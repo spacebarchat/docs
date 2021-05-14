@@ -11,5 +11,4 @@ theme:
     scheme: slate
     primary: indigo
   features:
-    - navigation.instant
     - navigation.expand
