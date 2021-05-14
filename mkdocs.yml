@@ -18,3 +18,4 @@ theme:
         name: Switch to light mode
   features:
     - navigation.expand
+    - navigation.instant
