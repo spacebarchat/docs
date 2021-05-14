@@ -19,6 +19,6 @@ jobs:
             - run: pip install mkdocs-material mkdocs-section-index
             - uses: sterlingwes/gh-pages-deploy-action@v1.1
               with:
-                  access-token: ${{ secrets.GITHUB_TOKEN }}
+                  access-token: ${{ secrets.ACCESS_TOKEN }}
                   source-directory: site
                   build-command: mkdocs build
