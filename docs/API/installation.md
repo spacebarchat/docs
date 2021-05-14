@@ -16,10 +16,9 @@ git clone https://github.com/fosscord/fosscord-api
 cd fosscord-api
 ```
 ### Step 2
-Install (dev) dependencies:
+Install dependencies:
 ```bash
 npm install
-npm install --only=dev
 ```
 ### Step 3
 Start:
