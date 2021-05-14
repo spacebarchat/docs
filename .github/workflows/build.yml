@@ -21,4 +21,4 @@ jobs:
               with:
                   access-token: ${{ secrets.ACCESS_TOKEN }}
                   source-directory: site
-                  build-command: mkdocs build && echo "docs.fosscord.com" > site/CNAME
+                  build-command: mkdocs build; echo "docs.fosscord.com" > site/CNAME
