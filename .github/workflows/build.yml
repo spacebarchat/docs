@@ -14,8 +14,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-python@v2
-            with:
-              python-version: 3.x
+              with:
+                python-version: 3.x
             - run: pip install mkdocs-material mkdocs-section-index
             - uses: sterlingwes/gh-pages-deploy-action@v1.1
               with:
