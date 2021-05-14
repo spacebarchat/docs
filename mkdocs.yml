@@ -1,0 +1,13 @@
+site_name: Fosscord Docs
+repo_url: https://github.com/Stylix58/fosscord-docs
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  font: Open Sans
+  palette:
+    scheme: slate
+    primary: indigo
+  features:
+    - navigation.instant
+    - navigation.expand
