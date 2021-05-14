@@ -8,7 +8,13 @@ theme:
   favicon: assets/logo.png
   font: Open Sans
   palette:
-    scheme: slate
-    primary: indigo
+    - scheme: default
+        toggle:
+          icon: material/lightbulb-outline
+          name: Switch to dark mode
+      - scheme: slate
+        toggle:
+          icon: material/lightbulb
+          name: Switch to light mode
   features:
     - navigation.expand
