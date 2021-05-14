@@ -17,9 +17,8 @@ jobs:
               with:
                 python-version: 3.x
             - run: pip install mkdocs-material mkdocs-section-index
-            - run: echo "docs.fosscord.com" > ./site/CNAME
             - uses: sterlingwes/gh-pages-deploy-action@v1.1
               with:
                   access-token: ${{ secrets.ACCESS_TOKEN }}
                   source-directory: site
-                  build-command: mkdocs build
+                  build-command: echo "docs.fosscord.com" > site/CNAME && mkdocs build
