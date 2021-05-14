@@ -1,5 +1,7 @@
 site_name: Fosscord Docs
 repo_url: https://github.com/Stylix58/fosscord-docs
+plugins:
+  - section-index
 theme:
   name: material
   logo: assets/logo.png
