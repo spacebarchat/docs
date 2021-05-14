@@ -4,26 +4,28 @@ You should be familiar with:
 * [Git](https://git-scm.com/)
 * [NodeJS](https://nodejs.org/)
 * [TypeScript](https://www.typescriptlang.org/)
-* [Mongoose](https://mongoosejs.com/)
 
-and the technologies we use for the API.
+and the technologies we use for the Gateway.
 
 ## Getting Started
-Clone the Repository:
+### Step 1
+Clone the repository:
 ```bash
-git clone https://github.com/fosscord/fosscord-api
-cd fosscord-api
+git clone https://github.com/fosscord/fosscord-gateway
+cd fosscord-gateway
 ```
-### Install (dev) dependencies
+### Step 2
+Install (dev) dependencies:
 ```bash
 npm install
 npm install --only=dev
 ```
-### Starting
+### Step 3
+Start:
 ```
 npm start
 ```
-### Debugging
-#### VS Code
+## Debugging
+### VS Code
 The Launch file configuration is in ``./vscode/launch.json``,
 so you can just debug the server by pressing ``F5`` or the ``> Launch Server`` button

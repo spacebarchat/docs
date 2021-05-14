@@ -6,6 +6,3 @@ For documentation, head over to the [Discord docs](https://discord.dev).
 
 ## Installation
 The API is not yet finished.
-
-## Contribution
-If want to help developing go ahead and read the [Contribution Guide](contribution).
