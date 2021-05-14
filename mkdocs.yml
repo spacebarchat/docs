@@ -1,5 +1,5 @@
 site_name: Fosscord Docs
-repo_url: https://github.com/Stylix58/fosscord-docs
+repo_url: https://github.com/fosscord/fosscord-docs
 plugins:
   - section-index
 theme:
