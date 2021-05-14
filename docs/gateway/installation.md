@@ -15,10 +15,9 @@ git clone https://github.com/fosscord/fosscord-gateway
 cd fosscord-gateway
 ```
 ### Step 2
-Install (dev) dependencies:
+Install dependencies:
 ```bash
 npm install
-npm install --only=dev
 ```
 ### Step 3
 Start:
