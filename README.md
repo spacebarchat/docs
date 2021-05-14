@@ -7,7 +7,9 @@ Just put in a terminal the following command:
 
 ## Launch
 Dynamic build (for development):
+
 `mkdocs serve`
 
-Standard build (for production)
+Standard build (for production):
+
 `mkdocs build`
