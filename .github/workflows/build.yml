@@ -1,16 +1,24 @@
-name: Build to GitHub Pages
+name: Github Pages Publish
+
 on:
-  push:
-    branches:
-      - master
-      - main
+    push:
+        branches:
+            - master
+    workflow_dispatch:
+        branches:
+            - master
+            
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: pip install mkdocs-material mkdocs-section-index
-      - run: mkdocs gh-deploy --force
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v2
+            with:
+              python-version: 3.x
+            - run: pip install mkdocs-material mkdocs-section-index
+            - uses: sterlingwes/gh-pages-deploy-action@v1.1
+              with:
+                  access-token: ${{ secrets.GITHUB_TOKEN }}
+                  source-directory: site
+                  build-command: mkdocs build
