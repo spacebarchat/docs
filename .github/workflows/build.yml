@@ -20,6 +20,5 @@ jobs:
             - uses: Stylix58/gh-pages-deploy-action@master
               with:
                   access-token: ${{ secrets.ACCESS_TOKEN }}
-                  custom-domain: docs.fosscord.com
                   source-directory: site
                   build-command: mkdocs build
