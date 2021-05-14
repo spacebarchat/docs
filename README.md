@@ -1,5 +1,5 @@
 # Fosscord Docs
-Docs for Fosscord
+The official docs for Fosscord.
 
 ## Install
 Just put in a terminal the following command:
