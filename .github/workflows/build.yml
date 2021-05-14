@@ -20,6 +20,6 @@ jobs:
             - uses: sterlingwes/gh-pages-deploy-action@v1.1
               with:
                   access-token: ${{ secrets.ACCESS_TOKEN }}
+                  custom-domain: docs.fosscord.com
                   source-directory: site
                   build-command: mkdocs build
-                  custom-domain: docs.fosscord.com
