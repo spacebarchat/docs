@@ -1,6 +1,9 @@
-[Status overview](https://github.com/fosscord/fosscord-gateway/projects/3)
+# Gateway
 
-This is a complete one-on-on clone of the discord gateway written in TypeScript.
+### [Status overview](https://github.com/fosscord/fosscord-gateway/projects/3)
 
-## Installation
-The Gateway is not yet finished.
+This is the fosscord WebSocket Gateway Server.
+
+For documentation, head over to the [Discord docs](https://discord.dev).
+
+If you want to work on a feature please comment on the corresponding issue so we can assign it you that nobody implements something twice.
