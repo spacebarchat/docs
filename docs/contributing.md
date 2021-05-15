@@ -17,7 +17,8 @@ cd fosscord
 
 [Install MongoDB](https://docs.mongodb.com/manual/installation/) locally and configure it:
 
-1. Edit the file `/etc/mongod.conf` and add this to the end:
+1. Edit the file
+(linux: `/etc/mongod.conf`, macos: ``/usr/local/etc/mongod.conf``, windows: ``<install directory>\bin\mongod.cfg``) and add this to the end:
 
 ```
 replication:
