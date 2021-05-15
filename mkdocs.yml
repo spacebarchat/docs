@@ -40,12 +40,13 @@ nav:
   - "Gateway":
       - gateway/index.md
       - gateway/structure.md
-      - server_util/database.md
-      - server_util/permissions.md
   - "UI Framework":
       - UI/index.md
       - UI/installation.md
       - UI/write_a_component.md
+  - "Client":
+      - client/index.md
+      - plugins.md
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences

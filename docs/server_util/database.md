@@ -1,3 +1,5 @@
+# Database
+
 ## Philosophy
 
 We create [mongoose](http://mongoosejs.com/) models and typescript interfaces for every data structure in the database.
