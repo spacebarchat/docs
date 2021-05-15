@@ -747,7 +747,8 @@ cd fosscord
 <p><strong>Recommended</strong>: Secure, control over data and lower latency</p>
 <p><a href="https://docs.mongodb.com/manual/installation/">Install MongoDB</a> locally and configure it:</p>
 <ol>
-<li>Edit the file <code>/etc/mongod.conf</code> and add this to the end:</li>
+<li>Edit the file
+(linux: <code>/etc/mongod.conf</code>, macos: <code>/usr/local/etc/mongod.conf</code>, windows: <code>&lt;install directory&gt;\bin\mongod.cfg</code>) and add this to the end:</li>
 </ol>
 <div class="highlight"><pre><span></span><code>replication:
     replSetName: &quot;rs0&quot;
