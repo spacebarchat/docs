@@ -6,7 +6,7 @@ Fosscord consists of many repositories, which together make up the client and th
 
 -   [fosscord-api](https://github.com/fosscord/fosscord-api) is the REST HTTP API server.
 -   [fosscord-gateway](https://github.com/fosscord/fosscord-gateway) is the WebSocket Gateway server.
--   [fosscord-media](https://github.com/fosscord/fosscord-media) will be the media server for voice and video sharing.
+-   [fosscord-rtc](https://github.com/fosscord/fosscord-rtc) will be the webrtc server for voice and video sharing.
 -   [fosscord-dashboard](https://github.com/fosscord/fosscord-dashboard) An admin dashboard for the server (analytics, settings, administration, trust & safety)
 -   [fosscord-server-util](https://github.com/fosscord/fosscord-server-util) contains all shared logic like Database Models, Utility functions...
 -   [fosscord-cdn](https://github.com/fosscord/fosscord-cdn) is the content-delivery-content (CDN) that stores user uploaded images.
