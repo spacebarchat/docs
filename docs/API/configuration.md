@@ -16,11 +16,11 @@ The very first time the server starts, it saves to default config in the databas
 
 You **should not** `get()` the Config in the root of your file and it instead load the config every time you access a value
 
-Import the file:
+Import ``Config`` from fosscord-server-util:
 
 ```js
 // at the top of the file import the Config file from /src/util/Config.ts
-import Config from "/../util/Config";
+import { Config } from "@fosscord-server-util";
 ```
 
 Access the Config in your route:
@@ -28,7 +28,7 @@ Access the Config in your route:
 ```js
 router.get("/", (req: Request, res: Response) => {
 	// call Config.get() to get the whole config object and then just access the property you want
-	const { REGISTRATION_DISABLED } = Config.get().register;
+	const { allowNewRegistration } = Config.get().register;
 });
 ```
 
@@ -36,7 +36,7 @@ router.get("/", (req: Request, res: Response) => {
 
 ### Add own values to the Config
 
-The default Config is located in `/src/util/Config.ts` and exports a `interface DefaultOptions` and a `const DefaultOptions` object with reasonable default values.
+The default Config is located in [server-util `/src/util/Config.ts`](https://github.com/fosscord/fosscord-server-util/blob/master/src/util/Config.ts) and exports a `interface DefaultOptions` and a `const DefaultOptions` object with reasonable default values.
 
 To add your own values to the config, add the properties to the `interface` with corresponding types and add default values to `const DefaultOptions`.
 
