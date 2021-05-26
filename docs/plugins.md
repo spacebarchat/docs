@@ -16,4 +16,4 @@
 - Shouldn't be able to intercept events, except if it:
     - Requests permission to a specific event(s)
     - Requests permission to all events
-- Needs to request permission to be able to extend extend the client's UI
+- Needs to request permission to be able to extend the client's UI
