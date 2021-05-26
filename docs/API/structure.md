@@ -15,7 +15,7 @@ All Express [Middlewares](http://expressjs.com/en/guide/writing-middleware.html)
 
 ### Routes
 
-All Express [Router](http://expressjs.com/en/4x/api.html#router) Routes are in the directory `/src/routes/` and are automatically registered.
+All Express [Router](http://expressjs.com/en/4x/api.html#router) Routes are in the directory `/src/routes/` and are automatically registered based on the file structure.
 
 ### Models
 
