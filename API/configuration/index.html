@@ -679,19 +679,19 @@
 <p>The very first time the server starts, it saves to default config in the database. The next start it will load the config from the database.</p>
 <h2 id="getting-started-for-contributors">Getting Started for Contributors</h2>
 <p>You <strong>should not</strong> <code>get()</code> the Config in the root of your file and it instead load the config every time you access a value</p>
-<p>Import the file:</p>
+<p>Import <code>Config</code> from fosscord-server-util:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// at the top of the file import the Config file from /src/util/Config.ts</span>
-<span class="k">import</span> <span class="nx">Config</span> <span class="k">from</span> <span class="s2">&quot;/../util/Config&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Config</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;@fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>Access the Config in your route:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="o">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="o">:</span> <span class="nx">Response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="c1">// call Config.get() to get the whole config object and then just access the property you want</span>
-    <span class="kd">const</span> <span class="p">{</span> <span class="nx">REGISTRATION_DISABLED</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">allowNewRegistration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><code>Config.get()</code> returns the current config object and is not expensive at all</p>
 <h3 id="add-own-values-to-the-config">Add own values to the Config</h3>
-<p>The default Config is located in <code>/src/util/Config.ts</code> and exports a <code>interface DefaultOptions</code> and a <code>const DefaultOptions</code> object with reasonable default values.</p>
+<p>The default Config is located in <a href="https://github.com/fosscord/fosscord-server-util/blob/master/src/util/Config.ts">server-util <code>/src/util/Config.ts</code></a> and exports a <code>interface DefaultOptions</code> and a <code>const DefaultOptions</code> object with reasonable default values.</p>
 <p>To add your own values to the config, add the properties to the <code>interface</code> with corresponding types and add default values to <code>const DefaultOptions</code>.</p>
 <p>Also you don't need to worry about updating "old config versions", because new values will automatically be synced with the database.</p>
 <p>Note, however, that if the database already has a default value it won't update it.</p>
