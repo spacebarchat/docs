@@ -23,8 +23,9 @@ router.get("/members", (req, res) => {});
 ## Authentication
 Every request must contain the authorization header except the ``/login`` and ``/register`` route.
 
-To access the user id for the token of the request use ``req.user_id`` 
+You can add additional non-auth routes in [``/src/middlewares/Authentication.ts``](https://github.com/fosscord/fosscord-api/blob/master/src/middlewares/Authentication.ts#L5)
 
+To access the user id for the current request use ``req.user_id`` 
 
 ## Body Validation
 We use a custom body validation logic from lambert-server to check if the JSON body is valid.
@@ -58,9 +59,9 @@ const min = 2;
 const max = 32;
 const type = String;
 
-{ username: new Length(min: number, max: number, type) }
+{ username: new Length(min, max, type) }
 ```
-this will limit the maximum string length to the ``min`` and ``max`` value.
+this will limit the maximum string/number/array length to the ``min`` and ``max`` value.
 
 ### Example:
 ```ts
