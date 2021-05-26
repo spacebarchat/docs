@@ -765,7 +765,8 @@ Now you can just use any regular express function on the router variable e.g:
 </code></pre></div></p>
 <h2 id="authentication">Authentication</h2>
 <p>Every request must contain the authorization header except the <code>/login</code> and <code>/register</code> route.</p>
-<p>To access the user id for the token of the request use <code>req.user_id</code> </p>
+<p>You can add additional non-auth routes in <a href="https://github.com/fosscord/fosscord-api/blob/master/src/middlewares/Authentication.ts#L5"><code>/src/middlewares/Authentication.ts</code></a></p>
+<p>To access the user id for the current request use <code>req.user_id</code> </p>
 <h2 id="body-validation">Body Validation</h2>
 <p>We use a custom body validation logic from lambert-server to check if the JSON body is valid.</p>
 <p>To import the function from <code>/src/util/instanceOf.ts</code> use:
@@ -789,9 +790,9 @@ Now you can use the <a href="http://expressjs.com/en/guide/using-middleware.html
 <span class="kd">const</span> <span class="nx">max</span> <span class="o">=</span> <span class="mf">32</span><span class="p">;</span>
 <span class="kd">const</span> <span class="kd">type</span> <span class="o">=</span> <span class="nb">String</span><span class="p">;</span>
 
-<span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">max</span>: <span class="kt">number</span><span class="p">,</span> <span class="kd">type</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kd">type</span><span class="p">)</span> <span class="p">}</span>
 </code></pre></div>
-this will limit the maximum string length to the <code>min</code> and <code>max</code> value.</p>
+this will limit the maximum string/number/array length to the <code>min</code> and <code>max</code> value.</p>
 <h3 id="example">Example:</h3>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">Length</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">SCHEMA</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span> <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span> <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}]</span> <span class="p">}</span>
