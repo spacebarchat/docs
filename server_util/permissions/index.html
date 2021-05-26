@@ -629,12 +629,14 @@
                 <p>To get the permission for a guild member import the <code>getPermission</code> from <code>fosscord-server-util</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getPermission</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
-<p>The first argument is the user_id the second the guild_id and the third channel_id</p>
-<p>If you want to receive the permission for a certain channel:</p>
+<p>The first argument is the user_id the second the guild_id and the third an optional channel_id</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">permissions</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">guild_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">channel_id?</span>: <span class="kt">string</span><span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">permissions</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="s2">&quot;106142653265366125&quot;</span><span class="p">,</span> <span class="s2">&quot;4061326832657368175&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">perms</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">userid</span><span class="p">,</span> <span class="nx">guild_id</span><span class="p">);</span>
+<span class="c1">// preferred method: Use this if you want to check if a user lacks a certain permission and abort the operation</span>
 <span class="nx">perms</span><span class="p">.</span><span class="nx">hasThrow</span><span class="p">(</span><span class="s2">&quot;MANAGE_GUILD&quot;</span><span class="p">)</span> <span class="c1">// will throw an error if the users lacks the permission</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">perms</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s2">&quot;MANAGE_GUILD&quot;</span><span class="p">))</span> <span class="p">{</span>
