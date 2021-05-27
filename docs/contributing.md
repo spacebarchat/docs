@@ -7,7 +7,7 @@ Clone all repositories:
 ```
 git clone --recurse-submodules -j8 https://github.com/fosscord/fosscord
 cd fosscord
-git submodule foreach "git checkout master"
+git submodule foreach "git checkout master && git pull origin master"
 ```
 
 ### Mongodb
