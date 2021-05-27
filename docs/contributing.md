@@ -94,6 +94,8 @@ npm i
 npm start
 ```
 
+Now you should have a development server running and can use the test client on [http://localhost:3001](http://localhost:3001)
+
 ---
 
 ### Docker
@@ -103,3 +105,5 @@ Optionally if you want to use Docker:
 ```
 docker-compose up
 ```
+You can access it on [http://localhost:3001](http://localhost:3001)
+
