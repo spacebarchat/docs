@@ -85,6 +85,14 @@ npm i
 npm start
 ```
 
+#### Make it public
+You need to set the gateway endpoint in order to access it from everywhere.
+To do this create a ``/api/.env`` file and appending/writing this:
+```
+GATEWAY=[YOURGATEWAYURL]
+```
+replace ``[YOURGATEWAYURL]`` with your gateway endpoint e.g. ``http://localhost:3001``, ``http://myfosscordserver:3001``
+
 ---
 
 ### WebSocket Gateway Server
