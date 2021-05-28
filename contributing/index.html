@@ -328,6 +328,19 @@
     HTTP API Server
   </a>
   
+    <nav class="md-nav" aria-label="HTTP API Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-it-public" class="md-nav__link">
+    Make it public
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -698,6 +711,19 @@
     HTTP API Server
   </a>
   
+    <nav class="md-nav" aria-label="HTTP API Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-it-public" class="md-nav__link">
+    Make it public
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -803,6 +829,12 @@ Either "Add current ip address" or "allow access from anywhere" or the ip of you
 npm i
 npm start
 </code></pre></div>
+<h4 id="make-it-public">Make it public</h4>
+<p>You need to set the gateway endpoint in order to access it from everywhere.
+To do this create a <code>/api/.env</code> file and appending/writing this:
+<div class="highlight"><pre><span></span><code>GATEWAY=[YOURGATEWAYURL]
+</code></pre></div>
+replace <code>[YOURGATEWAYURL]</code> with your gateway endpoint e.g. <code>http://localhost:3001</code>, <code>http://myfosscordserver:3001</code></p>
 <hr />
 <h3 id="websocket-gateway-server">WebSocket Gateway Server</h3>
 <div class="highlight"><pre><span></span><code>cd gateway
