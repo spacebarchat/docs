@@ -29,8 +29,8 @@ Fosscord consists of many repositories, which together make up the client and th
 
 ### Naming convention
 
-The issue name must have the main label as a prefix in brackets: e.g. `[Feature] Test` or `[Bug] Test`.
+- The issue name must have the main label as a prefix in brackets: e.g. `[Feature] Test` or `[Bug] Test`.
 
-The first letter of the prefix and the title must be uppercase.
+- The first letter of the prefix and the title must be uppercase.
 
-You are not allowed to use CAPS.
+- You are not allowed to use CAPS.
