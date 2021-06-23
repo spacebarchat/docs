@@ -31,19 +31,19 @@ nav:
   - ressources.md
   - contributing.md
   - "API":
-      - API/index.md
-      - API/structure.md
-      - API/configuration.md
+      - api/index.md
+      - api/structure.md
+      - api/configuration.md
       - server_util/database.md
       - server_util/permissions.md
-      - API/route.md
+      - api/route.md
   - "Gateway":
       - gateway/index.md
       - gateway/structure.md
-  - "UI Framework":
-      - UI/index.md
-      - UI/installation.md
-      - UI/write_a_component.md
+  - "Ui Framework":
+      - ui/index.md
+      - ui/installation.md
+      - ui/write_a_component.md
   - "Client":
       - client/index.md
       - plugins.md
