@@ -3,7 +3,7 @@ The official docs for Fosscord.
 
 ## Install
 Just put in a terminal the following command:
-`git clone https://github.com/fosscord/fosscord-docs && pip3 install material-mkdocs mkdocs-section-index`
+`git clone https://github.com/fosscord/fosscord-docs && python3 -m pip install mkdocs mkdocs-material mkdocs-section-index`
 
 ## Launch
 Dynamic build (for development):
