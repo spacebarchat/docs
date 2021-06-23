@@ -34,3 +34,8 @@ Fosscord consists of many repositories, which together make up the client and th
 - The first letter of the prefix and the title must be uppercase.
 
 - You are not allowed to use CAPS.
+
+#### Example Issue:
+_this issue follows the above mentioned conventions_
+
+<img src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/fosscord/fosscord/issues/11&type=compact">
