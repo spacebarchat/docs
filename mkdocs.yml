@@ -42,8 +42,7 @@ nav:
       - gateway/structure.md
   - "Ui Framework":
       - ui/index.md
-      - ui/installation.md
-      - ui/write_a_component.md
+      - ui/contribution_and_installation.md
   - "Client":
       - client/index.md
       - plugins.md
