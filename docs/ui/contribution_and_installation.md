@@ -57,5 +57,3 @@ _Open `./test/index.html` to see the test page._
 ...
 @import "<component>.scss";
 ```
-
-4.
