@@ -3,6 +3,7 @@
 - [GitHub](https://github.com/fosscord/fosscord)
 - [OpenCollective](https://opencollective.com/fosscord)
 - [Roadmap](https://github.com/fosscord/fosscord-api/issues/140)
+- [Discord server](https://discord.gg/ZrnGQP6p3d) (If we are finished we'll host our own support server.)
 
 
 ## Project structure
