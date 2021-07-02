@@ -8,7 +8,7 @@ Fosscord is a combination of the abbreviation FOSS (**F**ree **O**pen **S**ource
 ## Philosophy
 Fosscord aims to be a full one-on-one clone of Discord, adding more features that can be used as a replacement for the official client and still connect to discord.com and host private Fosscord server instances.
 
-Fosscord aims to give the best possible user experience, while being backwards compatible to Discord's features and adding new ones/improving old ones.
+Fosscord aims to give the best possible user experience, while being backwards compatible to Discord's features and adding new ones/improving old ones while maintaining the user privacy with end-to-end encryption support.
 
 The client can connect to multiple server instances without the need to open it multiple times.
 
