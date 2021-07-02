@@ -1,3 +1,10 @@
+## Links
+- [Docs](https://docs.fosscord.com)
+- [GitHub](https://github.com/fosscord/fosscord)
+- [OpenCollective](https://opencollective.com/fosscord)
+- [Roadmap](https://github.com/fosscord/fosscord-api/issues/140)
+
+
 ## Project structure
 
 Fosscord consists of many repositories, which together make up the client and the server:
