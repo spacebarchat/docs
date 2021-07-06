@@ -28,7 +28,7 @@ theme:
     - navigation.top
 nav:
   - index.md
-  - ressources.md
+  - resources.md
   - contributing.md
   - "API":
       - api/index.md
