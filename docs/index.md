@@ -1,35 +1,57 @@
 # Home
+
 ### What is Fosscord?
-Fosscord is a free open source selfhostable chat, voice and video discord-compatible platform
+
+Fosscord is a free open source selfhostable chat, voice and video
+discord-compatible platform
 
 ### Why the name Fosscord?
-Fosscord is a combination of the abbreviation FOSS (**F**ree **O**pen **S**ource **S**oftware) and the name Dis**cord**.
+
+Fosscord is a combination of the abbreviation FOSS (**F**ree **O**pen **S**ource
+**S**oftware) and the name Dis**cord**.
 
 ## Philosophy
-Fosscord aims to be a full one-on-one clone of Discord, adding more features that can be used as a replacement for the official client and still connect to discord.com and host private Fosscord server instances.
 
-Fosscord aims to give the best possible user experience, while being backwards compatible to Discord's features and adding new ones/improving old ones while maintaining the user privacy with end-to-end encryption support.
+Fosscord aims to be a full one-on-one clone of Discord, adding more features
+that can be used as a replacement for the official client and still connect to
+discord.com and host private Fosscord server instances.
 
-The client can connect to multiple server instances without the need to open it multiple times.
+Fosscord aims to give the best possible user experience, while being backwards
+compatible to Discord's features and adding new ones/improving old ones while
+maintaining the user privacy with end-to-end encryption support.
 
-The client should be extensible through a secure Plugin and Theme System with own store.
+The client can connect to multiple server instances without the need to open it
+multiple times.
 
-The server should be extensible through bots, just like discord without the need to change anything except the api endpoint.
+The client should be extensible through a secure Plugin and Theme System with
+own store.
 
-The project is open source so everyone can have a look what's going on under the hood and can be maintained and expanded by the community.
+The server should be extensible through bots, just like discord without the need
+to change anything except the api endpoint.
 
-Everything is configurable in the server config and everyone can add their own features, so that it is not opinionated.
+The project is open source so everyone can have a look what's going on under the
+hood and can be maintained and expanded by the community.
+
+Everything is configurable in the server config and everyone can add their own
+features, so that it is not opinionated.
 
 ### Concept
+
 <img src="img/architecture.png" alt="Architecture">
 
 ### Why backwards compatible to Discord?
-- Benefit from the large user base of discord -> make a better client
-- No disadvantage for the users who use fosscord, so that they can still communicate with all friends who use discord
-- Discord has already built a great and stable protocol _(don't reinvent the wheel)_
-- _(We can still add additional features)_
+
+-   Benefit from the large user base of discord -> more users, making the switch
+    easier for new users & keeping workflows intact
+-   No disadvantage for the users who use fosscord, so that they can still
+    communicate with all their peers who use discord
+-   Discord has already built a great and stable protocol _(don't reinvent the
+    wheel)_
+-   The community can extend and customize their clients and servers by
+    selfhosting them and developing and installing addons
 
 ## Support
+
 [Discord server](https://discord.gg/ZrnGQP6p3d)
 
-If we are finished, we'll host our own support server.
+Ones we are finished, we'll host our own instance to host the support server.
