@@ -30,6 +30,7 @@ nav:
   - index.md
   - resources.md
   - contributing.md
+  - encryption.md
   - "API":
       - api/index.md
       - api/structure.md
