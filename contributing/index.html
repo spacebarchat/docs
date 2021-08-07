@@ -774,9 +774,10 @@
                 <h1 id="contributing">Contributing</h1>
 <h2 id="setup">Setup</h2>
 <p>Clone all repositories:</p>
-<div class="highlight"><pre><span></span><code>git clone --recurse-submodules -j8 https://github.com/fosscord/fosscord
-cd fosscord
-git submodule foreach &quot;git checkout master &amp;&amp; git pull origin master&quot;
+<div class="highlight"><pre><span></span><code>git clone https://github.com/fosscord/fosscord fosscord_clone
+cd fosscord_clone/scripts/setup
+chmod +x setup.sh
+./setup.sh
 </code></pre></div>
 <h3 id="mongodb">Mongodb</h3>
 <h4 id="mongodb-local-server">MongoDB local server</h4>
