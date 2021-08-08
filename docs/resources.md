@@ -1,5 +1,6 @@
 ## Links
 - [Docs](https://docs.fosscord.com)
+- [Status](https://status.fosscord.com/)
 - [GitHub](https://github.com/fosscord/fosscord)
 - [OpenCollective](https://opencollective.com/fosscord)
 - [Roadmap](https://github.com/fosscord/fosscord-api/issues/140)
