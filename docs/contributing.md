@@ -92,7 +92,7 @@ To do this create a ``/api/.env`` file and appending/writing this:
 ```
 GATEWAY=[YOURGATEWAYURL]
 ```
-replace ``[YOURGATEWAYURL]`` with your gateway endpoint e.g. ``ws://localhost:3001``, ``wss://myfosscordserver:3001``
+replace ``[YOURGATEWAYURL]`` with your gateway endpoint e.g. ``ws://localhost:3002``, ``wss://myfosscordserver:3002``
 if it is https/ssl encrypted use ``wss`` otherwise use ``ws``.
 
 ---
