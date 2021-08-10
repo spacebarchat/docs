@@ -31,7 +31,7 @@ Fosscord consists of many repositories, which together make up the client and th
 -   [fosscord-themes](https://github.com/fosscord/fosscord-themes) contains all the official themes for the client.
 -   [fosscord-plugins](https://github.com/fosscord/fosscord-plugins) contains all the official plugins for the client.
 -   [fosscord-client](https://github.com/fosscord/fosscord-client) is the official Fosscord client.
--   [fosscord-client](https://github.com/fosscord/fosscord-client-native) is the official (react)-native Fosscord client.
+-   [fosscord-client-native](https://github.com/fosscord/fosscord-client-native) is the official (react)-native Fosscord client.
 -   ~~[react-native-withcss](https://github.com/fosscord/react-native-withcss) CSS support for react native~~ (Discontinued)
 -   ~~[css-mediaquery](https://github.com/fosscord/css-mediaquery) CSS media query support for react native~~ (Discontinued)
 
