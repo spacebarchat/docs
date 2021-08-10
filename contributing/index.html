@@ -784,27 +784,25 @@ chmod +x setup.sh
 <p><strong>Recommended</strong>: Secure, control over data and lower latency</p>
 <p><a href="https://docs.mongodb.com/manual/installation/">Install MongoDB</a> locally and configure it:</p>
 <ol>
-<li>Edit the file
-(linux: <code>/etc/mongod.conf</code>, macos: <code>/usr/local/etc/mongod.conf</code>, windows: <code>&lt;install directory&gt;\bin\mongod.cfg</code>) and add this to the end:</li>
+<li>
+<p>Edit the file
+(linux: <code>/etc/mongod.conf</code>, macos: <code>/usr/local/etc/mongod.conf</code>, windows: <code>&lt;install directory&gt;\bin\mongod.cfg</code>) and add this to the end:</p>
+<p>replication:
+    replSetName: "rs0"</p>
+</li>
+<li>
+<p>Restart MongoDB</p>
+<p>systemctl reload mongod</p>
+</li>
+<li>
+<p>Connect to mongodb</p>
+<p>mongo</p>
+</li>
+<li>
+<p>Setup replica set:</p>
+<p>rs.initiate()</p>
+</li>
 </ol>
-<div class="highlight"><pre><span></span><code>replication:
-    replSetName: &quot;rs0&quot;
-</code></pre></div>
-<ol>
-<li>Restart MongoDB</li>
-</ol>
-<div class="highlight"><pre><span></span><code>systemctl reload mongod
-</code></pre></div>
-<ol>
-<li>Connect to mongodb</li>
-</ol>
-<div class="highlight"><pre><span></span><code>mongo
-</code></pre></div>
-<ol>
-<li>Setup replica set:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>rs.initiate()
-</code></pre></div>
 <h4 id="mongodb-atlascloud-server">MongoDB Atlas/Cloud server</h4>
 <p><strong>Easier setup</strong>: But no data sovereignty and higher latency</p>
 <ol>
