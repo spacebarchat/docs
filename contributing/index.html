@@ -787,20 +787,24 @@ chmod +x setup.sh
 <li>
 <p>Edit the file
 (linux: <code>/etc/mongod.conf</code>, macos: <code>/usr/local/etc/mongod.conf</code>, windows: <code>&lt;install directory&gt;\bin\mongod.cfg</code>) and add this to the end:</p>
-<p>replication:
-    replSetName: "rs0"</p>
+<div class="highlight"><pre><span></span><code>replication:
+    replSetName: &quot;rs0&quot;
+</code></pre></div>
 </li>
 <li>
 <p>Restart MongoDB</p>
-<p>systemctl reload mongod</p>
+<div class="highlight"><pre><span></span><code>systemctl reload mongod
+</code></pre></div>
 </li>
 <li>
 <p>Connect to mongodb</p>
-<p>mongo</p>
+<div class="highlight"><pre><span></span><code>mongo
+</code></pre></div>
 </li>
 <li>
 <p>Setup replica set:</p>
-<p>rs.initiate()</p>
+<div class="highlight"><pre><span></span><code>rs.initiate()
+</code></pre></div>
 </li>
 </ol>
 <h4 id="mongodb-atlascloud-server">MongoDB Atlas/Cloud server</h4>
