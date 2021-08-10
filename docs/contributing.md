@@ -22,20 +22,20 @@ chmod +x setup.sh
 1. Edit the file
 (linux: `/etc/mongod.conf`, macos: ``/usr/local/etc/mongod.conf``, windows: ``<install directory>\bin\mongod.cfg``) and add this to the end:
 
-    replication:
-	    replSetName: "rs0"
+        replication:
+            replSetName: "rs0"
 
 2. Restart MongoDB
 
-    systemctl reload mongod
+        systemctl reload mongod
 
 3. Connect to mongodb
 
-    mongo
+        mongo
 
 4. Setup replica set:
 
-    rs.initiate()
+        rs.initiate()
 
 #### MongoDB Atlas/Cloud server
 
