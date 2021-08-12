@@ -97,6 +97,16 @@ npm i
 npm start
 ```
 
+---
+
+### CDN Server
+
+```
+cd cdn
+npm i
+npm start
+```
+
 Now you should have a development server running and can use the test client on [http://localhost:3001](http://localhost:3001)
 
 ---
