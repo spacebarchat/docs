@@ -14,15 +14,15 @@ Fosscord consists of many repositories, which together make up the client and th
 
 ### Server
 
--   [fosscord-api](https://github.com/fosscord/fosscord-api) is the REST HTTP API server.
--   [fosscord-gateway](https://github.com/fosscord/fosscord-gateway) is the WebSocket Gateway server
--   [fosscord-voice-gateway](https://github.com/fosscord/fosscord-voice-gateway) is the Fosscord Voice Gateway Server
--   [fosscord-rtc](https://github.com/fosscord/fosscord-rtc) will be the webrtc server for voice and video sharing.
--   [fosscord-webrtc-server](https://github.com/fosscord/fosscord-webrtc-server) is a _javascript_ fosscord webrtc server for voice and video communication
--   [fosscord-dashboard](https://github.com/fosscord/fosscord-dashboard) An admin dashboard for the server (analytics, settings, administration, trust & safety)
--   [fosscord-server-util](https://github.com/fosscord/fosscord-server-util) contains all shared logic like Database Models, Utility functions...
--   [fosscord-cdn](https://github.com/fosscord/fosscord-cdn) is the content-delivery-content (CDN) that stores user uploaded images.
--   [fosscord-server](https://github.com/fosscord/fosscord-server) is the complete bundled fosscord server
+-   **[fosscord-server](https://github.com/fosscord/fosscord-api) is the complete Fosscord Server**
+
+Contains:
+-   [gateway](https://github.com/fosscord/fosscord-server/tree/master/gateway) is the WebSocket Gateway server
+-   [rtc](https://github.com/fosscord/fosscord-server/tree/master/rtc) will be the rtc server for voice and video sharing.
+-   [webrtc-server](https://github.com/fosscord/fosscord-server/tree/master/webrtc-server) is a _javascript_ fosscord webrtc server for voice and video communication
+-   [dashboard](https://github.com/fosscord/fosscord-server/tree/master/dashboard) An admin dashboard for the server (analytics, settings, administration, trust & safety)
+-   [util](https://github.com/fosscord/fosscord-server/tree/master/server-util) contains all shared logic like Database Models, Utility functions...
+-   [cdn](https://github.com/fosscord/fosscord-server/tree/master/cdn) is the content-delivery-content (CDN) that stores user uploaded images.
 
 
 ### Client
