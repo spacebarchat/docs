@@ -16,7 +16,7 @@
     
     
       
-        <title>Plugins - Fosscord Docs</title>
+        <title>Download - Fosscord Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#philosophy" class="md-skip">
+        <a href="#download" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plugins
+              Download
             
           </span>
         </div>
@@ -510,16 +510,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
       
       <label class="md-nav__link" for="__nav_9">
         <span class="md-nav__icon md-icon"></span>
@@ -545,59 +543,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          <span class="md-nav__icon md-icon"></span>
-          
-            <a href="./" class="md-nav__link md-nav__link--active"
-              style="margin: initial; padding: initial; pointer-events: initial">
-          
-            Plugins
-          </a>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
         Plugins
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -624,6 +574,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -632,15 +584,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
+  <a href="#server" class="md-nav__link">
+    Server
   </a>
+  
+    <nav class="md-nav" aria-label="Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easy-installation" class="md-nav__link">
+    Easy installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-terminalshell" class="md-nav__link">
+    With terminal/shell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
+  <a href="#client" class="md-nav__link">
+    Client
   </a>
   
 </li>
@@ -657,39 +636,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/plugins.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/download.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Plugins</h1>
-                
-                <h2 id="philosophy">Philosophy</h2>
+                <h1 id="download">Download</h1>
+<h2 id="server">Server</h2>
+<p>You need to install nodejs from https://nodejs.org/</p>
+<h3 id="easy-installation">Easy installation</h3>
 <ul>
-<li>Plugins are executed in their environment to prevent security issues</li>
-<li>Plugins can create their own UI and loaded in a separate view <em>(similar to vscode extensions)</em></li>
-<li>Plugins can access the component Api and therefore extend the client UI</li>
-<li>Plugins can access the WebSocket Connection/Rest API and intercept/transform events</li>
-<li>Plugins are restricted and can only do actions with the corresponding permission</li>
-<li>Plugins should be accessible through a store that needs to verify the plugins (with dev options to sideload plugins/add other stores)</li>
+<li>Download the zip from <a href="https://github.com/fosscord/fosscord-server/archive/refs/heads/master.zip">github</a> and extract it.</li>
+<li><strong>Windows</strong>: Double click on start.bat</li>
+<li><strong>Mac/Linux</strong>: Open start.sh with terminal/shell</li>
 </ul>
-<h2 id="permissions">Permissions</h2>
-<ul>
-<li>Can't access the user's token (token plugins should rather be directly integrated into the client (e.g. account switcher))</li>
-<li>All permissions must meet the purpose of the plugin and must justify why they need the certain permission to be approved</li>
-<li>Shouldn't be able to make any request, except if it:<ul>
-<li>Requests permission to access the api of the network</li>
-<li>Requests permission to access a specific domain (e.g. plugins backend)</li>
-<li>Requests permission to access all domains</li>
-</ul>
-</li>
-<li>Shouldn't be able to intercept events, except if it:<ul>
-<li>Requests permission to a specific event(s)</li>
-<li>Requests permission to all events</li>
-</ul>
-</li>
-<li>Needs to request permission to be able to extend the client's UI</li>
-</ul>
+<p>You can now access it on <a href="http://localhost:3001">http://localhost:3001</a></p>
+<h3 id="with-terminalshell">With terminal/shell</h3>
+<p>You need to install nodejs from https://git-scm.com/downloads</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/fosscord/fosscord-server
+cd fosscord-server/bundle
+npm i
+npm start
+</code></pre></div>
+<p>You can now access it on <a href="http://localhost:3001">http://localhost:3001</a></p>
+<h3 id="docker">Docker</h3>
+<p>Optionally if you want to use Docker:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/fosscord/fosscord-server
+cd fosscord-server
+docker-compose up
+</code></pre></div>
+<p>You can now access it on <a href="http://localhost:3001">http://localhost:3001</a></p>
+<h2 id="client">Client</h2>
+<p>Our client is not ready for the public. <em>(<a href="https://github.com/fosscord/fosscord-client">help contributing</a>)</em></p>
+<p>However the server already has a discord test client built in, which can be used to access Fosscord.</p>
                 
               
               
@@ -710,26 +689,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../client/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Client" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Client
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
