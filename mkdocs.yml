@@ -29,6 +29,7 @@ theme:
 nav:
   - index.md
   - resources.md
+  - setup.md
   - contributing.md
   - encryption.md
   - "API":
