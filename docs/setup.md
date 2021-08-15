@@ -1,8 +1,8 @@
-# Download
+# Setup
 
 ## Server
 
-You need to install nodejs from https://nodejs.org/
+You need to install nodejs from [nodejs.org](https://nodejs.org/).
 
 ### Easy installation
 
