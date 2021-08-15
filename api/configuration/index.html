@@ -705,7 +705,7 @@
 <p>You <strong>should not</strong> <code>get()</code> the Config in the root of your file and it instead load the config every time you access a value</p>
 <p>Import <code>Config</code> from fosscord-server-util:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// at the top of the file import the Config file from /src/util/Config.ts</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">Config</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;@fosscord-server-util&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Config</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>Access the Config in your route:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="o">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="o">:</span> <span class="nx">Response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>

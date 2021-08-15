@@ -743,12 +743,12 @@
 <h2 id="documentation">Documentation</h2>
 <p>Have a look at the <a href="https://mongoosejs.com/docs/">mongoose documentation</a> to get familiar with it or watch this <a href="https://youtu.be/WDrU305J1yw">tutorial</a></p>
 <h2 id="getting-started">Getting Started</h2>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">mongoose</span> <span class="k">from</span> <span class="s2">&quot;mongoose&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">mongoose</span> <span class="kr">from</span> <span class="s2">&quot;mongoose&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>and now you can query the database, here are some examples:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildModel</span><span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildModel</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 
-<span class="k">await</span> <span class="k">new</span> <span class="nx">GuildModel</span><span class="p">({</span> <span class="p">...</span> <span class="p">}).</span><span class="nx">save</span><span class="p">();</span> <span class="c1">// inserts a new guild</span>
+<span class="k">await</span> <span class="ow">new</span> <span class="nx">GuildModel</span><span class="p">({</span> <span class="p">...</span> <span class="p">}).</span><span class="nx">save</span><span class="p">();</span> <span class="c1">// inserts a new guild</span>
 
 <span class="kd">const</span> <span class="nx">guild</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">GuildModel</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="nx">id</span>: <span class="kt">...</span> <span class="p">}).</span><span class="nx">exec</span><span class="p">();</span> <span class="c1">// searches for a guild</span>
 </code></pre></div>
@@ -766,12 +766,12 @@
     <span class="nx">data?</span>: <span class="kt">any</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">EventSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Schema</span><span class="p">({</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">EventSchema</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Schema</span><span class="p">({</span>
     <span class="nx">guild_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
     <span class="nx">user_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
     <span class="nx">channel_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
-    <span class="nx">created_at</span><span class="o">:</span> <span class="p">{</span> <span class="kd">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
-    <span class="nx">event</span><span class="o">:</span> <span class="p">{</span> <span class="kd">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
+    <span class="nx">created_at</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
+    <span class="nx">event</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
     <span class="nx">data</span>: <span class="kt">Object</span><span class="p">,</span>
 <span class="p">});</span>
 
@@ -782,7 +782,7 @@
 <p><em>(Events are stored in a MongoDB Event Store collection and distributed to the individual gateway servers)</em></p>
 <p>You can find all events on the <a href="https://discord.com/developers/docs/topics/gateway#commands-and-events">discord docs page</a> and in <a href="https://github.com/fosscord/fosscord-server-util/blob/master/src/models/Event.ts"><code>server-util/src/modesl/Event.ts</code></a></p>
 <p>To emit an event import the <code>emitEvent</code> function from <code>/src/util/Event.ts</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">emitEvent</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;../../../util/Event&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">emitEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;../../../util/Event&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>this will take a the following parameters:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -794,7 +794,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>For easy intellisense, annotate the parameter with the corresponding Event interface from <code>fosscord-server-util</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildDeleteEvent</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildDeleteEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 
 <span class="nx">emitEvent</span><span class="p">({...}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
 <span class="c1">// or with &lt;&gt; brackets:</span>

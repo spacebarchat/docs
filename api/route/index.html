@@ -778,14 +778,14 @@
 <p>If you want to use URL Params like <code>:id</code> in e.g. <code>/users/:id</code> you need to use <code>#</code> instead of <code>:</code> for the folder/filename, because of file naming issues on windows.</p>
 <p><code>index.ts</code> files <strong>won't</strong> serve <code>/api/index</code> and instead alias the parent folder e.g. <code>/api/</code></p>
 <p>Your file needs to default export a <a href="https://expressjs.com/de/4x/api.html#router">express.Router()</a>:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Router</span> <span class="p">}</span> <span class="k">from</span> <span class="nx">express</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Router</span> <span class="p">}</span> <span class="kr">from</span> <span class="nx">express</span>
 <span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">Router</span><span class="p">();</span>
 <span class="k">export</span> <span class="k">default</span> <span class="nx">router</span><span class="p">;</span>
 </code></pre></div>
 Now you can just use any regular express function on the router variable e.g:
-<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
-<span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/members&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/members&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
 </code></pre></div></p>
 <h2 id="authentication">Authentication</h2>
 <p>Every request must contain the authorization header except the <code>/login</code> and <code>/register</code> route.</p>
@@ -794,10 +794,10 @@ Now you can just use any regular express function on the router variable e.g:
 <h2 id="body-validation">Body Validation</h2>
 <p>We use a custom body validation logic from lambert-server to check if the JSON body is valid.</p>
 <p>To import the function from <code>/src/util/instanceOf.ts</code> use:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
 </code></pre></div>
 Now you can use the <a href="http://expressjs.com/en/guide/using-middleware.html">middleware</a> <code>check</code> for your routes by calling check with your Body Schema.
-<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(...),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(...),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
 </code></pre></div></p>
 <h3 id="schema">Schema</h3>
 <p>A Schema is a Object Structure with key-value objects that checks if the supplied body is an instance of the specified class.
@@ -809,18 +809,18 @@ Now you can use the <a href="http://expressjs.com/en/guide/using-middleware.html
 <p>You can specify optional parameters if you prefix the key with a <code>$</code> (dollar sign) e.g.: <code>{ $captcha: String }</code>, this will make the captcha property in the body optional.</p>
 <h4 id="limit-string-length">Limit String length</h4>
 <p>Additionally import the class <code>Length</code> from instanceOf and specify the type by making a new <code>Length</code> Object taking following parameters:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Length</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Length</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">min</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">max</span> <span class="o">=</span> <span class="mf">32</span><span class="p">;</span>
-<span class="kd">const</span> <span class="kd">type</span> <span class="o">=</span> <span class="nb">String</span><span class="p">;</span>
+<span class="kd">const</span> <span class="kr">type</span> <span class="o">=</span> <span class="nb">String</span><span class="p">;</span>
 
-<span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kd">type</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kr">type</span><span class="p">)</span> <span class="p">}</span>
 </code></pre></div>
 this will limit the maximum string/number/array length to the <code>min</code> and <code>max</code> value.</p>
 <h3 id="example">Example:</h3>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">Length</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">Length</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">SCHEMA</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span> <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span> <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}]</span> <span class="p">}</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(</span><span class="nx">SCHEMA</span><span class="p">),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(</span><span class="nx">SCHEMA</span><span class="p">),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
 </code></pre></div>
 <h2 id="throw-errors">Throw Errors</h2>
 <p>If the body validation fails it will automatically throw an error.</p>
@@ -849,7 +849,7 @@ this will limit the maximum string/number/array length to the <code>min</code> a
 <span class="p">}</span>
 </code></pre></div></p>
 <p>To manually throw a <code>FieldError</code> import <code>FieldErrors</code>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">FieldErrors</span> <span class="p">}</span> <span class="k">from</span> <span class="err">/src/util/instanceOf</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">FieldErrors</span> <span class="p">}</span> <span class="kr">from</span> <span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">util</span><span class="o">/</span><span class="nx">instanceOf</span>
 </code></pre></div>
 To make sure your errors are understood in all languages translate it with <a href="https://www.i18next.com/translation-function/essentials">i18next</a> and <code>req.t</code></p>
 <p>So after you have checked the field is invalid throw the <code>FieldErrors</code>

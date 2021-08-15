@@ -651,7 +651,7 @@
                   <h1>Permissions</h1>
                 
                 <p>To get the permission for a guild member import the <code>getPermission</code> from <code>fosscord-server-util</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getPermission</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getPermission</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>The first argument is the user_id the second the guild_id and the third an optional channel_id</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">permissions</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">guild_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">channel_id?</span>: <span class="kt">string</span><span class="p">)</span>
