@@ -10,6 +10,8 @@ You need to install nodejs from [nodejs.org](https://nodejs.org/).
 -   **Windows**: Double click on start.bat
 -   **Mac/Linux**: Open start.sh with terminal/shell
 
+**Notice**: the first time you open start.bat/sh it needs to download the mongodb server (250mb) (you don't see any progress bar).
+
 You can now access it on [http://localhost:3001](http://localhost:3001)
 
 ### With terminal/shell
@@ -18,8 +20,8 @@ You need to install nodejs from https://git-scm.com/downloads
 
 ```
 git clone https://github.com/fosscord/fosscord-server
-cd fosscord-server/bundle
-npm i
+cd fosscord-server
+npm install
 npm start
 ```
 
