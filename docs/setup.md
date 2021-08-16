@@ -2,25 +2,29 @@
 
 ## Server
 
-You need to install nodejs from [nodejs.org](https://nodejs.org/).
+### Download
 
-### Easy installation
+For stable fosscord-server release use this version.
 
--   Download the zip from [github](https://github.com/fosscord/fosscord-server/archive/refs/heads/master.zip) and extract it.
--   **Windows**: Double click on start.bat
--   **Mac/Linux**: Open start.sh with terminal/shell
+Download the server release from [GitHub](https://github.com/fosscord/fosscord-server/releases) for your operating system. (Size ~60mb)
 
-**Notice**: the first time you open start.bat/sh it needs to download the mongodb server (250mb) (you don't see any progress bar).
+Double click the file to start the server. (The first time it takes longer as it needs to setup the server)
 
-You can now access it on [http://localhost:3001](http://localhost:3001)
+You can now access it on [http://localhost:3001](http://localhost:3001).
 
 ### With terminal/shell
 
-You need to install nodejs from https://git-scm.com/downloads
+You will be able to use the latest bleeding edge version of fosscord-server. (Which may have bugs)
+
+You need to install git from [git-scm.com](https://git-scm.com/downloads) or your package manager.
+
+You need to install nodejs from [nodejs.org](https://nodejs.org/) or your package manager.
+
+Then clone and start the server, by executing this in the
 
 ```
 git clone https://github.com/fosscord/fosscord-server
-cd fosscord-server
+cd fosscord-server/bundle
 npm install
 npm start
 ```
