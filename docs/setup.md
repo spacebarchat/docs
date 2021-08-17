@@ -2,7 +2,7 @@
 
 ## Server
 
-### Download
+### [Download](https://github.com/fosscord/fosscord-server/releases)
 
 This is the stable fosscord-server release.
 
@@ -20,7 +20,7 @@ You need to install git from [git-scm.com](https://git-scm.com/downloads) or you
 
 You need to install nodejs from [nodejs.org](https://nodejs.org/) or your package manager.
 
-Now you can clone and start the server, by executing this in the terminal/shell:
+Now you can clone and start the server by executing this in the terminal/shell:
 
 ```
 git clone https://github.com/fosscord/fosscord-server
