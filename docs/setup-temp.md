@@ -25,20 +25,27 @@ You need to install rabbitmq from [rabbitmq.com](https://www.rabbitmq.com/downlo
 
 Now you can clone and start the server by executing each module in its own terminal/shell:
 
+(API+DEMO CLIENT: port 3001)
 ```
 git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server/api
 npm install
 npm start
 ```
-
+(GATEWAY: port 3002)
 ```
 git clone https://github.com/fosscord/fosscord-server
-cd fosscord-server/api
+cd fosscord-server/gateway
 npm install
 npm start
 ```
-
+(CDN: port 3003)
+```
+git clone https://github.com/fosscord/fosscord-server
+cd fosscord-server/cdn
+npm install
+npm start
+```
 You can now access it on [http://localhost:3001](http://localhost:3001) (Demo ui runs on api port (3001). Other Ports: 3002, gateway (websocket) and 3003, CDN (http))
 
 ### Docker
