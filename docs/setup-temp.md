@@ -23,7 +23,7 @@ You need to install nodejs from [nodejs.org](https://nodejs.org/) or your packag
 
 You need to install rabbitmq from [rabbitmq.com](https://www.rabbitmq.com/download.html) or your package manager.
 
-Now you can clone and start the server by executing each module in its own terminal/shell:
+Now you can clone (git clone https://github.com/fosscord/fosscord-server) and start the server by executing each module in its own terminal/shell:
 
 (API+DEMO CLIENT: port 3001)
 ```
@@ -34,14 +34,12 @@ npm start
 ```
 (GATEWAY: port 3002)
 ```
-git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server/gateway
 npm install
 npm start
 ```
 (CDN: port 3003)
 ```
-git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server/cdn
 npm install
 npm start
