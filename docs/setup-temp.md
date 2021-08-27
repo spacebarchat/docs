@@ -21,18 +21,25 @@ You need to install git from [git-scm.com](https://git-scm.com/downloads) or you
 
 You need to install nodejs from [nodejs.org](https://nodejs.org/) or your package manager.
 
-You need to install rabbitmq from 
+You need to install rabbitmq from [rabbitmq.com](https://www.rabbitmq.com/download.html) or your package manager.
 
-Now you can clone and start the server by executing this in the terminal/shell:
+Now you can clone and start the server by executing each module in its own terminal/shell:
 
 ```
 git clone https://github.com/fosscord/fosscord-server
-cd fosscord-server/bundle
+cd fosscord-server/api
 npm install
 npm start
 ```
 
-You can now access it on [http://localhost:3001](http://localhost:3001)
+```
+git clone https://github.com/fosscord/fosscord-server
+cd fosscord-server/api
+npm install
+npm start
+```
+
+You can now access it on [http://localhost:3001](http://localhost:3001) (Demo ui runs on api port (3001). Other Ports: 3002, gateway (websocket) and 3003, CDN (http))
 
 ### Docker
 
