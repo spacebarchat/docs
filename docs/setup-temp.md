@@ -13,11 +13,11 @@ Double click the file to start the server. (The first time it takes longer as it
 You can now access it on [http://localhost:3001](http://localhost:3001).
 
 ### With terminal/shell
-### Manual Setup
+### Manual Setup (For every submodule required to run Fosscord-Server)
 
 This is the latest bleeding edge version of fosscord-server, which may have bugs.
 
-You need to install git from [git-scm.com](https://git-scm.com/downloads) or your package manager.
+You need to install git from [git-scm.com](https://git-scm.com/downloads) or your package manager and start it.
 
 You need to install nodejs from [nodejs.org](https://nodejs.org/) or your package manager.
 
