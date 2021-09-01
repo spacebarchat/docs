@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -417,12 +417,38 @@
     Getting Started
   </a>
   
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-database-query" class="md-nav__link">
+    Example database query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    Models
+  <a href="#entities" class="md-nav__link">
+    Entities
   </a>
+  
+    <nav class="md-nav" aria-label="Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-entity" class="md-nav__link">
+    Example entity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -435,8 +461,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#example-emit-event" class="md-nav__link">
+    Example emit event
   </a>
   
 </li>
@@ -690,12 +716,38 @@
     Getting Started
   </a>
   
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-database-query" class="md-nav__link">
+    Example database query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    Models
+  <a href="#entities" class="md-nav__link">
+    Entities
   </a>
+  
+    <nav class="md-nav" aria-label="Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-entity" class="md-nav__link">
+    Example entity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -708,8 +760,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#example-emit-event" class="md-nav__link">
+    Example emit event
   </a>
   
 </li>
@@ -738,76 +790,82 @@
                 
                 <h1 id="database">Database</h1>
 <h2 id="philosophy">Philosophy</h2>
-<p>We create <a href="http://mongoosejs.com/">mongoose</a> models and typescript interfaces for every data structure in the database.</p>
-<p>We use strings for all id's and for bitfields we use bigint's</p>
+<p>The instance hoster should be able to use any database they want for their specific size and purpose.</p>
+<p>That is why we use <a href="https://typeorm.io/">typeorm</a> for database entities (models) for every data structure we use, because typeorm supports many different database engines.</p>
+<p>We use strings for all ids and bitfields (Tho when working with bitfields we convert it to BigInts and pass it to the utility <code>BitField</code> class)</p>
 <h2 id="documentation">Documentation</h2>
-<p>Have a look at the <a href="https://mongoosejs.com/docs/">mongoose documentation</a> to get familiar with it or watch this <a href="https://youtu.be/WDrU305J1yw">tutorial</a></p>
+<p>Have a look at the <a href="https://typeorm.io/">typeorm documentation</a> to get familiar with it or watch this <a href="https://youtu.be/Paz0gnODPE0">tutorial</a>.</p>
+<p>TypeORM supports MySQL, MariaDB, Postgres, CockroachDB, SQLite, Microsoft SQL Server, Oracle, SAP Hana, sql.js</p>
 <h2 id="getting-started">Getting Started</h2>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">mongoose</span> <span class="kr">from</span> <span class="s2">&quot;mongoose&quot;</span><span class="p">;</span>
-</code></pre></div>
-<p>and now you can query the database, here are some examples:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildModel</span><span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
+<p>Import the entity you want to select, manipulate, delete or insert from <code>@fosscord/util</code></p>
+<p><a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/entities/index.ts">List of all entities</a>: <code>Application, Attachment, AuditLog, Ban, BaseClass, Channel, Config, ConnectedAccount, Emoji, Guild, Invite, Member, Message, RateLimit, ReadState, Recipient, Relationship, Role, Sticker, Team, TeamMember, Template, User, VoiceState, Webhook</code></p>
+<h3 id="example-database-query">Example database query</h3>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Guild</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 
-<span class="k">await</span> <span class="ow">new</span> <span class="nx">GuildModel</span><span class="p">({</span> <span class="p">...</span> <span class="p">}).</span><span class="nx">save</span><span class="p">();</span> <span class="c1">// inserts a new guild</span>
+<span class="k">await</span> <span class="ow">new</span> <span class="nx">Guild</span><span class="p">({</span> <span class="p">...</span> <span class="p">}).</span><span class="nx">save</span><span class="p">();</span> <span class="c1">// inserts a new guild or updates it if it already exists</span>
 
-<span class="kd">const</span> <span class="nx">guild</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">GuildModel</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="nx">id</span>: <span class="kt">...</span> <span class="p">}).</span><span class="nx">exec</span><span class="p">();</span> <span class="c1">// searches for a guild</span>
+<span class="kd">const</span> <span class="nx">guild</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Guild</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span> <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;23948723947932&quot;</span> <span class="p">}).</span><span class="nx">exec</span><span class="p">();</span> <span class="c1">// searches for a guild</span>
+
+<span class="k">await</span> <span class="nx">Guild</span><span class="p">.</span><span class="ow">delete</span><span class="p">({</span> <span class="nx">owner_id</span><span class="o">:</span> <span class="s2">&quot;34975309473&quot;</span> <span class="p">})</span>
 </code></pre></div>
-<h2 id="models">Models</h2>
-<p>We have mongoose Database Models and additionally <a href="https://www.typescriptlang.org/docs/handbook/interfaces.html">TypeScript Interfaces</a>.</p>
-<p>They are located in the repo <code>fosscord-server-util</code> under <code>/src/models/</code>.</p>
-<p>To add your own Database Model, create a new file and export the model and the interface.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">interface</span> <span class="nx">Event</span> <span class="k">extends</span> <span class="nx">Document</span> <span class="p">{</span>
-    <span class="nx">guild_id?</span>: <span class="kt">bigint</span><span class="p">;</span>
-    <span class="nx">user_id?</span>: <span class="kt">bigint</span><span class="p">;</span>
-    <span class="nx">channel_id?</span>: <span class="kt">bigint</span><span class="p">;</span>
-    <span class="nx">created_at?</span>: <span class="kt">number</span><span class="p">;</span>
-    <span class="nx">event</span>: <span class="kt">EVENT</span><span class="p">;</span>
-    <span class="nx">data?</span>: <span class="kt">any</span><span class="p">;</span>
+<h2 id="entities">Entities</h2>
+<p>The typeorm database entities are located in <a href="https://github.com/fosscord/fosscord-server/tree/master/util/src/entities"><code>util/src/entities/</code></a>.</p>
+<p>To add your own database entity, create a new file, export the model and import/export it in <a href="(https://github.com/fosscord/fosscord-server/tree/master/util/src/entities/index.ts)"><code>util/src/entities/index.ts</code></a>.</p>
+<h3 id="example-entity">Example entity</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">@Entity</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">User</span> <span class="k">extends</span> <span class="nx">BaseClass</span> <span class="p">{</span>
+    <span class="c1">// id column is automatically added by BaseClass</span>
+
+    <span class="kd">@Column</span><span class="p">()</span>
+    <span class="nx">username</span>: <span class="kt">string</span><span class="p">;</span>
+
+    <span class="kd">@JoinColumn</span><span class="p">({</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;connected_account_ids&quot;</span> <span class="p">})</span>
+    <span class="kd">@OneToMany</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">ConnectedAccount</span><span class="p">,</span> <span class="p">(</span><span class="nx">account</span>: <span class="kt">ConnectedAccount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">account</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span>
+    <span class="nx">connected_accounts</span>: <span class="kt">ConnectedAccount</span><span class="p">[];</span>
+
+    <span class="k">static</span> <span class="k">async</span> <span class="nx">getPublicUser</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">opts?</span>: <span class="kt">FindOneOptions</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span>
+            <span class="p">{</span> <span class="nx">id</span>: <span class="kt">user_id</span> <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="p">...</span><span class="nx">opts</span><span class="p">,</span>
+                <span class="nx">select</span><span class="o">:</span> <span class="p">[...</span><span class="nx">PublicUserProjection</span><span class="p">,</span> <span class="p">...(</span><span class="nx">opts</span><span class="o">?</span><span class="p">.</span><span class="nx">select</span> <span class="o">||</span> <span class="p">[])],</span>
+            <span class="p">}</span>
+        <span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user</span><span class="p">)</span> <span class="k">throw</span> <span class="ow">new</span> <span class="nx">HTTPError</span><span class="p">(</span><span class="s2">&quot;User not found&quot;</span><span class="p">,</span> <span class="mf">404</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">user</span><span class="p">;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">EventSchema</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Schema</span><span class="p">({</span>
-    <span class="nx">guild_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
-    <span class="nx">user_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
-    <span class="nx">channel_id</span>: <span class="kt">Types.Long</span><span class="p">,</span>
-    <span class="nx">created_at</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
-    <span class="nx">event</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span>: <span class="kt">true</span> <span class="p">},</span>
-    <span class="nx">data</span>: <span class="kt">Object</span><span class="p">,</span>
-<span class="p">});</span>
-
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">EventModel</span> <span class="o">=</span> <span class="nx">model</span><span class="o">&lt;</span><span class="nx">Event</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;Event&quot;</span><span class="p">,</span> <span class="nx">EventSchema</span><span class="p">,</span> <span class="s2">&quot;events&quot;</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="emit-events">Emit events</h2>
 <p>Most Routes modify the database and therefore need to inform the clients with events for data changes.</p>
-<p><em>(Events are stored in a MongoDB Event Store collection and distributed to the individual gateway servers)</em></p>
-<p>You can find all events on the <a href="https://discord.com/developers/docs/topics/gateway#commands-and-events">discord docs page</a> and in <a href="https://github.com/fosscord/fosscord-server-util/blob/master/src/models/Event.ts"><code>server-util/src/modesl/Event.ts</code></a></p>
-<p>To emit an event import the <code>emitEvent</code> function from <code>/src/util/Event.ts</code></p>
+<p>Events are either stored locally if the server was started through the bundle or in RabbitMQ and are distributed to the gateway servers.</p>
+<p>You can find all events on the <a href="https://discord.com/developers/docs/topics/gateway#commands-and-events">discord docs page</a> and in <a href="https://github.com/fosscord/fosscord-server/blob/master/util/src/interfaces/Event.ts"><code>util/src/interfaces/Event.ts</code></a>.</p>
+<p>To emit an event import the <code>emitEvent</code> function from <code>@fosscord/util</code></p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">emitEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;../../../util/Event&quot;</span><span class="p">;</span>
 </code></pre></div>
-<p>this will take a the following parameters:</p>
+<p>You need to specify whom you want to send the event to, to do that either pass <code>guild_id</code>, <code>user_id</code> or <code>channel_id</code>.
+Additionally you need to set the <a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts#L465">eventname</a> e.g. <code>GUILD_DELETE</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nx">guild_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to all guild members</span>
-    <span class="nx">channel_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to all channel members (e.g. group dm)</span>
+    <span class="nx">channel_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to all channel members</span>
     <span class="nx">user_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to the specific user</span>
-    <span class="nx">event</span>: <span class="kt">string</span><span class="p">;</span> <span class="c1">// the EVENTNAME, you can find all gateway event names in the fosscord-server-util Events file</span>
+    <span class="nx">event</span>: <span class="kt">string</span><span class="p">;</span> <span class="c1">// the EVENTNAME, you can find all gateway event names in the @fosscord/util Events file</span>
     <span class="nx">data?</span>: <span class="kt">any</span><span class="p">;</span> <span class="c1">// event payload data</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>For easy intellisense, annotate the parameter with the corresponding Event interface from <code>fosscord-server-util</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildDeleteEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
+<p>For easy intellisense, annotate the parameter with the corresponding <a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts">Event interface</a> from <code>@fosscord/util</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildDeleteEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@fosscord/util&quot;</span><span class="p">;</span>
 
 <span class="nx">emitEvent</span><span class="p">({...}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
-<span class="c1">// or with &lt;&gt; brackets:</span>
-<span class="nx">emitEvent</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">GuildDeleteEvent</span><span class="o">&gt;</span><span class="p">{...});</span>
 </code></pre></div>
-<h3 id="example">Example</h3>
+<h3 id="example-emit-event">Example emit event</h3>
 <p>Putting it all together:</p>
 <div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="nx">emitEvent</span><span class="p">({</span>
+    <span class="nx">user_id</span><span class="o">:</span> <span class="s2">&quot;3297349345345874&quot;</span><span class="p">,</span>
     <span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;GUILD_DELETE&quot;</span><span class="p">,</span>
     <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">id</span>: <span class="kt">guildID</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;96784598743975349&quot;</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="nx">guild_id</span>: <span class="kt">guildID</span><span class="p">,</span>
 <span class="p">}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
 </code></pre></div>
                 
@@ -885,10 +943,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
       
     
   </body>
