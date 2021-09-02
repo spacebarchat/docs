@@ -2,8 +2,7 @@
 
 ### What is Fosscord?
 
-Fosscord is a free open source selfhostable chat, voice and video
-discord-compatible platform
+Fosscord is a free open source selfhostable discord compatible chat, voice and video platform
 
 ### Why the name Fosscord?
 
@@ -37,7 +36,7 @@ features, so that it is not opinionated.
 
 ### Concept
 
-<img src="img/architecture.png" alt="Architecture">
+<img src="assets/architecture.png" alt="Architecture">
 
 ### Why backwards compatible to Discord?
 

@@ -1,8 +1,6 @@
-# Installation
+# UI Framework
 
 -   see: [@fosscord/ui](https://www.npmjs.com/package/@fosscord/ui)
-
-# Contribution
 
 ## Requirements
 

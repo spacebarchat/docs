@@ -1,8 +1,6 @@
-# Setup
+# Setup Server
 
-## Server
-
-### [Download](https://github.com/fosscord/fosscord-server/releases)
+## [Download](https://github.com/fosscord/fosscord-server/releases)
 
 This is the stable fosscord-server release.
 
@@ -12,7 +10,7 @@ Double click the file to start the server. (The first time it takes longer as it
 
 You can now access it on [http://localhost:3001](http://localhost:3001).
 
-### With terminal/shell
+## With terminal/shell
 
 This is the latest bleeding edge version of fosscord-server, which may have bugs.
 
@@ -31,7 +29,7 @@ npm start
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
 
-### Docker
+## Docker
 
 Optionally if you want to use Docker:
 
@@ -42,9 +40,3 @@ docker-compose up
 ```
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
-
-## Client
-
-Our client is not ready for the public. _([help contributing](https://github.com/fosscord/fosscord-client))_
-
-However the server already has a discord test client built in, which can be used to access Fosscord.
