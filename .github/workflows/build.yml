@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material mkdocs-section-index
+      - run: pip install mkdocs-material mkdocs-render-swagger-plugin
       - run: mkdocs build
       - run: echo docs.fosscord.com >> site/CNAME
       - name: Deploy 🚀
