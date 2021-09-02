@@ -3,8 +3,8 @@ repo_url: https://github.com/fosscord/fosscord
 edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
 site_description: Documentation of Fosscord a free open source selfhostable chat, voice and video discord-compatible platform
 plugins:
-  - section-index
   - search
+  - render_swagger
 theme:
   name: material
   logo: assets/logo.png
@@ -26,28 +26,6 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.top
-nav:
-  - index.md
-  - resources.md
-  - setup.md
-  - contributing.md
-  - encryption.md
-  - "API":
-      - api/index.md
-      - api/structure.md
-      - api/configuration.md
-      - server_util/database.md
-      - server_util/permissions.md
-      - api/route.md
-  - "Gateway":
-      - gateway/index.md
-      - gateway/structure.md
-  - "Ui Framework":
-      - ui/index.md
-      - ui/contribution_and_installation.md
-  - "Client":
-      - client/index.md
-      - plugins.md
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
