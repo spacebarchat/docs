@@ -41,7 +41,7 @@ features, so that it is not opinionated.
 ### Why backwards compatible to Discord?
 
 -   Benefit from the large user base of discord -> more users, making the switch
-    easier for new users & keeping workflows intact
+    easier for new users & keeping workflows intact and easily migrating existing discord bots
 -   No disadvantage for the users who use fosscord, so that they can still
     communicate with all their peers who use discord
 -   Discord has already built a great and stable protocol _(don't reinvent the
