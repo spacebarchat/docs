@@ -25,6 +25,7 @@ git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server
 cd bundle
 npm run setup
+npm start
 ```
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
