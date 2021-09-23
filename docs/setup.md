@@ -22,12 +22,14 @@ Now you can clone and start the server by executing this in the terminal/shell:
 
 ```
 git clone https://github.com/fosscord/fosscord-server
-cd fosscord-server/bundle
-npm install
-npm start
+cd fosscord-server
+cd bundle
+npm run setup
 ```
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
+
+To increase startup time you can just execute ``npm run start:bundle`` which skips the build process.
 
 ## Docker
 
