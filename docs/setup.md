@@ -30,7 +30,7 @@ npm start
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
 
-To increase startup time you can just execute ``npm run start:bundle`` which skips the build process.
+To decrease startup time you can just execute ``npm run start:bundle`` which skips the build process.
 
 ## Docker
 
