@@ -53,4 +53,4 @@ features, so that it is not opinionated.
 
 [Discord server](https://discord.gg/ZrnGQP6p3d)
 
-Ones we are finished, we'll host our own instance to host the support server.
+Once we are finished, we'll host our own instance to host the support server.
