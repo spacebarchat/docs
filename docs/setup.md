@@ -16,7 +16,7 @@ This is the latest bleeding edge version of fosscord-server, which may have bugs
 
 You need to install git from [git-scm.com](https://git-scm.com/downloads) or your package manager.
 
-You need to install nodejs from [nodejs.org](https://nodejs.org/) or your package manager.
+You need to install nodejs version 14 or higher from [nodejs.org](https://nodejs.org/) or your package manager.
 
 Now you can clone and start the server by executing this in the terminal/shell:
 
