@@ -25,12 +25,18 @@ git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server
 cd bundle
 npm run setup
-npm start
+npm run start:bundle
 ```
 
 You can now access it on [http://localhost:3001](http://localhost:3001)
 
-To decrease startup time you can just execute ``npm run start:bundle`` which skips the build process.
+To update it run (notice will discard all changed files):
+```
+git reset --hard HEAD
+git pull
+npm run setup
+npm run start:bundle
+```
 
 ## Docker
 
