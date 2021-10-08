@@ -16,7 +16,7 @@
     
     
       
-        <title>Encryption - Fosscord Docs</title>
+        <title>Bots - Fosscord Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#encryption" class="md-skip">
+        <a href="#bots" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Encryption
+              Bots
             
           </span>
         </div>
@@ -260,16 +260,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -296,51 +294,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Encryption
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/encryption/" class="md-nav__link">
         Encryption
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -352,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routes/" class="md-nav__link">
+      <a href="../../api/routes/" class="md-nav__link">
         Routes
       </a>
     </li>
@@ -512,14 +470,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -546,11 +506,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../setup/bots/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Bots
       </a>
+      
     </li>
   
 
@@ -562,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/server/" class="md-nav__link">
+      <a href="../server/" class="md-nav__link">
         Setup Server
       </a>
     </li>
@@ -595,21 +565,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -620,19 +575,17 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/api/encryption.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/bots.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="encryption">Encryption</h1>
-<h2 id="philosophy">Philosophy</h2>
-<p>Everything should be end-to-end encrypted by default.</p>
-<p>Everything should be configurable by the user/admin to their security needs.</p>
-<p>Once encryption is enabled you can't disable it anymore. <em>(Plain text channels need be created as such)</em></p>
-<p>End to end encryption should also be possible on unsupported servers e.g. discord.com. <em>(through special formatted messages)</em></p>
-<p>Based on the concept that the server cannot be trusted and could be compromised.</p>
-<p><em>more coming soon</em></p>
+                <h1 id="bots">Bots</h1>
+<p>Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.
+Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts.
+To get the user token, open the instance in your browser and enable DevTools (hit <code>F12</code> or <code>Right click on the page -&gt; Inspect</code>).
+Logout, register a new account and navigate to the network tab inside of the DevTools. (image coming soon)
+Enable the xhr/fetch request filter and click on any api request and copy the <code>Authorization</code> header.</p>
                 
               
               
@@ -657,7 +610,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../resources/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Resources" rel="prev">
+        <a href="../../contributing/ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI Framework" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -666,20 +619,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Resources
+              UI Framework
             </div>
           </div>
         </a>
       
       
         
-        <a href="../routes/" class="md-footer__link md-footer__link--next" aria-label="Next: Routes" rel="next">
+        <a href="../server/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup Server" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Routes
+              Setup Server
             </div>
           </div>
           <div class="md-footer__button md-icon">
