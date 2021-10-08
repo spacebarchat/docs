@@ -6,15 +6,15 @@
 -   [GitHub](https://github.com/fosscord/) (GitHub organization)
 -   [OpenCollective](https://opencollective.com/fosscord) (Financially support the project to cover server costs and other expenses)
 -   [Discord server](https://discord.gg/ZrnGQP6p3d) (for support & organization (If we are finished we'll host our own support server))
--   [Tor Hidden Service](http://7jexqzsbqndcsh6y7hybtaf5us5vt7mya7hi4fbi2tid6zazno3h44qd.onion/) (Better privacy for TOR users)
+-   [Tor Hidden Service](http://7jexqzsbqndcsh6y7hybtaf5us5vt7mya7hi4fbi2tid6zazno3h44qd.onion/) (Official Fosscord instance on TOR)
 
 ## Project structure
 
-Fosscord consists of many repositories, which together make up the client and the server:
+Fosscord consists of many repositories, which together make up the client and server:
 
 ### Server
 
--   **[fosscord-server](https://github.com/fosscord/fosscord-api) is the complete Fosscord Server**
+-   **[fosscord-server](https://github.com/fosscord/fosscord-api) is the complete Fosscord Server** and it
 
 Contains:
 

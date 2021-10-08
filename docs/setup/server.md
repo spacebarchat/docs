@@ -1,4 +1,4 @@
-# Setup Server
+# Server
 
 ## [Download](https://github.com/fosscord/fosscord-server/releases)
 
@@ -31,6 +31,7 @@ npm run start:bundle
 You can now access it on [http://localhost:3001](http://localhost:3001)
 
 To update it run (notice will discard all changed files):
+
 ```
 git reset --hard HEAD
 git pull

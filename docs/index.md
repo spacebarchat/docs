@@ -4,11 +4,6 @@
 
 Fosscord is a free open source selfhostable discord compatible chat, voice and video platform
 
-### Why the name Fosscord?
-
-Fosscord is a combination of the abbreviation FOSS (**F**ree **O**pen **S**ource
-**S**oftware) and the name Dis**cord**.
-
 ## Philosophy
 
 Fosscord aims to be a full one-on-one clone of Discord, adding more features

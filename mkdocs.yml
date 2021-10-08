@@ -3,6 +3,7 @@ repo_url: https://github.com/fosscord/fosscord
 edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
 site_description: Documentation of Fosscord a free open source selfhostable chat, voice and video discord-compatible platform
 plugins:
+  - section-index
   - search
   - render_swagger
 theme:
