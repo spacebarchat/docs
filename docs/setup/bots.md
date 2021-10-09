@@ -16,6 +16,8 @@ Currently the bot dashboard is still in development and not yet finished. Until 
 8. Click on any (api) request
 9. Inside of "Request Headers" copy the value of the `authorization` header.
 
+![Retrieve user token](https://user-images.githubusercontent.com/34555296/136654084-73c2c2a2-0a54-46f3-b10d-ff20cd64c656.jpg)
+
 **Done**: You now can use this copied token to login with your bot libary or authorize any api request by putting it inside the authorization header.
 
 **Notice**: Currently you can but don't need to prefix the token with "`Bot `".
