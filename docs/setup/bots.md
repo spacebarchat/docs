@@ -2,7 +2,7 @@
 
 Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.
 
-Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts.
+Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts. Similarly in the instances where the human/bot distinction is disabled, just a regular user would be used.
 
 ## Retrieve the user token:
 
@@ -17,10 +17,12 @@ Currently the bot dashboard is still in development and not yet finished. Until 
 
 **Done**: You now can use this token to login with your bot libary or authorize any api request by putting it inside the authorization header.
 
-**Notice**: Currently you can but don't need to prefix the token with "`Bot `"
+**Notice**: Currently you can but don't need to prefix the token with "`Bot `".
 
 ## Libraries
 
 ### Discord.js
 
 ### Discord.py
+
+### JDA
