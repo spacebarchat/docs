@@ -16,7 +16,7 @@
     
     
       
-        <title>Setup Server - Fosscord Docs</title>
+        <title>Server - Fosscord Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-server" class="md-skip">
+        <a href="#server" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup Server
+              Server
             
           </span>
         </div>
@@ -278,10 +278,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
-          Api
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../api/">Api</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Api" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -348,10 +354,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Client
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../client/">Client</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Client" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
@@ -418,10 +430,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5">
-          Contributing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contributing/">Contributing</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
@@ -490,10 +508,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_6">
-          Setup
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Setup</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Setup" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
@@ -532,12 +556,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Setup Server
+          Server
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Setup Server
+        Server
       </a>
       
         
@@ -653,7 +677,7 @@
                   </a>
                 
                 
-                <h1 id="setup-server">Setup Server</h1>
+                <h1 id="server">Server</h1>
 <h2 id="download"><a href="https://github.com/fosscord/fosscord-server/releases">Download</a></h2>
 <p>This is the stable fosscord-server release.</p>
 <p>Download the server release from <a href="https://github.com/fosscord/fosscord-server/releases">GitHub</a> for your operating system. (Size ~60mb)</p>
@@ -671,12 +695,12 @@ npm run setup
 npm run start:bundle
 </code></pre></div>
 <p>You can now access it on <a href="http://localhost:3001">http://localhost:3001</a></p>
-<p>To update it run (notice will discard all changed files):
+<p>To update it run (notice will discard all changed files):</p>
 <div class="highlight"><pre><span></span><code>git reset --hard HEAD
 git pull
 npm run setup
 npm run start:bundle
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="docker">Docker</h2>
 <p>Optionally if you want to use Docker:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/fosscord/fosscord-server

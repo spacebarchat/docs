@@ -278,10 +278,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
-          Api
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../api/">Api</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Api" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -348,10 +354,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Client
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../client/">Client</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Client" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
@@ -418,10 +430,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5">
-          Contributing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contributing/">Contributing</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
@@ -490,10 +508,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_6">
-          Setup
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Setup</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Setup" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
@@ -517,9 +541,73 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bots
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Bots
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-the-user-token" class="md-nav__link">
+    Retrieve the user token:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discordjs" class="md-nav__link">
+    Discord.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discordpy" class="md-nav__link">
+    Discord.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jda" class="md-nav__link">
+    JDA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -533,7 +621,7 @@
   
     <li class="md-nav__item">
       <a href="../server/" class="md-nav__link">
-        Setup Server
+        Server
       </a>
     </li>
   
@@ -565,6 +653,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-the-user-token" class="md-nav__link">
+    Retrieve the user token:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discordjs" class="md-nav__link">
+    Discord.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discordpy" class="md-nav__link">
+    Discord.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jda" class="md-nav__link">
+    JDA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -581,11 +718,65 @@
                 
                 
                 <h1 id="bots">Bots</h1>
-<p>Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.
-Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts.
-To get the user token, open the instance in your browser and enable DevTools (hit <code>F12</code> or <code>Right click on the page -&gt; Inspect</code>).
-Logout, register a new account and navigate to the network tab inside of the DevTools. (image coming soon)
-Enable the xhr/fetch request filter and click on any api request and copy the <code>Authorization</code> header.</p>
+<p>Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.</p>
+<p>Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts. Similarly in the instances where the human/bot distinction is disabled, just a regular user would be used.</p>
+<h2 id="retrieve-the-user-token">Retrieve the user token:</h2>
+<ol>
+<li>Open the instance in your browser</li>
+<li>Logout of your current account</li>
+<li>Register a new account</li>
+<li>Enable DevTools (hit <code>F12</code> or <code>Right click on the page -&gt; Inspect</code>).</li>
+<li>Open the network tab inside of DevTools</li>
+<li>Enable the xhr/fetch request filter</li>
+<li>Execute any kind of action (navigate to a channel, send a message)</li>
+<li>Click on any (api) request</li>
+<li>Inside of "Request Headers" copy the value of the <code>authorization</code> header.</li>
+</ol>
+<p><strong>Done</strong>: You now can use this copied token to login with your bot libary or authorize any api request by putting it inside the authorization header.</p>
+<p><strong>Notice</strong>: Currently you can but don't need to prefix the token with "<code>Bot</code>".</p>
+<h2 id="libraries">Libraries</h2>
+<p>Change <code>https://api.fosscord.com</code> to your desired endpoint.</p>
+<p>Replace <code>your token here</code> with your copied token.</p>
+<h3 id="discordjs">Discord.js</h3>
+<p>Inside the client option you can specify the api endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">Client</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;discord.js&quot;</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Client</span><span class="p">({</span>
+    <span class="nx">http</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">version</span><span class="o">:</span> <span class="mf">9</span><span class="p">,</span>
+        <span class="nx">api</span><span class="o">:</span> <span class="s2">&quot;https://api.fosscord.com&quot;</span><span class="p">,</span>
+        <span class="nx">cdn</span><span class="o">:</span> <span class="s2">&quot;https://cdn.fosscord.com&quot;</span><span class="p">,</span>
+        <span class="nx">invite</span><span class="o">:</span> <span class="s2">&quot;https://fosscord.com/invite&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="nx">client</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="discordpy">Discord.py</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="n">discord</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Route</span><span class="o">.</span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.fosscord.com&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;your token here&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="jda">JDA</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.lang.reflect.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">net.dv8tion.jda.internal.requests.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">JDA</span> <span class="n">jda</span> <span class="o">=</span> <span class="n">JDABuilder</span><span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;your token here&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+
+    <span class="n">Field</span> <span class="n">field</span> <span class="o">=</span> <span class="n">Requester</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;DISCORD_API_PREFIX&quot;</span><span class="p">)</span>
+    <span class="n">field</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+    <span class="n">Field</span> <span class="n">modifiers</span> <span class="o">=</span> <span class="n">Field</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;modifiers&quot;</span><span class="p">);</span>
+    <span class="n">modifiers</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="n">modifiers</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">field</span><span class="p">.</span><span class="na">getModifiers</span><span class="p">()</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">Modifier</span><span class="p">.</span><span class="na">FINAL</span><span class="p">);</span>
+
+    <span class="n">field</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;https://api.fosscord.com&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -610,7 +801,7 @@ Enable the xhr/fetch request filter and click on any api request and copy the <c
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../contributing/ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI Framework" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -619,20 +810,20 @@ Enable the xhr/fetch request filter and click on any api request and copy the <c
               <span class="md-footer__direction">
                 Previous
               </span>
-              UI Framework
+              Setup
             </div>
           </div>
         </a>
       
       
         
-        <a href="../server/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup Server" rel="next">
+        <a href="../server/" class="md-footer__link md-footer__link--next" aria-label="Next: Server" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Setup Server
+              Server
             </div>
           </div>
           <div class="md-footer__button md-icon">
