@@ -53,7 +53,7 @@ In order to have your questions resolved more quickly and efficiently, see also:
 - Any kind of violation can lead to removal of the offending content.
 - Kicks and bans apply to all communities administrated by Fosscord maintainers group.
 
-If a moderator violates the code of conduct, make sure to point it out to me. This can lead to warnings and demotion of the moderator. 
+If a moderator violates the code of conduct, make sure to point it out to me. This can lead to warnings and demotion of the moderator.
 
 If I myself violate the code of conduct, no such possibility exists. Thus, it is important to call me out, or make one of my friends or moderators call me out. Further steps will then be discussed ad hoc.
 
