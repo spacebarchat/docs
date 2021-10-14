@@ -4,28 +4,40 @@
 
 ## How to get started:
 
-1. Clone the docs repository
+1. Fork this repository.
+2. Clone the forked repository.
 
-```bash
-git clone https://github.com/fosscord/fosscord-docs
-```
+   ```bash
+   git clone https://github.com/<YOUR_USERNAME_HERE>/fosscord-docs
+   ```
 
-2. Install
+3. Install dependencies.
 
-```bash
-python3 -m pip install mkdocs-material mkdocs-section-index
-```
+   ```bash
+   python3 -m pip install mkdocs-material mkdocs-section-index
+   ```
 
-3. Test locally
+4. Test locally.
 
-- development:
+   - development:
 
-  ```bash
-  python3 -m mkdocs serve
-  ```
+     ```bash
+     python3 -m mkdocs serve
+     ```
 
-- production:
+   - production:
 
-  ```bash
-  python3 -m mkdocs build
-  ```
+     ```bash
+     python3 -m mkdocs build
+     ```
+
+5. Edit documents(s).
+
+6. Format document(s).
+
+   fosscord uses [prettier](https://prettier.io) formatter to consistently format our documents. Instructions to install and use prettier can be found [here](https://prettier.io/docs/en/install.html).
+
+   If you are using vscode, install the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format documents on save.
+
+7. Commit changes with good commit messages.
+8. Create a pull request.
