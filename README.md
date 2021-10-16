@@ -1,12 +1,43 @@
-# Fosscord Docs [![Build to GitHub Pages](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml/badge.svg)](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml)
+# Fosscord Docs
+
+[![Build to GitHub Pages](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml/badge.svg)](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## How to get started:
-`git clone https://github.com/fosscord/fosscord-docs && python3 -m pip install mkdocs-material mkdocs-section-index`
 
-- development:
+1. Fork this repository.
+2. Clone the forked repository.
 
-  `python3 -m mkdocs serve`
+   ```bash
+   git clone https://github.com/<YOUR_USERNAME_HERE>/fosscord-docs
+   ```
 
-- production:
+3. Install dependencies.
 
-  `python3 -m mkdocs build`
+   ```bash
+   python3 -m pip install mkdocs-material mkdocs-section-index
+   ```
+
+4. Test locally.
+
+   - development:
+
+     ```bash
+     python3 -m mkdocs serve
+     ```
+
+   - production:
+
+     ```bash
+     python3 -m mkdocs build
+     ```
+
+5. Edit documents(s).
+
+6. Format document(s).
+
+   fosscord uses [prettier](https://prettier.io) formatter to consistently format our documents. Instructions to install and use prettier can be found [here](https://prettier.io/docs/en/install.html).
+
+   If you are using vscode, install the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format documents on save.
+
+7. Commit changes with good commit messages.
+8. Create a pull request.

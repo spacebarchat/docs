@@ -90,8 +90,8 @@ Access the Config in your route:
 
 ```js
 router.get("/", (req: Request, res: Response) => {
-	// call Config.get() to get the whole config object and then just access the property you want
-	const { allowNewRegistration } = Config.get().register;
+  // call Config.get() to get the whole config object and then just access the property you want
+  const { allowNewRegistration } = Config.get().register;
 });
 ```
 
@@ -184,7 +184,7 @@ const max = 32;
 const type = String;
 
 {
-	username: new Length(min, max, type);
+  username: new Length(min, max, type);
 }
 ```
 
@@ -194,7 +194,11 @@ this will limit the maximum string/number/array length to the `min` and `max` va
 
 ```ts
 import { check, Length } from "/src/util/instanceOf";
-const SCHEMA = { username: new Length(2, 32, String), age: Number, $posts: [{ title: String }] };
+const SCHEMA = {
+  username: new Length(2, 32, String),
+  age: Number,
+  $posts: [{ title: String }],
+};
 app.post("/", check(SCHEMA), (req, res) => {});
 ```
 
@@ -206,26 +210,26 @@ The `errors` structure is a key-value Object describing what field contained the
 
 ```json
 {
-	"code": 50035,
-	"message": "Invalid Form Body",
-	"errors": {
-		"email": {
-			"_errors": [
-				{
-					"message": "Email is already registered",
-					"code": "EMAIL_ALREADY_REGISTERED"
-				}
-			]
-		},
-		"username": {
-			"_errors": [
-				{
-					"message": "Must be between 2 - 32 in length",
-					"code": "BASE_TYPE_BAD_LENGTH"
-				}
-			]
-		}
-	}
+  "code": 50035,
+  "message": "Invalid Form Body",
+  "errors": {
+    "email": {
+      "_errors": [
+        {
+          "message": "Email is already registered",
+          "code": "EMAIL_ALREADY_REGISTERED"
+        }
+      ]
+    },
+    "username": {
+      "_errors": [
+        {
+          "message": "Must be between 2 - 32 in length",
+          "code": "BASE_TYPE_BAD_LENGTH"
+        }
+      ]
+    }
+  }
 }
 ```
 
@@ -288,21 +292,24 @@ To add your own database entity, create a new file, export the model and import/
 ```ts
 @Entity("users")
 export class User extends BaseClass {
-	// id column is automatically added by BaseClass
+  // id column is automatically added by BaseClass
 
-	@Column()
-	username: string;
+  @Column()
+  username: string;
 
-	@JoinColumn({ name: "connected_account_ids" })
-	@OneToMany(() => ConnectedAccount, (account: ConnectedAccount) => account.user)
-	connected_accounts: ConnectedAccount[];
+  @JoinColumn({ name: "connected_account_ids" })
+  @OneToMany(
+    () => ConnectedAccount,
+    (account: ConnectedAccount) => account.user
+  )
+  connected_accounts: ConnectedAccount[];
 
-	static async getPublicUser(user_id: string, opts?: FindOneOptions<User>) {
-		return await User.findOneOrFail(
-			{ id: user_id },
-			{ ...opts, select: [...PublicUserProjection, ...(opts?.select || [])] }
-		);
-	}
+  static async getPublicUser(user_id: string, opts?: FindOneOptions<User>) {
+    return await User.findOneOrFail(
+      { id: user_id },
+      { ...opts, select: [...PublicUserProjection, ...(opts?.select || [])] }
+    );
+  }
 }
 ```
 
@@ -347,11 +354,11 @@ Putting it all together:
 
 ```ts
 await emitEvent({
-	user_id: "3297349345345874",
-	event: "GUILD_DELETE",
-	data: {
-		id: "96784598743975349",
-	},
+  user_id: "3297349345345874",
+  event: "GUILD_DELETE",
+  data: {
+    id: "96784598743975349",
+  },
 } as GuildDeleteEvent);
 ```
 
