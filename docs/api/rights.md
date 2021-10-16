@@ -9,8 +9,7 @@ Right | Value | Grants when it's 1
 -- | -- | --
 `OPERATOR` | 1 << 0 | All rights
 `MANAGE_APPLICATIONS` | 1 << 1 | Ability to alter or remove others' applications
-`MANAGE_GUILDS` | 1 << 2 | Same as the per-guild `MANAGE_GUILD` permission, but applies to all guilds and DM channels,
-can join any guild without invite
+`MANAGE_GUILDS` | 1 << 2 | Same as the per-guild `MANAGE_GUILD` permission, but applies to all guilds and DM channels, can join any guild without invite
 `MANAGE_MESSAGES` | 1 << 3 | Can delete or edit any message they can read
 `MANAGE_RATE_LIMITS` | 1 << 4 | Add, change, define rate limits of other users, can also grant `BYPASS_RATE_LIMITS` if the user also has `BYPASS_RATE_LIMITS` and `MANAGE_USERS`
 `MANAGE_ROUTING` | 1 << 5 | Create, alter, enable, disable custom message routing rules in any channel/guild
@@ -24,8 +23,7 @@ can join any guild without invite
 `CREATE_DM_GROUPS` | 1 << 13 | Can create group DMs (a user without `SEND_MESSAGES` cannot be added however)
 `CREATE_GUILDS` | 1 << 14 | Can create mass invites in the guilds that they have `CREATE_INSTANT_INVITE`
 `CREATE_GUILDS` | 1 << 15 | Can create guilds
-`CREATE_ROLES` | 1 << 16 | Can create roles and per-guild or per-channel permission overrides
-in the guilds that they have permissions
+`CREATE_ROLES` | 1 << 16 | Can create roles and per-guild or per-channel permission overrides in the guilds that they have permissions
 `CREATE_TEMPLATES`  | 1 << 17 | Can create templates for guilds, custom channels and channels with custom routing
 `CREATE_WEBHOOKS` | 1 << 18 | Can create webhooks in the guilds that they have permissions
 `JOIN_GUILDS` | 1 << 19 | Can join guilds by using invites or vanity names
