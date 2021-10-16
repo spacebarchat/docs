@@ -12,8 +12,7 @@ Right | Value | Grants when it's 1
 `MANAGE_GUILDS` | 1 << 2 | Same as the per-guild `MANAGE_GUILD` permission, but applies to all guilds and DM channels,
 can join any guild without invite
 `MANAGE_MESSAGES` | 1 << 3 | Can delete or edit any message they can read
-`MANAGE_RATE_LIMITS` | 1 << 4 | Add, change, define rate limits of other users, can also grant `BYPASS_RATE_LIMITS`
-if the user also has `BYPASS_RATE_LIMITS` and `MANAGE_USERS`
+`MANAGE_RATE_LIMITS` | 1 << 4 | Add, change, define rate limits of other users, can also grant `BYPASS_RATE_LIMITS` if the user also has `BYPASS_RATE_LIMITS` and `MANAGE_USERS`
 `MANAGE_ROUTING` | 1 << 5 | Create, alter, enable, disable custom message routing rules in any channel/guild
 `MANAGE_TICKETS` | 1 << 6 | Respond to or resolve other users' support tickets
 `MANAGE_USERS` | 1 << 7 | Create, alter, remove, ban users, create controlled account groups
