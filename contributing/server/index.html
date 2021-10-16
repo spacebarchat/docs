@@ -1268,8 +1268,8 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 </code></pre></div>
 <p>Access the Config in your route:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="o">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="o">:</span> <span class="nx">Response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// call Config.get() to get the whole config object and then just access the property you want</span>
-    <span class="kd">const</span> <span class="p">{</span> <span class="nx">allowNewRegistration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
+  <span class="c1">// call Config.get() to get the whole config object and then just access the property you want</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">allowNewRegistration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><code>Config.get()</code> returns the current config object and is not expensive at all</p>
@@ -1321,39 +1321,43 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <span class="kd">const</span> <span class="kr">type</span> <span class="o">=</span> <span class="nb">String</span><span class="p">;</span>
 
 <span class="p">{</span>
-    <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kr">type</span><span class="p">);</span>
+  <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kr">type</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>this will limit the maximum string/number/array length to the <code>min</code> and <code>max</code> value.</p>
 <h4 id="example_1">Example</h4>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">Length</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">SCHEMA</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span> <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span> <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}]</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">SCHEMA</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span>
+  <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span>
+  <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}],</span>
+<span class="p">};</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(</span><span class="nx">SCHEMA</span><span class="p">),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
 </code></pre></div>
 <h4 id="throw-errors">Throw Errors</h4>
 <p>If the body validation fails it will automatically throw an error.</p>
 <p>The <code>errors</code> structure is a key-value Object describing what field contained the error:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">50035</span><span class="p">,</span>
-    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid Form Body&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Email is already registered&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL_ALREADY_REGISTERED&quot;</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Must be between 2 - 32 in length&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BASE_TYPE_BAD_LENGTH&quot;</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">50035</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid Form Body&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Email is already registered&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL_ALREADY_REGISTERED&quot;</span>
         <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Must be between 2 - 32 in length&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BASE_TYPE_BAD_LENGTH&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
     <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>To manually throw a <code>FieldError</code> import <code>FieldErrors</code></p>
@@ -1389,21 +1393,24 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <h4 id="example-entity">Example entity</h4>
 <div class="highlight"><pre><span></span><code><span class="kd">@Entity</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
 <span class="k">export</span> <span class="kd">class</span> <span class="nx">User</span> <span class="k">extends</span> <span class="nx">BaseClass</span> <span class="p">{</span>
-    <span class="c1">// id column is automatically added by BaseClass</span>
+  <span class="c1">// id column is automatically added by BaseClass</span>
 
-    <span class="kd">@Column</span><span class="p">()</span>
-    <span class="nx">username</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="kd">@Column</span><span class="p">()</span>
+  <span class="nx">username</span>: <span class="kt">string</span><span class="p">;</span>
 
-    <span class="kd">@JoinColumn</span><span class="p">({</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;connected_account_ids&quot;</span> <span class="p">})</span>
-    <span class="kd">@OneToMany</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">ConnectedAccount</span><span class="p">,</span> <span class="p">(</span><span class="nx">account</span>: <span class="kt">ConnectedAccount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">account</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span>
-    <span class="nx">connected_accounts</span>: <span class="kt">ConnectedAccount</span><span class="p">[];</span>
+  <span class="kd">@JoinColumn</span><span class="p">({</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;connected_account_ids&quot;</span> <span class="p">})</span>
+  <span class="kd">@OneToMany</span><span class="p">(</span>
+    <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">ConnectedAccount</span><span class="p">,</span>
+    <span class="p">(</span><span class="nx">account</span>: <span class="kt">ConnectedAccount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">account</span><span class="p">.</span><span class="nx">user</span>
+  <span class="p">)</span>
+  <span class="nx">connected_accounts</span>: <span class="kt">ConnectedAccount</span><span class="p">[];</span>
 
-    <span class="k">static</span> <span class="k">async</span> <span class="nx">getPublicUser</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">opts?</span>: <span class="kt">FindOneOptions</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findOneOrFail</span><span class="p">(</span>
-            <span class="p">{</span> <span class="nx">id</span>: <span class="kt">user_id</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="p">...</span><span class="nx">opts</span><span class="p">,</span> <span class="nx">select</span><span class="o">:</span> <span class="p">[...</span><span class="nx">PublicUserProjection</span><span class="p">,</span> <span class="p">...(</span><span class="nx">opts</span><span class="o">?</span><span class="p">.</span><span class="nx">select</span> <span class="o">||</span> <span class="p">[])]</span> <span class="p">}</span>
-        <span class="p">);</span>
-    <span class="p">}</span>
+  <span class="k">static</span> <span class="k">async</span> <span class="nx">getPublicUser</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">opts?</span>: <span class="kt">FindOneOptions</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findOneOrFail</span><span class="p">(</span>
+      <span class="p">{</span> <span class="nx">id</span>: <span class="kt">user_id</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="p">...</span><span class="nx">opts</span><span class="p">,</span> <span class="nx">select</span><span class="o">:</span> <span class="p">[...</span><span class="nx">PublicUserProjection</span><span class="p">,</span> <span class="p">...(</span><span class="nx">opts</span><span class="o">?</span><span class="p">.</span><span class="nx">select</span> <span class="o">||</span> <span class="p">[])]</span> <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="emit-events">Emit Events</h2>
@@ -1431,11 +1438,11 @@ Additionally you need to set the <a href="https://github.com/fosscord/fosscord-s
 <h3 id="example_2">Example</h3>
 <p>Putting it all together:</p>
 <div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="nx">emitEvent</span><span class="p">({</span>
-    <span class="nx">user_id</span><span class="o">:</span> <span class="s2">&quot;3297349345345874&quot;</span><span class="p">,</span>
-    <span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;GUILD_DELETE&quot;</span><span class="p">,</span>
-    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;96784598743975349&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
+  <span class="nx">user_id</span><span class="o">:</span> <span class="s2">&quot;3297349345345874&quot;</span><span class="p">,</span>
+  <span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;GUILD_DELETE&quot;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;96784598743975349&quot;</span><span class="p">,</span>
+  <span class="p">},</span>
 <span class="p">}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="permissions">Permissions</h2>
