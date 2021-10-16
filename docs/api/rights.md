@@ -11,11 +11,11 @@ Right | Value | Grants when it's 1
 `MANAGE_APPLICATIONS` | 1 << 1 | Ability to alter or remove others' applications
 `MANAGE_GUILDS` | 1 << 2 | Same as the per-guild `MANAGE_GUILD` permission, but applies to all guilds and DM channels, can join any guild without invite
 `MANAGE_MESSAGES` | 1 << 3 | Can delete or edit any message they can read
-`MANAGE_RATE_LIMITS` | 1 << 4 | Add, change, define rate limits of other users, can also grant `BYPASS_RATE_LIMITS` if the user also has `BYPASS_RATE_LIMITS` and `MANAGE_USERS`
+`MANAGE_RATE_LIMITS` | 1 << 4 | Add, change, define rate limits of other users, can also grant others `BYPASS_RATE_LIMITS` when combined with `BYPASS_RATE_LIMITS` and `MANAGE_USERS`
 `MANAGE_ROUTING` | 1 << 5 | Create, alter, enable, disable custom message routing rules in any channel/guild
 `MANAGE_TICKETS` | 1 << 6 | Respond to or resolve other users' support tickets
-`MANAGE_USERS` | 1 << 7 | Create, alter, remove, ban users, create controlled account groups
-`ADD_MEMBERS` | 1 << 0 | Can manually add members into their guilds and group DMs
+`MANAGE_USERS` | 1 << 7 | Create, alter, remove, ban users; create, modify, remove user groups
+`ADD_MEMBERS` | 1 << 8 | Can manually add members into their guilds and group DMs
 `BYPASS_RATE_LIMITS` | 1 << 9 | Makes the user exempt from all rate limits
 `CREATE_APPLICATIONS` | 1 << 10 | Can create, edit, remove own applications
 `CREATE_CHANNELS` | 1 << 11 | Can create guild channels and custom channels
@@ -34,8 +34,8 @@ Right | Value | Grants when it's 1
 `SELF_EDIT_NAME`  | 1 << 24 | Can edit own username, nickname and avatar
 `SEND_MESSAGES` | 1 << 25 | Can send messages in the channels that they have permissions
 `USE_ACTIVITIES`  | 1 << 26 | Can use voice activities, such as watch together or whiteboard
-`USE_VIDEO` | 1 << 27 | Can use video and screenshare
-`USE_VOICE` | 1 << 28 | Can use voice
+`USE_VIDEO` | 1 << 27 | Can use video and screenshare in guilds/channels that they have permissions
+`USE_VOICE` | 1 << 28 | Can use voice in guilds/channels that they have permissions
 `INVITE_USERS` | 1 << 29 | Can create user-specific invites in the guilds that they have `INVITE_USERS`
 `SELF_DELETE_DISABLE` | 1 << 30 | Can delete/disable own account
 `DEBTABLE` | 1 << 31 | Can use pay-to-use features once paid
