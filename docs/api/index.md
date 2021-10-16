@@ -1,5 +1,5 @@
 # API
 
-## [Encryption](encryption/)
+## [Encryption](encryption.md)
 
-## [Routes](routes/)
+## [Routes](routes.md)
