@@ -701,7 +701,7 @@ such as the ability to edit one's own messages.</p>
 <tr>
 <td><code>MANAGE_RATE_LIMITS</code></td>
 <td>1 &lt;&lt; 4</td>
-<td>Add, change, define rate limits of other users, can also grant <code>BYPASS_RATE_LIMITS</code> if the user also has <code>BYPASS_RATE_LIMITS</code> and <code>MANAGE_USERS</code></td>
+<td>Add, change, define rate limits of other users, can also grant others <code>BYPASS_RATE_LIMITS</code> when combined with <code>BYPASS_RATE_LIMITS</code> and <code>MANAGE_USERS</code></td>
 </tr>
 <tr>
 <td><code>MANAGE_ROUTING</code></td>
@@ -716,11 +716,11 @@ such as the ability to edit one's own messages.</p>
 <tr>
 <td><code>MANAGE_USERS</code></td>
 <td>1 &lt;&lt; 7</td>
-<td>Create, alter, remove, ban users, create controlled account groups</td>
+<td>Create, alter, remove, ban users; create, modify, remove user groups</td>
 </tr>
 <tr>
 <td><code>ADD_MEMBERS</code></td>
-<td>1 &lt;&lt; 0</td>
+<td>1 &lt;&lt; 8</td>
 <td>Can manually add members into their guilds and group DMs</td>
 </tr>
 <tr>
@@ -816,12 +816,12 @@ such as the ability to edit one's own messages.</p>
 <tr>
 <td><code>USE_VIDEO</code></td>
 <td>1 &lt;&lt; 27</td>
-<td>Can use video and screenshare</td>
+<td>Can use video and screenshare in guilds/channels that they have permissions</td>
 </tr>
 <tr>
 <td><code>USE_VOICE</code></td>
 <td>1 &lt;&lt; 28</td>
-<td>Can use voice</td>
+<td>Can use voice in guilds/channels that they have permissions</td>
 </tr>
 <tr>
 <td><code>INVITE_USERS</code></td>
