@@ -2,7 +2,7 @@
 
 ### What is Fosscord?
 
-Fosscord is a free open source selfhostable discord compatible chat, voice and video platform
+Fosscord is a free open source self-hostable discord compatible chat, voice and video platform.
 
 ## Philosophy
 
@@ -42,7 +42,7 @@ features, so that it is not opinionated.
 - Discord has already built a great and stable protocol _(don't reinvent the
   wheel)_
 - The community can extend and customize their clients and servers by
-  selfhosting them and developing and installing addons
+  self-hosting them and developing and installing addons
 
 ## Support
 

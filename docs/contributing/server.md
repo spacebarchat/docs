@@ -8,13 +8,11 @@ Accept the [code of conduct](/contributing/) and follow the server [setup guide]
 
 The Gateway is a WebSocket server that is responsible for listening and emitting events.
 
-You can find the Roadmap overview [here](https://github.com/fosscord/fosscord-gateway/projects/3).
+For documentation, head over to the [Discord docs](https://discord.dev) as our own documentation is not written yet.
 
-For documentation, head over to the [Discord docs](https://discord.dev). (our own documention is not written yet)
+If you want to work on a feature, please comment on the corresponding issue or open a issue so so nobody implements something twice.
 
-If you want to work on a feature please comment on the corresponding issue so we can assign it you that nobody implements something twice.
-
-For the WebSocket, we use [ws](https://www.npmjs.com/package/ws) and we'll write our own packet handler for the individual opcodes and events.
+For the WebSocket, we use the [ws](https://www.npmjs.com/package/ws) package and we'll write our own packet handler for the individual opcodes and events.
 
 ## API
 
@@ -71,13 +69,13 @@ The config should have reasonable defaults similar to discord.
 
 Only in special cases it should require a third party config value.
 
-The config should be changeable over the admin fosscord-dashboard and update in realtime without the need to restart the servers
+The config should be changeable over the [admin dashboard](https://github.com/fosscord/fosscord-server/tree/master/dashboard) and update in realtime without the need to restart the servers.
 
 The very first time the server starts, it saves to default config in the database. The next start it will load the config from the database.
 
 ### Example
 
-You **should not** `get()` the Config in the root of your file and it instead load the config every time you access a value
+You **should not** `get()` the Config in the root of your file and it instead load the config every time you access a value.
 
 Import `Config` from fosscord-server-util:
 
@@ -90,8 +88,8 @@ Access the Config in your route:
 
 ```js
 router.get("/", (req: Request, res: Response) => {
-  // call Config.get() to get the whole config object and then just access the property you want
-  const { allowNewRegistration } = Config.get().register;
+    // call Config.get() to get the whole config object and then just access the property you want
+    const { allowNewRegistration } = Config.get().register;
 });
 ```
 
@@ -99,7 +97,7 @@ router.get("/", (req: Request, res: Response) => {
 
 ### Extending
 
-The default Config is located in [server-util `/src/util/Config.ts`](https://github.com/fosscord/fosscord-server-util/blob/master/src/util/Config.ts) and exports a `interface DefaultOptions` and a `const DefaultOptions` object with reasonable default values.
+The default Config is located in [server-util `/src/util/Config.ts`](https://github.com/fosscord/fosscord-server/blob/master/util/src/util/Config.ts) and exports a `interface DefaultOptions` and a `const DefaultOptions` object with reasonable default values.
 
 To add your own values to the config, add the properties to the `interface` with corresponding types and add default values to `const DefaultOptions`.
 
@@ -137,7 +135,7 @@ router.get("/members", (req, res) => {});
 
 Every request must contain the authorization header except the `/login` and `/register` route.
 
-You can add additional non-auth routes in [`/src/middlewares/Authentication.ts`](https://github.com/fosscord/fosscord-api/blob/master/src/middlewares/Authentication.ts#L5)
+You can add additional non-auth routes in [`/src/middlewares/Authentication.ts`](https://github.com/fosscord/fosscord-server/blob/master/api/src/middlewares/Authentication.ts#L5)
 
 To access the user id for the current request use `req.user_id`
 
@@ -167,7 +165,7 @@ A Schema is a Object Structure with key-value objects that checks if the supplie
 
 _Notice if you use e.g. BigInt even if you can't supply it with JSON, it will automatically convert the supplied JSON number/string to a BigInt._
 
-_Also if you want to check for an array of, just put the type inside `[]`_
+_Also if you want to check for an array of, just put the type inside `[]`._
 
 #### Optional Parameter
 
@@ -184,7 +182,7 @@ const max = 32;
 const type = String;
 
 {
-  username: new Length(min, max, type);
+    username: new Length(min, max, type);
 }
 ```
 
@@ -195,9 +193,9 @@ this will limit the maximum string/number/array length to the `min` and `max` va
 ```ts
 import { check, Length } from "/src/util/instanceOf";
 const SCHEMA = {
-  username: new Length(2, 32, String),
-  age: Number,
-  $posts: [{ title: String }],
+    username: new Length(2, 32, String),
+    age: Number,
+    $posts: [{ title: String }],
 };
 app.post("/", check(SCHEMA), (req, res) => {});
 ```
@@ -210,26 +208,26 @@ The `errors` structure is a key-value Object describing what field contained the
 
 ```json
 {
-  "code": 50035,
-  "message": "Invalid Form Body",
-  "errors": {
-    "email": {
-      "_errors": [
-        {
-          "message": "Email is already registered",
-          "code": "EMAIL_ALREADY_REGISTERED"
+    "code": 50035,
+    "message": "Invalid Form Body",
+    "errors": {
+        "email": {
+            "_errors": [
+                {
+                    "message": "Email is already registered",
+                    "code": "EMAIL_ALREADY_REGISTERED"
+                }
+            ]
+        },
+        "username": {
+            "_errors": [
+                {
+                    "message": "Must be between 2 - 32 in length",
+                    "code": "BASE_TYPE_BAD_LENGTH"
+                }
+            ]
         }
-      ]
-    },
-    "username": {
-      "_errors": [
-        {
-          "message": "Must be between 2 - 32 in length",
-          "code": "BASE_TYPE_BAD_LENGTH"
-        }
-      ]
     }
-  }
 }
 ```
 
@@ -239,9 +237,9 @@ To manually throw a `FieldError` import `FieldErrors`
 import { FieldErrors } from /src/iltu / instanceOf;
 ```
 
-To make sure your errors are understood in all languages translate it with [i18next](https://www.i18next.com/translation-function/essentials) and `req.t`
+To make sure your errors are understood in all languages translate it with [i18next](https://www.i18next.com/translation-function/essentials) and `req.t`.
 
-So after you have checked the field is invalid throw the `FieldErrors`
+So after you have checked the field is invalid throw the `FieldErrors`.
 
 ```ts
 throw FieldErrors(( login: { message: req.t("auth:login.INVALID_LOGIN"), code: "INVALID_LOGIN" }});
@@ -255,19 +253,19 @@ The instance hoster should be able to use any database they want for their speci
 
 That is why we use [typeorm](https://typeorm.io/) for database entities (models) for every data structure we use, because typeorm supports many different database engines.
 
-We use strings for all ids and bitfields (Tho when working with bitfields we convert it to BigInts and pass it to the utility `BitField` class)
+We use strings for all ids and bitfields (Tho when working with bitfields we convert it to BigInts and pass it to the utility `BitField` class).
 
 ### General
 
 Have a look at the [typeorm documentation](https://typeorm.io/) to get familiar with it or watch this [tutorial](https://youtu.be/Paz0gnODPE0).
 
-TypeORM supports MySQL, MariaDB, Postgres, CockroachDB, SQLite, Microsoft SQL Server, Oracle, SAP Hana, sql.js
+TypeORM supports MySQL, MariaDB, Postgres, CockroachDB, SQLite, Microsoft SQL Server, Oracle, SAP Hana, sql.js.
 
 ### Getting Started
 
 Import the entity you want to select, manipulate, delete or insert from `@fosscord/util`
 
-[List of all entities](https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/entities/index.ts): `Application, Attachment, AuditLog, Ban, BaseClass, Channel, Config, ConnectedAccount, Emoji, Guild, Invite, Member, Message, RateLimit, ReadState, Recipient, Relationship, Role, Sticker, Team, TeamMember, Template, User, VoiceState, Webhook`
+[List of all entities](https://github.com/fosscord/fosscord-server/blob/master/util/src/entities/index.ts): `Application, Attachment, AuditLog, Ban, BaseClass, Channel, Config, ConnectedAccount, Emoji, Guild, Invite, Member, Message, RateLimit, ReadState, Recipient, Relationship, Role, Sticker, Team, TeamMember, Template, User, VoiceState, Webhook`
 
 ### Example database query
 
@@ -292,24 +290,27 @@ To add your own database entity, create a new file, export the model and import/
 ```ts
 @Entity("users")
 export class User extends BaseClass {
-  // id column is automatically added by BaseClass
+    // id column is automatically added by BaseClass
 
-  @Column()
-  username: string;
+    @Column()
+    username: string;
 
-  @JoinColumn({ name: "connected_account_ids" })
-  @OneToMany(
-    () => ConnectedAccount,
-    (account: ConnectedAccount) => account.user
-  )
-  connected_accounts: ConnectedAccount[];
+    @JoinColumn({ name: "connected_account_ids" })
+    @OneToMany(
+        () => ConnectedAccount,
+        (account: ConnectedAccount) => account.user
+    )
+    connected_accounts: ConnectedAccount[];
 
-  static async getPublicUser(user_id: string, opts?: FindOneOptions<User>) {
-    return await User.findOneOrFail(
-      { id: user_id },
-      { ...opts, select: [...PublicUserProjection, ...(opts?.select || [])] }
-    );
-  }
+    static async getPublicUser(user_id: string, opts?: FindOneOptions<User>) {
+        return await User.findOneOrFail(
+            { id: user_id },
+            {
+                ...opts,
+                select: [...PublicUserProjection, ...(opts?.select || [])],
+            }
+        );
+    }
 }
 ```
 
@@ -328,7 +329,7 @@ import { emitEvent } from "../../../util/Event";
 ```
 
 You need to specify whom you want to send the event to, to do that either pass `guild_id`, `user_id` or `channel_id`.
-Additionally you need to set the [eventname](https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts#L465) e.g. `GUILD_DELETE`.
+Additionally you need to set the [eventname](https://github.com/fosscord/fosscord-server/blob/master/util/src/interfaces/Event.ts#L539) e.g. `GUILD_DELETE`.
 
 ```ts
 {
@@ -340,7 +341,7 @@ Additionally you need to set the [eventname](https://github.com/fosscord/fosscor
 }
 ```
 
-For easy intellisense, annotate the parameter with the corresponding [Event interface](https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts) from `@fosscord/util`:
+For easy intellisense, annotate the parameter with the corresponding [Event interface](https://github.com/fosscord/fosscord-server/blob/master/util/src/interfaces/Event.ts) from `@fosscord/util`:
 
 ```ts
 import { GuildDeleteEvent } from "@fosscord/util";
@@ -354,11 +355,11 @@ Putting it all together:
 
 ```ts
 await emitEvent({
-  user_id: "3297349345345874",
-  event: "GUILD_DELETE",
-  data: {
-    id: "96784598743975349",
-  },
+    user_id: "3297349345345874",
+    event: "GUILD_DELETE",
+    data: {
+        id: "96784598743975349",
+    },
 } as GuildDeleteEvent);
 ```
 
@@ -370,7 +371,7 @@ To get the permission for a guild member import the `getPermission` from `fossco
 import { getPermission } from "fosscord-server-util";
 ```
 
-The first argument is the user_id the second the guild_id and the third an optional channel_id
+The first argument is the user_id the second the guild_id and the third an optional channel_id.
 
 ```ts
 const permissions = await getPermission(user_id: string, guild_id: string, channel_id?: string)

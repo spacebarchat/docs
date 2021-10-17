@@ -1,14 +1,14 @@
 # UI Framework
 
-- see: [@fosscord/ui](https://www.npmjs.com/package/@fosscord/ui)
+-   see: [@fosscord/ui](https://www.npmjs.com/package/@fosscord/ui)
 
 ## Requirements
 
 You should be familiar with:
 
-- [Git](https://git-scm.com/)
-- [NodeJS](https://nodejs.org/)
-- [SCSS](https://sass-lang.com/)
+-   [Git](https://git-scm.com/)
+-   [NodeJS](https://nodejs.org/)
+-   [SCSS](https://sass-lang.com/)
 
 ## Getting Started
 

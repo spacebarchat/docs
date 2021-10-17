@@ -14,30 +14,30 @@
 3. Install dependencies.
 
    ```bash
-   python3 -m pip install mkdocs-material mkdocs-section-index
+   python3 -m pip install mkdocs-material mkdocs-render-swagger-plugin mkdocs-section-index
    ```
 
-4. Test locally.
+4. Edit documents(s).
 
-   - development:
-
-     ```bash
-     python3 -m mkdocs serve
-     ```
-
-   - production:
-
-     ```bash
-     python3 -m mkdocs build
-     ```
-
-5. Edit documents(s).
-
-6. Format document(s).
+   - Format document(s).
 
    fosscord uses [prettier](https://prettier.io) formatter to consistently format our documents. Instructions to install and use prettier can be found [here](https://prettier.io/docs/en/install.html).
 
    If you are using vscode, install the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format documents on save.
 
-7. Commit changes with good commit messages.
-8. Create a pull request.
+5. Test locally.
+
+   - Serve in http://127.0.0.1:8000 with hot reload:
+
+     ```bash
+     python3 -m mkdocs serve
+     ```
+
+   - Build for production:
+
+     ```bash
+     python3 -m mkdocs build
+     ```
+
+6. Commit changes with good commit messages.
+7. Create a pull request.
