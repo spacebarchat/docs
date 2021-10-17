@@ -682,27 +682,37 @@
                 <h1 id="plugins">Plugins</h1>
 <h2 id="philosophy">Philosophy</h2>
 <ul>
-<li>Plugins are executed in their environment to prevent security issues</li>
-<li>Plugins can create their own UI and loaded in a separate view <em>(similar to vscode extensions)</em></li>
-<li>Plugins can access the component Api and therefore extend the client UI</li>
-<li>Plugins can access the WebSocket Connection/Rest API and intercept/transform events</li>
-<li>Plugins are restricted and can only do actions with the corresponding permission</li>
-<li>Plugins should be accessible through a store that needs to verify the plugins (with dev options to sideload plugins/add other stores)</li>
+<li>Plugins are executed in their environment to prevent security issues.</li>
+<li>Plugins can create their own UI and loaded in a separate view <em>(similar to vscode extensions)</em>.</li>
+<li>Plugins can access the component Api and therefore extend the client UI.</li>
+<li>Plugins can access the WebSocket Connection/Rest API and intercept/transform events.</li>
+<li>Plugins are restricted and can only do actions with the corresponding permission.</li>
+<li>Plugins should be accessible through a store that needs to verify the plugins (with dev options to load plugins/add other stores).</li>
 </ul>
 <h2 id="permissions">Permissions</h2>
 <ul>
-<li>Can't access the user's token (token plugins should rather be directly integrated into the client (e.g. account switcher))</li>
-<li>All permissions must meet the purpose of the plugin and must justify why they need the certain permission to be approved</li>
-<li>Shouldn't be able to make any request, except if it:</li>
-<li>Requests permission to access the api of the network</li>
-<li>Requests permission to access a specific domain (e.g. plugins backend)</li>
-<li>Requests permission to access all domains</li>
-<li>Shouldn't be able to intercept events, except if it:</li>
-<li>Requests permission to a specific event(s)</li>
-<li>Requests permission to all events</li>
-<li>Needs to request permission to be able to extend the client's UI</li>
+<li>Can't access the user's token (token plugins should rather be directly integrated into the client (e.g. account switcher)).</li>
+<li>All permissions must meet the purpose of the plugin and must justify why they need the certain permission to be approved.</li>
+<li>
+<p>Shouldn't be able to make any request, except if it:</p>
+<ul>
+<li>Requests permission to access the api of the network.</li>
+<li>Requests permission to access a specific domain (e.g. plugins backend).</li>
+<li>Requests permission to access all domains.</li>
 </ul>
-<p><em>more coming soon</em></p>
+</li>
+<li>
+<p>Shouldn't be able to intercept events, except if it:</p>
+<ul>
+<li>Requests permission to a specific event(s).</li>
+<li>Requests permission to all events.</li>
+</ul>
+</li>
+<li>
+<p>Needs to request permission to be able to extend the client's UI.</p>
+</li>
+</ul>
+<p><strong><em>more coming soon</em></strong></p>
                 
               
               

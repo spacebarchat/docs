@@ -1226,10 +1226,9 @@
 <p>Accept the <a href="/contributing/">code of conduct</a> and follow the server <a href="/setup">setup guide</a> to setup the development environment.</p>
 <h2 id="gateway">Gateway</h2>
 <p>The Gateway is a WebSocket server that is responsible for listening and emitting events.</p>
-<p>You can find the Roadmap overview <a href="https://github.com/fosscord/fosscord-gateway/projects/3">here</a>.</p>
-<p>For documentation, head over to the <a href="https://discord.dev">Discord docs</a>. (our own documention is not written yet)</p>
-<p>If you want to work on a feature please comment on the corresponding issue so we can assign it you that nobody implements something twice.</p>
-<p>For the WebSocket, we use <a href="https://www.npmjs.com/package/ws">ws</a> and we'll write our own packet handler for the individual opcodes and events.</p>
+<p>For documentation, head over to the <a href="https://discord.dev">Discord docs</a> as our own documentation is not written yet.</p>
+<p>If you want to work on a feature, please comment on the corresponding issue or open a issue so so nobody implements something twice.</p>
+<p>For the WebSocket, we use the <a href="https://www.npmjs.com/package/ws">ws</a> package and we'll write our own packet handler for the individual opcodes and events.</p>
 <h2 id="api">API</h2>
 <p>The API is a HTTP REST server that process requests and manipulates the database.</p>
 <p>You can find the api documentation <a href="/api/">here</a>.</p>
@@ -1258,23 +1257,23 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <p>Every fosscord server instance should be completely configurable in every way, without the need to change the source code.</p>
 <p>The config should have reasonable defaults similar to discord.</p>
 <p>Only in special cases it should require a third party config value.</p>
-<p>The config should be changeable over the admin fosscord-dashboard and update in realtime without the need to restart the servers</p>
+<p>The config should be changeable over the <a href="https://github.com/fosscord/fosscord-server/tree/master/dashboard">admin dashboard</a> and update in realtime without the need to restart the servers.</p>
 <p>The very first time the server starts, it saves to default config in the database. The next start it will load the config from the database.</p>
 <h3 id="example">Example</h3>
-<p>You <strong>should not</strong> <code>get()</code> the Config in the root of your file and it instead load the config every time you access a value</p>
+<p>You <strong>should not</strong> <code>get()</code> the Config in the root of your file and it instead load the config every time you access a value.</p>
 <p>Import <code>Config</code> from fosscord-server-util:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// at the top of the file import the Config file from /src/util/Config.ts</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Config</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>Access the Config in your route:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="o">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="o">:</span> <span class="nx">Response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// call Config.get() to get the whole config object and then just access the property you want</span>
-  <span class="kd">const</span> <span class="p">{</span> <span class="nx">allowNewRegistration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
+    <span class="c1">// call Config.get() to get the whole config object and then just access the property you want</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">allowNewRegistration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">get</span><span class="p">().</span><span class="nx">register</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><code>Config.get()</code> returns the current config object and is not expensive at all</p>
 <h3 id="extending">Extending</h3>
-<p>The default Config is located in <a href="https://github.com/fosscord/fosscord-server-util/blob/master/src/util/Config.ts">server-util <code>/src/util/Config.ts</code></a> and exports a <code>interface DefaultOptions</code> and a <code>const DefaultOptions</code> object with reasonable default values.</p>
+<p>The default Config is located in <a href="https://github.com/fosscord/fosscord-server/blob/master/util/src/util/Config.ts">server-util <code>/src/util/Config.ts</code></a> and exports a <code>interface DefaultOptions</code> and a <code>const DefaultOptions</code> object with reasonable default values.</p>
 <p>To add your own values to the config, add the properties to the <code>interface</code> with corresponding types and add default values to <code>const DefaultOptions</code>.</p>
 <p>Also you don't need to worry about updating "old config versions", because new values will automatically be synced with the database.</p>
 <p>Note, however, that if the database already has a default value it won't update it.</p>
@@ -1295,7 +1294,7 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 </code></pre></div>
 <h3 id="authentication">Authentication</h3>
 <p>Every request must contain the authorization header except the <code>/login</code> and <code>/register</code> route.</p>
-<p>You can add additional non-auth routes in <a href="https://github.com/fosscord/fosscord-api/blob/master/src/middlewares/Authentication.ts#L5"><code>/src/middlewares/Authentication.ts</code></a></p>
+<p>You can add additional non-auth routes in <a href="https://github.com/fosscord/fosscord-server/blob/master/api/src/middlewares/Authentication.ts#L5"><code>/src/middlewares/Authentication.ts</code></a></p>
 <p>To access the user id for the current request use <code>req.user_id</code></p>
 <h3 id="body-validation">Body Validation</h3>
 <p>We use a custom body validation logic from lambert-server to check if the JSON body is valid.</p>
@@ -1310,7 +1309,7 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nx">id</span>: <span class="kt">String</span><span class="p">,</span> <span class="nx">roles</span><span class="o">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">]</span> <span class="p">}</span>
 </code></pre></div>
 <p><em>Notice if you use e.g. BigInt even if you can't supply it with JSON, it will automatically convert the supplied JSON number/string to a BigInt.</em></p>
-<p><em>Also if you want to check for an array of, just put the type inside <code>[]</code></em></p>
+<p><em>Also if you want to check for an array of, just put the type inside <code>[]</code>.</em></p>
 <h4 id="optional-parameter">Optional Parameter</h4>
 <p>You can specify optional parameters if you prefix the key with a <code>$</code> (dollar sign) e.g.: <code>{ $captcha: String }</code>, this will make the captcha property in the body optional.</p>
 <h4 id="limit-string-length">Limit String length</h4>
@@ -1321,16 +1320,16 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <span class="kd">const</span> <span class="kr">type</span> <span class="o">=</span> <span class="nb">String</span><span class="p">;</span>
 
 <span class="p">{</span>
-  <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kr">type</span><span class="p">);</span>
+    <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="kr">type</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>this will limit the maximum string/number/array length to the <code>min</code> and <code>max</code> value.</p>
 <h4 id="example_1">Example</h4>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">Length</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;/src/util/instanceOf&quot;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">SCHEMA</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span>
-  <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span>
-  <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}],</span>
+    <span class="nx">username</span>: <span class="kt">new</span> <span class="nx">Length</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">32</span><span class="p">,</span> <span class="nb">String</span><span class="p">),</span>
+    <span class="nx">age</span>: <span class="kt">Number</span><span class="p">,</span>
+    <span class="nx">$posts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">title</span>: <span class="kt">String</span> <span class="p">}],</span>
 <span class="p">};</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nx">check</span><span class="p">(</span><span class="nx">SCHEMA</span><span class="p">),</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
 </code></pre></div>
@@ -1338,46 +1337,46 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <p>If the body validation fails it will automatically throw an error.</p>
 <p>The <code>errors</code> structure is a key-value Object describing what field contained the error:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">50035</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid Form Body&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-          <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Email is already registered&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL_ALREADY_REGISTERED&quot;</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">50035</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid Form Body&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Email is already registered&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL_ALREADY_REGISTERED&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Must be between 2 - 32 in length&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BASE_TYPE_BAD_LENGTH&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
         <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;_errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-          <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Must be between 2 - 32 in length&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;BASE_TYPE_BAD_LENGTH&quot;</span>
-        <span class="p">}</span>
-      <span class="p">]</span>
     <span class="p">}</span>
-  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>To manually throw a <code>FieldError</code> import <code>FieldErrors</code></p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">FieldErrors</span> <span class="p">}</span> <span class="kr">from</span> <span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">iltu</span> <span class="o">/</span> <span class="nx">instanceOf</span><span class="p">;</span>
 </code></pre></div>
-<p>To make sure your errors are understood in all languages translate it with <a href="https://www.i18next.com/translation-function/essentials">i18next</a> and <code>req.t</code></p>
-<p>So after you have checked the field is invalid throw the <code>FieldErrors</code></p>
+<p>To make sure your errors are understood in all languages translate it with <a href="https://www.i18next.com/translation-function/essentials">i18next</a> and <code>req.t</code>.</p>
+<p>So after you have checked the field is invalid throw the <code>FieldErrors</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">throw</span> <span class="nx">FieldErrors</span><span class="p">((</span> <span class="nx">login</span><span class="o">:</span> <span class="p">{</span> <span class="nx">message</span>: <span class="kt">req.t</span><span class="p">(</span><span class="s2">&quot;auth:login.INVALID_LOGIN&quot;</span><span class="p">),</span> <span class="nx">code</span><span class="o">:</span> <span class="s2">&quot;INVALID_LOGIN&quot;</span> <span class="p">}});</span>
 </code></pre></div>
 <h2 id="database">Database</h2>
 <h3 id="philosophy_1">Philosophy</h3>
 <p>The instance hoster should be able to use any database they want for their specific size and purpose.</p>
 <p>That is why we use <a href="https://typeorm.io/">typeorm</a> for database entities (models) for every data structure we use, because typeorm supports many different database engines.</p>
-<p>We use strings for all ids and bitfields (Tho when working with bitfields we convert it to BigInts and pass it to the utility <code>BitField</code> class)</p>
+<p>We use strings for all ids and bitfields (Tho when working with bitfields we convert it to BigInts and pass it to the utility <code>BitField</code> class).</p>
 <h3 id="general">General</h3>
 <p>Have a look at the <a href="https://typeorm.io/">typeorm documentation</a> to get familiar with it or watch this <a href="https://youtu.be/Paz0gnODPE0">tutorial</a>.</p>
-<p>TypeORM supports MySQL, MariaDB, Postgres, CockroachDB, SQLite, Microsoft SQL Server, Oracle, SAP Hana, sql.js</p>
+<p>TypeORM supports MySQL, MariaDB, Postgres, CockroachDB, SQLite, Microsoft SQL Server, Oracle, SAP Hana, sql.js.</p>
 <h3 id="getting-started">Getting Started</h3>
 <p>Import the entity you want to select, manipulate, delete or insert from <code>@fosscord/util</code></p>
-<p><a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/entities/index.ts">List of all entities</a>: <code>Application, Attachment, AuditLog, Ban, BaseClass, Channel, Config, ConnectedAccount, Emoji, Guild, Invite, Member, Message, RateLimit, ReadState, Recipient, Relationship, Role, Sticker, Team, TeamMember, Template, User, VoiceState, Webhook</code></p>
+<p><a href="https://github.com/fosscord/fosscord-server/blob/master/util/src/entities/index.ts">List of all entities</a>: <code>Application, Attachment, AuditLog, Ban, BaseClass, Channel, Config, ConnectedAccount, Emoji, Guild, Invite, Member, Message, RateLimit, ReadState, Recipient, Relationship, Role, Sticker, Team, TeamMember, Template, User, VoiceState, Webhook</code></p>
 <h3 id="example-database-query">Example database query</h3>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Guild</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 
@@ -1393,24 +1392,27 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <h4 id="example-entity">Example entity</h4>
 <div class="highlight"><pre><span></span><code><span class="kd">@Entity</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
 <span class="k">export</span> <span class="kd">class</span> <span class="nx">User</span> <span class="k">extends</span> <span class="nx">BaseClass</span> <span class="p">{</span>
-  <span class="c1">// id column is automatically added by BaseClass</span>
+    <span class="c1">// id column is automatically added by BaseClass</span>
 
-  <span class="kd">@Column</span><span class="p">()</span>
-  <span class="nx">username</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="kd">@Column</span><span class="p">()</span>
+    <span class="nx">username</span>: <span class="kt">string</span><span class="p">;</span>
 
-  <span class="kd">@JoinColumn</span><span class="p">({</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;connected_account_ids&quot;</span> <span class="p">})</span>
-  <span class="kd">@OneToMany</span><span class="p">(</span>
-    <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">ConnectedAccount</span><span class="p">,</span>
-    <span class="p">(</span><span class="nx">account</span>: <span class="kt">ConnectedAccount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">account</span><span class="p">.</span><span class="nx">user</span>
-  <span class="p">)</span>
-  <span class="nx">connected_accounts</span>: <span class="kt">ConnectedAccount</span><span class="p">[];</span>
+    <span class="kd">@JoinColumn</span><span class="p">({</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;connected_account_ids&quot;</span> <span class="p">})</span>
+    <span class="kd">@OneToMany</span><span class="p">(</span>
+        <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">ConnectedAccount</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">account</span>: <span class="kt">ConnectedAccount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">account</span><span class="p">.</span><span class="nx">user</span>
+    <span class="p">)</span>
+    <span class="nx">connected_accounts</span>: <span class="kt">ConnectedAccount</span><span class="p">[];</span>
 
-  <span class="k">static</span> <span class="k">async</span> <span class="nx">getPublicUser</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">opts?</span>: <span class="kt">FindOneOptions</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findOneOrFail</span><span class="p">(</span>
-      <span class="p">{</span> <span class="nx">id</span>: <span class="kt">user_id</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="p">...</span><span class="nx">opts</span><span class="p">,</span> <span class="nx">select</span><span class="o">:</span> <span class="p">[...</span><span class="nx">PublicUserProjection</span><span class="p">,</span> <span class="p">...(</span><span class="nx">opts</span><span class="o">?</span><span class="p">.</span><span class="nx">select</span> <span class="o">||</span> <span class="p">[])]</span> <span class="p">}</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
+    <span class="k">static</span> <span class="k">async</span> <span class="nx">getPublicUser</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">opts?</span>: <span class="kt">FindOneOptions</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findOneOrFail</span><span class="p">(</span>
+            <span class="p">{</span> <span class="nx">id</span>: <span class="kt">user_id</span> <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="p">...</span><span class="nx">opts</span><span class="p">,</span>
+                <span class="nx">select</span><span class="o">:</span> <span class="p">[...</span><span class="nx">PublicUserProjection</span><span class="p">,</span> <span class="p">...(</span><span class="nx">opts</span><span class="o">?</span><span class="p">.</span><span class="nx">select</span> <span class="o">||</span> <span class="p">[])],</span>
+            <span class="p">}</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="emit-events">Emit Events</h2>
@@ -1421,7 +1423,7 @@ The <code>.ts</code> source files are located in <a href="https://github.com/fos
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">emitEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;../../../util/Event&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>You need to specify whom you want to send the event to, to do that either pass <code>guild_id</code>, <code>user_id</code> or <code>channel_id</code>.
-Additionally you need to set the <a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts#L465">eventname</a> e.g. <code>GUILD_DELETE</code>.</p>
+Additionally you need to set the <a href="https://github.com/fosscord/fosscord-server/blob/master/util/src/interfaces/Event.ts#L539">eventname</a> e.g. <code>GUILD_DELETE</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nx">guild_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to all guild members</span>
     <span class="nx">channel_id?</span>: <span class="kt">bigint</span><span class="p">;</span> <span class="c1">// specify this if this event should be sent to all channel members</span>
@@ -1430,7 +1432,7 @@ Additionally you need to set the <a href="https://github.com/fosscord/fosscord-s
     <span class="nx">data?</span>: <span class="kt">any</span><span class="p">;</span> <span class="c1">// event payload data</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>For easy intellisense, annotate the parameter with the corresponding <a href="https://github.com/fosscord/fosscord-server/blob/typeorm/util/src/interfaces/Event.ts">Event interface</a> from <code>@fosscord/util</code>:</p>
+<p>For easy intellisense, annotate the parameter with the corresponding <a href="https://github.com/fosscord/fosscord-server/blob/master/util/src/interfaces/Event.ts">Event interface</a> from <code>@fosscord/util</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">GuildDeleteEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;@fosscord/util&quot;</span><span class="p">;</span>
 
 <span class="nx">emitEvent</span><span class="p">({...}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
@@ -1438,18 +1440,18 @@ Additionally you need to set the <a href="https://github.com/fosscord/fosscord-s
 <h3 id="example_2">Example</h3>
 <p>Putting it all together:</p>
 <div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="nx">emitEvent</span><span class="p">({</span>
-  <span class="nx">user_id</span><span class="o">:</span> <span class="s2">&quot;3297349345345874&quot;</span><span class="p">,</span>
-  <span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;GUILD_DELETE&quot;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;96784598743975349&quot;</span><span class="p">,</span>
-  <span class="p">},</span>
+    <span class="nx">user_id</span><span class="o">:</span> <span class="s2">&quot;3297349345345874&quot;</span><span class="p">,</span>
+    <span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;GUILD_DELETE&quot;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;96784598743975349&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
 <span class="p">}</span> <span class="kr">as</span> <span class="nx">GuildDeleteEvent</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="permissions">Permissions</h2>
 <p>To get the permission for a guild member import the <code>getPermission</code> from <code>fosscord-server-util</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">getPermission</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;fosscord-server-util&quot;</span><span class="p">;</span>
 </code></pre></div>
-<p>The first argument is the user_id the second the guild_id and the third an optional channel_id</p>
+<p>The first argument is the user_id the second the guild_id and the third an optional channel_id.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">permissions</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="nx">user_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">guild_id</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">channel_id?</span>: <span class="kt">string</span><span class="p">)</span>
 
 <span class="kd">const</span> <span class="nx">permissions</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getPermission</span><span class="p">(</span><span class="s2">&quot;106142653265366125&quot;</span><span class="p">,</span> <span class="s2">&quot;4061326832657368175&quot;</span><span class="p">)</span>
