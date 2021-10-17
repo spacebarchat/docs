@@ -1,16 +1,14 @@
 # Server
 
-<!--
 ## [Download](https://github.com/fosscord/fosscord-server/releases)
 
 This is the stable fosscord-server release.
 
-Download the server release from [GitHub](https://github.com/fosscord/fosscord-server/releases) for your operating system. (Size ~60mb)
+Download the server release from [GitHub](https://github.com/fosscord/fosscord-server/releases) for your operating system. (Size ~80mb)
 
 Double click the file to start the server. (The first time it takes longer as it needs to setup the server)
 
 You can now access it on [http://localhost:3001](http://localhost:3001).
--->
 
 ## With terminal/shell
 
