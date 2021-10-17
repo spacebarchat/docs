@@ -14,7 +14,7 @@
 3. Install dependencies.
 
    ```bash
-   python3 -m pip install mkdocs-material mkdocs-section-index
+   python3 -m pip install mkdocs-material mkdocs-render-swagger-plugin mkdocs-section-index
    ```
 
 4. Test locally.
