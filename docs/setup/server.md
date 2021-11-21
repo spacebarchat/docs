@@ -43,6 +43,9 @@ npm run start:bundle
 
 ### With Docker
 
+!!! failure "Not Supported Currently"
+    Avoid using Docker build until further notice. The current build is faulty and will not build correctly. Instead, install using the terminal in the section "With Terminal". 
+
 Optionally if you want to use Docker:
 
 ```
