@@ -14,7 +14,7 @@ A dedicated server is the most classic hosting solution. It is an actual, physic
 | Full Control | More expensive |
 | You get the full potential of your server | No dynamic resources |
 
-**Recommended providers:** [Hetzner](https://hetzner.com)
+**Recommended providers:** [ServerBlaze](https://serverblaze.eu/) (Sponsor), [Hetzner](https://hetzner.com)
 
 ### Virtual Private Servers
 A Virtual Private Server, or VPS for short, is a virtual machine that runs on a larger dedicated server. This makes a VPS cheaper than a dedicated server, as providers can rent out multiple VPS's per server. It also allows you to dynamically change the resources your server is getting, if your provider supports that.
