@@ -8,7 +8,6 @@ For example this path for git cloned fosscord-server will be `fosscord-server/bu
 | Number | Description |
 |---|---|
 | 1. | What is database.db/it's path |
-| 3
 | 2. | What will we be discussing today? |
 | 3. | The number of tables you can edit |
 | 4. | Description of each editable table's |
