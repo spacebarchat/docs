@@ -1,4 +1,4 @@
-# 1. How to use MySQL database
+# 1. How to use MySQL/SQLite database
  database.db is a file that makes your fosscord instance customizable.
 
 I will be found in `#/bundle/database.db` where `# is the dir name example fosscord-server`
