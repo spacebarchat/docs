@@ -72,3 +72,6 @@ Number of total tables you can edit (this does not include the sub tables, sub t
 `bans`: bans are the users that are banned from a server.
 
 `channel`: channel's created on your fosscord instance
+
+`config`: config table is the most important table of all the DB, that's where the real **magic** happens, it has all the things to update instance name, instance description, config's,URL's ETC
+
