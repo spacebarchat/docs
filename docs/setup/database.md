@@ -59,4 +59,4 @@ Number of total tables you can edit (this does not include the sub tables, sub t
 32. users<br/>
 33. voice_states<br/>
 34. webhooks<br/>
-<details>
+<\details>
