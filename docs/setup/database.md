@@ -64,7 +64,11 @@ Number of total tables you can edit (this does not include the sub tables, sub t
 
 # 4. What does each table do?
 `applications`: Bot Applications, TOS applications, RPC applications ETC
+
 `attachments`: attachments are photos and videos you send on your fosscord instance
+
 `audit_logs`: this are logs where the logs of bans, deleting channels, creating channels, making roles,updating roles.. ETC
+
 `bans`: bans are the users that are banned from a server.
+
 `channel`: channel's created on your fosscord instance
