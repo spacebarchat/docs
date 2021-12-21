@@ -1,1 +1,1 @@
-# `How to use Database.db`
+# How to use `database.db`
