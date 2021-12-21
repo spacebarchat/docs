@@ -22,37 +22,41 @@ We will be discussing how to edit `database.db` file which is a database used fo
 Number of total tables you can edit (this does not include the sub tables, sub tables are tables inside tables): `35-34`
 
 **Names of the tables you can edit**
-1. applications
-2. attachments
-3. audit_logs
-4. bans
-5. channels
-6. config
-7. connected_accounts
-8. emojis
-9. guilds
-10. invites
-11. member_roles
-12. members
-13. message_channel_mentions
-14. message_role_mentions
-15. message_stickers
-16. message_user_mentions
-17. messages
-18. migrations
-19. query-result-cache
-20. rate_limits
-21. read_states
-22. recipients
-23. relationship
-24. roles
-25. sessions
-26. sqlite_sequence
-27. sticker_packs
-28. stickers
-29. team_members
-30. teams
-31. templates
-32. users
-33. voice_states
-34. webhooks
+<details>
+<summary>Names of the table you can edit (it's really big)</summary>
+<br>
+1. applications<br/>
+2. attachments<br/>
+3. audit_logs<br/>
+4. bans<br/>
+5. channels<br/>
+6. config<br/>
+7. connected_accounts<br/>
+8. emojis<br/>
+9. guilds<br/>
+10. invites<br/>
+11. member_roles<br/>
+12. members<br/>
+13. message_channel_mentions<br/>
+14. message_role_mentions<br/>
+15. message_stickers<br/>
+16. message_user_mentions<br/>
+17. messages<br/>
+18. migrations<br/>
+19. query-result-cache<br/>
+20. rate_limits<br/>
+21. read_states<br/>
+22. recipients<br/>
+23. relationship<br/>
+24. roles<br/>
+25. sessions<br/>
+26. sqlite_sequence<br/>
+27. sticker_packs<br/>
+28. stickers<br/>
+29. team_members<br/>
+30. teams<br/>
+31. templates<br/>
+32. users<br/>
+33. voice_states<br/>
+34. webhooks<br/>
+<details>
