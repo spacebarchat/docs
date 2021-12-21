@@ -6,4 +6,4 @@
 
 ## [Hosting](hosting/)
 
-## [Editing Database](database.md/)
+## [Editing Database](database/)
