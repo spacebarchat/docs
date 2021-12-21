@@ -55,4 +55,4 @@ Number of total tables you can edit (this does not include the sub tables, sub t
 31. templates
 32. users
 33. voice_states
-34.webhooks
+34. webhooks
