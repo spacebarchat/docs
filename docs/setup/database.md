@@ -1,4 +1,4 @@
-# 1. How to use `database.db`
+# 1. How to use MySQL database
  database.db is a file that makes your fosscord instance customizable.
 
 I will be found in `#/bundle/database.db` where `# is the dir name example fosscord-server`
