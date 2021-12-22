@@ -36,6 +36,7 @@ server {
                 proxy_set_header Connection "upgrade";
     }
 
+        // everything below this is safe to remove if you want to
         location = /api/v9/auth/register {
                 limit_req zone=registerzone;
                 proxy_pass http://127.0.0.1:3001;
