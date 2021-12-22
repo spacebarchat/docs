@@ -69,6 +69,9 @@ If done correctly, you should have your website up and running with SSL. ``serve
 
 An example of a correctly configured NGINX setup (using SSL):
 
+!!! failure "THIS IS JUST AN EXAMPLE"
+        Do not use this, use the command above, if you use it correctly, you should have a working instance with HTTPS.
+
 ```
 limit_req_zone $binary_remote_addr zone=registerzone:10m rate=1r/m;
 server {
