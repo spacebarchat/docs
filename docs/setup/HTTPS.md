@@ -66,6 +66,8 @@ Generate your certificates with certbot.
 
 ``sudo certbot --nginx -d fosscord.your.website``
 
+If you want your certificates to renew, run ``crontab -e`` and paste this in: ``0 12 * * * /usr/bin/certbot renew --quiet``. Then you should be all set!
+
 If done correctly, you should have your website up and running with SSL. ``server_name`` is important because certbot will use it to sign the certificates.
 
 An example of a correctly configured NGINX setup (using SSL):
