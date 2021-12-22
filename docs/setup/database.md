@@ -75,3 +75,64 @@ Number of total tables you can edit (this does not include the sub tables, sub t
 
 `config`: config table is the most important table of all the DB, that's where the real **magic** happens, it has all the things to update instance name, instance description, config's,URL's ETC
 
+`connected_accounts`: this us the list of the accounts that are online on your instances
+
+`emojis`: this are emojis that are stored on your instance
+
+`guilds`: this are guilds that are made/on your instances
+
+`invites`: this are invites created on your instance
+
+`member_roles`: the roles that are made on your fosscord instance 
+
+`members`: list's members that are in your instance but it also has server is which the members are in
+
+`message_role_mentions`: roles mentioned in a message
+
+`message_channel_mentions`: channels mentioned in a message
+
+`message_stickers`: stickers that are sent or made
+
+`message_user_mentions`: user mention that is sent using a message `example: @OmxproYT#7508`
+
+`messages`: messages sent on your fosscord instance
+
+`migrations`: migrations that happened on your instance 
+
+`query-result-cache`: result cache of query, it makes searching faster
+
+`rate_limits`: rate limits that are placed on a account
+
+`read_states`: read states of messages (I think not sure)
+
+`recipients`: recipients of your instances 
+
+`relationships`: (really don't know what this means I really don't know if this is even important)
+
+`roles`: roles made on your instances
+
+`sessions`: sessions that are online OR sessions that are made on your instance 
+
+`sqlite_sequenses`: sequences on sqlite DB
+
+`sticker_packs`: sticker packs made on your fosscord instances (you can make more)
+
+`stickers`: stickers that are on your instance
+
+`team_members`: team members of teams
+
+`teams`: team's made on your instance
+
+`templates`: server templates made on your instance
+
+`users`: user accounts made on your fosscord instances
+
+`voice_states`: states of Voice Chat
+
+`webhooks`: webhooks made on your fosscord instances
+
+# 5. What does each sub-table do?
+Coming Soon!
+
+# 6. Some fun tricks you can do with your database.db
+Coming Soon!
