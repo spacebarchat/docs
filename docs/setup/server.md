@@ -86,4 +86,4 @@ For an always up to date version of the currently available configuration option
 | security_captcha_sitekey           | string  | null                    | Captcha provider site key                                                                              |
 | security_captcha_secret            | string  | null                    | Captcha provider secret to check if the user supplied captcha result is correct                        |
 | security_ipdataApiKey              | string  | _public key_            | IPdata.co api key to check if a register ip address is using proxies                                   |
-| login_requireCaptcha               | boolean | false                   | Check to require captchas to login                                                                     |
+| login_requireCaptcha               | boolean | false                   | Check to require captchas to login                                                                      |
