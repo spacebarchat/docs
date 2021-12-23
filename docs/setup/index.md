@@ -5,3 +5,7 @@
 ## [Server](server/)
 
 ## [Hosting](hosting/)
+
+## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
+
+## [Database Setup (MariaDB)](DATABASE/)
