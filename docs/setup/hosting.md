@@ -40,3 +40,4 @@ Depending on your electricity prices, this may be the cheapest option. Just use 
 
 - Specialized website hosting services, that don't give you root access to a server
 - Online code collaboration sites like [**replit**](https://replit.com) or [**glitch**](https://glitch.com)
+- Hosting with ngrok - you will not be able to use attachments (send files/images) as you do not have a static domain name
