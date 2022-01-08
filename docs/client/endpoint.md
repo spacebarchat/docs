@@ -1,6 +1,6 @@
 # Client
 
-### ENDPOINT
+## ENDPOINT
 
 In order to set your **ENDPOINT** follow these simple steps
 
