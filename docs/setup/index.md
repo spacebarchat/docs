@@ -6,6 +6,6 @@
 
 ## [Hosting](hosting/)
 
-## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
-
 ## [Database Setup (MariaDB)](DATABASE/)
+
+## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
