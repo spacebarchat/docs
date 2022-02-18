@@ -2,6 +2,7 @@
 
 ## Setup
 
+### Apache2 is currently not supported.
 
 A reverse proxy is when you take a web server, for our example, NGINX and you ue it to redirect traffic on port 80/443 to port 3001, but to
 your browser, it still appears as port 80/443

@@ -8,4 +8,4 @@
 
 ## [Database Setup (MariaDB)](DATABASE/)
 
-## [Securing your instance (NGINX)](HTTPS/)
+## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
