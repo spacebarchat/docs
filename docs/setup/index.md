@@ -9,3 +9,5 @@
 ## [Database Setup (MariaDB)](DATABASE/)
 
 ## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
+
+##[SQLite](SQLITE/)
