@@ -9,7 +9,7 @@ to make the computer run your program on it's own, without you having to use scr
 
 To do this, you need a medium understanding of linux.
 
-### Using systemctl, service or systemd
+### Using systemd (Debian based distros, Arch Linux etc.)
 Whatever you call it.
 
 !!! failure "THIS IS JUST AN EXAMPLE"
@@ -30,13 +30,12 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-If you set it up correctly, you should be able to run ``systemctl start fosscord`` and, your fosscord works!
+If you set it up correctly, you should be able to run ``systemctl enable --now fosscord`` and, your fosscord works! (and will start everytime your system boots!)
 
 ### Distros without "systemd"
 
 !!! failure "Not supported"
-    I haven't had any experience with Gentoo or any other distros. Sorry guys
-
-If you find a way to do it there, please send a pull request to the repository [here](https://github.com/fosscord/fosscord-docs/)
+    I haven't had any experience with Gentoo or any other distros. Sorry guys. There are ways in other linux distros to install systemctl/systemd. I would highly reccomend it.
+    If there is enough demand, I will figure out how sysvinit works.
 
 // by AToska21
