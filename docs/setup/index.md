@@ -6,10 +6,12 @@
 
 ## [Hosting](hosting/)
 
-## [Database Setup (MariaDB)](DATABASE/)
-
 ## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
+
+## Database Setups
+
+## [MariaDB](MARIADB/)
 
 ## [SQLite](SQLITE/)
 
-## [PostgreSQL](postgresql/)
+## [PostgreSQL](POSTGRESQL/)
