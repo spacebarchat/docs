@@ -10,4 +10,4 @@
 
 ## [Reverse Proxy/HTTPS (NGINX)](HTTPS/)
 
-##[SQLite](SQLITE/)
+## [SQLite](SQLITE/)
