@@ -2,7 +2,7 @@
 
 Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.
 
-Currently the developer portal is not fully implemented yet, and Fosscord's bot dashboard is still in development. Until then you can use regular user accounts. Similarly in the instances where the human/bot distinction is disabled, just a regular user would be used.
+Currently the developer portal is not fully implemented yet, and Fosscord's bot dashboard is still in development. Until then you can use regular user accounts. Similarly in the instances where the human/bot distinction is disabled, just a regular user would be used. (aka self-botting)
 
 ## Retrieve the user token:
 
