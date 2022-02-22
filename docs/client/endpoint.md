@@ -8,6 +8,7 @@ In order to set your **ENDPOINT** follow these simple steps
 
 - There is a file called (`settings.json`) the contents of this file are (`They can be different depending on your discord's client settings`) :
 
+- Note: ( If you are the instance owner make sure to install `@yukikaze-bot/erlpack` using `npm i @yukikaze-bot/erlpack` in order for desktop clients being able to connect to your instance by changing the endpoint)
 
 ```js
 {
