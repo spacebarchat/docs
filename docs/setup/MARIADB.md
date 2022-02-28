@@ -36,4 +36,6 @@ If you set it up correctly, you should be able to run ``systemctl start fosscord
 (which you should do, checkout the "Setup" section) and, your fosscord works! It may say "TABLE NOT SETUP" or something. Ignore these, because
 they are just there because the database is uninitialized.
 
+If you get an error that says ``DriverPackageNotInstalledError: Mysql package has not been found installed.``, run ``npm install mysql --save``.
+
 // by AToska21
