@@ -15,7 +15,7 @@
     
     
       
-        <title>Bots - Fosscord Docs</title>
+        <title>1. How to use SQLite database - Fosscord Docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bots" class="md-skip">
+        <a href="#1-how-to-use-sqlite-database" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bots
+              1. How to use SQLite database
             
           </span>
         </div>
@@ -626,11 +626,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../SQLITE/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         1. How to use SQLite database
       </a>
+      
     </li>
   
 
@@ -654,86 +664,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bots
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bots/" class="md-nav__link">
         Bots
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#retrieve-the-user-token" class="md-nav__link">
-    Retrieve the user token:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#libraries" class="md-nav__link">
-    Libraries
-  </a>
-  
-    <nav class="md-nav" aria-label="Libraries">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discordjs" class="md-nav__link">
-    Discord.js
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discordpy" class="md-nav__link">
-    Discord.py
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jda" class="md-nav__link">
-    JDA
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -793,55 +728,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#retrieve-the-user-token" class="md-nav__link">
-    Retrieve the user token:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#libraries" class="md-nav__link">
-    Libraries
-  </a>
-  
-    <nav class="md-nav" aria-label="Libraries">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#discordjs" class="md-nav__link">
-    Discord.js
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discordpy" class="md-nav__link">
-    Discord.py
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jda" class="md-nav__link">
-    JDA
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -852,73 +738,134 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/bots.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/SQLITE.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="bots">Bots</h1>
-<p>Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.</p>
-<p>Currently the bot dashboard is still in development and not yet finished. Until then you can use regular user accounts. Similarly in the instances where the human/bot distinction is disabled, just a regular user would be used.</p>
-<h2 id="retrieve-the-user-token">Retrieve the user token:</h2>
-<ol>
-<li>Open the instance in your browser</li>
-<li>Logout of your current account</li>
-<li>Register a new account</li>
-<li>Enable DevTools (hit <code>F12</code> or <code>Right click on the page -&gt; Inspect</code>).</li>
-<li>Open the network tab inside of DevTools</li>
-<li>Enable the xhr/fetch request filter</li>
-<li>Execute any kind of action (navigate to a channel, send a message)</li>
-<li>Click on any (api) request</li>
-<li>Inside of "Request Headers" copy the value of the <code>authorization</code> header.</li>
-</ol>
-<p><img alt="Retrieve user token" src="https://user-images.githubusercontent.com/34555296/136654084-73c2c2a2-0a54-46f3-b10d-ff20cd64c656.jpg" /></p>
-<p><strong>Done</strong>: You now can use this copied token to login with your bot libary or authorize any api request by putting it inside the authorization header.</p>
-<p><strong>Notice</strong>: Currently you can but don't need to prefix the token with "<code>Bot</code>".</p>
-<h2 id="libraries">Libraries</h2>
-<p>Change <code>https://api.fosscord.com</code> to your desired endpoint.</p>
-<p>Replace <code>your token here</code> with your copied token.</p>
-<h3 id="discordjs">Discord.js</h3>
-<p>Inside the client option you can specify the api endpoint:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">Client</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;discord.js&quot;</span><span class="p">);</span>
+<h1 id="1-how-to-use-sqlite-database">1. How to use SQLite database</h1>
+<p>database.db is a file that makes your fosscord instance customizable. Fosscord curently uses SQLite Database to store it's data, you can allways change it.</p>
+<p>I will be found in <code>#/bundle/database.db</code> where <code># is the dir name example fosscord-server</code>
+For example this path for git cloned fosscord-server will be <code>fosscord-server/bundle/database.db</code></p>
+<h1 id="basic-stuff-that-will-be-included-in-this-documentation-page">Basic stuff that will be included in this Documentation page</h1>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>What is database.db/it's path</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>What will we be discussing today?</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>The number of tables you can edit</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Description of each editable table's</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>What each sub tables do?</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Other Fun Tricks with database.db (Coming Soon)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-what-will-be-discussing-today">2. What will be discussing today?</h1>
+<p>We will be discussing how to edit <code>database.db</code> file which is a database used for your fosscord client/server, it's used to save people's data and also allows you to edit your instance in many ways!, you can edit your info, edit passwords, emails, usernames you can give badges... etc, we will be discussing to how to edit them and do it correctly so you don't get too many errors..., let's get a explanation on the tables.</p>
+<h1 id="3-the-number-of-tables-you-can-edit">3. The number of tables you can edit</h1>
+<p>Number of total tables you can edit (this does not include the sub tables, sub tables are tables inside tables): <code>35-34</code></p>
+<p><strong>Names of the tables you can edit</strong></p>
+<details>
+<summary>Names of the table you can edit (it's really big)</summary>
+<br>
+1. applications<br/>
+2. attachments<br/>
+3. audit_logs<br/>
+4. bans<br/>
+5. channels<br/>
+6. config<br/>
+7. connected_accounts<br/>
+8. emojis<br/>
+9. guilds<br/>
+10. invites<br/>
+11. member_roles<br/>
+12. members<br/>
+13. message_channel_mentions<br/>
+14. message_role_mentions<br/>
+15. message_stickers<br/>
+16. message_user_mentions<br/>
+17. messages<br/>
+18. migrations<br/>
+19. query-result-cache<br/>
+20. rate_limits<br/>
+21. read_states<br/>
+22. recipients<br/>
+23. relationship<br/>
+24. roles<br/>
+25. sessions<br/>
+26. sqlite_sequence<br/>
+27. sticker_packs<br/>
+28. stickers<br/>
+29. team_members<br/>
+30. teams<br/>
+31. templates<br/>
+32. users<br/>
+33. voice_states<br/>
+34. webhooks<br/>
+</summary>
+</details>
 
-<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Client</span><span class="p">({</span>
-    <span class="nx">http</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">version</span><span class="o">:</span> <span class="mf">9</span><span class="p">,</span>
-        <span class="nx">api</span><span class="o">:</span> <span class="s2">&quot;https://api.fosscord.com&quot;</span><span class="p">,</span>
-        <span class="nx">cdn</span><span class="o">:</span> <span class="s2">&quot;https://cdn.fosscord.com&quot;</span><span class="p">,</span>
-        <span class="nx">invite</span><span class="o">:</span> <span class="s2">&quot;https://fosscord.com/invite&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
-<span class="p">});</span>
-
-<span class="nx">client</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="discordpy">Discord.py</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">discord</span>
-
-<span class="n">discord</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Route</span><span class="o">.</span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.fosscord.com&quot;</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-
-<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;your token here&#39;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="jda">JDA</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.lang.reflect.*</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">net.dv8tion.jda.internal.requests.*</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">JDA</span> <span class="n">jda</span> <span class="o">=</span> <span class="n">JDABuilder</span><span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;your token here&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
-
-    <span class="n">Field</span> <span class="n">field</span> <span class="o">=</span> <span class="n">Requester</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;DISCORD_API_PREFIX&quot;</span><span class="p">)</span>
-    <span class="n">field</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-
-    <span class="n">Field</span> <span class="n">modifiers</span> <span class="o">=</span> <span class="n">Field</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;modifiers&quot;</span><span class="p">);</span>
-    <span class="n">modifiers</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-    <span class="n">modifiers</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">field</span><span class="p">.</span><span class="na">getModifiers</span><span class="p">()</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">Modifier</span><span class="p">.</span><span class="na">FINAL</span><span class="p">);</span>
-
-    <span class="n">field</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;https://api.fosscord.com&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<h1 id="4-what-does-each-table-do">4. What does each table do?</h1>
+<p><code>applications</code>: Bot Applications, TOS applications, RPC applications ETC</p>
+<p><code>attachments</code>: attachments are photos and videos you send on your fosscord instance</p>
+<p><code>audit_logs</code>: this are logs where the logs of bans, deleting channels, creating channels, making roles,updating roles.. ETC</p>
+<p><code>bans</code>: bans are the users that are banned from a server.</p>
+<p><code>channel</code>: channel's created on your fosscord instance</p>
+<p><code>config</code>: config table is the most important table of all the DB, that's where the real <strong>magic</strong> happens, it has all the things to update instance name, instance description, config's,URL's ETC</p>
+<p><code>connected_accounts</code>: this us the list of the accounts that are online on your instances</p>
+<p><code>emojis</code>: this are emojis that are stored on your instance</p>
+<p><code>guilds</code>: this are guilds that are made/on your instances</p>
+<p><code>invites</code>: this are invites created on your instance</p>
+<p><code>member_roles</code>: the roles that are made on your fosscord instance </p>
+<p><code>members</code>: list's members that are in your instance but it also has server is which the members are in</p>
+<p><code>message_role_mentions</code>: roles mentioned in a message</p>
+<p><code>message_channel_mentions</code>: channels mentioned in a message</p>
+<p><code>message_stickers</code>: stickers that are sent or made</p>
+<p><code>message_user_mentions</code>: user mention that is sent using a message <code>example: @OmxproYT#7508</code></p>
+<p><code>messages</code>: messages sent on your fosscord instance</p>
+<p><code>migrations</code>: migrations that happened on your instance </p>
+<p><code>query-result-cache</code>: result cache of query, it makes searching faster</p>
+<p><code>rate_limits</code>: rate limits that are placed on a account</p>
+<p><code>read_states</code>: read states of messages (I think not sure)</p>
+<p><code>recipients</code>: recipients of your instances </p>
+<p><code>relationships</code>: (really don't know what this means I really don't know if this is even important)</p>
+<p><code>roles</code>: roles made on your instances</p>
+<p><code>sessions</code>: sessions that are online OR sessions that are made on your instance </p>
+<p><code>sqlite_sequenses</code>: sequences on sqlite DB</p>
+<p><code>sticker_packs</code>: sticker packs made on your fosscord instances (you can make more)</p>
+<p><code>stickers</code>: stickers that are on your instance</p>
+<p><code>team_members</code>: team members of teams</p>
+<p><code>teams</code>: team's made on your instance</p>
+<p><code>templates</code>: server templates made on your instance</p>
+<p><code>users</code>: user accounts made on your fosscord instances</p>
+<p><code>voice_states</code>: states of Voice Chat</p>
+<p><code>webhooks</code>: webhooks made on your fosscord instances</p>
+<p>You can edit this with a program called DBeaver.</p>
+<p>// made my omxpro
+// adapted by AToska21</p>
 
               
             </article>
@@ -937,7 +884,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../SYSTEMD/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using systemd" rel="prev">
+        <a href="../POSTGRESQL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: POSTGRESQL" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -946,20 +893,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Using systemd
+              POSTGRESQL
             </div>
           </div>
         </a>
       
       
         
-        <a href="../hosting/" class="md-footer__link md-footer__link--next" aria-label="Next: Hosting" rel="next">
+        <a href="../SYSTEMD/" class="md-footer__link md-footer__link--next" aria-label="Next: Using systemd" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hosting
+              Using systemd
             </div>
           </div>
           <div class="md-footer__button md-icon">
