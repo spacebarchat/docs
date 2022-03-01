@@ -11,7 +11,7 @@ A reverse proxy is the most efficient way to setup HTTPS on your instance.
 
 To do this, you need a basic understanding of setting up a web server.
 
-### Without HTTPS (you can remove the "location = api/register" part of the website, it's there to stop people from raiding your instance)
+### Without HTTPS
 
 ```
 limit_req_zone $binary_remote_addr zone=registerzone:10m rate=1r/m;
