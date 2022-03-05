@@ -8,8 +8,8 @@ plugins:
   - render_swagger
 theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   font: Open Sans
   palette:
     - scheme: default
