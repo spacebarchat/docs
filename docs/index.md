@@ -1,5 +1,7 @@
 # Home
 
+Just wanna get to setup instructions? Click [here](server/setup.md)!
+
 ### What is Fosscord?
 
 Fosscord is a free open source self-hostable discord compatible chat, voice and video platform.
