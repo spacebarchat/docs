@@ -2,7 +2,7 @@
 
 ## Setup
 
-### [Download](https://github.com/fosscord/fosscord-server/releases)
+<!-- ### [Download](https://github.com/fosscord/fosscord-server/releases)
 
 This is the stable fosscord-server release.
 
@@ -10,7 +10,7 @@ Download the server release from [GitHub](https://github.com/fosscord/fosscord-s
 
 Double click the file to start the server. (The first time it takes longer as it needs to setup the server)
 
-You can now access it on [http://localhost:3001](http://localhost:3001).
+You can now access it on [http://localhost:3001](http://localhost:3001). -->
 
 ### With terminal
 
