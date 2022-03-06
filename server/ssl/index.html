@@ -10,33 +10,34 @@
       
       
       
-      <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
-        <title>Setup - Fosscord Docs</title>
+        <title>Reverse Proxy/SSL - Fosscord Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,300i,400,400i,700,700i%7C:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup" class="md-skip">
+        <a href="#reverse-proxyssl" class="md-skip">
           Skip to content
         </a>
       
@@ -78,9 +79,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
+    <a href="../.." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -96,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup
+              Reverse Proxy/SSL
             
           </span>
         </div>
@@ -197,9 +198,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
+    <a href="../.." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Fosscord Docs
@@ -227,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -242,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         Frequently Asked Questions
       </a>
     </li>
@@ -257,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         Resources
       </a>
     </li>
@@ -293,7 +294,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../api/">Api</a>
+          <a href="../../api/">Api</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -314,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/encryption/" class="md-nav__link">
+      <a href="../../api/encryption/" class="md-nav__link">
         Encryption
       </a>
     </li>
@@ -328,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/rights/" class="md-nav__link">
+      <a href="../../api/rights/" class="md-nav__link">
         User rights
       </a>
     </li>
@@ -342,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/routes/" class="md-nav__link">
+      <a href="../../api/routes/" class="md-nav__link">
         Routes
       </a>
     </li>
@@ -376,27 +377,19 @@
         
           
         
-          
-        
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../client/">Client</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
+          <a href="../../bots/">Bots</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Client" data-md-level="1">
+      <nav class="md-nav" aria-label="Bots" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Client
+          Bots
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -406,36 +399,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../client/connect/" class="md-nav__link">
-        Client
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../client/plugins/" class="md-nav__link">
-        Plugins
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../client/themes/" class="md-nav__link">
-        Themes
+      <a href="../../bots/setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -470,12 +435,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../contributing/">Contributing</a>
+          <a href="../../client/">Client</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -483,8 +450,98 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/connect/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/plugins/" class="md-nav__link">
+        Plugins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/themes/" class="md-nav__link">
+        Themes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contributing/">Contributing</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Contributing
         </label>
@@ -496,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/server/" class="md-nav__link">
+      <a href="../../contributing/server/" class="md-nav__link">
         Server
       </a>
     </li>
@@ -510,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/ui/" class="md-nav__link">
+      <a href="../../contributing/ui/" class="md-nav__link">
         UI Framework
       </a>
     </li>
@@ -539,7 +596,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -558,25 +615,23 @@
         
           
         
-          
-        
       
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Setup</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Server</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Setup" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+      <nav class="md-nav" aria-label="Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Setup
+          Server
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -586,8 +641,8 @@
   
   
     <li class="md-nav__item">
-      <a href="HTTPS/" class="md-nav__link">
-        Reverse Proxy/HTTPS (NGINX)
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
       </a>
     </li>
   
@@ -600,8 +655,8 @@
   
   
     <li class="md-nav__item">
-      <a href="MARIADB/" class="md-nav__link">
-        Using MariaDB/MySQL
+      <a href="../database/" class="md-nav__link">
+        Database
       </a>
     </li>
   
@@ -614,8 +669,8 @@
   
   
     <li class="md-nav__item">
-      <a href="POSTGRESQL/" class="md-nav__link">
-        POSTGRESQL
+      <a href="../env/" class="md-nav__link">
+        Environment Variables
       </a>
     </li>
   
@@ -628,49 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="SQLITE/" class="md-nav__link">
-        1. How to use SQLite database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="SYSTEMD/" class="md-nav__link">
-        Using systemd
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="bots/" class="md-nav__link">
-        Bots
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hosting/" class="md-nav__link">
+      <a href="../hosting/" class="md-nav__link">
         Hosting
       </a>
     </li>
@@ -684,8 +697,91 @@
   
   
     <li class="md-nav__item">
-      <a href="server/" class="md-nav__link">
-        Server
+      <a href="../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reverse Proxy/SSL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Reverse Proxy/SSL
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proxies" class="md-nav__link">
+    Proxies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guides" class="md-nav__link">
+    Guides
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd/" class="md-nav__link">
+        Systemd Service
       </a>
     </li>
   
@@ -725,57 +821,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bots" class="md-nav__link">
-    Bots
+  <a href="#proxies" class="md-nav__link">
+    Proxies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    Server
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hosting" class="md-nav__link">
-    Hosting
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reverse-proxyhttps-nginx" class="md-nav__link">
-    Reverse Proxy/HTTPS (NGINX)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-setups" class="md-nav__link">
-    Database Setups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mariadb" class="md-nav__link">
-    MariaDB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sqlite" class="md-nav__link">
-    SQLite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postgresql" class="md-nav__link">
-    PostgreSQL
+  <a href="#guides" class="md-nav__link">
+    Guides
   </a>
   
 </li>
@@ -792,21 +853,27 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/server/ssl.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="setup">Setup</h1>
-<h2 id="bots"><a href="bots/">Bots</a></h2>
-<h2 id="server"><a href="server/">Server</a></h2>
-<h2 id="hosting"><a href="hosting/">Hosting</a></h2>
-<h2 id="reverse-proxyhttps-nginx"><a href="HTTPS/">Reverse Proxy/HTTPS (NGINX)</a></h2>
-<h2 id="database-setups">Database Setups</h2>
-<h2 id="mariadb"><a href="MARIADB/">MariaDB</a></h2>
-<h2 id="sqlite"><a href="SQLITE/">SQLite</a></h2>
-<h2 id="postgresql"><a href="POSTGRESQL/">PostgreSQL</a></h2>
+<h1 id="reverse-proxyssl">Reverse Proxy/SSL</h1>
+<p>If you're running a production instance of Fosscord, it is <strong>strongly</strong> recommended to use SSL (better known as https), which you can achieve by using a reverse proxy.</p>
+<p>A reverse proxy not only gives your instance SSL support, but also allows you to run it alongside other web services behind the same port!</p>
+<h2 id="proxies">Proxies</h2>
+<p>There are multiple reverse proxies you can use, the most popular being <a href="https://nginx.org">Nginx</a> and <a href="https://traefik.io/traefik/">Traefik</a>.</p>
+<p>Another popular solution that allows easy management via a webinterface and is based on Nginx is <a href="https://nginxproxymanager.com/">NginxProxyManager</a>.</p>
+<h2 id="setup">Setup</h2>
+<p>Choose your preferred reverse proxy, and install it using the respective setup instructions. </p>
+<p>Then, configure it to forward traffic from your domain (or a subdomain) to the port your Fosscord instance runs on (3001 by default).</p>
+<p>To be able to use SSL, you will need an SSL certificate. If you're using NginxProxyManager, you just need to enable SSL support and your proxy will automatically generate and set up certificates for you. Otherwise, you will need to set up <a href="https://certbot.eff.org">Certbot</a>.</p>
+<h2 id="guides">Guides</h2>
+<p><a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/">Nginx</a></p>
+<p><a href="https://nginxproxymanager.com/guide/#quick-setup">NginxProxyManager</a></p>
+<p><a href="https://doc.traefik.io/traefik/getting-started/install-traefik/">Traefik</a></p>
+<p><a href="https://certbot.eff.org/instructions">Certbot</a></p>
 
               
             </article>
@@ -825,7 +892,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../contributing/ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI Framework" rel="prev">
+        <a href="../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -834,20 +901,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              UI Framework
+              Setup
             </div>
           </div>
         </a>
       
       
         
-        <a href="HTTPS/" class="md-footer__link md-footer__link--next" aria-label="Next: Reverse Proxy/HTTPS (NGINX)" rel="next">
+        <a href="../systemd/" class="md-footer__link md-footer__link--next" aria-label="Next: Systemd Service" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Reverse Proxy/HTTPS (NGINX)
+              Systemd Service
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -877,10 +944,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5413a266.min.js"></script>
       
     
   </body>

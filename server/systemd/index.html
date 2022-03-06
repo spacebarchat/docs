@@ -10,16 +10,16 @@
       
       
       
-      <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
-        <title>Reverse Proxy/HTTPS (NGINX) - Fosscord Docs</title>
+        <title>Systemd Service - Fosscord Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -30,9 +30,10 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,300i,400,400i,700,700i%7C:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reverse-proxyhttps-nginx" class="md-skip">
+        <a href="#systemd-service" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +81,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -96,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reverse Proxy/HTTPS (NGINX)
+              Systemd Service
             
           </span>
         </div>
@@ -199,7 +200,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Fosscord Docs
@@ -376,6 +377,62 @@
         
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../bots/">Bots</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Bots" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bots
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bots/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+        
           
         
           
@@ -387,14 +444,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../client/">Client</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Client" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Client
         </label>
@@ -461,7 +518,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -477,14 +534,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../contributing/">Contributing</a>
           
-            <label for="__nav_6">
+            <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Contributing
         </label>
@@ -539,12 +596,10 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
-        
-          
         
           
         
@@ -565,18 +620,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Setup</a>
+          <a href="../">Server</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Setup" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+      <nav class="md-nav" aria-label="Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Setup
+          Server
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -584,99 +639,10 @@
               
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Reverse Proxy/HTTPS (NGINX)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Reverse Proxy/HTTPS (NGINX)
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache2-is-currently-not-supported" class="md-nav__link">
-    Apache2 is currently not supported.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#without-https" class="md-nav__link">
-    Without HTTPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-https" class="md-nav__link">
-    Using HTTPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with-apache2" class="md-nav__link">
-    With Apache2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
-      <a href="../MARIADB/" class="md-nav__link">
-        Using MariaDB/MySQL
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
       </a>
     </li>
   
@@ -689,8 +655,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../POSTGRESQL/" class="md-nav__link">
-        POSTGRESQL
+      <a href="../database/" class="md-nav__link">
+        Database
       </a>
     </li>
   
@@ -703,36 +669,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../SQLITE/" class="md-nav__link">
-        1. How to use SQLite database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SYSTEMD/" class="md-nav__link">
-        Using systemd
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bots/" class="md-nav__link">
-        Bots
+      <a href="../env/" class="md-nav__link">
+        Environment Variables
       </a>
     </li>
   
@@ -759,9 +697,47 @@
   
   
     <li class="md-nav__item">
-      <a href="../server/" class="md-nav__link">
-        Server
+      <a href="../setup/" class="md-nav__link">
+        Setup
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl/" class="md-nav__link">
+        Reverse Proxy/SSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Systemd Service
+      </a>
+      
     </li>
   
 
@@ -793,55 +769,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache2-is-currently-not-supported" class="md-nav__link">
-    Apache2 is currently not supported.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#without-https" class="md-nav__link">
-    Without HTTPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-https" class="md-nav__link">
-    Using HTTPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with-apache2" class="md-nav__link">
-    With Apache2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -852,135 +779,28 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/HTTPS.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/server/systemd.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="reverse-proxyhttps-nginx">Reverse Proxy/HTTPS (NGINX)</h1>
-<h2 id="setup">Setup</h2>
-<h3 id="apache2-is-currently-not-supported">Apache2 is currently not supported.</h3>
-<p>A reverse proxy is when you take a web server, for our example, NGINX and you ue it to redirect traffic on port 80/443 to port 3001, but to
-your browser, it still appears as port 80/443</p>
-<p>A reverse proxy is the most efficient way to setup HTTPS on your instance.</p>
-<p>To do this, you need a basic understanding of setting up a web server.</p>
-<h3 id="without-https">Without HTTPS</h3>
-<div class="highlight"><pre><span></span><code>limit_req_zone $binary_remote_addr zone=registerzone:10m rate=1r/m;
-server {
-        listen 80;
+<h1 id="systemd-service">Systemd Service</h1>
+<p>If you want to run Fosscord as a systemd service, simply put this in <code>/etc/systemd/system/fosscord.service</code>:</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=&lt;your description&gt;
 
-        server_name fosscord.your.website;
-        location / {
-                proxy_pass http://127.0.0.1:3001;
-                proxy_set_header Host $host;
-                proxy_pass_request_headers      on;
-                add_header Last-Modified $date_gmt;
-                add_header Cache-Control &#39;no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0&#39;;
-                proxy_set_header  X-Real-IP $remote_addr;
-                proxy_set_header  X-Forwarded-Proto https;
-                proxy_set_header  X-Forwarded-For $remote_addr;
-                proxy_set_header  X-Forwarded-Host $remote_addr;
-                proxy_no_cache 1;
-                proxy_cache_bypass 1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection &quot;upgrade&quot;;
-    }
+[Service]
+User=&lt;your user&gt;
+WorkingDirectory=&lt;fosscord bundle directory&gt;
+ExecStart=npm run start:bundle
+Restart=always
 
-        // everything below this is safe to remove if you want to
-        location = /api/v9/auth/register {
-                limit_req zone=registerzone;
-                proxy_pass http://127.0.0.1:3001;
-                proxy_set_header Host $host;
-                proxy_pass_request_headers      on;
-                add_header Last-Modified $date_gmt;
-                add_header Cache-Control &#39;no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0&#39;;
-                proxy_set_header  X-Real-IP $remote_addr;
-                proxy_set_header  X-Forwarded-Proto https;
-                proxy_set_header  X-Forwarded-For $remote_addr;
-                proxy_set_header  X-Forwarded-Host $remote_addr;
-                proxy_no_cache 1;
-                proxy_cache_bypass 1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection &quot;upgrade&quot;;
-        }
+[Install]
+WantedBy=multi-user.target
 </code></pre></div>
-<p>You can now use your website on port 80.</p>
-<h3 id="using-https">Using HTTPS</h3>
-<p>Using the existing HTTP config, run this command</p>
-<p>Generate your certificates with certbot.</p>
-<p><code>sudo certbot --nginx -d fosscord.your.website</code></p>
-<p>If you want your certificates to renew, run <code>crontab -e</code> and paste this in: <code>0 12 * * * /usr/bin/certbot renew --quiet</code>. Then you should be all set!</p>
-<p>If done correctly, you should have your website up and running with SSL. <code>server_name</code> is important because certbot will use it to sign the certificates.</p>
-<p>An example of a correctly configured NGINX setup (using SSL):</p>
-<div class="admonition failure">
-<p class="admonition-title">THIS IS JUST AN EXAMPLE<p>Do not use this, use the command above, if you use it correctly, you should have a working instance with HTTPS.</p>
-</p>
-</div>
-<div class="highlight"><pre><span></span><code>limit_req_zone $binary_remote_addr zone=registerzone:10m rate=1r/m;
-server {
-        server_name fosscord.your.website;
-        location / {
-                proxy_pass http://127.0.0.1:3001;
-                proxy_set_header Host $host;
-                proxy_pass_request_headers      on;
-                add_header Last-Modified $date_gmt;
-                add_header Cache-Control &#39;no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0&#39;;
-                proxy_set_header  X-Real-IP $remote_addr;
-                proxy_set_header  X-Forwarded-Proto https;
-                proxy_set_header  X-Forwarded-For $remote_addr;
-                proxy_set_header  X-Forwarded-Host $remote_addr;
-                proxy_no_cache 1;
-                proxy_cache_bypass 1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection &quot;upgrade&quot;;
-    }
-
-        // same thing here
-        location = /api/v9/auth/register {
-                limit_req zone=registerzone;
-                proxy_pass http://127.0.0.1:3001;
-                proxy_set_header Host $host;
-                proxy_pass_request_headers      on;
-                add_header Last-Modified $date_gmt;
-                add_header Cache-Control &#39;no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0&#39;;
-                proxy_set_header  X-Real-IP $remote_addr;
-                proxy_set_header  X-Forwarded-Proto https;
-                proxy_set_header  X-Forwarded-For $remote_addr;
-                proxy_set_header  X-Forwarded-Host $remote_addr;
-                proxy_no_cache 1;
-                proxy_cache_bypass 1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection &quot;upgrade&quot;;
-        }
-
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /yourcerts/website.crt; # managed by certbot
-    ssl_certificate_key /yourcerts/privatekey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-}
-server {
-    if ($host = fosscord.your.website) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-        server_name fosscord.your.website;
-        listen 80;
-    return 404; # managed by Certbot
-
-
-}
-</code></pre></div>
-<h3 id="with-apache2">With Apache2</h3>
-<div class="admonition failure">
-<p class="admonition-title">Not supported</p>
-<p>Avoid using Apache2, since I've tried it and it just led to an infinite loading screen for me.</p>
-</div>
-<p>You can find how to use Apache2 reverse proxy on the internet. If you find out how to set it up correctly, please send a pull request to the repository <a href="https://github.com/fosscord/fosscord-docs/">here</a></p>
-<p>// by AToska21</p>
+<p>Then, execute <code>sudo systemctl start fosscord</code> from your terminal.</p>
+<p>If you want to automatically run Fosscord on boot, execute <code>sudo systemctl enable fosscord</code></p>
 
               
             </article>
@@ -999,7 +819,7 @@ server {
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup" rel="prev">
+        <a href="../ssl/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reverse Proxy/SSL" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1008,26 +828,11 @@ server {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Setup
+              Reverse Proxy/SSL
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../MARIADB/" class="md-footer__link md-footer__link--next" aria-label="Next: Using MariaDB/MySQL" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Using MariaDB/MySQL
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
@@ -1054,7 +859,7 @@ server {
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5413a266.min.js"></script>
       
     
   </body>

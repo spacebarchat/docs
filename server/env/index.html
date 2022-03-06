@@ -10,16 +10,16 @@
       
       
       
-      <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
-        <title>1. How to use SQLite database - Fosscord Docs</title>
+        <title>Environment Variables - Fosscord Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -30,9 +30,10 @@
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,300i,400,400i,700,700i%7C:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-how-to-use-sqlite-database" class="md-skip">
+        <a href="#environment-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +81,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -96,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. How to use SQLite database
+              Environment Variables
             
           </span>
         </div>
@@ -199,7 +200,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Fosscord Docs
@@ -376,6 +377,62 @@
         
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../bots/">Bots</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Bots" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bots
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bots/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+        
           
         
           
@@ -387,14 +444,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../client/">Client</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Client" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Client
         </label>
@@ -461,7 +518,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -477,14 +534,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../contributing/">Contributing</a>
           
-            <label for="__nav_6">
+            <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Contributing
         </label>
@@ -539,12 +596,10 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
-        
-          
         
           
         
@@ -565,18 +620,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Setup</a>
+          <a href="../">Server</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Setup" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+      <nav class="md-nav" aria-label="Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Setup
+          Server
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -586,8 +641,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../HTTPS/" class="md-nav__link">
-        Reverse Proxy/HTTPS (NGINX)
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
       </a>
     </li>
   
@@ -600,22 +655,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../MARIADB/" class="md-nav__link">
-        Using MariaDB/MySQL
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POSTGRESQL/" class="md-nav__link">
-        POSTGRESQL
+      <a href="../database/" class="md-nav__link">
+        Database
       </a>
     </li>
   
@@ -637,38 +678,48 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Environment Variables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        1. How to use SQLite database
+        Environment Variables
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <li class="md-nav__item">
-      <a href="../SYSTEMD/" class="md-nav__link">
-        Using systemd
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
+    
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
   
-    <li class="md-nav__item">
-      <a href="../bots/" class="md-nav__link">
-        Bots
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -694,8 +745,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../server/" class="md-nav__link">
-        Server
+      <a href="../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl/" class="md-nav__link">
+        Reverse Proxy/SSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd/" class="md-nav__link">
+        Systemd Service
       </a>
     </li>
   
@@ -728,6 +807,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -738,134 +839,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/SQLITE.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/server/env.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="1-how-to-use-sqlite-database">1. How to use SQLite database</h1>
-<p>database.db is a file that makes your fosscord instance customizable. Fosscord curently uses SQLite Database to store it's data, you can allways change it.</p>
-<p>I will be found in <code>#/bundle/database.db</code> where <code># is the dir name example fosscord-server</code>
-For example this path for git cloned fosscord-server will be <code>fosscord-server/bundle/database.db</code></p>
-<h1 id="basic-stuff-that-will-be-included-in-this-documentation-page">Basic stuff that will be included in this Documentation page</h1>
+<h1 id="environment-variables">Environment Variables</h1>
+<p>Some configuration is done via environment variables. If you can't find what you're looking for here, try <a href="../configuration/">database configuration</a></p>
+<h2 id="editing">Editing</h2>
+<p>In order to edit environment variables, just create a file called <code>.env</code> in <code>bundle/</code>. In there, you can declare variables in the format <code>VARIABLE=value</code>.</p>
+<h2 id="options">Options</h2>
+<p>This list may be incomplete.</p>
 <table>
 <thead>
 <tr>
-<th>Number</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1.</td>
-<td>What is database.db/it's path</td>
+<td>THREADS</td>
+<td>Amount of threads/workers to use</td>
 </tr>
 <tr>
-<td>2.</td>
-<td>What will we be discussing today?</td>
-</tr>
-<tr>
-<td>3.</td>
-<td>The number of tables you can edit</td>
-</tr>
-<tr>
-<td>4.</td>
-<td>Description of each editable table's</td>
-</tr>
-<tr>
-<td>5.</td>
-<td>What each sub tables do?</td>
-</tr>
-<tr>
-<td>6.</td>
-<td>Other Fun Tricks with database.db (Coming Soon)</td>
+<td>DATABASE</td>
+<td>Connection URL of the database</td>
 </tr>
 </tbody>
 </table>
-<h1 id="2-what-will-be-discussing-today">2. What will be discussing today?</h1>
-<p>We will be discussing how to edit <code>database.db</code> file which is a database used for your fosscord client/server, it's used to save people's data and also allows you to edit your instance in many ways!, you can edit your info, edit passwords, emails, usernames you can give badges... etc, we will be discussing to how to edit them and do it correctly so you don't get too many errors..., let's get a explanation on the tables.</p>
-<h1 id="3-the-number-of-tables-you-can-edit">3. The number of tables you can edit</h1>
-<p>Number of total tables you can edit (this does not include the sub tables, sub tables are tables inside tables): <code>35-34</code></p>
-<p><strong>Names of the tables you can edit</strong></p>
-<details>
-<summary>Names of the table you can edit (it's really big)</summary>
-<br>
-1. applications<br/>
-2. attachments<br/>
-3. audit_logs<br/>
-4. bans<br/>
-5. channels<br/>
-6. config<br/>
-7. connected_accounts<br/>
-8. emojis<br/>
-9. guilds<br/>
-10. invites<br/>
-11. member_roles<br/>
-12. members<br/>
-13. message_channel_mentions<br/>
-14. message_role_mentions<br/>
-15. message_stickers<br/>
-16. message_user_mentions<br/>
-17. messages<br/>
-18. migrations<br/>
-19. query-result-cache<br/>
-20. rate_limits<br/>
-21. read_states<br/>
-22. recipients<br/>
-23. relationship<br/>
-24. roles<br/>
-25. sessions<br/>
-26. sqlite_sequence<br/>
-27. sticker_packs<br/>
-28. stickers<br/>
-29. team_members<br/>
-30. teams<br/>
-31. templates<br/>
-32. users<br/>
-33. voice_states<br/>
-34. webhooks<br/>
-</summary>
-</details>
-
-<h1 id="4-what-does-each-table-do">4. What does each table do?</h1>
-<p><code>applications</code>: Bot Applications, TOS applications, RPC applications ETC</p>
-<p><code>attachments</code>: attachments are photos and videos you send on your fosscord instance</p>
-<p><code>audit_logs</code>: this are logs where the logs of bans, deleting channels, creating channels, making roles,updating roles.. ETC</p>
-<p><code>bans</code>: bans are the users that are banned from a server.</p>
-<p><code>channel</code>: channel's created on your fosscord instance</p>
-<p><code>config</code>: config table is the most important table of all the DB, that's where the real <strong>magic</strong> happens, it has all the things to update instance name, instance description, config's,URL's ETC</p>
-<p><code>connected_accounts</code>: this us the list of the accounts that are online on your instances</p>
-<p><code>emojis</code>: this are emojis that are stored on your instance</p>
-<p><code>guilds</code>: this are guilds that are made/on your instances</p>
-<p><code>invites</code>: this are invites created on your instance</p>
-<p><code>member_roles</code>: the roles that are made on your fosscord instance </p>
-<p><code>members</code>: list's members that are in your instance but it also has server is which the members are in</p>
-<p><code>message_role_mentions</code>: roles mentioned in a message</p>
-<p><code>message_channel_mentions</code>: channels mentioned in a message</p>
-<p><code>message_stickers</code>: stickers that are sent or made</p>
-<p><code>message_user_mentions</code>: user mention that is sent using a message <code>example: @OmxproYT#7508</code></p>
-<p><code>messages</code>: messages sent on your fosscord instance</p>
-<p><code>migrations</code>: migrations that happened on your instance </p>
-<p><code>query-result-cache</code>: result cache of query, it makes searching faster</p>
-<p><code>rate_limits</code>: rate limits that are placed on a account</p>
-<p><code>read_states</code>: read states of messages (I think not sure)</p>
-<p><code>recipients</code>: recipients of your instances </p>
-<p><code>relationships</code>: (really don't know what this means I really don't know if this is even important)</p>
-<p><code>roles</code>: roles made on your instances</p>
-<p><code>sessions</code>: sessions that are online OR sessions that are made on your instance </p>
-<p><code>sqlite_sequenses</code>: sequences on sqlite DB</p>
-<p><code>sticker_packs</code>: sticker packs made on your fosscord instances (you can make more)</p>
-<p><code>stickers</code>: stickers that are on your instance</p>
-<p><code>team_members</code>: team members of teams</p>
-<p><code>teams</code>: team's made on your instance</p>
-<p><code>templates</code>: server templates made on your instance</p>
-<p><code>users</code>: user accounts made on your fosscord instances</p>
-<p><code>voice_states</code>: states of Voice Chat</p>
-<p><code>webhooks</code>: webhooks made on your fosscord instances</p>
-<p>You can edit this with a program called DBeaver.</p>
-<p>// made my omxpro
-// adapted by AToska21</p>
 
               
             </article>
@@ -884,7 +887,7 @@ For example this path for git cloned fosscord-server will be <code>fosscord-serv
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../POSTGRESQL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: POSTGRESQL" rel="prev">
+        <a href="../database/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Database" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -893,20 +896,20 @@ For example this path for git cloned fosscord-server will be <code>fosscord-serv
               <span class="md-footer__direction">
                 Previous
               </span>
-              POSTGRESQL
+              Database
             </div>
           </div>
         </a>
       
       
         
-        <a href="../SYSTEMD/" class="md-footer__link md-footer__link--next" aria-label="Next: Using systemd" rel="next">
+        <a href="../hosting/" class="md-footer__link md-footer__link--next" aria-label="Next: Hosting" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Using systemd
+              Hosting
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -939,7 +942,7 @@ For example this path for git cloned fosscord-server will be <code>fosscord-serv
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5413a266.min.js"></script>
       
     
   </body>

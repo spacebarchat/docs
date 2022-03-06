@@ -10,33 +10,34 @@
       
       
       
-      <link rel="icon" href="../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
-        <title>Using systemd - Fosscord Docs</title>
+        <title>Bots - Fosscord Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,300i,400,400i,700,700i%7C:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-systemd" class="md-skip">
+        <a href="#bots" class="md-skip">
           Skip to content
         </a>
       
@@ -78,9 +79,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
+    <a href=".." title="Fosscord Docs" class="md-header__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -96,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using systemd
+              Bots
             
           </span>
         </div>
@@ -197,9 +198,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
+    <a href=".." title="Fosscord Docs" class="md-nav__button md-logo" aria-label="Fosscord Docs" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     Fosscord Docs
@@ -227,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Home
       </a>
     </li>
@@ -242,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         Frequently Asked Questions
       </a>
     </li>
@@ -257,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resources/" class="md-nav__link">
+      <a href="../resources/" class="md-nav__link">
         Resources
       </a>
     </li>
@@ -293,7 +294,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../api/">Api</a>
+          <a href="../api/">Api</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -314,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/encryption/" class="md-nav__link">
+      <a href="../api/encryption/" class="md-nav__link">
         Encryption
       </a>
     </li>
@@ -328,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/rights/" class="md-nav__link">
+      <a href="../api/rights/" class="md-nav__link">
         User rights
       </a>
     </li>
@@ -342,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/routes/" class="md-nav__link">
+      <a href="../api/routes/" class="md-nav__link">
         Routes
       </a>
     </li>
@@ -362,21 +363,19 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-        
-          
-        
-          
         
           
         
@@ -384,19 +383,15 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../client/">Client</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Bots</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Client" data-md-level="1">
+      <nav class="md-nav" aria-label="Bots" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Client
+          Bots
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -406,36 +401,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/connect/" class="md-nav__link">
-        Client
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../client/plugins/" class="md-nav__link">
-        Plugins
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../client/themes/" class="md-nav__link">
-        Themes
+      <a href="setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -470,12 +437,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/">Contributing</a>
+          <a href="../client/">Client</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -483,8 +452,98 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/connect/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/plugins/" class="md-nav__link">
+        Plugins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/themes/" class="md-nav__link">
+        Themes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../contributing/">Contributing</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Contributing
         </label>
@@ -496,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/server/" class="md-nav__link">
+      <a href="../contributing/server/" class="md-nav__link">
         Server
       </a>
     </li>
@@ -510,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/ui/" class="md-nav__link">
+      <a href="../contributing/ui/" class="md-nav__link">
         UI Framework
       </a>
     </li>
@@ -530,21 +589,17 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
       
       
       
-        
-          
         
           
         
@@ -565,18 +620,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Setup</a>
+          <a href="../server/">Server</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Setup" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+      <nav class="md-nav" aria-label="Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Setup
+          Server
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -586,8 +641,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../HTTPS/" class="md-nav__link">
-        Reverse Proxy/HTTPS (NGINX)
+      <a href="../server/configuration/" class="md-nav__link">
+        Configuration
       </a>
     </li>
   
@@ -600,8 +655,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../MARIADB/" class="md-nav__link">
-        Using MariaDB/MySQL
+      <a href="../server/database/" class="md-nav__link">
+        Database
       </a>
     </li>
   
@@ -614,8 +669,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../POSTGRESQL/" class="md-nav__link">
-        POSTGRESQL
+      <a href="../server/env/" class="md-nav__link">
+        Environment Variables
       </a>
     </li>
   
@@ -628,117 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SQLITE/" class="md-nav__link">
-        1. How to use SQLite database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Using systemd
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Using systemd
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#explaination" class="md-nav__link">
-    Explaination
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-systemd-debian-based-distros-arch-linux-etc" class="md-nav__link">
-    Using systemd (Debian based distros, Arch Linux etc.)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#distros-without-systemd" class="md-nav__link">
-    Distros without "systemd"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bots/" class="md-nav__link">
-        Bots
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hosting/" class="md-nav__link">
+      <a href="../server/hosting/" class="md-nav__link">
         Hosting
       </a>
     </li>
@@ -752,8 +697,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../server/" class="md-nav__link">
-        Server
+      <a href="../server/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/ssl/" class="md-nav__link">
+        Reverse Proxy/SSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/systemd/" class="md-nav__link">
+        Systemd Service
       </a>
     </li>
   
@@ -797,33 +770,6 @@
     Setup
   </a>
   
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#explaination" class="md-nav__link">
-    Explaination
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-systemd-debian-based-distros-arch-linux-etc" class="md-nav__link">
-    Using systemd (Debian based distros, Arch Linux etc.)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#distros-without-systemd" class="md-nav__link">
-    Distros without "systemd"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -838,45 +784,14 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/setup/SYSTEMD.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/fosscord/fosscord-docs/edit/master/docs/bots/index.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="using-systemd">Using systemd</h1>
-<h2 id="setup">Setup</h2>
-<h3 id="explaination">Explaination</h3>
-<p>A systemd service, otherwise known as a daemon, is when you use the incuded systemd/systemctl package with your distro
-to make the computer run your program on it's own, without you having to use screen or anything else.</p>
-<p>To do this, you need a medium understanding of linux.</p>
-<h3 id="using-systemd-debian-based-distros-arch-linux-etc">Using systemd (Debian based distros, Arch Linux etc.)</h3>
-<p>Whatever you call it.</p>
-<div class="admonition failure">
-<p class="admonition-title">THIS IS JUST AN EXAMPLE<p>Only use this config as a base. DO NOT USE ROOT.</p>
-</p>
-</div>
-<p>The directory this file should go in is <code>/etc/systemd/system/fosscord.service</code> or whatever your system uses.</p>
-<p><div class="highlight"><pre><span></span><code>[Unit]
-Description=&lt;your description here&gt;
-
-[Service]
-User=root
-WorkingDirectory=&lt;fosscord directory&gt;
-ExecStart=npm run start:bundle
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-</code></pre></div>
-If you set it up correctly, you should be able to run <code>systemctl enable --now fosscord</code> and, your fosscord works! (and will start everytime your system boots!)</p>
-<h3 id="distros-without-systemd">Distros without "systemd"</h3>
-<div class="admonition failure">
-<p class="admonition-title">Not supported</p>
-<p>I haven't had any experience with Gentoo or any other distros. Sorry guys. There are ways in other linux distros to install systemctl/systemd. I would highly reccomend it.
-If there is enough demand, I will figure out how sysvinit works.</p>
-</div>
-<p>// by AToska21</p>
+<h1 id="bots">Bots</h1>
+<h2 id="setup"><a href="setup">Setup</a></h2>
 
               
             </article>
@@ -895,7 +810,7 @@ If there is enough demand, I will figure out how sysvinit works.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../SQLITE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. How to use SQLite database" rel="prev">
+        <a href="../api/routes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Routes" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -904,20 +819,20 @@ If there is enough demand, I will figure out how sysvinit works.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              1. How to use SQLite database
+              Routes
             </div>
           </div>
         </a>
       
       
         
-        <a href="../bots/" class="md-footer__link md-footer__link--next" aria-label="Next: Bots" rel="next">
+        <a href="setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Bots
+              Setup
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -947,10 +862,10 @@ If there is enough demand, I will figure out how sysvinit works.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      <script src="../assets/javascripts/bundle.5413a266.min.js"></script>
       
     
   </body>
