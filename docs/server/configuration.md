@@ -13,6 +13,7 @@ In order to edit your configuration, you will need to manually open your databas
 - [SqliteBrowser](https://sqlitebrowser.org)
 
 #### PostgreSQL
+- [DBeaver](https://dbeaver.io)
 - [pgAdmin](https://www.pgadmin.org)
 
 #### MySQL/Mariadb
