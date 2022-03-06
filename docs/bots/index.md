@@ -1,0 +1,3 @@
+# Bots
+
+## [Setup](setup)

@@ -1,4 +1,4 @@
-# Bots
+# Setup
 
 Fosscord is backwards compatible to discord, which means you can reuse your existing discord bot library and only need to change the api endpoints.
 
@@ -20,7 +20,7 @@ Currently the developer portal is not fully implemented yet, and Fosscord's bot 
 
 **Done**: You now can use this copied token to login with your bot libary or authorize any api request by putting it inside the authorization header.
 
-**Notice**: Currently you can but don't need to prefix the token with "`Bot `".
+**Notice**: Currently you can but don't need to prefix the token with "`Bot`".
 
 ## Libraries
 
@@ -33,18 +33,18 @@ Replace `your token here` with your copied token.
 Inside the client option you can specify the api endpoint:
 
 ```js
-const { Client } = require("discord.js");
+const { Client } = require('discord.js')
 
 const client = new Client({
     http: {
         version: 9,
-        api: "https://api.fosscord.com",
-        cdn: "https://cdn.fosscord.com",
-        invite: "https://fosscord.com/invite",
-    },
-});
+        api: 'https://api.fosscord.com',
+        cdn: 'https://cdn.fosscord.com',
+        invite: 'https://fosscord.com/invite'
+    }
+})
 
-client.login("your token here");
+client.login('your token here')
 ```
 
 ### Discord.py
