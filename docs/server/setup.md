@@ -21,6 +21,8 @@ This is the latest bleeding edge version of fosscord-server, which may have bugs
 - (Only on Linux) ``gcc`` and ``g++`` | Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch
 - (Only on Windows) [Visual Studio](https://visualstudio.microsoft.com/) with the C++ package
 
+!!! info "Make sure python can be executed by just running `python`"
+
 #### Setup
 
 Open a shell/terminal and execute these commands:
