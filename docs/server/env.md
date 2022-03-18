@@ -8,7 +8,8 @@ In order to edit environment variables, just create a file called ``.env`` in ``
 
 If you want to globally assign variables, use `export` on Linux or `set` on Windows.
 For example: `export THREADS=8`.
-Note that this will reset on every restart of your operating system, so you may want to make it run on boot.
+
+Note that this only sets variables for the current shell. To make them run by default on opening any shell, add your commands to ``/etc/profile`` on Linux or use ``setx`` instead of ``set`` on Windows.
 
 ## Options
 
