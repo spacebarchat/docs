@@ -6,7 +6,7 @@ In order to set your **ENDPOINT** follow these simple steps
 
 - Go to `%appdata%/yourdiscord_client` (Example: `%appdata%/discordptb`)
 
-- There is a file called `settings.json`. It should look like (`Contents can be different depending on your Discord's client settings`):
+- There is a file called `settings.json`. It should look like: (`Contents can be different depending on your Discord's client settings`)
 
 ```js
 {
@@ -44,8 +44,9 @@ In order to set your **ENDPOINT** follow these simple steps
   "WEBAPP_ENDPOINT" : "https://your_fosscord_instance_url"
 }
 ```
+- Note: If you are the instance owner make sure to install `@yukikaze-bot/erlpack` using `npm i @yukikaze-bot/erlpack` in order for Electron clients being able to connect to your instance by changing the endpoint
 
-- After this close your discord client and reopen it and you are all done!
+- After this quit your Discord client, reopen it and you are all done!
 
 // Made by ImAaronFR
 // Added to PR and specific folder by AToska21
