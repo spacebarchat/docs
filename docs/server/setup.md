@@ -18,7 +18,7 @@ This is the latest bleeding edge version of fosscord-server, which may have bugs
 
 - [NodeJS](https://nodejs.org) v14+
 - [Python](https://python.org) 3
-- (Only on Linux) ``gcc`` and ``g++`` or alternatively on debian-based distros ``build-essential``
+- (Only on Linux) ``gcc`` and ``g++`` | Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch
 - (Only on Windows) [Visual Studio](https://visualstudio.microsoft.com/) with the C++ package
 
 #### Setup
