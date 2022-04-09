@@ -5,6 +5,8 @@
 User rights are instance-wide per-user permission toggle that affects instance-wide permissions of users,
 such as the ability to edit one's own messages.
 
+ !!! warn The default rights of a user is **no rights whatsoever**, make sure you grant users your desired set of rights.
+
 | Right                  | Value   | Grants when it's 1                                                                                                                                    |
 | ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `OPERATOR`             | 1 << 0  | All rights                                                                                                                                            |
