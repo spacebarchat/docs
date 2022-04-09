@@ -853,6 +853,9 @@
 <p>Some configuration is done via environment variables. If you can't find what you're looking for here, try <a href="../configuration/">database configuration</a></p>
 <h2 id="editing">Editing</h2>
 <p>In order to edit environment variables, just create a file called <code>.env</code> in <code>bundle/</code>. In there, you can declare variables in the format <code>VARIABLE=value</code>.</p>
+<p>If you want to globally assign variables, use <code>export</code> on Linux or <code>set</code> on Windows.
+For example: <code>export THREADS=8</code>.</p>
+<p>Note that this only sets variables for the current shell. To make them run by default on opening any shell, add your commands to <code>/etc/profile</code> on Linux or use <code>setx</code> instead of <code>set</code> on Windows.</p>
 <h2 id="options">Options</h2>
 <p>This list may be incomplete.</p>
 <table>
