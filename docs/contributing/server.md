@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Accept the [code of conduct](/contributing/) and follow the server [setup guide](/setup) to setup the development environment.
+Accept the [code of conduct](/contributing/) and follow the server [setup guide](/server/setup/) to setup the development environment.
 
 ## Gateway
 
