@@ -1,5 +1,5 @@
 # API
 
-## [Encryption](encryption/)
-
 ## [Routes](routes/)
+
+## [User rights](rights/)
