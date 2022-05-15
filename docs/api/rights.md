@@ -1,5 +1,9 @@
 # User rights
 
+Notice: For guild member permissions please refer to:  
+https://discord.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags
+
+
 ## Introduction
 
 User rights are instance-wide per-user permission toggle that affects instance-wide permissions of users,
@@ -45,3 +49,31 @@ such as the ability to edit one's own messages.
 
 Those individual right bits are combined to create the overall rights. Those rights may be granted to individual users
 as well as to user groups.
+
+## Applying User Rights
+
+One way to apply rights is throught editing the database directly.  
+The SQLite database file should be present in the `bundle\database.db` by default, if no dedicated database is used.  
+
+
+For editing a database, a common software to use is **DB Browser for SQLite** https://sqlitebrowser.org/dl/  
+Since a portable version exists, it's straightforward to use.   
+
+```
+So yeah, I've downloaded portable version of https://sqlitebrowser.org/dl/
+Started the **DB Browser for SQLite.exe**
+Opened the database file **bundle\database.db**
+Selected the tab **Browse Data`**
+Selected the Table `users`
+Found the only user entry of myself.
+Found the column named `rights`
+Applied `390842023424` rights value change.
+```
+**Make sure you press 'write changes' at the top**  
+Note: After writing changes the change is immediate.
+Note: There is probably no need to restart the fosscord instance.
+
+![image](https://user-images.githubusercontent.com/21064622/168485071-937649f8-3169-485e-9853-7c32f9840aa8.png)
+
+
+
