@@ -1,7 +1,7 @@
 ## Links
 
 - [Documentation](https://docs.fosscord.com)
-- [Roadmap](https://fosscord.notion.site/2c7fe9e73f9842d3bab3a4912dedd091) (Notion to-do board synced with GitHub issues)
+- [Roadmap](https://fosscord.com/roadmap/) (follows [GitHub issues page](https://github.com/fosscord/fosscord-server/issues))
 - [Status](https://status.fosscord.com/) (Status page of the official fosscord instance)
 - [GitHub](https://github.com/fosscord/) (GitHub organization)
 - [OpenCollective](https://opencollective.com/fosscord) (Financially support the project to cover server costs and other expenses)
