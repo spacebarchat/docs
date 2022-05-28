@@ -24,7 +24,7 @@ Contains:
 - [webRTC-server](https://github.com/fosscord/fosscord-server/tree/master/webrtc-server) a _javascript_ webRTC server for voice and video communication
 - [dashboard](https://github.com/fosscord/fosscord-server/tree/master/dashboard) An admin dashboard for the server (analytics, settings, administration, trust & safety)
 - [util](https://github.com/fosscord/fosscord-server/tree/master/util) contains all shared logic like Database Models, Utility functions...
-- [cdn](https://github.com/fosscord/fosscord-server/tree/master/cdn) is the content-delivery-content (CDN) that stores user uploaded images.
+- [cdn](https://github.com/fosscord/fosscord-server/tree/master/cdn) is the content-delivery-network (CDN) that stores user uploaded images.
 
 ### Client
 
