@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1c3799f8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
@@ -839,7 +839,74 @@
 <h2 id="introduction">Introduction</h2>
 <p>User rights are instance-wide per-user permission toggle that affects instance-wide permissions of users,
 such as the ability to edit one's own messages.</p>
-<p>!!! warning The default rights of a user is <strong>no rights whatsoever</strong>, make sure you grant users your desired set of rights.</p>
+<p>You may modify a users rights by editing the <code>rights</code> column in the <code>users</code> table.<br />
+See <a href="/server/database">Database</a> and <a href="/server/configuration">Configuration</a> for more information.</p>
+<p>The rights value is a bitfield string, and to grant multiple rights you must add their values together.
+For example, to grant <code>CREATE_GUILDS</code> and <code>SEND_MESSAGES</code>, grant the user(s) <br />
+<code>(1 &lt;&lt; 15) = 32768</code> +<br />
+<code>(1 &lt;&lt; 25) = 33554432</code> =<br />
+<code>33587200</code></p>
+<div class="admonition warning">
+<p class="admonition-title">The default rights are current <code>0</code>. <strong><em>NEVER</em></strong> set default rights to <code>1</code> ( <code>OPERATOR</code> ), as this allows ANY USER to perform ANY ACTION including shutting down the server. ONLY EVER GIVE YOURSELF <code>OPERATOR</code> RIGHTS.</p>
+</div>
+<p>The rights value <code>648540060672</code> emulates the rights of users on Discord.com, granting:  </p>
+<table>
+<thead>
+<tr>
+<th>Default Rights</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CREATE_CHANNELS</code></td>
+<td><code>SELF_DELETE_MESSAGES</code></td>
+<td><code>USE_ACHIEVEMENTS</code></td>
+</tr>
+<tr>
+<td><code>CREATE_DMS</code></td>
+<td><code>SELF_EDIT_MESSAGES</code></td>
+<td><code>SELF_ADD_DISCOVERABLE</code></td>
+</tr>
+<tr>
+<td><code>CREATE_DM_GROUPS</code></td>
+<td><code>SELF_EDIT_NAME</code></td>
+<td><code>SELF_LEAVE_GROUPS</code></td>
+</tr>
+<tr>
+<td><code>CREATE_GUILDS</code></td>
+<td><code>SEND_MESSAGES</code></td>
+<td><code>KICK_BAN_MEMBERS</code></td>
+</tr>
+<tr>
+<td><code>CREATE_INVITES</code></td>
+<td><code>USE_ACTIVITIES</code></td>
+<td><code>SELF_ADD_REACTIONS</code></td>
+</tr>
+<tr>
+<td><code>CREATE_ROLES</code></td>
+<td><code>USE_VIDEO</code></td>
+<td><code>DEBTABLE</code></td>
+</tr>
+<tr>
+<td><code>CREATE_TEMPLATES</code></td>
+<td><code>USE_VOICE</code></td>
+<td><code>PIN_MESSAGES</code></td>
+</tr>
+<tr>
+<td><code>CREATE_WEBHOOKS</code></td>
+<td><code>INVITE_USERS</code></td>
+<td><code>SELF_DELETE_DISABLE</code></td>
+</tr>
+<tr>
+<td><code>JOIN_GUILDS</code></td>
+<td><code>CREATE_APPLICATIONS</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Below is a list of all available rights</p>
 <table>
 <thead>
 <tr>
@@ -922,12 +989,12 @@ such as the ability to edit one's own messages.</p>
 <tr>
 <td><code>CREATE_GUILDS</code></td>
 <td>1 &lt;&lt; 14</td>
-<td>Can create mass invites in the guilds that they have <code>CREATE_INSTANT_INVITE</code></td>
+<td>Can create guilds</td>
 </tr>
 <tr>
-<td><code>CREATE_GUILDS</code></td>
+<td><code>CREATE_INVITES</code></td>
 <td>1 &lt;&lt; 15</td>
-<td>Can create guilds</td>
+<td>Can create mass invites in the guilds that they have <code>CREATE_INSTANT_INVITE</code></td>
 </tr>
 <tr>
 <td><code>CREATE_ROLES</code></td>
@@ -1014,10 +1081,58 @@ such as the ability to edit one's own messages.</p>
 <td>1 &lt;&lt; 32</td>
 <td>Can earn money using monetization features in the guilds that have <code>MONETIZATION_ENABLED</code></td>
 </tr>
+<tr>
+<td><code>KICK_BAN_MEMBERS</code></td>
+<td>1 &lt;&lt; 33</td>
+<td>Can kick or ban guild or group DM members in the guilds/groups that they have KICK_MEMBERS, or BAN_MEMBERS</td>
+</tr>
+<tr>
+<td><code>SELF_LEAVE_GROUPS</code></td>
+<td>1 &lt;&lt; 34</td>
+<td>Can leave the guilds or group DMs that they joined on their own (one can always leave a guild or group DMs they have been force-added)</td>
+</tr>
+<tr>
+<td><code>PRESENCE</code></td>
+<td>1 &lt;&lt; 35</td>
+<td>Inverts the presence confidentiality default (OPERATOR's presence is not routed by default, others' are) for a given user</td>
+</tr>
+<tr>
+<td><code>SELF_ADD_DISCOVERABLE</code></td>
+<td>1 &lt;&lt; 36</td>
+<td>Can mark discoverable guilds that they have permissions to mark as discoverable</td>
+</tr>
+<tr>
+<td><code>MANAGE_GUILD_DIRECTORY</code></td>
+<td>1 &lt;&lt; 37</td>
+<td>Can change anything in the primary guild directory</td>
+</tr>
+<tr>
+<td><code>POGGERS</code></td>
+<td>1 &lt;&lt; 38</td>
+<td>Can send confetti, screenshake, random user mention (@someone)</td>
+</tr>
+<tr>
+<td><code>USE_ACHIEVEMENTS</code></td>
+<td>1 &lt;&lt; 39</td>
+<td>Can use achievements and cheers</td>
+</tr>
+<tr>
+<td><code>INITIATE_INTERACTIONS</code></td>
+<td>1 &lt;&lt; 40</td>
+<td>Can initiate interactions</td>
+</tr>
+<tr>
+<td><code>RESPOND_TO_INTERACTIONS</code></td>
+<td>1 &lt;&lt; 41</td>
+<td>Can respond to interactions</td>
+</tr>
+<tr>
+<td><code>SEND_BACKDATED_EVENTS</code></td>
+<td>1 &lt;&lt; 42</td>
+<td>Can send backdated events</td>
+</tr>
 </tbody>
 </table>
-<p>Those individual right bits are combined to create the overall rights. Those rights may be granted to individual users
-as well as to user groups.</p>
 
               
             </article>
@@ -1091,7 +1206,7 @@ as well as to user groups.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
       
     
   </body>
