@@ -16,7 +16,7 @@ For example, to grant `CREATE_GUILDS` and `SEND_MESSAGES`, grant the user(s)
 
 !!! warning "The default rights are current `0`. ***NEVER*** set default rights to `1` ( `OPERATOR` ), as this allows ANY USER to perform ANY ACTION including shutting down the server. ONLY EVER GIVE YOURSELF `OPERATOR` RIGHTS."
 
-The rights value `648540060672` emulates the rights of users on Discord.com, granting:  
+The rights value `646392577024` emulates the rights of users on Discord.com, granting:  
 
 | Default Rights      |					        |					 		|
 |---------------------|-------------------------|---------------------------|
@@ -25,10 +25,10 @@ The rights value `648540060672` emulates the rights of users on Discord.com, gra
 | `CREATE_DM_GROUPS`  | `SELF_EDIT_NAME`	    | `SELF_LEAVE_GROUPS`		|
 | `CREATE_GUILDS`	  | `SEND_MESSAGES` 	    | `KICK_BAN_MEMBERS`		|
 | `CREATE_INVITES`    | `USE_ACTIVITIES`	    | `SELF_ADD_REACTIONS`		|
-| `CREATE_ROLES`	  | `USE_VIDEO`			    | `DEBTABLE`				|
-| `CREATE_TEMPLATES`  | `USE_VOICE`			    | `PIN_MESSAGES`			|
-| `CREATE_WEBHOOKS`   | `INVITE_USERS`		    | `SELF_DELETE_DISABLE`		|
-| `JOIN_GUILDS`	      | `CREATE_APPLICATIONS`	|							|
+| `CREATE_ROLES`	  | `USE_VIDEO`			    | `PIN_MESSAGES`			|
+| `CREATE_TEMPLATES`  | `USE_VOICE`			    | `SELF_DELETE_DISABLE`		|
+| `CREATE_WEBHOOKS`   | `INVITE_USERS`		    | `CREATE_APPLICATIONS`		|
+| `JOIN_GUILDS`	      | 						|							|
 
 Below is a list of all available rights
 
