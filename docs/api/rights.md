@@ -14,20 +14,6 @@ For example, to grant `CREATE_GUILDS` and `SEND_MESSAGES`, grant the user(s)
 `(1 << 25) = 33554432` =  
 `33587200`
 
-The default user rights are `648540059648`, granding rights for:  
-
-| Default Rights      |					        |					 		|
-|---------------------|-------------------------|---------------------------|
-| `CREATE_CHANNELS`   | `SELF_DELETE_MESSAGES`  | `USE_ACHIEVEMENTS` 		|
-| `CREATE_DMS`	      | `SELF_EDIT_MESSAGES`    | `SELF_ADD_DISCOVERABLE`	|
-| `CREATE_DM_GROUPS`  | `SELF_EDIT_NAME`	    | `SELF_LEAVE_GROUPS`		|
-| `CREATE_GUILDS`	  | `SEND_MESSAGES` 	    | `KICK_BAN_MEMBERS`		|
-| `CREATE_INVITES`    | `USE_ACTIVITIES`	    | `SELF_ADD_REACTIONS`		|
-| `CREATE_ROLES`	  | `USE_VIDEO`			    | `DEBTABLE`				|
-| `CREATE_TEMPLATES`  | `USE_VOICE`			    | `PIN_MESSAGES`			|
-| `CREATE_WEBHOOKS`   | `INVITE_USERS`		    | `SELF_DELETE_DISABLE`		|
-| `JOIN_GUILDS`	      |							|							|
-
 Below is a list of all available rights
 
 | Right                  	| Value   | Grants when it's 1                                                                                                                                    |
