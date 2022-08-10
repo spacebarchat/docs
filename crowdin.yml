@@ -1,0 +1,13 @@
+files:
+  - source: /docs/en/*.md
+    translation: /docs/%two_letters_code%/%original_file_name%
+  - source: /docs/en/api
+    translation: /docs/%two_letters_code%/api/%original_file_name%
+  - source: /docs/en/bots
+    translation: /docs/%two_letters_code%/bots/%original_file_name%
+  - source: /docs/en/client
+    translation: /docs/%two_letters_code%/client/%original_file_name%
+  - source: /docs/en/contributing
+    translation: /docs/%two_letters_code%/contributing/%original_file_name%
+  - source: /docs/en/server
+    translation: /docs/%two_letters_code%/server/%original_file_name%
