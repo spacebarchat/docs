@@ -2,10 +2,6 @@ site_name: Fosscord Docs
 repo_url: https://github.com/fosscord/fosscord
 edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
 site_description: Documentation of Fosscord a free open source selfhostable chat, voice and video discord-compatible platform
-plugins:
-  - section-index
-  - search
-  - render_swagger
 theme:
   name: material
   logo: assets/logo.svg
@@ -21,14 +17,22 @@ theme:
         icon: material/lightbulb
         name: Switch to light mode
   features:
-    - navigation.expand
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
     - navigation.indexes
     - navigation.top
+plugins:
+  - section-index
+  - search
+  - render_swagger
 markdown_extensions:
+  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.superfences
+extra:
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
