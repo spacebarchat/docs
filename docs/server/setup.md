@@ -16,12 +16,12 @@ This is the latest bleeding edge version of fosscord-server, which may have bugs
 
 #### Requirements
 
-- [NodeJS](https://nodejs.org) v14+
+- [NodeJS](https://nodejs.org) v16+
 - [Python](https://python.org) 3
 - (Only on Linux) ``gcc`` and ``g++`` | Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch
 - (Only on Windows) [Visual Studio](https://visualstudio.microsoft.com/) with the C++ package
 
-!!! info "Make sure python can be executed by just running `python`"
+!!! info "Make sure python can be executed and is a correct version by just running `python -V`"
 
 #### Setup
 
@@ -30,7 +30,6 @@ Open a shell/terminal and execute these commands:
 ```
 git clone https://github.com/fosscord/fosscord-server
 cd fosscord-server
-cd bundle
 npm run setup
 npm run start:bundle
 ```

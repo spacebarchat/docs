@@ -4,7 +4,7 @@ Some configuration is done via environment variables. If you can't find what you
 
 ## Editing
 
-In order to edit environment variables, just create a file called ``.env`` in ``bundle/``. In there, you can declare variables in the format ``VARIABLE=value``.
+In order to edit environment variables, just create a file called ``.env`` in the fosscord-server directory. In there, you can declare variables in the format ``VARIABLE=value``.
 
 If you want to globally assign variables, use `export` on Linux or `set` on Windows.
 For example: `export THREADS=8`.

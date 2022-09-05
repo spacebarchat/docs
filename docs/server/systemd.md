@@ -8,7 +8,7 @@ Description=<your description>
 
 [Service]
 User=<your user>
-WorkingDirectory=<fosscord bundle directory>
+WorkingDirectory=<fosscord directory>
 ExecStart=npm run start:bundle
 Restart=always
 
