@@ -11,6 +11,8 @@ For example: `export THREADS=8`.
 
 Note that this only sets variables for the current shell. To make them run by default on opening any shell, add your commands to ``/etc/profile`` on Linux or use ``setx`` instead of ``set`` on Windows.
 
+!!! WARNING "Multithreading is currently broken, so you should define THREADS=1"
+
 ## Options
 
 This list may be incomplete.
