@@ -33,3 +33,4 @@ markdown_extensions:
     - pymdownx.highlight
     - pymdownx.inlinehilite
     - pymdownx.superfences
+extra_css: [assets/extra.css]
