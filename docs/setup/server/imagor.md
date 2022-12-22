@@ -12,7 +12,7 @@ or cause the client to download directly from the image host.
 ## Setup
 
 To setup Imagor for Fosscord, first grab the `security_requestSignature` config value from Fosscord's database,
-and create a `imagor.env` file somewhere safe, with the following content.
+and create a `imagor.env` file somewhere safe, with the following content (do not include the `[]`)
 
 ```
 IMAGOR_SECRET=[security_requestSignature value]
