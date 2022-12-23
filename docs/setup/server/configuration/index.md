@@ -135,7 +135,7 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | sentry_enabled                                     | false                                                    | boolean                | Whether server-side Sentry analytics is enabled                       |
 | sentry_endpoint                                    | Fosscord sentry endpoint                                 | string                 | Sentry endpoint                                                       |
 | sentry_traceSampleRate                             | 1                                                        | number                 | Sentry sample rate (1 means all requests)                             |
-| sentry_environment                                 | The                                                      | string                 | Sentry environment name                                               |
+| sentry_environment                                 | System hostname                                          | string                 | Sentry environment name                                               |
 | defaults_user_premium                              | false                                                    | boolean                | Whether users are given premium upon registration                     |
 | defaults_user_premium_type                         | 2                                                        | number                 | The premium type given to users upon registration                     |
 | defaults_user_verified                             | true                                                     | boolean                | Whether users get verified email upon registration                    |
