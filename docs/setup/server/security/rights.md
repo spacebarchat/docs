@@ -1,4 +1,4 @@
-# Rights
+## About
 
 Rights are instance-wide, per-user permissions for everything you may perform on the instance,
 such as sending messages, editing messages, or shutting down the server.
@@ -14,7 +14,7 @@ For example, to grant `CREATE_GUILDS` and `SEND_MESSAGES`, set their `rights` to
 The default rights value given to users (set through the `register_defaultRights` config value)
 is generated through the `npm run generate:rights` script.
 
-Below is a list of all available rights
+## Available rights
 
 | Right                     | Value   | When enabled                                                                                                                                          |
 | ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,3 +67,105 @@ Below is a list of all available rights
 | `EDIT_FLAGS`              | 1 << 46 | Can modify other's flags                                                                                                                              |
 | `MANAGE_GROUPS`           | 1 << 47 | Can manage other's groups                                                                                                                             |
 | `VIEW_SERVER_STATS`       | 1 << 48 | Can view server stats /api/policies/stats                                                                                                             |
+
+## Calculator
+
+<style>
+	#rights-calculator * {
+		padding: 0;
+		margin: 0;
+		font-size: 0.65rem;
+
+	}
+
+	#rights-calculator #rights-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	#rights-calculator #rights-container input {
+		margin-right: 10px;
+		width: 20px;
+		height: 20px;
+	}
+
+	#rights-calculator #rights-output-container {
+		margin-top: 10px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+</style>
+
+<div id="rights-calculator">
+	<div id="rights-container"></div>
+	<div id="rights-output-container">
+		<p>Rights: <span id="rights-output"></span></p>
+	</div>
+</div>
+
+<script>
+	const NUM_COLUMNS = 3;
+
+	// Grab it from the above markdown table and parse it. Simply don't have multiple tables in the page lol
+	const rights =
+		// grab the table data elements
+		[...document.querySelectorAll("td")]
+			.map(x => x.innerText)				// get their content
+			.map((x, i) =>
+				x.indexOf("<<") == 2			// if this column is the `value` column
+					? x.split(" ").reverse()[0]	// get the value we shift by
+					: x)						// otherwise dont do anything
+	const mount = document.getElementById("rights-container");
+	const outputMount = document.getElementById("rights-output");
+	let calculated = 0n;
+
+	for (var i = 0; i < rights.length; i += NUM_COLUMNS) {
+		const name = rights[i];
+		const shift = rights[i + 1];
+		const desc = rights[i + 2];
+
+		const div = document.createElement("div");
+		const input = document.createElement("input");
+		input.setAttribute("type", "checkbox");
+		input.setAttribute("id", shift);
+		const label = document.createElement("label");
+		label.setAttribute("for", label.id);
+		label.innerText = name.toUpperCase();
+
+		div.appendChild(input);
+		div.appendChild(label);
+
+		mount.append(div);
+
+		input.addEventListener("click", (event) => {
+			const value = 1n << BigInt(event.target.getAttribute("id"));
+
+			// bit messy, oh well
+			if (value == 1n) {
+				if (event.target.checked) {
+					for (var elem of mount.children) {
+						elem.children[0].setAttribute("disabled", true);
+					}
+					event.target.removeAttribute("disabled")
+
+					outputMount.innerText = "1";
+					return;
+				}
+				else {
+					for (var elem of mount.children) {
+						elem.children[0].removeAttribute("disabled");
+					}
+					outputMount.innerText = calculated;
+					return;
+				}
+			}
+
+			calculated = event.target.checked
+				? calculated + value
+				: calculated - value;
+
+			outputMount.innerText = calculated;
+		});
+	}
+</script>
