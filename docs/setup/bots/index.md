@@ -1,7 +1,7 @@
 # Bots and Applications
 
 Fosscord is backwards-compatibile with Discord.com, and so all
-existing bots and applications designed for Discord.com should work with relatively easily
+existing bots and applications designed for Discord.com should work relatively easily
 when connected to a Fosscord instance instead.
 
 The Discord Developer Panel is available at /developers, and allows you all the same functionality
