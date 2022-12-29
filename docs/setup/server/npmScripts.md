@@ -31,7 +31,7 @@ Downloads a (mostly) complete discord.com web client and runs some basic patches
 -   Replaces "Discord" -> "Fosscord"
 -   "Nitro" -> "Premium"
 -   Replaces the Discord logo home button with a Fosscord logo
--   Prevents `localStorage` deletion (for [plugins](plugins.md))
+-   Prevents `localStorage` deletion (for [plugins](Test%20Client/plugins.md))
 -   Adds `fast-identify` support
 
 The script can only search for all javascript client files,

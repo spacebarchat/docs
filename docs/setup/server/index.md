@@ -50,4 +50,4 @@ Well, now you can configure Fosscord to your liking!
 
 -   [Skip to server configuration](configuration)
 -   [Skip to reverse proxy / SSL](reverseProxy.md)
--   [Skip to security](security.md)
+-   [Skip to security](security)
