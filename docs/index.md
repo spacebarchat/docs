@@ -4,6 +4,8 @@
 
 !!! info "Interested in contributing? We'd love to have you on board! [Click here](contributing)"
 
+!!! info "Have a question? It might be in [here](faq.md)"
+
 ## What is Fosscord?
 
 Fosscord is a Discord.com server implementation and extension,
