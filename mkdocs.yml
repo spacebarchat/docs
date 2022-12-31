@@ -1,4 +1,4 @@
-site_name: Fosscord Docs
+site_name: Fosscord Documentation
 repo_url: https://github.com/fosscord/fosscord
 edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
 site_description: Documentation of Fosscord a free open source selfhostable chat, voice and video discord-compatible platform
@@ -12,11 +12,15 @@ theme:
     favicon: assets/logo.svg
     font: Open Sans
     palette:
-        - scheme: default
+        - media: "(prefers-color-scheme: light)"
+          primary: deep-orange
+          scheme: default
           toggle:
               icon: material/lightbulb-outline
               name: Switch to dark mode
-        - scheme: slate
+        - media: "(prefers-color-scheme: dark)"
+          primary: deep-orange
+          scheme: slate
           toggle:
               icon: material/lightbulb
               name: Switch to light mode
