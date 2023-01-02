@@ -13,9 +13,10 @@ You **must** have access to a terminal for this guide.
 
 -   [Git](https://git-scm.com/)
 -   [NodeJS](https://nodejs.org). Version 16+
--   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.
+-   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
+	(See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
--   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the C++ development package.
+-   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
 
 ## Setup
 
