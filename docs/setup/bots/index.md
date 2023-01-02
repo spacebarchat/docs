@@ -18,12 +18,12 @@ the endpoints used.
 const { Client } = require("discord.js");
 
 const client = new Client({
-    http: {
-        version: 9,
-        api: "https://api.fosscord.com",
-        cdn: "https://cdn.fosscord.com",
-        invite: "https://fosscord.com/invite",
-    },
+	http: {
+		version: 9,
+		api: "https://api.fosscord.com",
+		cdn: "https://cdn.fosscord.com",
+		invite: "https://fosscord.com/invite",
+	},
 });
 
 client.login("your token here");

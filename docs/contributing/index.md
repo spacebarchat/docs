@@ -3,10 +3,11 @@
 !!! info "[Have you read the Code of Conduct?](conduct.md)"
 
 ## Notable Technologies
-* Typescript
-* [Typeorm](https://www.npmjs.com/package/typeorm)
-* [WS](https://www.npmjs.com/package/ws)
-* [Express](https://www.npmjs.com/package/express)
+
+-   Typescript
+-   [Typeorm](https://www.npmjs.com/package/typeorm)
+-   [WS](https://www.npmjs.com/package/ws)
+-   [Express](https://www.npmjs.com/package/express)
 
 ## Structure
 
