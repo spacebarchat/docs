@@ -10,7 +10,8 @@ in the `fosscord-server` folder, with the format `NAME=VALUE` with each on new l
 | PORT             | number         | Port to listen on. Used by all components, including bundle. If using bundle, all components run under the same port |
 | DATABASE         | string         | Database connection string. Defaults to SQlite3 at project root                                                      |
 | CONFIG_PATH      | string         | File path for JSON config, if not using `config` db table                                                            |
-| WS_LOGEVENTS     | boolean        | If set, log websocket events from gateway                                                                            |
+| WS_LOGEVENTS     | boolean        | If set, log websocket events except messages from gateway                                                            |
+| WS_VERBOSE       | boolean        | If set, log websocket messages received by gateway                                                                   |
 | CDN              | string         | Lowest priority value for public CDN annoucements                                                                    |
 | GATEWAY          | string         | Lowest priority value for public gateway annoucements                                                                |
 | STORAGE_LOCATION | string         | CDN storage location. File path or S3 bucktet                                                                        |
