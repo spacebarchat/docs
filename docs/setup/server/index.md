@@ -35,10 +35,6 @@ npm i
 # Build and generate schema. Separately, they are `build` and `generate:schema`.
 npm run setup
 
-# Syncronise database. Be careful running this on existing databases,
-# as you may incur dataloss. You only need to run this once.
-npm run sync:db
-
 # Start the bundle server ( API, CDN, Gateway in one )
 npm run start
 ```
