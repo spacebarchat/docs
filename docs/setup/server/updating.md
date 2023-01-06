@@ -1,5 +1,5 @@
 If you had followed the [setup guide](index.md), you'll have installed Fosscord using [Git](https://git-scm.com/).
-Thus, you can update the server by running `git pull`.
+Thus, you can update the server by running `git pull` in the `fosscord-server` directory.
 
 If you had made any changes locally, you may run into merge conflicts,
 where the Fosscord team has made changes to the same code you changed. If it's not important to you, you can simply run `git reset --hard HEAD`
