@@ -5,11 +5,14 @@ site_description: Documentation of Fosscord a free open source selfhostable chat
 plugins:
     - section-index
     - search
-    - render_swagger
+    - swagger-ui-tag:
+          extra_css: [assets/swagger.css]
+          docExpansion: none
+          filter: true
 theme:
     name: material
     logo: assets/logo.svg
-    favicon: assets/logo.svg
+    favicon: assets/favicon.svg
     font: Open Sans
     palette:
         - media: "(prefers-color-scheme: light)"
