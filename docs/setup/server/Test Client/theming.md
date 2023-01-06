@@ -1,6 +1,6 @@
 # Theming
 
-'Theming' here refers to the theming of the Discord.com web client used for testing.
+'Theming' here refers to the theming of the [test client](index.md).
 Fosscord can inject additional CSS into the client to allow you to change quite a lot about it's appearence.
 
 There's three different CSS files injected into the client, in `/assets/public`, including `fosscord-login.css`, `fosscord.css`, and `user.css`.

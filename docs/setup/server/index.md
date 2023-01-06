@@ -6,17 +6,20 @@ you should check out the other pages on this site to take your instance to the n
 
 For this guide, we assume you're familar with the terminal.
 
-We do **not** recommend or support running Fosscord using services such as Ngrok, Heroku or other 'free' hosting providers.
+We do **not** recommend or support running Fosscord using services such as Ngrok or Heroku.  
 You **must** have access to a terminal for this guide.
+
+We do not recommend using Windows to run Fosscord.
 
 ## Dependencies
 
 -   [Git](https://git-scm.com/)
 -   [NodeJS](https://nodejs.org). Version 16+
 -   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
-	(See: `python-is-python3` package)
+    (See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
 -   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
+    You do not need the full Visual Studio install, the build tools are fine.
 
 ## Setup
 

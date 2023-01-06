@@ -7,8 +7,6 @@ _which will delete all your changes_. If you want to keep them, you'll have to g
 
 After downloading the new version, go through the setup guide as normal again:
 
-!!! error "Do not run `npm run sync:db` with existing databases! You may suffer dataloss!"
-
 ```bash
 # Install any new javascript packages
 npm i

@@ -3,7 +3,9 @@
 Fosscord's configuration is done through the `config` table of your database.
 The table schema consists of two columns `key` and `value`, where `value` is a JSON value.
 For now, you can update this through SQL manually or a GUI database editor such as
-[DBeaver](https://dbeaver.io/) or [SQLite Browser](https://sqlitebrowser.org/) if using SQLite.
+[DBeaver](https://dbeaver.io/).
+
+!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make Fosscord use a JSON file instead of a database table."
 
 ## Array Types
 
@@ -72,10 +74,10 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | limits_rate_routes_auth_login_window               | 60                                                       | number                 | IP /login rate limit window, in seconds                               |
 | limits_rate_routes_auth_register_count             | 2                                                        | number                 | Allowed number of IP /register requests within window                 |
 | limits_rate_routes_auth_register_window            | 43200                                                    | number                 | IP /register rate limit window, in seconds                            |
-| limits_absoluteRate_register_limit                 | 25                                                       | number                 | Absolute number of registrations globally per window                  |
+| limits_absoluteRate_register_limit                 | 25                                                       | number                 | Absolute number of registrations instance-wide per window             |
 | limits_absoluteRate_register_window                | 3600000                                                  | number                 | Global /register rate limit window, in seconds                        |
 | limits_absoluteRate_register_enabled               | true                                                     | boolean                | Whether absolute register rate limits are enabled                     |
-| limits_absoluteRate_sendMessage_limit              | 200                                                      | number                 | Absolute number of messages globally per window                       |
+| limits_absoluteRate_sendMessage_limit              | 200                                                      | number                 | Absolute number of messages instance-wide per window                  |
 | limits_absoluteRate_sendMessage_window             | 60000                                                    | number                 | Global sendMessage window, in seconds                                 |
 | limits_absoluteRate_sendMessage_enabled            | true                                                     | boolean                | Whether absolute message sending rate limits are enabled              |
 | [security_captcha_enabled](../security/captcha.md) | false                                                    | boolean                | Whether to enable captchas for login/register                         |

@@ -14,9 +14,9 @@ all while adding some additional goodies, security, privacy, and configuration o
 
 Fosscord allows you to host a complete, Discord.com-compatible chat service
 with complete control over it's content, usage, security, configuration, and featureset.
-Being Discord.com-compatible, all existing clients, bots, and applications written for
-Discord.com can be used on any Fosscord instance, which we believe will be immensely useful
-in any transition process between services.
+Being Discord.com-compatible will allow all existing clients, bots, and applications written for
+Discord.com to be used on any Fosscord instance, which we believe will be immensely useful
+for any transition process between services.
 
 As Fosscord is an entirely separate service from Discord.com, it means a Fosscord server by itself **cannot**
 access private data controlled by Discord.com. You **cannot** use a Fosscord server to chat with your friends on Discord.com.
@@ -25,4 +25,4 @@ You also **cannot** use a Fosscord server to grant premium ("Nitro") features to
 Our goal is to achieve complete feature parity with Discord.com, as well as
 implement additional security, privacy, and other useful features serverside.
 In addition to our server software, we aim to create Fosscord-aware clients that can be used to connect
-to multiple Fosscord-compatible instances - including Discord.com - with rich theming and plugin support.
+to multiple Fosscord-compatible instances with rich theming and plugin support.

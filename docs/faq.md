@@ -1,18 +1,18 @@
 # Frequently Asked Questions
 
-??? info "Voice/Video when???"
+??? info "Voice/Video when?"
 
     Currently there is no voice or video support in any Fosscord instance.
     This is a very difficult feature to get working, especially given that
     we must implement it the exact same way as Discord.com for client compatibility.
     [We would be incredibly thankful for any assistance.](/contributing)
 
-??? info "Free Nitro???"
+??? info "Free Nitro?"
 
     Please do not use Discord trademarks to refer to anything regarding Fosscord.
     As an instance owner, you can grant yourself or others *premium* features which may be used to determine your abilities
     *client-side*. However, Fosscord-server currently does not have any distinction between premium and free users.
-    All users can access all features, given they have the [right](security/rights.md) to do so.
+    All users can access all features, given they have the [rights](security/rights.md) to do so.
 
     You cannot give yourself premium features on Discord.com using a Fosscord instance.
 
@@ -27,12 +27,13 @@
 
     No. Discord servers, as in the bare-metal running the service, are completely inaccessible
     to people, outside of course the Discord.com service provided. It is impossible for us to use their
-    infrastructure. Fosscord is hosted entirely by you, the instance owner (or whoever is the owner of your instance).
+    infrastructure. Fosscord instances are hosted entirely by their owner(s).
 
     If you mean Discord 'server' as in a *guild*, also no. Fosscord is not a proxy for
-    Discord guilds. Fosscord does not create Discord.com accounts, or ask for your own, at any time
-    (outside of a Discord.com account connection for your Fosscord user, which is still not us asking for your credentials).
-    If Fosscord was to try this, Discord's automated spam filters would surely block your instance.
+    Discord guilds. Fosscord does not create Discord.com accounts or ask for your own at any time
+    (outside of OAuth features provided by the instance such as account connections or 'login with' buttons)
+    If Fosscord was to try this, Discord's automated spam filters would surely block your instance,
+    and ban any offending accounts.
 
     Lastly, you can simply view [our codebase](https://github.com/fosscord/fosscord-server).
     A simple proxy would not need to be this complex or large.
@@ -49,20 +50,18 @@
 
     Yes, this is true. However, this is purely for testing and development purposes.
     Fosscord is first and foremost a *backend* server implementation, and we simply use Discord.com's client
-    to achieve our goals. Efforts are being made to move away from this with our own client, but as you may have guessed,
+    to verify our work as correct. Efforts are being made to move away from this with our own client, but as you may have guessed,
     building a Discord-compatible client is difficult.
 
     You can read more about the test client [here](Test%20Client/index.md)
 
 ??? info "Is this illegal?"
 
-    The person writing this does not believe it to be illegal, no.
+    The Fosscord maintainers do not believe it to be, no. See: [Oracle v. Google](https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.).
     The only aspect of Fosscord that is not entirely written by us is the test client which we simply proxy from Discord.com,
     and we take measures to show that the client is purely for development and research purposes.
 
 ??? info "Why are you doing this, anyway?"
-
-    Personally, it's because it's fun. But if you ask 'Officially':
 
     1. We love free, open source software.
     2. There are many existing bots, applications, users, features, and ideas surrounding Discord.com.
@@ -70,7 +69,7 @@
     4. Reimplementing allows us to extend the Discord protocol in ways Discord.com may not deem feasible, economical, whateverical.
     5. This includes privacy features, such as end to end encryption for example.
     6. The reverse engineering effort by our team may be useful to outside developers looking to understand how similar services work.
-    7. The Discord protocol despite it's API complexity is quite simple and linear, which makes this project more feasible.
+    7. The Discord protocol, despite its API complexity, is quite simple and linear. No complex conflict resolution like Matrix, for example.
 
 ??? info "Editing the database is annoying, is there a graphical interface for this?"
 

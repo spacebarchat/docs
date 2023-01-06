@@ -9,7 +9,7 @@ Shorthand for `build` and `generate:schema`
 ## `sync:db`
 
 Syncronise the database schema between Fosscord source code and your database.
-**May incur dataloss**. You should only run this once, for new installs.
+**May incur data loss**.
 
 ## `build`
 
