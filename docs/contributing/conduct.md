@@ -12,7 +12,7 @@ By contributing to any Fosscord projects (for example, through pull request) you
 
 -   If possible, provide assistance with Fosscord projects to other users.
 -   Be respectful toward other's opinions and viewpoints.
--   Accepting responsibility and apoligising to those affected for our mistakes.
+-   Accepting responsibility and apologizing to those affected for our mistakes.
 
 ### Prohibited Behaviour
 
