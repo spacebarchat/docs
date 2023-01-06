@@ -6,7 +6,7 @@ This code of conduct is based on the Artemis Lena Code of Conduct by FantasyCook
 
 Fosscord community spaces includes Fosscord github repositories and Fosscord development guilds (be it on Discord.com or Fosscord instances mananged by the Fosscord maintainers group).
 
-By contributing to any Fosscord projects (for example, through pull request) you guarantee that you have the rights to resign all rights to Fosscord under the AGPLV3 license.
+By contributing to any Fosscord projects (for example, through pull request) you guarantee that you have the requisite rights to grant Fosscord a AGPLV3 licence. If your work is legally in the public domain (through a legally accepted waiver or a mandate (such as the national government works of United States, People's Republic of China and Israel)), you **must** declare this.
 
 ### Desirable Behaviour
 
