@@ -29,7 +29,7 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | cdn_endpointPublic                                 | http://localhost:3001                                    | string                 | See gateway_endpointPublic                                            |
 | cdn_resizeHeightMax                                | 1000                                                     | number                 | Maximum image resize height for embeds.                               |
 | cdn_resizeWidthMax                                 | 1000                                                     | number                 | Maximum image resize width for embeds.                                |
-| [cdn_imagorServerUrl](../imagor.md)                | null                                                     | string                 | Imagor instance endpoint for external image resizing.                 |
+| [cdn_imagorServerUrl](imagor.md)                   | null                                                     | string                 | Imagor instance endpoint for external image resizing.                 |
 | api_defaultVersion                                 | 9                                                        | string                 | API version to use when not specified                                 |
 | api_activeVersions_0                               | 6, 7, 8, 9                                               | string[]               | Allowed API version numbers. [Array](#array-types).                   |
 | general_instanceName                               | Fosscord Instance                                        | string                 | Announced instance name                                               |
@@ -85,7 +85,7 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | security_captcha_sitekey                           | null                                                     | string                 | Captcha service sitekey                                               |
 | security_captcha_secret                            | null                                                     | string                 | Captcha service secret                                                |
 | security_twoFactor_generateBackupCodes             | true                                                     | boolean                | Whether to generate backup codes for MFA users                        |
-| security_requestSignature                          | Secret secret                                            | string                 | The signature required for CDN or [Imagor](../imagor.md) usage        |
+| security_requestSignature                          | Secret secret                                            | string                 | The signature required for CDN or [Imagor](imagor.md) usage           |
 | security_jwtSecret                                 | Secure secret                                            | string                 | The secret used for user token generation                             |
 | [security_forwadedFor](../reverseProxy.md)         | null                                                     | string                 | HTTP header for user's real IP.                                       |
 | security_ipdataApiKey                              | Fosscord IPdata key                                      | string                 | API key used for IP geolocation and proxy detection                   |

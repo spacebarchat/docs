@@ -12,7 +12,7 @@
     Please do not use Discord trademarks to refer to anything regarding Fosscord.
     As an instance owner, you can grant yourself or others *premium* features which may be used to determine your abilities
     *client-side*. However, Fosscord-server currently does not have any distinction between premium and free users.
-    All users can access all features, given they have the [rights](security/rights.md) to do so.
+    All users can access all features, given they have the [rights](setup/server/security/rights.md) to do so.
 
     You cannot give yourself premium features on Discord.com using a Fosscord instance.
 
@@ -53,7 +53,7 @@
     to verify our work as correct. Efforts are being made to move away from this with our own client, but as you may have guessed,
     building a Discord-compatible client is difficult.
 
-    You can read more about the test client [here](Test%20Client/index.md)
+    You can read more about the test client [here](setup/server/Test%20Client/index.md)
 
 ??? info "Is this illegal?"
 
