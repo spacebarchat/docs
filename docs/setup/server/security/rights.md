@@ -14,6 +14,51 @@ For example, to grant `CREATE_GUILDS` and `SEND_MESSAGES`, set their `rights` to
 The default rights value given to users (set through the `register_defaultRights` config value)
 is generated through the `npm run generate:rights` script.
 
+## OPERATOR Rights
+
+!!! error "It is EXTREMELY DISCOURAGED to give OPERATOR rights to all users, or to set the default rights to OPERATOR. If your rights value is an odd number, that includes operator."
+
+Operator rights currently grants access to the following, in addition to all rights:
+
+-   Server shutdown through GET `/api/stop`
+-   [Registration token creation](regTokens.md) through GET `/api/auth/generate-registration-tokens`
+
+## Calculator
+
+<style>
+	#rights-calculator * {
+		padding: 0;
+		margin: 0;
+		font-size: 0.65rem;
+
+	}
+
+	#rights-calculator #rights-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	#rights-calculator #rights-container input {
+		margin-right: 10px;
+		width: 20px;
+		height: 20px;
+	}
+
+	#rights-calculator #rights-output-container {
+		margin-top: 10px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+</style>
+
+<div id="rights-calculator">
+	<div id="rights-container"></div>
+	<div id="rights-output-container">
+		<p>Rights: <span id="rights-output"></span></p>
+	</div>
+</div>
+
 ## Available rights
 
 | Right                     | Value   | When enabled                                                                                                                                          |
@@ -67,41 +112,5 @@ is generated through the `npm run generate:rights` script.
 | `EDIT_FLAGS`              | 1 << 46 | Can modify other's flags                                                                                                                              |
 | `MANAGE_GROUPS`           | 1 << 47 | Can manage other's groups                                                                                                                             |
 | `VIEW_SERVER_STATS`       | 1 << 48 | Can view server stats /api/policies/stats                                                                                                             |
-
-## Calculator
-
-<style>
-	#rights-calculator * {
-		padding: 0;
-		margin: 0;
-		font-size: 0.65rem;
-
-	}
-
-	#rights-calculator #rights-container {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	}
-
-	#rights-calculator #rights-container input {
-		margin-right: 10px;
-		width: 20px;
-		height: 20px;
-	}
-
-	#rights-calculator #rights-output-container {
-		margin-top: 10px;
-		padding: 10px;
-		background-color: rgba(0, 0, 0, 0.3);
-		border-radius: 10px;
-	}
-</style>
-
-<div id="rights-calculator">
-	<div id="rights-container"></div>
-	<div id="rights-output-container">
-		<p>Rights: <span id="rights-output"></span></p>
-	</div>
-</div>
 
 <script src="/assets/js/rightsCalculator.js"></script>
