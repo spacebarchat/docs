@@ -1,10 +1,10 @@
 # Home
 
-!!! info "Want to skip to the server installation guide? [Click here](setup/server)"
+!!! note "Interested in contributing? We'd love to have you on board! [Click here](contributing)"
 
-!!! info "Interested in contributing? We'd love to have you on board! [Click here](contributing)"
+!!! tip "Want to skip to the server installation guide? [Click here](setup/server)"
 
-!!! info "Have a question? It might be in [here](faq.md)"
+!!! question "Have a question? It might be in [here](faq.md)"
 
 ## What is Fosscord?
 
@@ -26,3 +26,10 @@ Our goal is to achieve complete feature parity with Discord.com, as well as
 implement additional security, privacy, and other useful features serverside.
 In addition to our server software, we aim to create Fosscord-aware clients that can be used to connect
 to multiple Fosscord-compatible instances with rich theming and plugin support.
+
+## Support
+
+For any kind of support regarding Fosscord, feel free to ask questions in our [Discord.com server](https://discord.gg/Ms5Ev7S6bF)
+or our [official Fosscord instance](https://staging.fosscord.com).
+
+For bug reporting and feature requests please create an [issue](https://github.com/fosscord/fosscord-server/issues/new/choose) on Github.
