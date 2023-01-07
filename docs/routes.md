@@ -6,5 +6,5 @@
 	}
 </style>
 
-<!-- <swagger-ui src="https://raw.githubusercontent.com/fosscord/fosscord-server/master/api/assets/openapi.json"/> -->
-<swagger-ui src="/assets/openapi.json"/>
+<swagger-ui src="https://raw.githubusercontent.com/fosscord/fosscord-server/maddy/refactor/assets/openapi.json"/>
+<!-- <swagger-ui src="/assets/openapi.json"/> -->
