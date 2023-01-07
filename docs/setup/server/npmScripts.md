@@ -9,7 +9,7 @@ Shorthand for `build` and `generate:schema`
 ## `sync:db`
 
 Syncronise the database schema between Fosscord source code and your database.
-**May incur data loss**.
+**May incur data loss**. You do not normally need to run this script, as Fosscord-server will perform it when necessary.
 
 ## `build`
 
