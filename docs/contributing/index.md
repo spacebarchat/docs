@@ -39,5 +39,6 @@ because the gateway returns responses encoded with [erlpack](https://github.com/
 Easy fix though, just edit the `DeveloperOptionsStore` localStorage key so that `logGatewayEvents` is true, and reload the client.
 
 !!! warning
-Make sure you rerun `npm run build` every time you edit source code. Additionally, make sure you run `npm run generate:schema` whenever you change a
-schema. If you want to do both, there's a shortcut: `npm run setup`.
+
+    Make sure you rerun `npm run build` every time you edit source code. Additionally, make sure you run `npm run generate:schema` whenever you change a
+    schema. If you want to do both, there's a shortcut: `npm run setup`.
