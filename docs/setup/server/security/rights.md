@@ -16,7 +16,7 @@ is generated through the `npm run generate:rights` script. The script generates 
 
 ## OPERATOR Rights
 
-!!! error "It is EXTREMELY DISCOURAGED to give OPERATOR rights to all users, or to set the default rights to OPERATOR. If your rights value is an odd number, that includes operator."
+!!! danger "It is EXTREMELY DISCOURAGED to give OPERATOR rights to all users, or to set the default rights to OPERATOR. If your rights value is an odd number, that includes operator."
 
 Operator rights currently grants access to the following, in addition to all rights:
 
