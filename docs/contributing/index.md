@@ -29,7 +29,7 @@ and guessing about any functionality server-side, if it's undocumented.
 For a lot of things it's pretty simple to guess, `GET /api/users/@me` returns private details about your user for example.
 This route is also detailed in [Discords own documentation](https://discord.com/developers/), [here specifically](https://discord.com/developers/docs/resources/user#get-current-user).
 
-Discords does not document anything that is not related to application/bot development, though.
+Discord generally does not document anything that is not related to application/bot development, though.
 As an example, `GET /api/updates?platform={}` which returns the `url`, `pub_date`, `name` and any `notes` about the latest client release for a platform.
 
 For the Gateway it's the same procedure, except now you can't use the network logger of your devtools
