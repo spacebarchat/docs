@@ -12,7 +12,7 @@ For example, to grant `CREATE_GUILDS` and `SEND_MESSAGES`, set their `rights` to
 `33587200`
 
 The default rights value given to users (set through the `register_defaultRights` config value)
-is generated through the `npm run generate:rights` script.
+is generated through the `npm run generate:rights` script. The script generates a rights value that mimicks Discord.com.
 
 ## OPERATOR Rights
 
