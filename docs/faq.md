@@ -16,6 +16,20 @@
 
     You cannot give yourself premium features on Discord.com using a Fosscord instance.
 
+??? info "How do I boost my guild? Or, how do I buy premium?"
+
+    You cannot buy premium features through Fosscord, as Fosscord does not support any payment backend.
+
+    Additionally, Fosscord does not currently have any distinction between premium and free users or guilds.
+    All users and guilds have access to all features server-side.
+
+    In the case of users, you may run into issues with the client preventing you from using certain features,
+    if the user's `premium_type` or `premium` values are not set correctly. By default, Fosscord will do this for you, however.
+
+    In the case of guilds, you may run into issues with uploading animated icons or banners, etc.
+    If so, simply give the guild the [features](setup/server/configuration/guildFeatures.md) you require.
+    You can set them to be given to all guilds by default using the [config](setup/server/configuration/index.md) `guild_defaultFeatures` array.
+
 ??? info "Can I log in with my Discord account?"
 
     No. Fosscord and Discord are entirely separate services, with their own separate databases
