@@ -7,9 +7,9 @@
 -   We use [prettier](https://www.npmjs.com/package/prettier) for code formatting. We have a `.prettierrc` file in fosscord-server's root
     and use a git precommit hook to autorun it.
 -   Try to stay consistent with the rest of the project
--   Try to keep each commit to a single feature or idea, with descriptions of what it is and why it is done. No "Large refactor" commits that touch every file.
+-   Try to keep each commit to a single feature or idea, with descriptions of what it is and why it is done. No "Large refactor" commits that touch every file, unless absolutely required due to the nature of change.
 -   Leave comments in your code about why something is done when appropriate, not just what it is doing.
--   If you're working on a feature, please announce that you're working on it (in the relevant GH issue or our Discord, preferably both), so that we can work more effectively.
+-   If you're working on a feature, please announce that you're working on it (in the relevant GH issue or our Discord, preferably both), so that we can work more effectively and minimise conflicting change attempts.
     Additionally, please do not try to snipe features that others are working on.
 
 ## Structure
