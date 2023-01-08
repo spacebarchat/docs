@@ -1,6 +1,6 @@
 # Contributing
 
-!!! info "[Have you read the Code of Conduct?](conduct.md)"
+!!! question "[Have you read the Code of Conduct?](conduct.md)"
 
 ## Style and a note on etiquette
 
@@ -37,3 +37,7 @@ As an example, `GET /api/updates?platform={}` which returns the `url`, `pub_date
 For the Gateway it's the same procedure, except now you can't use the network logger of your devtools
 because the gateway returns responses encoded with [erlpack](https://github.com/discord/erlpack).
 Easy fix though, just edit the `DeveloperOptionsStore` localStorage key so that `logGatewayEvents` is true, and reload the client.
+
+!!! warning
+Make sure you rerun `npm run build` every time you edit source code. Additionally, make sure you run `npm run generate:schema` whenever you change a
+schema. If you want to do both, there's a shortcut: `npm run setup`.
