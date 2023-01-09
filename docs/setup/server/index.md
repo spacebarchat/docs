@@ -44,6 +44,9 @@ npm run start
 
 If all went according to plan, you can now access your new Fosscord instance at [http://localhost:3001](http://localhost:3001)! Congrats!
 
+If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running,
+(you should set up a reverse proxy, next!).
+
 ## Now what?
 
 Well, now you can configure Fosscord to your liking!
