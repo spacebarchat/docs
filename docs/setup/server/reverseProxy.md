@@ -7,7 +7,11 @@ Generally, our community sets up Fosscord instances behind NGINX, a powerful rev
 Below is an example NGINX config. On Ubuntu, you can put this in `/etc/nginx/sites-available/fosscord`,
 and enable it with `ln -s /etc/nginx/sites-available/fosscord /etc/nginx/sites-enabled/` and `systemctl restart nginx`
 
-!!! info "Other distros and Windows may not have a `sites-available`, `sites-enabled` directory structure. You may need to edit the `/etc/nginx/nginx.conf` file instead, or place new files in a `conf.d` directory, for example."
+!!! info
+
+    Other distros, and Windows, may not have a `sites-available`, `sites-enabled` directory structure.
+    You may need to edit the `/etc/nginx/nginx.conf` file instead, or place new files in a `conf.d` directory, for example.
+    Check which directories exist on your system to be sure.
 
 ```nginx
 server {
