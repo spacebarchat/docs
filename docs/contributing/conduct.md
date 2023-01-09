@@ -2,7 +2,7 @@
 
 By contributing to or interacting with Fosscord or Fosscord community spaces, you accept the code of conduct.
 
-This code of conduct is based on the Artemis Lena Code of Conduct by FantasyCookie17. As it is licensed under CC0, it may be used by other communities in modified or unmodified form without permission from the author. Its purpose is to ensure a civilised, tolerant, compassionate, help, pluralistic, and peaceful style of communication.
+This code of conduct is based on the Artemis Lena Code of Conduct by FantasyCookie17. As it is licensed under CC0, it may be used by other communities in modified or unmodified form without permission from the author. Its purpose is to ensure a civilised, tolerant, compassionate, helpful, pluralistic, and peaceful style of communication.
 
 Fosscord community spaces includes Fosscord github repositories and Fosscord development guilds (be it on Discord.com or Fosscord instances mananged by the Fosscord maintainers group).
 
