@@ -2,11 +2,13 @@
 
 By contributing to or interacting with Fosscord or Fosscord community spaces, you accept the code of conduct.
 
-This code of conduct is based on the Artemis Lena Code of Conduct by FantasyCookie17. As it is licensed under CC0, it may be used by other communities in modified or unmodified form without permission from the author. Its purpose is to ensure a civilised, tolerant, compassionate, helpful, pluralistic, and peaceful style of communication.
+This code of conduct is based on the Artemis Lena Code of Conduct by FantasyCookie17. As it is licensed under CC0,
+it may be used by other communities in modified or unmodified form without permission from the author.
+Its purpose is to ensure a civilised, tolerant, compassionate, helpful, pluralistic, and peaceful style of communication.
 
 Fosscord community spaces includes Fosscord github repositories and Fosscord development guilds (be it on Discord.com or Fosscord instances mananged by the Fosscord maintainers group).
 
-By contributing to any Fosscord projects (for example, through pull request) you guarantee that you have the requisite rights to grant Fosscord a AGPLV3 licence. If your work is legally in the public domain (through a legally accepted waiver or a mandate (such as the national government works of United States, People's Republic of China and Israel)), you **must** declare this.
+By contributing to any Fosscord projects (for example, through pull request) you guarantee that you have the rights to resign all rights to Fosscord under the AGPLV3 license.
 
 ### Desirable Behaviour
 
@@ -41,7 +43,8 @@ By contributing to any Fosscord projects (for example, through pull request) you
 
 You may report any violation of this code of conduct to the Fosscord community team directly through Discord, private message or otherwise.
 
-If you believe us to be in violation of this code of conduct, please report it to someone in a higher position, or to many people on the team. Make sure to provide a direct quote from here to be as effective as possible.
+If you believe us to be in violation of this code of conduct, please report it to someone in a higher position,
+or to many people on the team. Make sure to provide a direct quote from here to be as effective as possible.
 
 ### Changes to this document
 
