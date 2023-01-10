@@ -1,0 +1,11 @@
+.md-typeset__table {
+	min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+	display: table;
+}
+
+.md-grid {
+	max-width: 65rem;
+}

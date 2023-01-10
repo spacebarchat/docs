@@ -1,63 +1,44 @@
 # Contributing
 
-By contributing you accept the code of conduct.
+!!! question "[Have you read the Code of Conduct?](conduct.md)"
 
-## Code of conduct
+## Style and a note on etiquette
 
-This is the code of conduct for the Fosscord developer community. It is based on Artemis Lena Code of Conduct by FantasyCookie17. As it is licensed CC0, it may also be used in modified or non-modified form by other communities without permission by the author. Its purpose is to ensure a civilized, tolerant, compassionate, helpful, pluralistic and peaceful style of communication.
+-   We use [prettier](https://www.npmjs.com/package/prettier) for code formatting. We have a `.prettierrc` file in fosscord-server's root
+    and use a git precommit hook to autorun it.
+-   Try to stay consistent with the rest of the project
+-   Try to keep each commit to a single feature or idea, with descriptions of what it is and why it is done. No "Large refactor" commits that touch every file,
+    unless absolutely required due to the nature of change.
+-   Leave comments in your code about why something is done when appropriate, not just what it is doing.
+-   If you're working on a feature, please announce that you're working on it (in the relevant GH issue or our Discord, preferably both),
+    so that we can work more effectively and minimise conflicting change attempts.
+    Additionally, please do not try to snipe features that others are working on.
 
-Fosscord developer community includes Fosscord Github repositories and Fosscord development guild.
-Fosscord developers community is administered by the Fosscord maintainers group.
+## Structure
 
-If you contribute to the project in any form (for example through code by a pull request) you guarantee that you have the rights to resign all rights to Fosscord under the AGPLV3 license.
+Fosscord is written in Typescript and is comprised of 4 main parts:
 
-### Desirable behavior
+-   REST HTTP API server
+-   Websocket Gateway server for realtime communication with clients
+-   HTTP CDN server for storing user file content.
+-   `utils` module to separate our database models, schemas, and other things from the above 3 components.
 
--   If possible, providing help with issues other users may have. If it suits the topic of the community, answer it in there, if it does not, try to link to a community where it is more on topic.
--   Accepting other opinions, even if you disagree. This does not exclude the possibility to provide arguments for your own opinion.
--   Pinging moderators by mentioning their names in chat in the case of rule violations, especially trolling or spamming. While doing so, do not quote or reply to the violator to prevent extra attention by non-moderators.
+## Implementing endpoints, opcodes, etc
 
-In order to have your questions resolved more quickly and efficiently, see also: The XY problem, Don't ask to ask, No Hello and How to Ask Smart Questions
+Generally, the approach is to just see what the Discord.com client sends and receives from Discord.com (through your browsers devtools, for example)
+and guessing about any functionality server-side, if it's undocumented.
 
-### Undesirable behavior
+For a lot of things it's pretty simple to guess, `GET /api/users/@me` returns private details about your user for example.
+This route is also detailed in [Discords own documentation](https://discord.com/developers/), [here specifically](https://discord.com/developers/docs/resources/user#get-current-user).
 
--   Talking about things that do not suit the topic of the community. Communities exempt from this rule will mention that in their descriptions.
--   Attacking people rather than attacking their arguments (a.k.a. ad hominem).
--   Bringing extra attention by people who are not moderators to trolls and spammers.
--   Self-censorship for reasons of politeness or similar. As long as you keep it civil and free of insults, it is desirable to discuss issues you have with people directly, rather than letting it build up and later creating drama. It is in the interest of the moderators to make the rooms feel comfortable for a large amount of people, this includes changing their own behavior where necessary and reasonable. If you feel it is better to discuss in a smaller group, ask the person you have an issue with and/or a moderator whether it is fine to invite them to a private chat.
--   Making other users feel uncomfortable, for example by nagging them with questions they have stated they do not want to answer.
--   Misgendering, deadnaming and assuming gender. Use the singular they/them and inclusive language where possible.
--   Not liking the community. If you do, why don't you just leave? You would be causing discomfort to everyone else as well if you did not.
+Discord generally does not document anything that is not related to application/bot development, though.
+As an example, `GET /api/updates?platform={}` which returns the `url`, `pub_date`, `name` and any `notes` about the latest client release for a platform.
 
-### Prohibited behavior
+For the Gateway it's the same procedure, except now you can't use the network logger of your devtools
+because the gateway returns responses encoded with [erlpack](https://github.com/discord/erlpack).
+Easy fix though, just edit the `DeveloperOptionsStore` localStorage key so that `logGatewayEvents` is true, and reload the client.
 
--   Spreading hateful, violent or discriminatory ideologies or conspiracy theories, via images and other media (including avatars) or text (including nicknames), as well as discriminating against any group or person. This includes the use of slurs.
--   Spamming. This includes adverts, large amounts of repetitive messages, sending invites to users without asking (invite spam), etc.
--   Trolling; intentionally derailing conversations or producing discussions on non-issues.
--   Doxing: The disclosure of others' private information without their consent.
--   Sharing leaked proprietary source code from Discord Inc.: It is forbidden to share leaked proprietary source code from Discord Inc. Violation may lead to ban and legal consequences.
--   Posting media that may cause harm or be triggering to other people. For example, people with photosensitive epilepsy may experience seizures from animations with rapidly changing or flashing colours.
--   Actively suppressing opinions of other users.
--   Being an undesired bot (bots are undesired if not approved by moderation), or adding an undesired bot to a community.
--   Ban evasion (creation of additional accounts to join a community after having been banned from that room).
--   If you are a moderator or otherwise have permissions above those of normal users: abusing your permissions for personal motives not compatible with this code of conduct.
--   Continued harassment of other users.
--   Posting explicit imagery (sexual content, displays of violence, etc.) or unwanted sexual or romantic advances towards other users.
--   Posting content that is illegal to publish or illegal to distribute without permission in Germany. The reason is that in certain cases, especially when it comes to copyright, the service provider (who might be us, the fosscord founders), may be held liable, and we do not wish to get into legal trouble.
--   Abusing loopholes in this code of conduct, for example doing something that is not explicitly covered by the prohibited behavior, yet is in conflict with the general idea of desirable behavior.
+!!! warning
 
-### Consequences of violation
-
--   Undesirable behavior will lead to warnings, and later on, if repeated too often, kicks or bans.
--   Prohibited behavior will, in most cases, directly lead to a kick or ban.
--   Any kind of violation can lead to removal of the offending content.
--   Kicks and bans apply to all communities administrated by Fosscord maintainers group.
-
-If a moderator violates the code of conduct, make sure to point it out to us. This can lead to warnings and demotion of the moderator.
-
-If we violate the code of conduct, no such possibility exists. Thus, it is important to call us out, or make one of our friends call us out. Further steps will then be discussed ad hoc.
-
-### Changes to this code of conduct
-
-This code of conduct may be changed in order to enhance clarity and precision at any time, typically without notification.
-// edited by Xenorio and AToska21
+    Make sure you rerun `npm run build` every time you edit source code. Additionally, make sure you run `npm run generate:schema` whenever you change a
+    schema. If you want to do both, there's a shortcut: `npm run setup`.

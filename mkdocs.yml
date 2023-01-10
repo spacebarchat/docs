@@ -1,34 +1,45 @@
-site_name: Fosscord Docs
+site_name: Fosscord Documentation
 repo_url: https://github.com/fosscord/fosscord
 edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
-site_description: Documentation of Fosscord a free open source selfhostable chat, voice and video discord-compatible platform
+site_description: "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
 plugins:
-  - section-index
-  - search
-  - render_swagger
+    - section-index
+    - search
+    - swagger-ui-tag:
+          extra_css: [assets/swagger.css]
+          docExpansion: none
+          filter: true
 theme:
-  name: material
-  logo: assets/logo.svg
-  favicon: assets/logo.svg
-  font: Open Sans
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/lightbulb
-        name: Switch to light mode
-  features:
-    - navigation.expand
-    - navigation.instant
-    - navigation.tracking
-    - navigation.sections
-    - navigation.indexes
-    - navigation.top
+    name: material
+    logo: assets/logo.svg
+    favicon: assets/favicon.svg
+    font: Open Sans
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          primary: deep-orange
+          scheme: default
+          toggle:
+              icon: material/lightbulb-outline
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: deep-orange
+          scheme: slate
+          toggle:
+              icon: material/lightbulb
+              name: Switch to light mode
+    features:
+        - navigation.expand
+        - navigation.instant
+        - navigation.tracking
+        - navigation.sections
+        - navigation.indexes
+        - navigation.top
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight
-  - pymdownx.superfences
+    - admonition
+    - pymdownx.details
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+          alternate_style: true
+extra_css: [assets/extra.css]

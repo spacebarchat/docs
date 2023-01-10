@@ -1,53 +1,35 @@
 # Home
 
-Just wanna get to setup instructions? Click [here](server/setup.md)!
+!!! note "Interested in contributing? We'd love to have you on board! [Click here](contributing)"
 
-### What is Fosscord?
+!!! tip "Want to skip to the server installation guide? [Click here](setup/server)"
 
-Fosscord is a free open source self-hostable discord compatible chat, voice and video platform.
+!!! question "Have a question? It might be in [here](faq.md)"
 
-## Philosophy
+## What is Fosscord?
 
-Fosscord aims to be a full one-on-one clone of Discord, adding more features
-that can be used as a replacement for the official client and still connect to
-discord.com and host private Fosscord server instances.
+Fosscord is a Discord.com server implementation and extension,
+with the goal of complete feature parity with Discord.com,
+all while adding some additional goodies, security, privacy, and configuration options.
 
-Fosscord aims to give the best possible user experience, while being backwards
-compatible to Discord's features and adding new ones/improving old ones while
-maintaining the user privacy with end-to-end encryption support.
+Fosscord allows you to host a complete, Discord.com-compatible chat service
+with complete control over it's content, usage, security, configuration, and featureset.
+Being Discord.com-compatible will allow all existing clients, bots, and applications written for
+Discord.com to be used on any Fosscord instance, which we believe will be immensely useful
+for any transition process between services.
 
-The client can connect to multiple server instances without the need to open it
-multiple times.
+As Fosscord is an entirely separate service from Discord.com, it means a Fosscord server by itself **cannot**
+access private data controlled by Discord.com. You **cannot** use a Fosscord server to chat with your friends on Discord.com.
+You also **cannot** use a Fosscord server to grant premium ("Nitro") features to a Discord.com account (although you can grant these to a Fosscord account).
 
-The client should be extensible through a secure Plugin and Theme System with
-own store.
-
-The server should be extensible through bots, just like discord without the need
-to change anything except the api endpoint.
-
-The project is open source so everyone can have a look what's going on under the
-hood and can be maintained and expanded by the community.
-
-Everything is configurable in the server config and everyone can add their own
-features, so that it is not opinionated.
-
-### Concept
-
-<img src="assets/architecture.png" alt="Architecture">
-
-### Why backwards compatible to Discord?
-
-- Benefit from the large user base of discord -> more users, making the switch
-  easier for new users & keeping workflows intact and easily migrating existing discord bots
-- No disadvantage for the users who use fosscord, so that they can still
-  communicate with all their peers who use discord
-- Discord has already built a great and stable protocol _(don't reinvent the
-  wheel)_
-- The community can extend and customize their clients and servers by
-  self-hosting them and developing and installing addons
+Our goal is to achieve complete feature parity with Discord.com, as well as
+implement additional security, privacy, and other useful features serverside.
+In addition to our server software, we aim to create Fosscord-aware clients that can be used to connect
+to multiple Fosscord-compatible instances with rich theming and plugin support.
 
 ## Support
 
-[Discord server](https://discord.gg/ZrnGQP6p3d)
+For any kind of support regarding Fosscord, feel free to ask questions in our [Discord.com server](https://discord.gg/Ms5Ev7S6bF)
+or our [official Fosscord instance](https://staging.fosscord.com).
 
-Once we are finished, we'll host our own instance to host the support server.
+For bug reporting and feature requests please create an [issue](https://github.com/fosscord/fosscord-server/issues/new/choose) on Github.
