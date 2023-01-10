@@ -1,6 +1,6 @@
 # Test Client
 
-!!! warning "The test client included with fosscord-server is deprecated and will be removed in favour of [Dicord-Client-Proxy](http://github.com/fosscord/Discord-Client-Proxy) in the future"
+!!! warning "The test client included with fosscord-server is deprecated and will be removed in favour of [Discord-Client-Proxy](http://github.com/fosscord/Discord-Client-Proxy) in the future"
 
 The test client is a proxy to the Discord.com client used for development purposes.
 You can enable the test client by setting the `client_useTestClient` [config](../configuration/index.md) value.
