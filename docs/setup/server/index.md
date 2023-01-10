@@ -51,6 +51,7 @@ If you set up your server remotely, you can use `curl http://localhost:3001/api/
 
 Well, now you can configure Fosscord to your liking!
 
+-   [Skip to test client configuration](Test%20Client/index.md)
 -   [Skip to server configuration](configuration)
 -   [Skip to reverse proxy / SSL](reverseProxy.md)
 -   [Skip to security](security)
