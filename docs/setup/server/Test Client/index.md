@@ -3,10 +3,12 @@
 !!! warning "The test client included with fosscord-server is deprecated and will be removed in favour of [Discord-Client-Proxy](http://github.com/fosscord/Discord-Client-Proxy) in the future"
 
 The test client is a proxy to the Discord.com client used for development purposes.
-You can enable the test client by setting the `client_useTestClient` [config](../configuration/index.md) value.
+You can enable the test client by setting the [`client_useTestClient` config](../configuration/index.md) value in your database.
+
+## How it works
 
 By editing the `GLOBAL_ENV` variable used by the client, we can trick it into sending requests to the API/Gateway/CDN/etc to us,
-instead of Discord.com.
+instead of Discord.com. We simply proxy it from Discord.com otherwise.
 
 ## Updating
 
