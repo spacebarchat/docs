@@ -16,7 +16,8 @@ To generate a database migration in fosscord-server:
     ```
     npm run generate:migration -- src/util/migrations/:dbms:/:migrationName:.ts
     ```
-    where :dbms: is the db you use, and :migrationName: is whatever you wish to call it.
+    where `:dbms:` is the db you use, and `:migrationName:` is whatever you wish to call it.
+	The migration must be named a valid Javascript class name.
 3. The generated file is what TypeORM will do if you were to run `npm run sync:db`.
    Obviously, this is not always what you want. Edit it to preserve as much of the original data as possible.
 
