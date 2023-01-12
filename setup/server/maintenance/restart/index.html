@@ -6,11 +6,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
-<link href="../imagor/" rel="prev"/>
-<link href="../userFlags/" rel="next"/>
+<link href="../" rel="prev"/>
+<link href="../updating/" rel="next"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
-<title>RabbitMQ - Fosscord Documentation</title>
+<title>When must the server restart? - Fosscord Documentation</title>
 <link href="../../../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rabbitmq">
+<a class="md-skip" href="#when-must-the-server-restart">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RabbitMQ
+              When must the server restart?
             
           </span>
 </div>
@@ -258,10 +258,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_7" id="__nav_5_3_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3_7" id="__nav_5_3_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Configuration</a>
+<a href="../../configuration/">Configuration</a>
 <label for="__nav_5_3_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -273,43 +273,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../embeds/">
+<a class="md-nav__link" href="../../configuration/embeds/">
         Embeds
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../env/">
+<a class="md-nav__link" href="../../configuration/env/">
         Environment Variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../guildFeatures/">
+<a class="md-nav__link" href="../../configuration/guildFeatures/">
         Guild Features
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../imagor/">
+<a class="md-nav__link" href="../../configuration/imagor/">
         Imagor
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/rabbitmq/">
         RabbitMQ
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../userFlags/">
+<a class="md-nav__link" href="../../configuration/userFlags/">
         User Flags
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3_8" id="__nav_5_3_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_8" id="__nav_5_3_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../maintenance/">Maintenance</a>
+<a href="../">Maintenance</a>
 <label for="__nav_5_3_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -320,13 +319,14 @@
           Maintenance
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../maintenance/restart/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         When must the server restart?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../maintenance/updating/">
+<a class="md-nav__link" href="../updating/">
         Updating
       </a>
 </li>
@@ -391,17 +391,23 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="rabbitmq">RabbitMQ</h1>
-<p><a href="https://www.rabbitmq.com/">RabbitMQ</a> is an open source message broker.
-Fosscord can be configured to use it for communication between the API server and Gateway server.
-RabbitMQ is required to be set up when you run the API and Gateway servers separately (outside of bundle).
-Without it, the Gateway server won't know when you send new events for things such as message creation.
-In the message create case, you will be able to send messages, but will have to reload the client to view new messages from others.</p>
-<p>After you've downloaded and installed RabbitMQ,
-edit Fosscord's <a href="../">config</a>, set <code>rabbitmq_host</code> to <code>"amqp://guest:guest@host:5672"</code></p>
-<p>The <code>guest</code> RabbitMQ account can only be accessed via localhost, by default.
-If you want to run Fosscord over multiple systems,
-you'll need to set up <a href="https://www.rabbitmq.com/access-control.html">access control</a> in RabbitMQ.</p>
+<h1 id="when-must-the-server-restart">When must the server restart?</h1>
+<p>Fosscord-server must restart in the following cases:</p>
+<ul>
+<li>The .env file or config (database or <a href="configuration/env.md">CONFIG_PATH</a>) has changed.</li>
+<li>Files in the <code>client_test</code>, <code>preload-plugins</code> folders of inside <code>assets</code> have changed.</li>
+<li>Files inside <code>src</code> have changed (<em>remember to <code>npm run build</code></em>).</li>
+<li>The <code>assets/schemas.json</code> file has changed.</li>
+<li>The <a href="configuration/rabbitmq.md">RabbitMQ</a> connection has been lost.</li>
+</ul>
+<p>For all other cases, you do not need to restart the server. For example:</p>
+<ul>
+<li>Running <code>npm run generate:client</code></li>
+<li>Running <code>npm run generate:changelog</code></li>
+<li>Editing any table in the database other than <code>config</code>. For example, to edit a <code>users</code> <a href="security/rights.md"><code>rights</code></a></li>
+<li>Database connection was lost (this should auto reconnect)</li>
+</ul>
+<p>This is not an exhaustive list. If a change you made is not applied, the first thing you should try is restarting.</p>
 </article>
 </div>
 </div>
