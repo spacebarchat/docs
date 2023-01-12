@@ -4,8 +4,8 @@
 
 Generally, our community sets up Fosscord instances behind NGINX, a powerful reverse proxy.
 
-Below is an example NGINX config. On Ubuntu, you can put this in `/etc/nginx/sites-available/fosscord`,
-and enable it with `ln -s /etc/nginx/sites-available/fosscord /etc/nginx/sites-enabled/` and `systemctl restart nginx`
+Below is an example NGINX config. On Ubuntu, you can put this in the `/etc/nginx/sites-available/fosscord.conf` file,
+and enable it with `ln -s /etc/nginx/sites-available/fosscord.conf /etc/nginx/sites-enabled/` and `systemctl restart nginx`
 
 !!! info
 
