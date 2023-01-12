@@ -2,8 +2,18 @@
 
 !!! warning "The test client included with fosscord-server is deprecated and will be removed in favour of [Discord-Client-Proxy](http://github.com/fosscord/Discord-Client-Proxy) in the future"
 
+## Enabling the test client
+
 The test client is a proxy to the Discord.com client used for development purposes.
 You can enable the test client by setting the [`client_useTestClient` config](../configuration/index.md) value in your database.
+
+Here's a step-by-step guide:
+
+1. Open your [database](../database.md), with a tool such as DBeaver.
+2. Go to the `config` table. In DBeaver, this is on the left in the Database Navigator.
+3. In the Data tab of the main view, find the row containing `client_useTestClient`
+4. Update it's `value` to read `true`, instead of `false`.
+5. Save the database, and restart the server.
 
 ## How it works
 
