@@ -47,6 +47,11 @@ If all went according to plan, you can now access your new Fosscord instance at 
 If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running,
 (you should set up a reverse proxy, next!).
 
+!!! note
+	
+	The [test client](Test%20Client/index.md) is disabled by default, and you will be redirected to /api/ping when navigating to
+	the server in your browser. You may want to enable the test client.
+
 ## Now what?
 
 Well, now you can configure Fosscord to your liking!
