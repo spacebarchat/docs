@@ -410,8 +410,8 @@
 <h1 id="reverse-proxy">Reverse Proxy</h1>
 <h2 id="nginx">NGINX</h2>
 <p>Generally, our community sets up Fosscord instances behind NGINX, a powerful reverse proxy.</p>
-<p>Below is an example NGINX config. On Ubuntu, you can put this in <code>/etc/nginx/sites-available/fosscord</code>,
-and enable it with <code>ln -s /etc/nginx/sites-available/fosscord /etc/nginx/sites-enabled/</code> and <code>systemctl restart nginx</code></p>
+<p>Below is an example NGINX config. On Ubuntu, you can put this in the <code>/etc/nginx/sites-available/fosscord.conf</code> file,
+and enable it with <code>ln -s /etc/nginx/sites-available/fosscord.conf /etc/nginx/sites-enabled/</code> and <code>systemctl restart nginx</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Other distros, and Windows, may not have a <code>sites-available</code>, <code>sites-enabled</code> directory structure.
