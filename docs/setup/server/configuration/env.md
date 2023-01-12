@@ -11,7 +11,8 @@ in the `fosscord-server` folder, with the format `NAME=VALUE` with each on new l
 | DATABASE         | string         | Database connection string. Defaults to SQlite3 at project root                                                      |
 | CONFIG_PATH      | string         | File path for JSON config, if not using `config` db table                                                            |
 | WS_LOGEVENTS     | boolean        | If set, log websocket events except messages from gateway                                                            |
-| WS_VERBOSE       | boolean        | If set, log websocket messages received by gateway                                                                   |
+| WS_VERBOSE       | boolean        | If set, log websocket messages sent/received by gateway                                                              |
+| WS_DUMP          | boolean        | If set, dump websocket messages sent/received to disk                                                                |
 | CDN              | string         | Lowest priority value for public CDN annoucements                                                                    |
 | GATEWAY          | string         | Lowest priority value for public gateway annoucements                                                                |
 | STORAGE_LOCATION | string         | CDN storage location. File path or S3 bucktet                                                                        |
