@@ -65,7 +65,7 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 Our last step is to simply tell Fosscord about Imagor. Just set the `cdn_imagorServerUrl` config value to your public endpoint for Imagor, wrapped in quotes.
 
 For example, if you used the `/media` location in your existing nginx config, it will look something like `"https://your.fosscord.com/media"`.
-If you used a subdomain as suggested in, it will look like `"https://media.your.fosscord.com"`.
+If you used a subdomain, it will look like `"https://media.your.fosscord.com"`.
 Don't include a trailing backslash.
 
 Congrats! After a restart, you've now got Imagor resizing your images!
