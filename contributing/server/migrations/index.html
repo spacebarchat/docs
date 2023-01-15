@@ -464,7 +464,7 @@
 <li>On the branch/commit you want to migrate <em>from</em>, generate the database.
    You can run the server or run <a href="../../../setup/server/npmScripts/#syncdb"><code>npm run sync:db</code></a>.</li>
 <li>Switch to branch/commit you want to migrate <em>to</em>, and run
-    <div class="highlight"><pre><span></span><code>npm run generate:migration -- src/util/migrations/:dbms:/:migrationName:.ts
+    <div class="highlight"><pre><span></span><code>npm run generate:migration -- src/util/migrations/:dbms:/:migrationName:
 </code></pre></div>
     where <code>:dbms:</code> is the db you use, and <code>:migrationName:</code> is whatever you wish to call it.
     The migration must be named a valid Javascript class name.</li>
