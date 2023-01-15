@@ -9,9 +9,9 @@
 <link href="../" rel="prev"/>
 <link href="../updating/" rel="next"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
 <title>When must the server restart? - Fosscord Documentation</title>
-<link href="../../../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -89,7 +89,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -416,17 +416,17 @@
 <h1 id="when-must-the-server-restart">When must the server restart?</h1>
 <p>Fosscord-server must restart in the following cases:</p>
 <ul>
-<li>The .env file or config (database or <a href="configuration/env.md">CONFIG_PATH</a>) has changed.</li>
+<li>The .env file or config (database or <a href="/setup/server/configuration">CONFIG_PATH</a> has changed.</li>
 <li>Files in the <code>client_test</code>, <code>preload-plugins</code> folders of inside <code>assets</code> have changed.</li>
 <li>Files inside <code>src</code> have changed (<em>remember to <code>npm run build</code></em>).</li>
 <li>The <code>assets/schemas.json</code> file has changed.</li>
-<li>The <a href="configuration/rabbitmq.md">RabbitMQ</a> connection has been lost.</li>
+<li>The <a href="/setup/server/configuration/rabbitmq">RabbitMQ</a> connection has been lost.</li>
 </ul>
 <p>For all other cases, you do not need to restart the server. For example:</p>
 <ul>
 <li>Running <code>npm run generate:client</code></li>
 <li>Running <code>npm run generate:changelog</code></li>
-<li>Editing any table in the database other than <code>config</code>. For example, to edit a <code>users</code> <a href="security/rights.md"><code>rights</code></a></li>
+<li>Editing any table in the database other than <code>config</code>. For example, to edit a <code>users</code> <a href="/setup/server/configuration/rabbitmq"><code>rights</code></a></li>
 <li>Database connection was lost (this should auto reconnect)</li>
 </ul>
 <p>This is not an exhaustive list. If a change you made is not applied, the first thing you should try is restarting.</p>
@@ -457,6 +457,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
 </body>
 </html>

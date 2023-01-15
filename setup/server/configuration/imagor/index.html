@@ -9,9 +9,9 @@
 <link href="../guildFeatures/" rel="prev"/>
 <link href="../rabbitmq/" rel="next"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
 <title>Imagor - Fosscord Documentation</title>
-<link href="../../../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -89,7 +89,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -463,8 +463,9 @@ privacy concerns, as an attacker may be able to learn users IP addresses.</p>
 </ul>
 <h2 id="setup">Setup</h2>
 <p>To setup Imagor for Fosscord, first grab the <code>security_requestSignature</code> config value from Fosscord's database,
-and create a <code>imagor.env</code> file somewhere safe, with the following content (do not include the <code>[]</code>)</p>
-<div class="highlight"><pre><span></span><code>IMAGOR_SECRET=[security_requestSignature value]
+and create a <code>imagor.env</code> file somewhere safe, with the following content.
+<strong>Make sure to edit the file with the correct information</strong>. Your requestSignture should <em>not</em> start or end with <code>"</code>.</p>
+<div class="highlight"><pre><span></span><code>IMAGOR_SECRET=security_requestSignature value from your Fosscord config
 PORT=8000
 </code></pre></div>
 <p>You can now start Imagor with</p>
@@ -485,9 +486,9 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <summary>Example config for <code>media.whatever.com</code> site</summary>
 <div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># Change the server_name to reflect your true domain</span>
-<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">media.whatever.com</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">media.whatever.com</span><span class="p">;</span>
 
-<span class="w">    </span><span class="s">add_header</span><span class="w"> </span><span class="s">Last-Modified</span><span class="w"> </span><span class="nv">$date_gmt</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Last-Modified</span><span class="w"> </span><span class="nv">$date_gmt</span><span class="p">;</span>
 <span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
 <span class="w">    </span><span class="kn">proxy_pass_request_headers</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
 <span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
@@ -500,6 +501,9 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 </code></pre></div>
 </details>
 <p>Our last step is to simply tell Fosscord about Imagor. Just set the <code>cdn_imagorServerUrl</code> config value to your public endpoint for Imagor, wrapped in quotes.</p>
+<p>For example, if you used the <code>/media</code> location in your existing nginx config, it will look something like <code>"https://your.fosscord.com/media"</code>.
+If you used a subdomain as suggested in, it will look like <code>"https://media.your.fosscord.com"</code>.
+Don't include a trailing backslash.</p>
 <p>Congrats! After a restart, you've now got Imagor resizing your images!</p>
 </article>
 </div>
@@ -528,6 +532,6 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
 </body>
 </html>
