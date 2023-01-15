@@ -13,10 +13,11 @@ privacy concerns, as an attacker may be able to learn users IP addresses.
 ## Setup
 
 To setup Imagor for Fosscord, first grab the `security_requestSignature` config value from Fosscord's database,
-and create a `imagor.env` file somewhere safe, with the following content (do not include the `[]`)
+and create a `imagor.env` file somewhere safe, with the following content.
+**Make sure to edit the file with the correct information**. Your requestSignture should *not* start or end with `"`.
 
 ```
-IMAGOR_SECRET=[security_requestSignature value]
+IMAGOR_SECRET=security_requestSignature value from your Fosscord config
 PORT=8000
 ```
 
@@ -47,7 +48,7 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
     ```nginx
     server {
     	# Change the server_name to reflect your true domain
-        server_name media.whatever.com
+        server_name media.whatever.com;
 
         add_header Last-Modified $date_gmt;
         proxy_set_header Host $host;
@@ -62,5 +63,9 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
     ```
 
 Our last step is to simply tell Fosscord about Imagor. Just set the `cdn_imagorServerUrl` config value to your public endpoint for Imagor, wrapped in quotes.
+
+For example, if you used the `/media` location in your existing nginx config, it will look something like `"https://your.fosscord.com/media"`.
+If you used a subdomain as suggested in, it will look like `"https://media.your.fosscord.com"`.
+Don't include a trailing backslash.
 
 Congrats! After a restart, you've now got Imagor resizing your images!
