@@ -475,7 +475,7 @@ PORT=8000
 If you would like to change the port Imagor listens on, be sure to change both the PORT value in <code>imagor.env</code>,
 and the <code>-p</code> value used in docker.</p>
 <p>If you're using a <a href="../../reverseProxy/">reverse proxy</a> such as Nginx for Fosscord already, you could add this to your config's <code>server</code> block</p>
-<div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/media</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/media/</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># If you changed the port, be sure to change it here too</span>
 <span class="w">    </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
 <span class="p">}</span>
