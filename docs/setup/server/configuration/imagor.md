@@ -34,9 +34,9 @@ and the `-p` value used in docker.
 If you're using a [reverse proxy](../reverseProxy.md) such as Nginx for Fosscord already, you could add this to your config's `server` block
 
 ```nginx
-location /media {
+location /media/ {
 	# If you changed the port, be sure to change it here too
-	proxy_pass http://127.0.0.1:8000;
+	proxy_pass http://127.0.0.1:8000/;
 }
 ```
 
