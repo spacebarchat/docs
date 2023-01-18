@@ -2,6 +2,8 @@
 
 [![Build to GitHub Pages](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml/badge.svg)](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/fosscord/fosscord-docs)
+
 ## How to get started:
 
 1. Fork this repository.
