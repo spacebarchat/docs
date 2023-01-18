@@ -562,10 +562,8 @@
 <li>Prevents <code>localStorage</code> deletion (for <a href="../Test%20Client/plugins/">plugins</a>)</li>
 <li>Adds <code>fast-identify</code> support</li>
 </ul>
-<p>The script can only search for all javascript client files,
-as it is difficult to determine the filetype of other assets.
-Instead, it uses a <code>cacheMisses</code> file in <code>fosscord-server/assets</code>
-generated at server runtime.</p>
+<p>Running this script will, at the time of writing, download roughly ~5000 assets.
+To only download JS files (~700 assets), set the <a href="../configuration/env/"><code>ONLY_CACHE_JS</code> environment variable</a></p>
 <h3 id="fast-identify">fast-identify</h3>
 <p>Essentially, it's a small mod to the fast-connect script Discord clients already use,
 which sends a small <code>IDENTIFY</code> payload to the server, which speeds up how fast we receive <code>READY</code>.
