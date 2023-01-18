@@ -34,10 +34,8 @@ Downloads a (mostly) complete discord.com web client and runs some basic patches
 -   Prevents `localStorage` deletion (for [plugins](Test%20Client/plugins.md))
 -   Adds `fast-identify` support
 
-The script can only search for all javascript client files,
-as it is difficult to determine the filetype of other assets.
-Instead, it uses a `cacheMisses` file in `fosscord-server/assets`
-generated at server runtime.
+Running this script will, at the time of writing, download roughly ~5000 assets.
+To only download JS files (~700 assets), set the [`ONLY_CACHE_JS` environment variable](configuration/env.md)
 
 ### fast-identify
 
