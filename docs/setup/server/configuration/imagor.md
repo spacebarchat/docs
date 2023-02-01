@@ -14,7 +14,7 @@ privacy concerns, as an attacker may be able to learn users IP addresses.
 
 To setup Imagor for Fosscord, first grab the `security_requestSignature` config value from Fosscord's database,
 and create a `imagor.env` file somewhere safe, with the following content.
-**Make sure to edit the file with the correct information**. Your requestSignture should *not* start or end with `"`.
+**Make sure to edit the file with the correct information**. Your requestSignture should _not_ start or end with `"`.
 
 ```
 IMAGOR_SECRET=security_requestSignature value from your Fosscord config
