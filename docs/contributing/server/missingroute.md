@@ -1,11 +1,12 @@
 # Missing Routes
 
-Below is a list of routes Fosscord-server does not currently implement.
+Below is a list of routes available on Discord.com Fosscord-server does not currently implement.
 
 It does not account for different HTTP methods (GET, POST, etc). A single method implemented by Fosscord will remove it from this list,
 so be sure to double check in the Fosscord [source code](https://github.com/fosscord/fosscord-server/tree/master/src/api/routes).
 
-It is generated daily by [fosscord/fosscord-missing-routes](https://github.com/fosscord/fosscord-missing-routes/).
+It is generated daily by [fosscord/fosscord-missing-routes](https://github.com/fosscord/fosscord-missing-routes/),
+by scraping the latest Discord.com client.
 
 <div>
 	<form class="md-search__form">
