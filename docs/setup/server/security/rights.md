@@ -50,12 +50,17 @@ Operator rights currently grants access to the following, in addition to all rig
 		background-color: rgba(0, 0, 0, 0.3);
 		border-radius: 10px;
 	}
+
+	#rights-output {
+		background-color: transparent;
+		border-bottom: 2px solid white;
+	}
 </style>
 
 <div id="rights-calculator">
 	<div id="rights-container"></div>
 	<div id="rights-output-container">
-		<p>Rights: <span id="rights-output"></span></p>
+		<p>Rights: <input id="rights-output"></input></p>
 	</div>
 </div>
 
