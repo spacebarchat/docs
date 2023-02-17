@@ -8,7 +8,7 @@
 <meta content="Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
 <link href="../regTokens/" rel="prev"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
 <title>Rights - Fosscord Documentation</title>
 <link href="../../../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -497,42 +497,11 @@ is generated through the <code>npm run generate:rights</code> script. The script
 <li><a href="../regTokens/">Registration token creation</a> through GET <code>/api/auth/generate-registration-tokens</code></li>
 </ul>
 <h2 id="calculator">Calculator</h2>
-<style>
-    #rights-calculator * {
-        padding: 0;
-        margin: 0;
-        font-size: 0.65rem;
-
-    }
-
-    #rights-calculator #rights-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    #rights-calculator #rights-container input {
-        margin-right: 10px;
-        width: 20px;
-        height: 20px;
-    }
-
-    #rights-calculator #rights-output-container {
-        margin-top: 10px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
-    }
-
-    #rights-output {
-        background-color: transparent;
-        border-bottom: 2px solid white;
-    }
-</style>
 <div id="rights-calculator">
 <div id="rights-container"></div>
-<div id="rights-output-container">
-<p>Rights: <input id="rights-output"/></p>
-</div>
+<div class="fc-search" id="rights-output-container">
+<input class="md-input md-input--stretch" id="rights-output" placeholder="Select right flags above, or input integer here">
+</input></div>
 </div>
 <h2 id="available-rights">Available rights</h2>
 <table>
@@ -819,7 +788,7 @@ is generated through the <code>npm run generate:rights</code> script. The script
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.6df46069.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
