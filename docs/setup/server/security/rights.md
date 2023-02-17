@@ -25,15 +25,6 @@ Operator rights currently grants access to the following, in addition to all rig
 
 ## Calculator
 
-<style>
-	#rights-container {
-		font-size: 0.75rem;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		margin-bottom: 15px;
-	}
-</style>
-
 <div id="rights-calculator">
 	<div id="rights-container"></div>
 	<div class="fc-search" id="rights-output-container">

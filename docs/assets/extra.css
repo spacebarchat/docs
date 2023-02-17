@@ -17,3 +17,10 @@
 [data-md-color-scheme="slate"] .md-typeset .fc-search .md-input {
 	background: var(--md-code-bg-color);
 }
+
+#rights-container {
+	font-size: 0.75rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin-bottom: 15px;
+}
