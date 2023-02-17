@@ -9,3 +9,11 @@
 .md-grid {
 	max-width: 65rem;
 }
+
+.md-typeset .fc-routesearch .md-input {
+	background: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .fc-routesearch .md-input {
+	background: var(--md-code-bg-color);
+}
