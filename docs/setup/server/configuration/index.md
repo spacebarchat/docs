@@ -1,6 +1,6 @@
 # Configuration
 
-Fosscord's configuration is done through the `config` table of your database.
+Fosscord's configuration is done through the `config` table of your [database](../database.md).
 The table schema consists of two columns `key` and `value`, where `value` is a JSON value.
 For now, you can update this through SQL manually or a GUI database editor such as
 [DBeaver](https://dbeaver.io/).
