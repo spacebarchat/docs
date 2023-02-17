@@ -10,10 +10,10 @@
 	max-width: 65rem;
 }
 
-.md-typeset .fc-routesearch .md-input {
+.md-typeset .fc-search .md-input {
 	background: var(--md-default-bg-color);
 }
 
-[data-md-color-scheme="slate"] .md-typeset .fc-routesearch .md-input {
+[data-md-color-scheme="slate"] .md-typeset .fc-search .md-input {
 	background: var(--md-code-bg-color);
 }

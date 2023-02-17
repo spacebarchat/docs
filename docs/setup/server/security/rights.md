@@ -26,41 +26,22 @@ Operator rights currently grants access to the following, in addition to all rig
 ## Calculator
 
 <style>
-	#rights-calculator * {
-		padding: 0;
-		margin: 0;
-		font-size: 0.65rem;
-
-	}
-
-	#rights-calculator #rights-container {
+	#rights-container {
+		font-size: 0.75rem;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	}
-
-	#rights-calculator #rights-container input {
-		margin-right: 10px;
-		width: 20px;
-		height: 20px;
-	}
-
-	#rights-calculator #rights-output-container {
-		margin-top: 10px;
-		padding: 10px;
-		background-color: rgba(0, 0, 0, 0.3);
-		border-radius: 10px;
-	}
-
-	#rights-output {
-		background-color: transparent;
-		border-bottom: 2px solid white;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		margin-bottom: 15px;
 	}
 </style>
 
 <div id="rights-calculator">
 	<div id="rights-container"></div>
-	<div id="rights-output-container">
-		<p>Rights: <input id="rights-output"></input></p>
+	<div class="fc-search" id="rights-output-container">
+		<input
+			id="rights-output"
+			class="md-input md-input--stretch"
+			placeholder="Select right flags above, or input integer here"
+		/>
 	</div>
 </div>
 

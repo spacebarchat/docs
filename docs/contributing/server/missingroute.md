@@ -9,7 +9,7 @@ It is generated daily by [fosscord/fosscord-missing-routes](https://github.com/f
 by scraping the latest Discord.com client.
 
 <div>
-	<div class="fc-routesearch">
+	<div class="fc-search">
 		<input
 			id="missing-routes-search"
 			class="md-input md-input--stretch"
