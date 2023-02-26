@@ -15,18 +15,18 @@ Fosscord supports the following email transports:
 
 Once you have an account with one of the above services, or an SMTP service, you can begin configuring Fosscord to send mail.
 
-!!! note
+You must edit:
 
-    By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+* The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
+    Be sure to set it to the Fosscord web app URL. For example, `https://staging.fosscord.com`
+* The `general_correspondenceEmail` config value, used as the 'from' email address.
+	If unset, `noreply@localhost` is used, which will most likely throw an error with your email service.
 
-    Additionally, if you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
+Optionally:
 
-    Lastly, you may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
-
-!!! warning
-
-	The `general_frontPage` [config](configuration/index.md) value is used to generate verification/password reset links.
-	Be sure to set it to the Fosscord web app URL. For example, `https://staging.fosscord.com`
+* By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+* If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
+* You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
 
 ## Email Config
 
@@ -52,7 +52,7 @@ Once you have an account with one of the above services, or an SMTP service, you
     | key                     | type   | description        |
     | ----------------------- | ------ | ------------------ |
     | email_mailjet_apiKey    | string | Mailjet API key    |
-    | email_mailjey_apiSecret | string | Mailjet API secret |
+    | email_mailjet_apiSecret | string | Mailjet API secret |
 
 === "Sendgrid"
 
@@ -67,17 +67,17 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
 
 Below are the available strings replaced in mail templates.
 
-| string                   | replaced with                                             |
-| ------------------------ | --------------------------------------------------------- |
-| `{instanceName}`         | `general_instanceName` config value                       |
-| `{userUsername}`         | The username of the user this email is being sent to      |
-| `{userDiscriminator}`    | The discriminator of the user this email is being sent to |
-| `{userId}`               | The ID of the user this email is being sent to            |
-| `{phoneNumber}`          | The last 4 digits of the user's phone number.             |
-| `{userEmail}`            | The user's email address                                  |
-| `{emailVerificationUrl}` | The generated email verification URL                      |
-| `{passwordResetUrl}`     | The generated password reset URL                          |
-| `{ipAddress}`            | The IP address that requested this email                  |
-| `{locationCity}`         | The GeoIP city that requested this email                  |
-| `{locationRegion}`       | The GeoIP region that requested this email                |
-| `{locationCountryName}`  | The GeoIP country that requested this email               |
+| string                   | replaced with                                                                |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `{instanceName}`         | `general_instanceName` config value                                          |
+| `{userUsername}`         | The username of the user this email is being sent to                         |
+| `{userDiscriminator}`    | The discriminator of the user this email is being sent to                    |
+| `{userId}`               | The ID of the user this email is being sent to                               |
+| `{phoneNumber}`          | The last 4 digits of the user's phone number.                                |
+| `{userEmail}`            | The user's email address                                                     |
+| `{emailVerificationUrl}` | The generated email verification URL                                         |
+| `{passwordResetUrl}`     | The generated password reset URL                                             |
+| `{ipAddress}`            | The IP address of new login (New login emails are not currently implemented) |
+| `{locationCity}`         | The GeoIP city of new login                                                  |
+| `{locationRegion}`       | The GeoIP region of new login                                                |
+| `{locationCountryName}`  | The GeoIP country of new login                                               |
