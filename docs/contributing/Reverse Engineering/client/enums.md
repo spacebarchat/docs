@@ -5,7 +5,7 @@ Various interesting enums/bitfields/etc found by inspecting the client source
 ## `usage_flags`
 
 Bitfield which tracks which premium features you have used in order
-Fto convince you out of unsubscribing from premium features.
+to convince you out of unsubscribing from premium features.
 
 | name                  | value |
 | --------------------- | ----- |
