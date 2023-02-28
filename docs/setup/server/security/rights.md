@@ -20,7 +20,7 @@ is generated through the `npm run generate:rights` script. The script generates 
 
 Operator rights currently grants access to the following, in addition to all rights:
 
--   Server shutdown through GET `/api/stop`
+-   Server shutdown through POST `/api/stop`
 -   [Registration token creation](regTokens.md) through GET `/api/auth/generate-registration-tokens`
 
 ## Calculator
