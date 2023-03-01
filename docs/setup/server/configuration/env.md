@@ -19,5 +19,3 @@ in the `fosscord-server` folder, with the format `NAME=VALUE` with each on new l
 | STORAGE_PROVIDER           | "s3" or "file" | CDN storage provider                                                                                                 |
 | STORAGE_BUCKET             | string         | S3 bucket name                                                                                                       |
 | STORAGE_REGION             | string         | S3 storage region                                                                                                    |
-| ONLY_CACHE_JS              | any            | If set, [`npm run generate:client`](../npmScripts.md#generateclient) will only cache JS files.                       |
-| CLIENT_PATCH_INSTANCE_NAME | string         | If set, [`npm run generate:client`](../npmScripts.md#generateclient) will use this as instance name.                 |

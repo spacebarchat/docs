@@ -60,20 +60,9 @@
     or to have access to leaked Discord.com code, we take measures in line with our [Code of Conduct](/contributing/conduct.md)
     to ensure the Fosscord codebase is free of any proprietary code. We want absolutely nothing to do with it.
 
-??? info "What about the test client? That's just the Discord.com one!"
-
-    Yes, this is true. However, this is purely for testing and development purposes.
-    Fosscord is first and foremost a *backend* server implementation, and we simply use Discord.com's client
-    to verify our work as correct. Efforts are being made to move away from this with our own client, but as you may have guessed,
-    building a Discord-compatible client is difficult.
-
-    You can read more about the test client [here](setup/server/Test%20Client/index.md)
-
 ??? info "Is this illegal?"
 
     The Fosscord maintainers do not believe it to be, no. See: [Oracle v. Google](https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.).
-    The only aspect of Fosscord that is not entirely written by us is the test client which we simply proxy from Discord.com,
-    and we take measures to show that the client is purely for development and research purposes.
 
 ??? info "Why are you doing this, anyway?"
 
