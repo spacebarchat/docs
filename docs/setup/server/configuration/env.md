@@ -26,7 +26,7 @@ These environment variables should be set in the environment `~/.profile` or wit
 
 | Name              | Value  | Description                                                     |
 | ----------------- | ------ | --------------------------------------------------------------- |
-| POSTGRES_USER     | string | Postgressql database user name                                  |
+| POSTGRES_USER     | string | Postgressql database username                                  |
 | POSTGRES_PASSWORD | string | Postgressql database password                                   |
 | POSTGRES_DATABASE | string | Database connection string. Defaults to SQlite3 at project root |
 | S3_BUCKET         | string | CDN storage location. S3 bucktet                                |
