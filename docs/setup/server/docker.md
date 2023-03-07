@@ -2,7 +2,7 @@
 
 ## dev environment
 
-This clones the master banch into a docker builder and run a build before starting it.
+This clones the master branch into a docker builder and runs a build before starting it.
 To run it you need docker and docker-compose
 `sudo docker compose up` or `sudo docker compose up -d`
 
@@ -14,11 +14,11 @@ Set the following environment variables in your environment (adapt POSTGRES_USER
 `export POSTGRES_PASSWORD=postgres` <br />
 `export POSTGRES_DATABASE=fosscord`
 
-This clones the master banch into a docker builder and run a build before starting it.
+This clones the master branch into a docker builder and runs a build before starting it.
 To run it you need docker and docker-compose
 `sudo docker-compose -f docker-compose.prod.yaml up` or `sudo docker-compose -f docker-compose.prod.yaml up -d`
 
-At first start you get an
+At first start, you get an
 
 ```
 db_1        | 2023-03-04 17:28:25.790 UTC [63] ERROR:  relation "config" does not exist at character 31
@@ -36,11 +36,11 @@ Set the following environment variables in your environment (adapt POSTGRES_USER
 `export S3_BUCKET_NAME=test` <br />
 `export S3_BUCKET_REGION=eu-central-1`
 
-This clones the master banch into a docker builder and run a build before starting it.
+This clones the master branch into a docker builder and runs a build before starting it.
 To run it you need docker and docker-compose
 `docker-compose -f docker-compose.prod.s3.yaml up` or `docker-compose -f docker-compose.prod.s3.yaml up -d`
 
-At first start you get an
+At first start, you get an
 
 ```
 db_1        | 2023-03-04 17:28:25.790 UTC [63] ERROR:  relation "config" does not exist at character 31
