@@ -11,6 +11,12 @@ You **must** have access to a terminal for this guide.
 
 We do not recommend using Windows to run Fosscord.
 
+## Docker
+
+To use docker please read the following page:
+
+-   [Docker](docker.md)
+
 ## Dependencies
 
 -   [Git](https://git-scm.com/)
@@ -46,12 +52,6 @@ If all went according to plan, you can now access your new Fosscord instance at 
 
 If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running,
 (you should set up a reverse proxy, next!).
-
-## Docker
-
-To use docker please read the following page:
-
--   [Docker](docker.md)
 
 ## Now what?
 

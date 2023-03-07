@@ -1,46 +1,36 @@
 # Docker
 
-## dev environment
+## Dev environment
 
 This clones the master branch into a docker builder and runs a build before starting it.
 To run it you need docker and docker-compose
 `sudo docker compose up` or `sudo docker compose up -d`
 
-## prod environment with local file storage
+## Prod environment with local file storage or with S3
 
 Set the following environment variables in your environment (adapt POSTGRES_USER, POSTGRES_PASSWORD):
 
-`export POSTGRES_USER=postgres` <br />
-`export POSTGRES_PASSWORD=postgres` <br />
-`export POSTGRES_DATABASE=fosscord`
+```
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=postgres
+export POSTGRES_DATABASE=fosscord
+```
 
 This clones the master branch into a docker builder and runs a build before starting it.
 To run it you need docker and docker-compose
 `sudo docker-compose -f docker-compose.prod.yaml up` or `sudo docker-compose -f docker-compose.prod.yaml up -d`
 
-At first start, you get an
+Additional you can set S3 storage backend:
 
 ```
-db_1        | 2023-03-04 17:28:25.790 UTC [63] ERROR:  relation "config" does not exist at character 31
-db_1        | 2023-03-04 17:28:25.790 UTC [63] STATEMENT:  SELECT COUNT(1) AS "cnt" FROM "config" "ConfigEntity"
+export S3_BUCKET=S3://...
+export S3_BUCKET_NAME=test
+export S3_BUCKET_REGION=eu-central-1
 ```
 
-## prod environment with S3 file storage
+Then start it with: `docker-compose -f docker-compose.prod.s3.yaml up` or `docker-compose -f docker-compose.prod.s3.yaml up -d`
 
-Set the following environment variables in your environment (adapt POSTGRES_USER, POSTGRES_PASSWORD, S3_BUCKET, S3_BUCKET_NAME,S3_BUCKET_REGION):
-
-`export POSTGRES_USER=postgres` <br />
-`export POSTGRES_PASSWORD=postgres` <br />
-`export POSTGRES_DATABASE=fosscord` <br />
-`export S3_BUCKET=S3://...` <br />
-`export S3_BUCKET_NAME=test` <br />
-`export S3_BUCKET_REGION=eu-central-1`
-
-This clones the master branch into a docker builder and runs a build before starting it.
-To run it you need docker and docker-compose
-`docker-compose -f docker-compose.prod.s3.yaml up` or `docker-compose -f docker-compose.prod.s3.yaml up -d`
-
-At first start, you get an
+At first start, you get an. This error can be ignored due to first start.
 
 ```
 db_1        | 2023-03-04 17:28:25.790 UTC [63] ERROR:  relation "config" does not exist at character 31
