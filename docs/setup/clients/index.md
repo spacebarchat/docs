@@ -1,8 +1,10 @@
 # Clients
 
-The official {{ name }} client is currently being developed at [this repository.](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/tree/dev/bare-rewrite).
-The {{ name }} client is, at the time of writing this (March 17th, 2023), under heavy development
-and not ready to be used just yet.
+!!! note "The {{ name }} client is, at the time of writing this (March 17th, 2023), under heavy development and not ready to be used in production just yet."
+
+!!! note "Windows support is currently broken."
+
+The official {{ name }} client is currently being developed at [this repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/tree/dev/bare-rewrite).
 
 ## Dependencies
 
@@ -25,36 +27,43 @@ cd {{ name.lower() }}-client; git switch dev/bare-rewrite
 yarn install
 ```
 
-To start the client, follow these instructions, depending on your NodeJS version:
+To start the client with Metro for development, run
 
-<details>
-  <summary>NodeJS == v16.x</summary>
-  
-  ```
-  yarn start
-  ```
-  
-</details>
+```bash
+yarn start
+```
 
-or
+!!! note "Platform-specific development commands:"
 
-<details>
-  <summary>NodeJS > v16.x</summary>
-  
-  ```
-  NODE_OPTIONS=--openssl-legacy-provider yarn start
-  ```
-  
-</details>
+    For development for Android, run
+
+    ```bash
+    yarn android
+    ```
+
+    For development for iOS, run
+
+    ```bash
+    yarn ios
+    ```
+
+    For development for Windows, run
+
+    ```bash
+    yarn windows
+    ```
+
+To build static files for the web, run
+
+```bash
+yarn build:web
+```
+
+Files will be built to `web-build`
 
 ## Contributing
 
 To contribute:
-
-<!-->
-
-TODO tell people what issues to work on
-<-->
 
 -   [Fork the repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/fork)
 -   Run the building instructions.
