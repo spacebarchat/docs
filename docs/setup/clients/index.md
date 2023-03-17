@@ -6,9 +6,9 @@ and not ready to be used just yet.
 
 ## Dependencies
 
-- [Git](https://git-scm.com/)
-- [NodeJS](https://nodejs.org). Version 16+
-- [yarn](https://yarnpkg.com/) (preferred) or npm
+-   [Git](https://git-scm.com/)
+-   [NodeJS](https://nodejs.org). Version 16+
+-   [yarn](https://yarnpkg.com/) (preferred) or npm
 
 ## Setup/Building
 
@@ -56,10 +56,10 @@ To contribute:
 TODO tell people what issues to work on
 <-->
 
-- [Fork the repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/fork)
-- Run the building instructions.
-- Commit & Push.
-- Pull Request & Done!
+-   [Fork the repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/fork)
+-   Run the building instructions.
+-   Commit & Push.
+-   Pull Request & Done!
 
 ### What can I contribute?
 
