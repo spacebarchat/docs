@@ -1,8 +1,16 @@
 # Frequently Asked Questions
 
+??? info "How do you use the Client?"
+    As described in [Clients](clients), the official client is not ready yet. You are free to use
+    a {{ name }} compatible client to connect, but no support will be provided.
+
+??? info "I am getting the error 'Cannot GET /', how fix?"
+    If you see that error message, it means that your server is configured correctly. Hooray!
+    Unfortunately, our official client isn't done yet (see question above).
+
 ??? info "Voice/Video when?"
 
-    Currently there is no voice or video support in any {{ name }} instance.
+    Currently, there is no voice or video support in any {{ name }} instance.
     This is a very difficult feature to get working, especially given that
     we must implement it the exact same way as Discord.com for client compatibility.
     [We would be incredibly thankful for any assistance.](/contributing)
