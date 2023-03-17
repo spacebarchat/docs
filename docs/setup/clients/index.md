@@ -6,9 +6,9 @@ and not ready to be used just yet.
 
 ## Dependencies
 
-- [Git](https://git-scm.com/)
-- [NodeJS](https://nodejs.org). Version 16+
-- [yarn](https://yarnpkg.com/) (preferred) or npm
+-   [Git](https://git-scm.com/)
+-   [NodeJS](https://nodejs.org). Version 16+
+-   [yarn](https://yarnpkg.com/) (preferred) or npm
 
 ## Setup/Building
 
@@ -56,14 +56,15 @@ To contribute:
 TODO tell people what issues to work on
 <-->
 
-- [Fork the repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/fork)
-- Run the building instructions.
-- Commit & Push.
-- Pull Request & Done!
+-   [Fork the repository](https://github.com/{{ name.lower() }}/{{ name.lower() }}-client/fork)
+-   Run the building instructions.
+-   Commit & Push.
+-   Pull Request & Done!
 
 ### What can I contribute?
 
 To quote the current lead client developer Puyodead1 directly:
+
 > uh, Idk. for the moment, I think we should focus more on "core" features like settings, editing messages, dms, markdown rendering, etc etc etc. with that, I would also say just use common sense, what do you think are basic features that you would want? some of the github issues apply to this.
 > but hey, if you want to work on something else like voice/video as a wild wacky idea, im not going to stop you. xD
 > if anyone else wants to chime in on [this](https://github.com/fosscord/fosscord-client/issues/21), go ahead
