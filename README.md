@@ -15,9 +15,19 @@
 
 3. Install dependencies.
 
+    From the project root directory, type
+
     ```bash
-    python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index
+    python3 -m pip install -r requirements.txt
     ```
+
+    alternatively,
+
+    ```bash
+    python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros
+    ```
+
+    will also work.
 
 4. Edit documents(s).
 
