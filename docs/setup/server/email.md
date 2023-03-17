@@ -1,32 +1,32 @@
 # Email
 
-Fosscord can be configured to send email, to enable the following functionality:
+{{ name }} can be configured to send email, to enable the following functionality:
 
--   Email verification
--   Password resets
--   Password change notifications
+- Email verification
+- Password resets
+- Password change notifications
 
-Fosscord supports the following email transports:
+{{ name }} supports the following email transports:
 
--   SMTP
--   [Mailjet](https://www.mailjet.com/)
--   [Mailgun](https://www.mailgun.com/)
--   [Sendgrid](https://sendgrid.com/)
+- SMTP
+- [Mailjet](https://www.mailjet.com/)
+- [Mailgun](https://www.mailgun.com/)
+- [Sendgrid](https://sendgrid.com/)
 
-Once you have an account with one of the above services, or an SMTP service, you can begin configuring Fosscord to send mail.
+Once you have an account with one of the above services, or an SMTP service, you can begin configuring {{ name }} to send mail.
 
 You must edit:
 
-* The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
-    Be sure to set it to the Fosscord web app URL. For example, `https://staging.fosscord.com`
-* The `general_correspondenceEmail` config value, used as the 'from' email address.
-	If unset, `noreply@localhost` is used, which will most likely throw an error with your email service.
+- The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
+    Be sure to set it to the {{ name }} web app URL. For example, `https://staging.{{ name }}.com`
+- The `general_correspondenceEmail` config value, used as the 'from' email address.
+ If unset, `noreply@localhost` is used, which will most likely throw an error with your email service.
 
 Optionally:
 
-* By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
-* If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
-* You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
+- By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+- If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
+- You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
 
 ## Email Config
 
@@ -62,7 +62,7 @@ Optionally:
 
 ## Email templates
 
-Fosscord's email templates are stored in [`fosscord-server/assets/email_templates`](https://github.com/fosscord/fosscord-server/tree/master/assets/email_templates).
+{{ name }}'s email templates are stored in [`{{ name }}-server/assets/email_templates`](https://github.com/{{ name }}/{{ name }}-server/tree/master/assets/email_templates).
 They are simple HTML files, which you may edit freely. Although HTML mail is very restricted, so a lot of content may not render properly.
 
 Below are the available strings replaced in mail templates.

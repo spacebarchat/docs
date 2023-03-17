@@ -1,15 +1,15 @@
 # Server Setup
 
-Fosscord-server setup ranges in difficulty depending on how you want to configure your system.
+{{ name }}-server setup ranges in difficulty depending on how you want to configure your system.
 This page provides a minimal setup guide to get you up and running,
 you should check out the other pages on this site to take your instance to the next level.
 
 For this guide, we assume you're familiar with the terminal.
 
-We do **not** recommend or support running Fosscord using services such as Ngrok or Heroku.  
+We do **not** recommend or support running {{ name }} using services such as Ngrok or Heroku.  
 You **must** have access to a terminal for this guide.
 
-We do not recommend using Windows to run Fosscord.
+We do not recommend using Windows to run {{ name }}.
 
 ## Dependencies
 
@@ -26,11 +26,11 @@ We do not recommend using Windows to run Fosscord.
 In your terminal:
 
 ```bash
-# Download Fosscord
-git clone https://github.com/fosscord/fosscord-server.git
+# Download {{ name }}
+git clone https://github.com/{{ name }}/{{ name }}-server.git
 
 # Navigate to project root
-cd fosscord-server
+cd {{ name }}-server
 
 # Install javascript packages
 npm i
@@ -42,14 +42,14 @@ npm run setup
 npm run start
 ```
 
-If all went according to plan, you can now access your new Fosscord instance at [http://localhost:3001](http://localhost:3001)! Congrats!
+If all went according to plan, you can now access your new {{ name }} instance at [http://localhost:3001](http://localhost:3001)! Congrats!
 
 If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running,
 (you should set up a reverse proxy, next!).
 
 ## Now what?
 
-Well, now you can configure Fosscord to your liking!
+Well, now you can configure {{ name }} to your liking!
 
 - [Skip to server configuration](configuration)
 - [Skip to reverse proxy / SSL](reverseProxy.md)
