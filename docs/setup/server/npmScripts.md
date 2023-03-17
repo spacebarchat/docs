@@ -30,4 +30,4 @@ Also displays the 'all rights' value, which `1` is a placeholder for.
 
 ## `generate:schema`
 
-Recreates the `{{ name }}-server/assets/schema.json` file, which is used for API and Gateway request validation.
+Recreates the `{{ name.lower() }}-server/assets/schema.json` file, which is used for API and Gateway request validation.

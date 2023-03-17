@@ -18,12 +18,12 @@ the endpoints used.
 const { Client } = require("discord.js");
 
 const client = new Client({
-	http: {
-		version: 9,
-		api: "https://api.{{ name }}.com",
-		cdn: "https://cdn.{{ name }}.com",
-		invite: "https://{{ name }}.com/invite",
-	},
+ http: {
+  version: 9,
+  api: "https://api.{{ name.lower() }}.com",
+  cdn: "https://cdn.{{ name.lower() }}.com",
+  invite: "https://{{ name.lower() }}.com/invite",
+ },
 });
 
 client.login("your token here");
@@ -34,7 +34,7 @@ client.login("your token here");
 ```py
 import discord
 
-discord.http.Route.BASE = "https://api.{{ name }}.com"
+discord.http.Route.BASE = "https://api.{{ name.lower() }}.com"
 client = discord.Client()
 
 client.run('your token here')
@@ -56,6 +56,6 @@ public static void main(String[] args) {
     modifiers.setAccessible(true);
     modifiers.setString(field, field.getModifiers() & ~Modifier.FINAL);
 
-    field.set(null, "https://api.{{ name }}.com");
+    field.set(null, "https://api.{{ name.lower() }}.com");
 }
 ```

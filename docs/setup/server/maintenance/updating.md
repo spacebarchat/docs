@@ -1,5 +1,5 @@
 If you had followed the [setup guide](index.md), you'll have installed {{ name }} using [Git](https://git-scm.com/).
-Thus, you can update the server by running `git pull` in the `{{ name }}-server` directory.
+Thus, you can update the server by running `git pull` in the `{{ name.lower() }}-server` directory.
 
 If you had made any changes locally, you may run into merge conflicts,
 where the {{ name }} team has made changes to the same code you changed. If it's not important to you, you can simply run `git reset --hard HEAD`

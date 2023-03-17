@@ -4,8 +4,8 @@
 
 Generally, our community sets up {{ name }} instances behind NGINX, a powerful reverse proxy.
 
-Below is an example NGINX config. On Ubuntu, you can put this in the `/etc/nginx/sites-available/{{ name }}.conf` file,
-and enable it with `ln -s /etc/nginx/sites-available/{{ name }}.conf /etc/nginx/sites-enabled/` and `systemctl restart nginx`
+Below is an example NGINX config. On Ubuntu, you can put this in the `/etc/nginx/sites-available/{{ name.lower() }}.conf` file,
+and enable it with `ln -s /etc/nginx/sites-available/{{ name.lower() }}.conf /etc/nginx/sites-enabled/` and `systemctl restart nginx`
 
 !!! info
 
@@ -16,7 +16,7 @@ and enable it with `ln -s /etc/nginx/sites-available/{{ name }}.conf /etc/nginx/
 ```nginx
 server {
  # Change server_name
-    server_name {{ name }}.example.com;
+    server_name {{ name.lower() }}.example.com;
     listen 80;
 
     location / {

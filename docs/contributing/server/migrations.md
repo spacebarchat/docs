@@ -8,7 +8,7 @@
 
 ## Generating Migrations
 
-To generate a database migration in {{ name }}-server:
+To generate a database migration in {{ name.lower() }}-server:
 
 1. On the branch/commit you want to migrate _from_, generate the database.
    You can run the server or run [`npm run sync:db`](../../setup/server/npmScripts.md#syncdb).

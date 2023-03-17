@@ -6,5 +6,5 @@
  }
 </style>
 
-<swagger-ui src="https://raw.githubusercontent.com/{{ name }}/{{ name }}-server/master/assets/openapi.json"/>
+<swagger-ui src="https://raw.githubusercontent.com/{{ name.lower() }}/{{ name.lower() }}-server/master/assets/openapi.json"/>
 <!-- <swagger-ui src="/assets/openapi.json"/> -->

@@ -25,5 +25,5 @@ There are a few query parameters available. Append them to the request URL, for 
 To use a registration token, append `?token={your registration token}` to the register route. For example
 
 ```
-https://staging.{{ name }}.com/register?token=some token
+https://staging.{{ name.lower() }}.com/register?token=some token
 ```

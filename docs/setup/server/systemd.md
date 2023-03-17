@@ -1,7 +1,7 @@
 # SystemD
 
 Below is an example SystemD service for running {{ name }}.  
-Save it in `/etc/systemd/system/{{ name }}.service`.
+Save it in `/etc/systemd/system/{{ name.lower() }}.service`.
 
 ```toml
 [Unit]
@@ -9,7 +9,7 @@ Description={{ name }}, for better and secure communication
 
 [Service]
 User=<your user>
-WorkingDirectory=<{{ name }} directory>
+WorkingDirectory=<{{ name.lower() }} directory>
 ExecStart=npm run start
 Restart=always
 StandardError=journal
@@ -27,11 +27,11 @@ If you would like to run the API, CDN or Gateway separately,
 you can edit the `ExecStart` command used in line with the [npm script](npmScripts.md).
 Also be sure to run [RabbitMQ](configuration/rabbitmq.md) in that case.
 
-You can now start {{ name }} using `sudo systemctl start {{ name }}`.
+You can now start {{ name }} using `sudo systemctl start {{ name.lower() }}`.
 
-To automatically run {{ name }} on boot, use `sudo systemctl enable {{ name }}`.
+To automatically run {{ name }} on boot, use `sudo systemctl enable {{ name.lower() }}`.
 
-To view the server logs, you may use `journalctl -u {{ name }}`, or with `-f` to view them as they come.
+To view the server logs, you may use `journalctl -u {{ name.lower() }}`, or with `-f` to view them as they come.
 
 You may also use the `lnav` package to get nice, colourised and scrolling output:  
-`journalctl -xefu {{ name }} | lnav`
+`journalctl -xefu {{ name.lower() }} | lnav`

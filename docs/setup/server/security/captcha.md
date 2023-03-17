@@ -16,7 +16,7 @@
     1. Navigate to [https://www.google.com/u/1/recaptcha/admin/create](https://www.google.com/u/1/recaptcha/admin/create)
     2. Fill in your websites details
     3. Select `reCAPTCHA v2` -> `"I'm not a robot" Checkbox`
-    4. Add your domain. For example, `staging.{{ name }}.com`. Go to the next screen.
+    4. Add your domain. For example, `staging.{{ name.lower() }}.com`. Go to the next screen.
     5. Copy your `sitekey` to the [config](../configuration/index.md) `security_captcha_sitekey` value, wrapped in quotes
     6. Copy your `secret` to the config `security_captcha_secret` value, wrapped in quotes
     7. Set the config `security_captcha_service` value to `"recaptcha"`

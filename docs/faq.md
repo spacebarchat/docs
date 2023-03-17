@@ -21,7 +21,7 @@
 
     Please do not use Discord trademarks to refer to anything regarding {{ name }}.
     As an instance owner, you can grant yourself or others *premium* features which may be used to determine your abilities
-    *client-side*. However, {{ name }}-server currently does not have any distinction between premium and free users.
+    *client-side*. However, {{ name.lower() }}-server currently does not have any distinction between premium and free users.
     All users can access all features, given they have the [rights](setup/server/security/rights.md) to do so.
 
     You cannot give yourself premium features on Discord.com using a {{ name }} instance.
@@ -59,7 +59,7 @@
     If {{ name }} was to try this, Discord's automated spam filters would surely block your instance,
     and ban any offending accounts.
 
-    Lastly, you can simply view [our codebase](https://github.com/{{ name }}/{{ name }}-server).
+    Lastly, you can simply view [our codebase](https://github.com/{{ name.lower() }}/{{ name.lower() }}-server).
     A simple proxy would not need to be this complex or large.
     We implement the entire Discord.com API, Gateway, among others.
     None of this would be necessary if we were simply abusing Discord.com.

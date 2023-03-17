@@ -30,6 +30,6 @@ to multiple {{ name }}-compatible instances with rich theming and plugin support
 ## Support
 
 For any kind of support regarding {{ name }}, feel free to ask questions in our [Discord.com server](https://discord.gg/Ms5Ev7S6bF)
-or our [official {{ name }} instance](https://staging.{{ name }}.com).
+or our [official {{ name }} instance](https://staging.{{ name.lower() }}.com).
 
-For bug reporting and feature requests please create an [issue](https://github.com/{{ name }}/{{ name }}-server/issues/new/choose) on Github.
+For bug reporting and feature requests please create an [issue](https://github.com/{{ name.lower() }}/{{ name.lower() }}-server/issues/new/choose) on Github.

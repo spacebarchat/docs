@@ -2,7 +2,7 @@
 
 Below is a list of environment variables used by {{ name }}.
 You can set environment variables easily by creating an `.env` file
-in the `{{ name }}-server` folder, with the format `NAME=VALUE` with each on new lines.
+in the `{{ name.lower() }}-server` folder, with the format `NAME=VALUE` with each on new lines.
 
 | Name             | Value          | Description                                                                                                          |
 | ---------------- | -------------- | -------------------------------------------------------------------------------------------------------------------- |

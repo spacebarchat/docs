@@ -3,9 +3,9 @@
 Below is a list of routes available on Discord.com {{ name }}-server does not currently implement.
 
 It does not account for different HTTP methods (GET, POST, etc). A single method implemented by {{ name }} will remove it from this list,
-so be sure to double check in the {{ name }} [source code](https://github.com/{{ name }}/{{ name }}-server/tree/master/src/api/routes).
+so be sure to double check in the {{ name }} [source code](https://github.com/{{ name.lower() }}/{{ name.lower() }}-server/tree/master/src/api/routes).
 
-It is generated daily by [{{ name }}/{{ name }}-missing-routes](https://github.com/{{ name }}/{{ name }}-missing-routes/),
+It is generated daily by [{{ name.lower() }}/{{ name.lower() }}-missing-routes](https://github.com/{{ name.lower() }}/{{ name.lower() }}-missing-routes/),
 by scraping the latest Discord.com client.
 
 <div>

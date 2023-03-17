@@ -1,15 +1,15 @@
 # Migrating from Staging
 
-'Staging' refers to [this branch](https://github.com/{{ name }}/{{ name }}-server/tree/staging) of {{ name }}-server,
-which is deprecated in favour of [the refactor branch](https://github.com/{{ name }}/{{ name }}-server/tree/maddy/refactor) (if this is a 404, its just become the main branch now).
+'Staging' refers to [this branch](https://github.com/{{ name.lower() }}/{{ name.lower() }}-server/tree/staging) of {{ name.lower() }}-server,
+which is deprecated in favour of [the refactor branch](https://github.com/{{ name.lower() }}/{{ name.lower() }}-server/tree/maddy/refactor) (if this is a 404, its just become the main branch now).
 
 !!! warn "If you were using SQLite, you will be unable to migrate to the new version. SQLite is primarily for testing and development purposes, and it should not be used for production."
 
 To migrate from Staging:
 
-1. Download the new version of {{ name }}-server  
-   `git clone https://github.com/{{ name }}/{{ name }}-server.git`
-2. Copy your `.env` file from your previous installation to the new `{{ name }}-server` folder.
+1. Download the new version of {{ name.lower() }}-server  
+   `git clone https://github.com/{{ name.lower() }}/{{ name.lower() }}-server.git`
+2. Copy your `.env` file from your previous installation to the new `{{ name.lower() }}-server` folder.
 3. Copy any user data, specifically the `files` directory, to the new project root.
 4. `npm i` in new installation
 5. `npm run setup`
