@@ -1,4 +1,5 @@
 mkdocs
+mkdocs-macros-plugin
 mkdocs-material
-mkdocs-swagger-ui-tag
 mkdocs-section-index
+mkdocs-swagger-ui-tag

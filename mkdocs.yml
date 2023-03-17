@@ -9,6 +9,9 @@ plugins:
           extra_css: [assets/swagger.css]
           docExpansion: none
           filter: true
+    - macros
+extra: # Variables, which can be used in a Jinja2-like fashion throughout all .md files.
+    name: Fosscord
 theme:
     name: material
     logo: assets/logo.svg
@@ -43,3 +46,4 @@ markdown_extensions:
     - pymdownx.tabbed:
           alternate_style: true
 extra_css: [assets/extra.css]
+
