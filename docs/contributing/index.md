@@ -4,13 +4,13 @@
 
 ## Style and a note on etiquette
 
-- We use [prettier](https://www.npmjs.com/package/prettier) for code formatting. We have a `.prettierrc` file in {{ name }}-server's root
+-   We use [prettier](https://www.npmjs.com/package/prettier) for code formatting. We have a `.prettierrc` file in {{ name }}-server's root
     and use a git precommit hook to autorun it.
-- Try to stay consistent with the rest of the project
-- Try to keep each commit to a single feature or idea, with descriptions of what it is and why it is done. No "Large refactor" commits that touch every file,
+-   Try to stay consistent with the rest of the project
+-   Try to keep each commit to a single feature or idea, with descriptions of what it is and why it is done. No "Large refactor" commits that touch every file,
     unless absolutely required due to the nature of change.
-- Leave comments in your code about why something is done when appropriate, not just what it is doing.
-- If you're working on a feature, please announce that you're working on it (in the relevant GH issue or our Discord, preferably both),
+-   Leave comments in your code about why something is done when appropriate, not just what it is doing.
+-   If you're working on a feature, please announce that you're working on it (in the relevant GH issue or our Discord, preferably both),
     so that we can work more effectively and minimise conflicting change attempts.
     Additionally, please do not try to snipe features that others are working on.
 
@@ -18,10 +18,10 @@
 
 {{ name }} is written in Typescript and is comprised of 4 main parts:
 
-- REST HTTP API server
-- Websocket Gateway server for realtime communication with clients
-- HTTP CDN server for storing user file content.
-- `utils` module to separate our database models, schemas, and other things from the above 3 components.
+-   REST HTTP API server
+-   Websocket Gateway server for realtime communication with clients
+-   HTTP CDN server for storing user file content.
+-   `utils` module to separate our database models, schemas, and other things from the above 3 components.
 
 ## Implementing endpoints, opcodes, etc
 

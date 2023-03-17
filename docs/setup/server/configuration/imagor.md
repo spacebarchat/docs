@@ -8,7 +8,7 @@ privacy concerns, as an attacker may be able to learn users IP addresses.
 
 ## Dependencies
 
-- [Docker](https://www.docker.com/)
+-   [Docker](https://www.docker.com/)
 
 ## Setup
 

@@ -46,4 +46,3 @@ markdown_extensions:
     - pymdownx.tabbed:
           alternate_style: true
 extra_css: [assets/extra.css]
-
