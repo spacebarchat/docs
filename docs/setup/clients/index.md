@@ -8,9 +8,9 @@ The official Fosscord client is currently being developed at [this repository](h
 
 ## Dependencies
 
-- [Git](https://git-scm.com/)
-- [NodeJS](https://nodejs.org). Version 16+
-- [yarn](https://yarnpkg.com/) (preferred) or npm
+-   [Git](https://git-scm.com/)
+-   [NodeJS](https://nodejs.org). Version 16+
+-   [yarn](https://yarnpkg.com/) (preferred) or npm
 
 ## Setup/Building
 
@@ -65,13 +65,13 @@ Files will be built to `web-build`
 
 To contribute:
 
-- [Fork the repository](https://github.com/fosscord/fosscord-client/fork)
-- Run the building instructions.
-- Commit & Push.
-- Pull Request & Done!
+-   [Fork the repository](https://github.com/fosscord/fosscord-client/fork)
+-   Run the building instructions.
+-   Commit & Push.
+-   Pull Request & Done!
 
 ### What can I contribute?
 
-- "Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.
-- Implementing other things like voice/video is fine too, though
-- [This](https://github.com/fosscord/fosscord-client/issues/21) is a good starting point and lists all things that are still missing from the client.
+-   "Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.
+-   Implementing other things like voice/video is fine too, though
+-   [This](https://github.com/fosscord/fosscord-client/issues/21) is a good starting point and lists all things that are still missing from the client.
