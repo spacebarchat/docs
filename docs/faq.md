@@ -1,5 +1,15 @@
 # Frequently Asked Questions
 
+??? info "How do you use the Client?"
+
+    As described in [Clients](/setup/clients), the official client is not ready yet. You are free to use
+    a Fosscord compatible client to connect, but no support will be provided.
+
+??? info "I am getting the error 'Cannot GET /', how fix?"
+
+    If you see that error message, it means that your server is configured correctly. Hooray!
+    Unfortunately, our official client isn't done yet (see question above).
+
 ??? info "Voice/Video when?"
 
     Currently there is no voice or video support in any Fosscord instance.
