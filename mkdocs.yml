@@ -1,7 +1,20 @@
-site_name: Fosscord Documentation
-repo_url: https://github.com/fosscord/fosscord
-edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
-site_description: "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
+extra:
+    #
+    # Change these macros if you wish to update the projects' name.
+    # Use {{ variable_name }} in .md files to reference a variable that you've declared here.
+    # For more information, read https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+    #
+    project_name: Fosscord
+    site_name: &site_name Fosscord Documentation
+    repo_url: &repo_url https://github.com/fosscord/fosscord
+    server_repo_url: https://github.com/fosscord/fosscord-Server
+    client_repo_url: https://github.com/fosscord/fosscord-client
+    edit_uri: &edit_uri https://github.com/fosscord/fosscord-docs/edit/master/docs/
+    site_description: &site_description "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
+site_name: *site_name
+repo_url: *repo_url
+edit_uri: *edit_uri
+site_description: *site_description
 plugins:
     - section-index
     - search
