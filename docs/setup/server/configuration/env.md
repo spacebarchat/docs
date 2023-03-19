@@ -1,12 +1,12 @@
 # Environment Variables
 
-Below is a list of environment variables used by Fosscord.
+Below is a list of environment variables used by {{ project.name }}.
 You can set environment variables easily by creating an `.env` file
-in the `fosscord-server` folder, with the format `NAME=VALUE` with each on new lines.
+in the `{{ project.name.lower() }}-server` folder, with the format `NAME=VALUE` with each on new lines.
 
 | Name                       | Value          | Description                                                                                                          |
 | -------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| THREADS                    | number         | Number of threads to run Fosscord on when using bundle. Make sure you've enabled RabbitMQ if using more than one     |
+| THREADS                    | number         | Number of threads to run {{ project.name }} on when using bundle. Make sure you've enabled RabbitMQ if using more than one     |
 | PORT                       | number         | Port to listen on. Used by all components, including bundle. If using bundle, all components run under the same port |
 | DATABASE                   | string         | Database connection string. Defaults to SQlite3 at project root                                                      |
 | CONFIG_PATH                | string         | File path for JSON config, if not using `config` db table                                                            |

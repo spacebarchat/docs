@@ -1,25 +1,26 @@
 # Clients
 
-!!! note "The Fosscord client is, at the time of writing this (March 17th, 2023), under heavy development and not ready to be used in production just yet."
+!!! note "The {{ project.name }} client is, at the time of writing this (March 17th, 2023), under heavy development and not ready to be used in production just yet."
 
 !!! warning "Windows support is currently broken."
 
-The official Fosscord client is currently being developed at [this repository](https://github.com/fosscord/fosscord-client/tree/dev/bare-rewrite).
+The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}/tree/dev/bare-rewrite).
 
 ## Official host
 
-We currently host the client at [https://app.fosscord.com](https://app.fosscord.com).
+We currently host the client at [https://app.{{ project.domain }}](https://app.{{ project.domain }}).
 You can use it to connect to our official instance by default,
 or you can use it to connect to your own by editing your local storage to include the `routeSettings` key with the below example content:
+
 ```json
 {
-	"api":"https://staging.fosscord.com/api/v9",
-	"cdn":"https://cdn.staging.fosscord.com",
-	"gateway":"wss://gateway.staging.fosscord.com",
-	"invite":"https://staging.fosscord.com/invite",
-	"template":"https://staging.fosscord.com/template",
-	"gift":"https://staging.fosscord.com/gift",
-	"scheduledEvent":"https://staging.fosscord.com/events"
+ "api":"https://staging.{{ project.domain }}/api/v9",
+ "cdn":"https://cdn.staging.{{ project.domain }}",
+ "gateway":"wss://gateway.staging.{{ project.domain }}",
+ "invite":"https://staging.{{ project.domain }}/invite",
+ "template":"https://staging.{{ project.domain }}/template",
+ "gift":"https://staging.{{ project.domain }}/gift",
+ "scheduledEvent":"https://staging.{{ project.domain }}/events"
 }
 ```
 
@@ -30,18 +31,18 @@ Replace the above endpoints with your own. If your domain name is `https://whate
 
 ### Dependencies
 
--   [Git](https://git-scm.com/)
--   [NodeJS](https://nodejs.org). Version 16+
--   [yarn](https://yarnpkg.com/) (preferred) or npm
+- [Git](https://git-scm.com/)
+- [NodeJS](https://nodejs.org). Version 16+
+- [yarn](https://yarnpkg.com/) (preferred) or npm
 
 In your terminal:
 
 ```bash
-# Download Fosscord Client
-git clone https://github.com/fosscord/fosscord-client.git
+# Download {{ project.name }} Client
+git clone {{ repositories.base_url }}/{{ repositories.client }}.git
 
 # Enter the cloned directory, switch branches to the one, which is actually being developed
-cd fosscord-client; git switch dev/bare-rewrite
+cd {{ project.name.lower() }}-client; git switch dev/bare-rewrite
 
 # Install dependencies
 yarn install
@@ -85,13 +86,13 @@ Files will be built to `web-build`
 
 To contribute:
 
--   [Fork the repository](https://github.com/fosscord/fosscord-client/fork)
--   Run the building instructions.
--   Commit & Push.
--   Pull Request & Done!
+- [Fork the repository]({{ repositories.base_url }}/{{ repositories.client }}/fork)
+- Run the building instructions.
+- Commit & Push.
+- Pull Request & Done!
 
 ### What can I contribute?
 
--   "Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.
--   Implementing other things like voice/video is fine too, though
--   [This](https://github.com/fosscord/fosscord-client/issues/21) is a good starting point and lists the core features that are still missing from the client.
+- "Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.
+- Implementing other things like voice/video is fine too, though
+- [This]({{ repositories.base_url }}/{{ repositories.client }}/issues/21) is a good starting point and lists the core features that are still missing from the client.

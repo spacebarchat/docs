@@ -1,11 +1,11 @@
 # Bots and Applications
 
-Fosscord is backwards-compatibile with Discord.com, and so all
+{{ project.name }} is backwards-compatibile with Discord.com, and so all
 existing bots and applications designed for Discord.com should work relatively easily
-when connected to a Fosscord instance instead.
+when connected to a {{ project.name }} instance instead.
 
 The Discord Developer Panel is available at /developers, and allows you all the same functionality
-to create bots and applications on a Fosscord instance as Discord.com.
+to create bots and applications on a {{ project.name }} instance as Discord.com.
 
 ## Bot Libraries
 
@@ -18,12 +18,12 @@ the endpoints used.
 const { Client } = require("discord.js");
 
 const client = new Client({
-	http: {
-		version: 9,
-		api: "https://api.fosscord.com",
-		cdn: "https://cdn.fosscord.com",
-		invite: "https://fosscord.com/invite",
-	},
+ http: {
+  version: 9,
+  api: "https://api.{{ project.domain }}",
+  cdn: "https://cdn.{{ project.domain }}",
+  invite: "https://{{ project.domain }}/invite",
+ },
 });
 
 client.login("your token here");
@@ -34,7 +34,7 @@ client.login("your token here");
 ```py
 import discord
 
-discord.http.Route.BASE = "https://api.fosscord.com"
+discord.http.Route.BASE = "https://api.{{ project.domain }}"
 client = discord.Client()
 
 client.run('your token here')
@@ -56,6 +56,6 @@ public static void main(String[] args) {
     modifiers.setAccessible(true);
     modifiers.setString(field, field.getModifiers() & ~Modifier.FINAL);
 
-    field.set(null, "https://api.fosscord.com");
+    field.set(null, "https://api.{{ project.domain }}");
 }
 ```

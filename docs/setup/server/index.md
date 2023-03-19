@@ -1,24 +1,24 @@
 # Server Setup
 
-Fosscord-server setup ranges in difficulty depending on how you want to configure your system.
+{{ project.name }}-server setup ranges in difficulty depending on how you want to configure your system.
 This page provides a minimal setup guide to get you up and running,
 you should check out the other pages on this site to take your instance to the next level.
 
 For this guide, we assume you're familar with the terminal.
 
-We do **not** recommend or support running Fosscord using services such as Ngrok or Heroku.  
+We do **not** recommend or support running {{ project.name }} using services such as Ngrok or Heroku.  
 You **must** have access to a terminal for this guide.
 
-We do not recommend using Windows to run Fosscord.
+We do not recommend using Windows to run {{ project.name }}.
 
 ## Dependencies
 
--   [Git](https://git-scm.com/)
--   [NodeJS](https://nodejs.org). Version 16+
--   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
+- [Git](https://git-scm.com/)
+- [NodeJS](https://nodejs.org). Version 16+
+- [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
     (See: `python-is-python3` package)
--   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
--   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
+- On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
+- On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
     You do not need the full Visual Studio install, the build tools are fine.
 
 ## Setup
@@ -26,11 +26,11 @@ We do not recommend using Windows to run Fosscord.
 In your terminal:
 
 ```bash
-# Download Fosscord
-git clone https://github.com/fosscord/fosscord-server.git
+# Download {{ project.name }}
+git clone {{ repositories.base_url }}/{{ repositories.server }}.git
 
 # Navigate to project root
-cd fosscord-server
+cd {{ project.name.lower() }}-server
 
 # Install javascript packages
 npm i
@@ -42,15 +42,15 @@ npm run setup
 npm run start
 ```
 
-If all went according to plan, you can now access your new Fosscord instance at [http://localhost:3001](http://localhost:3001)! Congrats!
+If all went according to plan, you can now access your new {{ project.name }} instance at [http://localhost:3001](http://localhost:3001)! Congrats!
 
 If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running,
 (you should set up a reverse proxy, next!).
 
 ## Now what?
 
-Well, now you can configure Fosscord to your liking!
+Well, now you can configure {{ project.name }} to your liking!
 
--   [Skip to server configuration](configuration)
--   [Skip to reverse proxy / SSL](reverseProxy.md)
--   [Skip to security](security)
+- [Skip to server configuration](configuration)
+- [Skip to reverse proxy / SSL](reverseProxy.md)
+- [Skip to security](security)

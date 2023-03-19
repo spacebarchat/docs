@@ -2,15 +2,21 @@ extra:
     #
     # Change these macros if you wish to update the projects' name.
     # Use {{ variable_name }} in .md files to reference a variable that you've declared here.
-    # For more information, read https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+    # For more information, read https://mkdocs-macros-plugin.readthedocs.io/en/latest/ .
     #
-    project_name: Fosscord
-    site_name: &site_name Fosscord Documentation
-    repo_url: &repo_url https://github.com/fosscord/fosscord
-    server_repo_url: https://github.com/fosscord/fosscord-Server
-    client_repo_url: https://github.com/fosscord/fosscord-client
-    edit_uri: &edit_uri https://github.com/fosscord/fosscord-docs/edit/master/docs/
-    site_description: &site_description "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
+    project:
+        name: Fosscord # Tip: use {{ project_name.lower() }} to get the project name in lowercase.
+        domain: fosscord.com
+    repositories:
+        base_url: https://github.com/
+        server: fosscord/fosscord-server
+        client: fosscord/fosscord-client
+        missing_routes: fosscord/fosscord-missing-routes
+        main: &repo_url https://github.com/fosscord/fosscord # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+    site:
+        name: &site_name Fosscord Documentation
+        description: &site_description "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
+        edit_uri: &edit_uri https://github.com/fosscord/fosscord-docs/edit/master/docs/ # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
 site_name: *site_name
 repo_url: *repo_url
 edit_uri: *edit_uri

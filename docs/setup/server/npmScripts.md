@@ -8,12 +8,12 @@ Shorthand for `build` and `generate:schema`
 
 ## `sync:db`
 
-Syncronise the database schema between Fosscord source code and your database.
-**May incur data loss**. You do not normally need to run this script, as Fosscord-server will perform it when necessary.
+Syncronise the database schema between {{ project.name }} source code and your database.
+**May incur data loss**. You do not normally need to run this script, as {{ project.name }}-server will perform it when necessary.
 
 ## `build`
 
-Builds the Fosscord source code
+Builds the {{ project.name }} source code
 
 ## `start`
 
@@ -30,4 +30,4 @@ Also displays the 'all rights' value, which `1` is a placeholder for.
 
 ## `generate:schema`
 
-Recreates the `fosscord-server/assets/schema.json` file, which is used for API and Gateway request validation.
+Recreates the `{{ project.name.lower() }}-server/assets/schema.json` file, which is used for API and Gateway request validation.
