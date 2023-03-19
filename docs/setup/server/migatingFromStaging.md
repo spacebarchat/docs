@@ -3,7 +3,7 @@
 'Staging' refers to [this branch](https://github.com/fosscord/fosscord-server/tree/staging) of fosscord-server,
 which is deprecated in favour of [the refactor branch](https://github.com/fosscord/fosscord-server/tree/maddy/refactor) (if this is a 404, its just become the main branch now).
 
-!!! warn "If you were using SQLite, you will be unable to migrate to the new version. SQLite is primarily for testing and development purposes, and it should not be used for production."
+!!! warning "If you were using SQLite, you will be unable to migrate to the new version. SQLite is primarily for testing and development purposes, and it should not be used for production."
 
 To migrate from Staging:
 

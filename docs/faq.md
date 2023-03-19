@@ -1,5 +1,10 @@
 # Frequently Asked Questions
 
+??? info "How do you use the Client?"
+
+    As described in [Clients](/setup/clients), the official client is not ready yet. You are free to use
+    a Fosscord compatible client to connect, but no support will be provided.
+
 ??? info "Voice/Video when?"
 
     Currently there is no voice or video support in any Fosscord instance.
