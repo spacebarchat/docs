@@ -6,18 +6,18 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
-<link href="../rabbitmq/" rel="prev"/>
-<link href="../../maintenance/" rel="next"/>
-<link href="../../../../assets/favicon.svg" rel="icon"/>
+<link href="../bots/" rel="prev"/>
+<link href="../server/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>User Flags - Fosscord Documentation</title>
-<link href="../../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Clients - Fosscord Documentation</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../../assets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#user-flags">
+<a class="md-skip" href="#clients">
           Skip to content
         </a>
 </div>
@@ -33,8 +33,8 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Fosscord Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Fosscord Documentation">
-<img alt="logo" src="../../../../assets/logo.svg"/>
+<a aria-label="Fosscord Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Fosscord Documentation">
+<img alt="logo" src="../../assets/logo.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              User Flags
+              Clients
             
           </span>
 </div>
@@ -115,8 +115,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Fosscord Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Fosscord Documentation">
-<img alt="logo" src="../../../../assets/logo.svg"/>
+<a aria-label="Fosscord Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Fosscord Documentation">
+<img alt="logo" src="../../assets/logo.svg"/>
 </a>
     Fosscord Documentation
   </label>
@@ -132,24 +132,24 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../..">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../faq/">
+<a class="md-nav__link" href="../../faq/">
         Frequently Asked Questions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../routes/">
+<a class="md-nav__link" href="../../routes/">
         API Routes
       </a>
 </li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../contributing/">Contributing</a>
+<a href="../../contributing/">Contributing</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -161,14 +161,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../contributing/conduct/">
+<a class="md-nav__link" href="../../contributing/conduct/">
         Code of Conduct
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../contributing/server/">Server</a>
+<a href="../../contributing/server/">Server</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -180,12 +180,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../contributing/server/migrations/">
+<a class="md-nav__link" href="../../contributing/server/migrations/">
         Migrations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../contributing/server/missingroute/">
+<a class="md-nav__link" href="../../contributing/server/missingroute/">
         Missing Routes
       </a>
 </li>
@@ -198,7 +198,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../">Setup</a>
+<a href="../">Setup</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -210,101 +210,146 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../bots/">
+<a class="md-nav__link" href="../bots/">
         Bots
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../clients/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Clients
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Clients
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#official-host">
+    Official host
+  </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setupbuilding">
+    Setup/Building
+  </a>
+<nav aria-label="Setup/Building" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contributing">
+    Contributing
+  </a>
+<nav aria-label="Contributing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-can-i-contribute">
+    What can I contribute?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Server</a>
+<a href="../server/">Server</a>
 <label for="__nav_5_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_5_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_5_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_3">
 <span class="md-nav__icon md-icon"></span>
           Server
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../database/">
+<a class="md-nav__link" href="../server/database/">
         Database
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../email/">
+<a class="md-nav__link" href="../server/email/">
         Email
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../migatingFromStaging/">
+<a class="md-nav__link" href="../server/migatingFromStaging/">
         Migrating from Staging
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../npmScripts/">
+<a class="md-nav__link" href="../server/npmScripts/">
         NPM scripts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../reverseProxy/">
+<a class="md-nav__link" href="../server/reverseProxy/">
         Reverse Proxy
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../systemd/">
+<a class="md-nav__link" href="../server/systemd/">
         SystemD
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_3_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_3_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Configuration</a>
+<a href="../server/configuration/">Configuration</a>
 <label for="__nav_5_3_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_5_3_7_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_5_3_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_5_3_7">
 <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../embeds/">
+<a class="md-nav__link" href="../server/configuration/embeds/">
         Embeds
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../env/">
+<a class="md-nav__link" href="../server/configuration/env/">
         Environment Variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../guildFeatures/">
+<a class="md-nav__link" href="../server/configuration/guildFeatures/">
         Guild Features
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../imagor/">
+<a class="md-nav__link" href="../server/configuration/imagor/">
         Imagor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rabbitmq/">
+<a class="md-nav__link" href="../server/configuration/rabbitmq/">
         RabbitMQ
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../server/configuration/userFlags/">
         User Flags
       </a>
 </li>
@@ -314,7 +359,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_3_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../maintenance/">Maintenance</a>
+<a href="../server/maintenance/">Maintenance</a>
 <label for="__nav_5_3_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -326,12 +371,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../maintenance/restart/">
+<a class="md-nav__link" href="../server/maintenance/restart/">
         When must the server restart?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../maintenance/updating/">
+<a class="md-nav__link" href="../server/maintenance/updating/">
         Updating
       </a>
 </li>
@@ -341,7 +386,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_3_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../security/">Security</a>
+<a href="../server/security/">Security</a>
 <label for="__nav_5_3_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -353,22 +398,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../security/captcha/">
+<a class="md-nav__link" href="../server/security/captcha/">
         CAPTCHAs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../security/limits/">
+<a class="md-nav__link" href="../server/security/limits/">
         Rate Limiting
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../security/regTokens/">
+<a class="md-nav__link" href="../server/security/regTokens/">
         Registration Tokens
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../security/rights/">
+<a class="md-nav__link" href="../server/security/rights/">
         Rights
       </a>
 </li>
@@ -390,17 +435,125 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#official-host">
+    Official host
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setupbuilding">
+    Setup/Building
+  </a>
+<nav aria-label="Setup/Building" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependencies">
+    Dependencies
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contributing">
+    Contributing
+  </a>
+<nav aria-label="Contributing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-can-i-contribute">
+    What can I contribute?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="user-flags">User Flags</h1>
-<p>User flags describe special properties of users, including whether they are staff, a verified bot, a bug hunter, etc.</p>
-<p>You can change a user's flags by setting the <code>public_flags</code> value in the <code>users</code> table.
-You can assign multiple flags by simply summing the respective values.</p>
-<p>A list of all user flags is available <a href="https://github.com/Delitefully/DiscordLists/blob/master/flags.md">here</a></p>
+<h1 id="clients">Clients</h1>
+<div class="admonition note">
+<p class="admonition-title">The Fosscord client is, at the time of writing this (March 17th, 2023), under heavy development and not ready to be used in production just yet.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Windows support is currently broken.</p>
+</div>
+<p>The official Fosscord client is currently being developed at <a href="https://github.com/fosscord/fosscord-client/tree/dev/bare-rewrite">this repository</a>.</p>
+<h2 id="official-host">Official host</h2>
+<p>We currently host the client at <a href="https://app.fosscord.com">https://app.fosscord.com</a>.
+You can use it to connect to our official instance by default,
+or you can use it to connect to your own by editing your local storage to include the <code>routeSettings</code> key with the below example content:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"api"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/api/v9"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"cdn"</span><span class="p">:</span><span class="s2">"https://cdn.staging.fosscord.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"gateway"</span><span class="p">:</span><span class="s2">"wss://gateway.staging.fosscord.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"invite"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/invite"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"template"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/template"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"gift"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/gift"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"scheduledEvent"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/events"</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Replace the above endpoints with your own. If your domain name is <code>https://whatever.notasite</code>, then you'll most likely want to enter
+<code>https://whatever.noasite/api/v9</code> for the API endpoint, etc.</p>
+<h2 id="setupbuilding">Setup/Building</h2>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://nodejs.org">NodeJS</a>. Version 16+</li>
+<li><a href="https://yarnpkg.com/">yarn</a> (preferred) or npm</li>
+</ul>
+<p>In your terminal:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download Fosscord Client</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/fosscord/fosscord-client.git
+
+<span class="c1"># Enter the cloned directory, switch branches to the one, which is actually being developed</span>
+<span class="nb">cd</span><span class="w"> </span>fosscord-client<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>dev/bare-rewrite
+
+<span class="c1"># Install dependencies</span>
+yarn<span class="w"> </span>install
+</code></pre></div>
+<p>To start the client with Metro for development, run</p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>start
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Platform-specific development commands:</p>
+<p>For development for Android, run</p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>android
+</code></pre></div>
+<p>For development for iOS, run</p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>ios
+</code></pre></div>
+<p>For development for Windows, run</p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>windows
+</code></pre></div>
+</div>
+<p>To build static files for the web (i.e. when hosting it yourself), run</p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>build:web
+</code></pre></div>
+<p>Files will be built to <code>web-build</code></p>
+<h2 id="contributing">Contributing</h2>
+<p>To contribute:</p>
+<ul>
+<li><a href="https://github.com/fosscord/fosscord-client/fork">Fork the repository</a></li>
+<li>Run the building instructions.</li>
+<li>Commit &amp; Push.</li>
+<li>Pull Request &amp; Done!</li>
+</ul>
+<h3 id="what-can-i-contribute">What can I contribute?</h3>
+<ul>
+<li>"Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.</li>
+<li>Implementing other things like voice/video is fine too, though</li>
+<li><a href="https://github.com/fosscord/fosscord-client/issues/21">This</a> is a good starting point and lists the core features that are still missing from the client.</li>
+</ul>
 </article>
 </div>
 </div>
@@ -427,8 +580,8 @@ You can assign multiple flags by simply summing the respective values.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
