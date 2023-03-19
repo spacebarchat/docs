@@ -5,6 +5,7 @@ site_description: "Documentation for Fosscord: a free open source selfhostable c
 plugins:
     - section-index
     - search
+    - macros
     - swagger-ui-tag:
           extra_css: [assets/swagger.css]
           docExpansion: none
