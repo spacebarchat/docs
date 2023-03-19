@@ -2,17 +2,37 @@
 
 !!! note "The Fosscord client is, at the time of writing this (March 17th, 2023), under heavy development and not ready to be used in production just yet."
 
-!!! note "Windows support is currently broken."
+!!! warning "Windows support is currently broken."
 
 The official Fosscord client is currently being developed at [this repository](https://github.com/fosscord/fosscord-client/tree/dev/bare-rewrite).
 
-## Dependencies
+## Official host
+
+We currently host the client at [https://app.fosscord.com](https://app.fosscord.com).
+You can use it to connect to our official instance by default,
+or you can use it to connect to your own by editing your local storage to include the `routeSettings` key with the below example content:
+```json
+{
+	"api":"https://staging.fosscord.com/api/v9",
+	"cdn":"https://cdn.staging.fosscord.com",
+	"gateway":"wss://gateway.staging.fosscord.com",
+	"invite":"https://staging.fosscord.com/invite",
+	"template":"https://staging.fosscord.com/template",
+	"gift":"https://staging.fosscord.com/gift",
+	"scheduledEvent":"https://staging.fosscord.com/events"
+}
+```
+
+Replace the above endpoints with your own. If your domain name is `https://whatever.notasite`, then you'll most likely want to enter
+`https://whatever.noasite/api/v9` for the API endpoint, etc.
+
+## Setup/Building
+
+### Dependencies
 
 -   [Git](https://git-scm.com/)
 -   [NodeJS](https://nodejs.org). Version 16+
 -   [yarn](https://yarnpkg.com/) (preferred) or npm
-
-## Setup/Building
 
 In your terminal:
 
@@ -53,7 +73,7 @@ yarn start
     yarn windows
     ```
 
-To build static files for the web, run
+To build static files for the web (i.e. when hosting it yourself), run
 
 ```bash
 yarn build:web
@@ -74,4 +94,4 @@ To contribute:
 
 -   "Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.
 -   Implementing other things like voice/video is fine too, though
--   [This](https://github.com/fosscord/fosscord-client/issues/21) is a good starting point and lists all things that are still missing from the client.
+-   [This](https://github.com/fosscord/fosscord-client/issues/21) is a good starting point and lists the core features that are still missing from the client.
