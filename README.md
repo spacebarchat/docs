@@ -4,7 +4,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/fosscord/fosscord-docs)
 
-## How to get started:
+## How to get started
 
 1. Fork this repository.
 2. Clone the forked repository.
@@ -16,7 +16,7 @@
 3. Install dependencies.
 
     ```bash
-    python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index
+    python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros-plugin
     ```
 
 4. Edit documents(s).
@@ -29,7 +29,7 @@
 
 5. Test locally.
 
-    - Serve in http://127.0.0.1:8000 with hot reload:
+    - Serve in <http://127.0.0.1:8000> with hot reload:
 
         ```bash
         python3 -m mkdocs serve

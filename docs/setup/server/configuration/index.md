@@ -1,11 +1,11 @@
 # Configuration
 
-Fosscord's configuration is done through the `config` table of your [database](../database.md).
+{{ project.name }}'s configuration is done through the `config` table of your [database](../database.md).
 The table schema consists of two columns `key` and `value`, where `value` is a JSON value.
 For now, you can update this through SQL manually or a GUI database editor such as
 [DBeaver](https://dbeaver.io/).
 
-!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make Fosscord use a JSON file instead of a database table."
+!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make {{ project.name }} use a JSON file instead of a database table."
 
 ## Array Types
 
@@ -23,16 +23,16 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | -------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
 | gateway_endpointPrivate                            | null                                                     | string                                   | Used for internal communication with gateway                          |
 | gateway_endpointPublic                             | null                                                     | string                                   | Publicly announced gateway endpoint                                   |
-| cdn_endpointPrivate                                | http://localhost:3001                                    | string                                   | See gateway_endpointPrivate                                           |
-| cdn_endpointPublic                                 | http://localhost:3001                                    | string                                   | See gateway_endpointPublic                                            |
+| cdn_endpointPrivate                                | <http://localhost:3001>                                    | string                                   | See gateway_endpointPrivate                                           |
+| cdn_endpointPublic                                 | <http://localhost:3001>                                    | string                                   | See gateway_endpointPublic                                            |
 | cdn_resizeHeightMax                                | 1000                                                     | number                                   | Maximum image resize height for embeds.                               |
 | cdn_resizeWidthMax                                 | 1000                                                     | number                                   | Maximum image resize width for embeds.                                |
 | [cdn_imagorServerUrl](imagor.md)                   | null                                                     | string                                   | Imagor instance endpoint for external image resizing.                 |
 | api_defaultVersion                                 | 9                                                        | string                                   | API version to use when not specified                                 |
 | api_activeVersions_0                               | 6, 7, 8, 9                                               | string[]                                 | Allowed API version numbers. [Array](#array-types).                   |
 | api_endpointPublic                                 | "/api"                                                   | string                                   | See gateway_endpointPublic                                            |
-| general_instanceName                               | Fosscord Instance                                        | string                                   | Announced instance name                                               |
-| general_instanceDescription                        | This is a Fosscord instance made in the pre-release days | string                                   | Announced instance description                                        |
+| general_instanceName                               | {{ project.name }} Instance                                        | string                                   | Announced instance name                                               |
+| general_instanceDescription                        | This is a {{ project.name }} instance made in the pre-release days | string                                   | Announced instance description                                        |
 | general_frontPage                                  | null                                                     | string                                   | Announced instance front page                                         |
 | general_tosPage                                    | null                                                     | string                                   | Announced instance TOS page                                           |
 | general_correspondenceEmail                        | null                                                     | string                                   | Announced instance correspondence email                               |
@@ -87,7 +87,7 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | security_requestSignature                          | Secret secret                                            | string                                   | The signature required for CDN or [Imagor](imagor.md) usage           |
 | security_jwtSecret                                 | Secure secret                                            | string                                   | The secret used for user token generation                             |
 | [security_forwadedFor](../reverseProxy.md)         | null                                                     | string                                   | HTTP header for user's real IP.                                       |
-| security_ipdataApiKey                              | Fosscord IPdata key                                      | string                                   | API key used for IP geolocation and proxy detection                   |
+| security_ipdataApiKey                              | {{ project.name }} IPdata key                                      | string                                   | API key used for IP geolocation and proxy detection                   |
 | security_mfaBackupCodeCount                        | 10                                                       | number                                   | Number of MFA backup codes to generate                                |
 | security_statsWorldReadable                        | true                                                     | boolean                                  | Whether instance stats are publically accessible or require right     |
 | security_defaultRegistrationTokenExpiration        | 604800000                                                | number                                   | Seconds for [registration tokens](../security/regTokens.md) to expire |
@@ -112,10 +112,10 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | register_blockProxies                              | true                                                     | boolean                                  | Whether proxies are blocked from registration                         |
 | register_incrementingDiscriminators                | false                                                    | boolean                                  | Whether discriminators are random or incrementing                     |
 | [register_defaultRights](../security/rights.md)    | 875069521787904                                          | string                                   | The rights assigned to users _upon registration_                      |
-| regions_default                                    | fosscord                                                 | string                                   | The default voice region to use                                       |
+| regions_default                                    | {{ project.name.lower() }}                                                 | string                                   | The default voice region to use                                       |
 | regions_useDefaultAsOptimal                        | true                                                     | boolean                                  | Whether to calculate closest or use default as optimal voice region   |
-| regions_available_0_id                             | fosscord                                                 | string[]                                 | The available voice region IDs                                        |
-| regions_available_0_name                           | Fosscord                                                 | string[]                                 | The available voice region names                                      |
+| regions_available_0_id                             | {{ project.name.lower() }}                                                 | string[]                                 | The available voice region IDs                                        |
+| regions_available_0_name                           | {{ project.name }}                                                 | string[]                                 | The available voice region names                                      |
 | regions_available_0_endpoint                       | 127.0.0.1:3004                                           | string[]                                 | The available voice region endpoint URLs                              |
 | regions_available_0_vip                            | false                                                    | boolean[]                                | Whether this voice region is VIP exclusive                            |
 | regions_available_0_custom                         | false                                                    | boolean[]                                | Whether this is a custom voice region (used for events/etc)           |
@@ -134,7 +134,7 @@ Arrays are represented by \_[number] in a config key. For example, multiple `gui
 | templates_allowDiscordTemplates                    | true                                                     | boolean                                  | Whether guild templates from Discord.com can be fetched               |
 | [templates_allowRaws](/concepts/guildTemplates.md) | true                                                     | boolean                                  | Whether raw guild templates are allowed                               |
 | sentry_enabled                                     | false                                                    | boolean                                  | Whether server-side Sentry analytics is enabled                       |
-| sentry_endpoint                                    | Fosscord sentry endpoint                                 | string                                   | Sentry endpoint                                                       |
+| sentry_endpoint                                    | {{ project.name }} sentry endpoint                                 | string                                   | Sentry endpoint                                                       |
 | sentry_traceSampleRate                             | 1                                                        | number                                   | Sentry sample rate (1 means all requests)                             |
 | sentry_environment                                 | System hostname                                          | string                                   | Sentry environment name                                               |
 | defaults_user_premium                              | false                                                    | boolean                                  | Whether users are given premium upon registration                     |

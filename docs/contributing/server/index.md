@@ -1,4 +1,4 @@
-# Contributing to fosscord-server
+# Contributing to {{ project.name.lower() }}-server
 
 ## [Migrations](migrations.md)
 
