@@ -9,9 +9,9 @@
 <link href="../guildFeatures/" rel="prev"/>
 <link href="../rabbitmq/" rel="next"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Imagor - Fosscord Documentation</title>
-<link href="../../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -459,8 +459,8 @@ If you would like to change the port Imagor listens on, be sure to change both t
 and the <code>-p</code> value used in docker.</p>
 <p>If you're using a <a href="../../reverseProxy/">reverse proxy</a> such as Nginx for Fosscord already, you could add this to your config's <code>server</code> block</p>
 <div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/media/</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1"># If you changed the port, be sure to change it here too</span>
-<span class="w">    </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
+<span class="w"> </span><span class="c1"># If you changed the port, be sure to change it here too</span>
+<span class="w"> </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Along with any additional config you already have, of course.
@@ -468,7 +468,7 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <details>
 <summary>Example config for <code>media.whatever.com</code> site</summary>
 <div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1"># Change the server_name to reflect your true domain</span>
+<span class="w"> </span><span class="c1"># Change the server_name to reflect your true domain</span>
 <span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">media.whatever.com</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Last-Modified</span><span class="w"> </span><span class="nv">$date_gmt</span><span class="p">;</span>
@@ -477,7 +477,7 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1"># If you had changed the port, change it here as well</span>
+<span class="w">   </span><span class="c1"># If you had changed the port, change it here as well</span>
 <span class="w">            </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -515,7 +515,7 @@ Don't include a trailing backslash.</p>
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.19047be9.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
@@ -554,6 +554,8 @@ Don't include a trailing backslash.</p>
                 }
             });
         
+            const dark_scheme_name = "slate"
+            
             window.scheme = document.body.getAttribute("data-md-color-scheme")
             const options = {
                 attributeFilter: ['data-md-color-scheme'],
@@ -566,7 +568,7 @@ Don't include a trailing backslash.</p>
                         for(var i = 0; i < iframe_list.length; i++) {
                             var ele = iframe_list.item(i);
                             if (ele) {
-                                if (scheme === "slate") {
+                                if (scheme === dark_scheme_name) {
                                     ele.contentWindow.enable_dark_mode();
                                 } else {
                                     ele.contentWindow.disable_dark_mode();

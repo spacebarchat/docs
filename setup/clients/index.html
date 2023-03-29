@@ -9,9 +9,9 @@
 <link href="../bots/" rel="prev"/>
 <link href="../server/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Clients - Fosscord Documentation</title>
-<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -487,21 +487,21 @@
 <div class="admonition warning">
 <p class="admonition-title">Windows support is currently broken.</p>
 </div>
-<p>The official Fosscord client is currently being developed at <a href="https://github.com/fosscord/fosscord-client/tree/dev/bare-rewrite">this repository</a>.</p>
+<p>The official Fosscord client is currently being developed at <a href="https://github.com//fosscord/fosscord-client/tree/dev/bare-rewrite">this repository</a>.</p>
 <h2 id="official-host">Official host</h2>
 <p>We currently host the client at <a href="https://app.fosscord.com">https://app.fosscord.com</a>.
 You can use it to connect to our official instance by default,
-or you can use it to connect to your own by editing your local storage to include the <code>routeSettings</code> key with the below example content:
+or you can use it to connect to your own by editing your local storage to include the <code>routeSettings</code> key with the below example content:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">"api"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/api/v9"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"cdn"</span><span class="p">:</span><span class="s2">"https://cdn.staging.fosscord.com"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"gateway"</span><span class="p">:</span><span class="s2">"wss://gateway.staging.fosscord.com"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"invite"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/invite"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"template"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/template"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"gift"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/gift"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"scheduledEvent"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/events"</span>
+<span class="w"> </span><span class="nt">"api"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/api/v9"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"cdn"</span><span class="p">:</span><span class="s2">"https://cdn.staging.fosscord.com"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"gateway"</span><span class="p">:</span><span class="s2">"wss://gateway.staging.fosscord.com"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"invite"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/invite"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"template"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/template"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"gift"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/gift"</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">"scheduledEvent"</span><span class="p">:</span><span class="s2">"https://staging.fosscord.com/events"</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Replace the above endpoints with your own. If your domain name is <code>https://whatever.notasite</code>, then you'll most likely want to enter
 <code>https://whatever.noasite/api/v9</code> for the API endpoint, etc.</p>
 <h2 id="setupbuilding">Setup/Building</h2>
@@ -513,7 +513,7 @@ or you can use it to connect to your own by editing your local storage to includ
 </ul>
 <p>In your terminal:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Download Fosscord Client</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/fosscord/fosscord-client.git
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com//fosscord/fosscord-client.git
 
 <span class="c1"># Enter the cloned directory, switch branches to the one, which is actually being developed</span>
 <span class="nb">cd</span><span class="w"> </span>fosscord-client<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>dev/bare-rewrite
@@ -543,7 +543,7 @@ yarn<span class="w"> </span>install
 <h2 id="contributing">Contributing</h2>
 <p>To contribute:</p>
 <ul>
-<li><a href="https://github.com/fosscord/fosscord-client/fork">Fork the repository</a></li>
+<li><a href="https://github.com//fosscord/fosscord-client/fork">Fork the repository</a></li>
 <li>Run the building instructions.</li>
 <li>Commit &amp; Push.</li>
 <li>Pull Request &amp; Done!</li>
@@ -552,7 +552,7 @@ yarn<span class="w"> </span>install
 <ul>
 <li>"Core" features like settings, editing messages, dms, markdown rendering, etc. What do you think are basic features that you would want? Some of the GitHub Issues apply to this.</li>
 <li>Implementing other things like voice/video is fine too, though</li>
-<li><a href="https://github.com/fosscord/fosscord-client/issues/21">This</a> is a good starting point and lists the core features that are still missing from the client.</li>
+<li><a href="https://github.com//fosscord/fosscord-client/issues/21">This</a> is a good starting point and lists the core features that are still missing from the client.</li>
 </ul>
 </article>
 </div>
@@ -581,7 +581,7 @@ yarn<span class="w"> </span>install
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
@@ -620,6 +620,8 @@ yarn<span class="w"> </span>install
                 }
             });
         
+            const dark_scheme_name = "slate"
+            
             window.scheme = document.body.getAttribute("data-md-color-scheme")
             const options = {
                 attributeFilter: ['data-md-color-scheme'],
@@ -632,7 +634,7 @@ yarn<span class="w"> </span>install
                         for(var i = 0; i < iframe_list.length; i++) {
                             var ele = iframe_list.item(i);
                             if (ele) {
-                                if (scheme === "slate") {
+                                if (scheme === dark_scheme_name) {
                                     ele.contentWindow.enable_dark_mode();
                                 } else {
                                     ele.contentWindow.disable_dark_mode();

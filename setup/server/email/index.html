@@ -9,9 +9,9 @@
 <link href="../database/" rel="prev"/>
 <link href="../migatingFromStaging/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Email - Fosscord Documentation</title>
-<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -454,7 +454,7 @@
 <li>The <code>general_frontPage</code> <a href="../configuration/">config</a> value, used to generate verification/password reset links.
     Be sure to set it to the Fosscord web app URL. For example, <code>https://staging.fosscord.com</code></li>
 <li>The <code>general_correspondenceEmail</code> config value, used as the 'from' email address.
-    If unset, <code>noreply@localhost</code> is used, which will most likely throw an error with your email service.</li>
+ If unset, <code>noreply@localhost</code> is used, which will most likely throw an error with your email service.</li>
 </ul>
 <p>Optionally:</p>
 <ul>
@@ -570,7 +570,7 @@
 </div>
 </input></input></input></input></div>
 <h2 id="email-templates">Email templates</h2>
-<p>Fosscord's email templates are stored in <a href="https://github.com/fosscord/fosscord-server/tree/master/assets/email_templates"><code>fosscord-server/assets/email_templates</code></a>.
+<p>Fosscord's email templates are stored in <a href="https://github.com//fosscord/fosscord-server/tree/master/assets/email_templates"><code>fosscord-server/assets/email_templates</code></a>.
 They are simple HTML files, which you may edit freely. Although HTML mail is very restricted, so a lot of content may not render properly.</p>
 <p>Below are the available strings replaced in mail templates.</p>
 <table>
@@ -658,7 +658,7 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
@@ -697,6 +697,8 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
                 }
             });
         
+            const dark_scheme_name = "slate"
+            
             window.scheme = document.body.getAttribute("data-md-color-scheme")
             const options = {
                 attributeFilter: ['data-md-color-scheme'],
@@ -709,7 +711,7 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
                         for(var i = 0; i < iframe_list.length; i++) {
                             var ele = iframe_list.item(i);
                             if (ele) {
-                                if (scheme === "slate") {
+                                if (scheme === dark_scheme_name) {
                                     ele.contentWindow.enable_dark_mode();
                                 } else {
                                     ele.contentWindow.disable_dark_mode();
