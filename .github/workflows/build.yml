@@ -12,7 +12,7 @@ jobs:
             - uses: actions/setup-python@v2
               with:
                   python-version: 3.x
-            - run: python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index
+            - run: python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros-plugin 
             - run: mkdocs build
             - run: echo docs.fosscord.com >> site/CNAME
             - name: Deploy 🚀
