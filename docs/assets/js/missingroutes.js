@@ -1,5 +1,5 @@
 const MISSING_ROUTES_LIST =
-	"https://raw.githubusercontent.com/fosscord/fosscord-missing-routes/main/missing.json";
+	"https://raw.githubusercontent.com/spacebarchat/missing-routes/main/missing.json";
 const listMount = document.getElementById("missing-routes-list");
 
 document

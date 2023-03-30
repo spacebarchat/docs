@@ -5,18 +5,18 @@ extra:
     # For more information, read https://mkdocs-macros-plugin.readthedocs.io/en/latest/ .
     #
     project:
-        name: Fosscord # Tip: use {{ project_name.lower() }} to get the project name in lowercase.
-        domain: fosscord.com
+        name: Spacebar # Tip: use {{ project_name.lower() }} to get the project name in lowercase.
+        domain: spacebar.chat
     repositories:
         base_url: https://github.com/
-        server: fosscord/fosscord-server
-        client: fosscord/fosscord-client
-        missing_routes: fosscord/fosscord-missing-routes
-        main: &repo_url https://github.com/fosscord/fosscord # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+        server: spacebarchat/server
+        client: spacebarchat/client
+        missing_routes: spacebarchat/missing-routes
+        main: &repo_url https://github.com/spacebarchat/spacebarchat # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
     site:
-        name: &site_name Fosscord Documentation
-        description: &site_description "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
-        edit_uri: &edit_uri https://github.com/fosscord/fosscord-docs/edit/master/docs/ # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+        name: &site_name Spacebar Documentation
+        description: &site_description "Documentation for Spacebar: a free open source selfhostable chat, voice and video discord-compatible platform"
+        edit_uri: &edit_uri https://github.com/spacebarchat/docs/edit/master/docs/ # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
 site_name: *site_name
 repo_url: *repo_url
 edit_uri: *edit_uri
@@ -36,13 +36,13 @@ theme:
     font: Open Sans
     palette:
         - media: "(prefers-color-scheme: light)"
-          primary: deep-orange
+          primary: #0185ff
           scheme: default
           toggle:
               icon: material/lightbulb-outline
               name: Switch to dark mode
         - media: "(prefers-color-scheme: dark)"
-          primary: deep-orange
+          primary: #0185ff
           scheme: slate
           toggle:
               icon: material/lightbulb

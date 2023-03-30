@@ -1,8 +1,8 @@
-# Fosscord Docs
+# Spacebar Docs
 
-[![Build to GitHub Pages](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml/badge.svg)](https://github.com/fosscord/fosscord-docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Build to GitHub Pages](https://github.com/spacebarchat/docs/actions/workflows/build.yml/badge.svg)](https://github.com/spacebarchat/docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/fosscord/fosscord-docs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/spacebarchat/docs)
 
 ## How to get started
 
@@ -10,7 +10,7 @@
 2. Clone the forked repository.
 
     ```bash
-    git clone https://github.com/<YOUR_USERNAME_HERE>/fosscord-docs
+    git clone https://github.com/<YOUR_USERNAME_HERE>/docs
     ```
 
 3. Install dependencies.
@@ -23,7 +23,7 @@
 
     - Format document(s).
 
-    fosscord uses [prettier](https://prettier.io) formatter to consistently format our documents. Instructions to install and use prettier can be found [here](https://prettier.io/docs/en/install.html).
+    Spacebar uses [prettier](https://prettier.io) formatter to consistently format our documents. Instructions to install and use prettier can be found [here](https://prettier.io/docs/en/install.html).
 
     If you are using vscode, install the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format documents on save.
 
