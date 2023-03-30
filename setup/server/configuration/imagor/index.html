@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
+<meta content="Documentation for Spacebar: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
 <link href="../guildFeatures/" rel="prev"/>
 <link href="../rabbitmq/" rel="next"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Imagor - Fosscord Documentation</title>
+<title>Imagor - Spacebar Documentation</title>
 <link href="../../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -19,7 +19,7 @@
 <link href="../../../../assets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -33,7 +33,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Fosscord Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Fosscord Documentation">
+<a aria-label="Spacebar Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Spacebar Documentation">
 <img alt="logo" src="../../../../assets/logo.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -43,7 +43,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Fosscord Documentation
+            Spacebar Documentation
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -56,11 +56,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="deep-orange" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="None" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="deep-orange" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="None" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
 </label>
@@ -96,7 +96,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/fosscord/fosscord" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/spacebarchat/spacebarchat" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -115,13 +115,13 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Fosscord Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Fosscord Documentation">
+<a aria-label="Spacebar Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Spacebar Documentation">
 <img alt="logo" src="../../../../assets/logo.svg"/>
 </a>
-    Fosscord Documentation
+    Spacebar Documentation
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/fosscord/fosscord" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/spacebarchat/spacebarchat" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -436,8 +436,8 @@
 <article class="md-content__inner md-typeset">
 <h1 id="imagor">Imagor</h1>
 <p><a href="https://github.com/cshum/imagor">Imagor</a> is a "fast, secure image processing server"
-used by Fosscord for external image resizing, primarily by embeds from other websites when linked in a message.
-If left unused, Fosscord will simply not provide a proxy_url for clients, which may leave external images unavailable
+used by Spacebar for external image resizing, primarily by embeds from other websites when linked in a message.
+If left unused, Spacebar will simply not provide a proxy_url for clients, which may leave external images unavailable
 or cause the client to download directly from the image host. Downloading images directly from the host may lead to
 privacy concerns, as an attacker may be able to learn users IP addresses.</p>
 <h2 id="dependencies">Dependencies</h2>
@@ -445,10 +445,10 @@ privacy concerns, as an attacker may be able to learn users IP addresses.</p>
 <li><a href="https://www.docker.com/">Docker</a></li>
 </ul>
 <h2 id="setup">Setup</h2>
-<p>To setup Imagor for Fosscord, first grab the <code>security_requestSignature</code> config value from Fosscord's database,
+<p>To setup Imagor for Spacebar, first grab the <code>security_requestSignature</code> config value from Spacebar's database,
 and create a <code>imagor.env</code> file somewhere safe, with the following content.
 <strong>Make sure to edit the file with the correct information</strong>. Your requestSignture should <em>not</em> start or end with <code>"</code>.</p>
-<div class="highlight"><pre><span></span><code>IMAGOR_SECRET=security_requestSignature value from your Fosscord config
+<div class="highlight"><pre><span></span><code>IMAGOR_SECRET=security_requestSignature value from your Spacebar config
 PORT=8000
 </code></pre></div>
 <p>You can now start Imagor with</p>
@@ -457,7 +457,7 @@ PORT=8000
 <p><code>8000</code> here is our port. Make sure that it'd available to people outside your network.
 If you would like to change the port Imagor listens on, be sure to change both the PORT value in <code>imagor.env</code>,
 and the <code>-p</code> value used in docker.</p>
-<p>If you're using a <a href="../../reverseProxy/">reverse proxy</a> such as Nginx for Fosscord already, you could add this to your config's <code>server</code> block</p>
+<p>If you're using a <a href="../../reverseProxy/">reverse proxy</a> such as Nginx for Spacebar already, you could add this to your config's <code>server</code> block</p>
 <div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/media/</span><span class="w"> </span><span class="p">{</span>
 <span class="w"> </span><span class="c1"># If you changed the port, be sure to change it here too</span>
 <span class="w"> </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
@@ -483,9 +483,9 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <span class="p">}</span>
 </code></pre></div>
 </details>
-<p>Our last step is to simply tell Fosscord about Imagor. Just set the <code>cdn_imagorServerUrl</code> config value to your public endpoint for Imagor, wrapped in quotes.</p>
-<p>For example, if you used the <code>/media</code> location in your existing nginx config, it will look something like <code>"https://your.fosscord.com/media"</code>.
-If you used a subdomain, it will look like <code>"https://media.your.fosscord.com"</code>.
+<p>Our last step is to simply tell Spacebar about Imagor. Just set the <code>cdn_imagorServerUrl</code> config value to your public endpoint for Imagor, wrapped in quotes.</p>
+<p>For example, if you used the <code>/media</code> location in your existing nginx config, it will look something like <code>"https://your.spacebar.chat/media"</code>.
+If you used a subdomain, it will look like <code>"https://media.your.spacebar.chat"</code>.
 Don't include a trailing backslash.</p>
 <p>Congrats! After a restart, you've now got Imagor resizing your images!</p>
 </article>
