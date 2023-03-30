@@ -397,15 +397,15 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="migrating-from-staging">Migrating from Staging</h1>
-<p>'Staging' refers to <a href="https://github.com//spacebarchat/server/tree/staging">this branch</a> of spacebar-server,
-which is deprecated in favour of <a href="https://github.com//spacebarchat/server/tree/maddy/refactor">the refactor branch</a> (if this is a 404, its just become the main branch now).</p>
+<p>'Staging' refers to <a href="https://github.com/spacebarchat/server/tree/staging">this branch</a> of spacebar-server,
+which is deprecated in favour of <a href="https://github.com/spacebarchat/server/tree/maddy/refactor">the refactor branch</a> (if this is a 404, its just become the main branch now).</p>
 <div class="admonition warning">
 <p class="admonition-title">If you were using SQLite, you will be unable to migrate to the new version. SQLite is primarily for testing and development purposes, and it should not be used for production.</p>
 </div>
 <p>To migrate from Staging:</p>
 <ol>
 <li>Download the new version of spacebar-server<br/>
-<code>git clone https://github.com//spacebarchat/server.git</code></li>
+<code>git clone https://github.com/spacebarchat/server.git</code></li>
 <li>Copy your <code>.env</code> file from your previous installation to the new <code>spacebar-server</code> folder.</li>
 <li>Copy any user data, specifically the <code>files</code> directory, to the new project root.</li>
 <li><code>npm i</code> in new installation</li>
