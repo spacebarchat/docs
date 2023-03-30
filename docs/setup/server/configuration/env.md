@@ -19,3 +19,4 @@ in the `{{ project.name.lower() }}-server` folder, with the format `NAME=VALUE` 
 | STORAGE_PROVIDER           | "s3" or "file" | CDN storage provider                                                                                                 |
 | STORAGE_BUCKET             | string         | S3 bucket name                                                                                                       |
 | STORAGE_REGION             | string         | S3 storage region                                                                                                    |
+| DB_LOGGING                 | boolean        | if "true" logs all SQL queries to the terminal                                                                        |
