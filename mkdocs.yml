@@ -8,7 +8,7 @@ extra:
         name: Spacebar # Tip: use {{ project_name.lower() }} to get the project name in lowercase.
         domain: spacebar.chat
     repositories:
-        base_url: https://github.com/
+        base_url: https://github.com
         server: spacebarchat/server
         client: spacebarchat/client
         missing_routes: spacebarchat/missing-routes
