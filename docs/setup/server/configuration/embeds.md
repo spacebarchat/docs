@@ -1,7 +1,7 @@
 # Embeds
 
-Embeds in Fosscord are external content that is displayed within your messages when linked to.
-Fosscord tries its best to fetch content from these external sites,
+Embeds in {{ project.name }} are external content that is displayed within your messages when linked to.
+{{ project.name }} tries its best to fetch content from these external sites,
 but sometimes we require an API key or other authentication with the site to display their content (or nicer looking embeds).
 
 For external images, it's best to set up [Imagor](imagor.md) for image resizing.
