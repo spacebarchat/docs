@@ -19,7 +19,7 @@ discord.com to be used on any {{ project.name }} instance, which we believe will
 for any transition process between services.
 
 As {{ project.name }} is an entirely separate service from discord.com, it means a {{ project.name }} server by itself **cannot**
-access private data controlled by discord.com. You **cannot** use a {{ project.name }} server to chat with your friends on Discord.com.
+access private data controlled by discord.com. You **cannot** use a {{ project.name }} server to chat with your friends on discord.com.
 You also **cannot** use a {{ project.name }} server to grant premium ("Nitro") features to a discord.com account (although you can grant these to a {{ project.name }} account).
 
 Our goal is to achieve complete feature parity with discord.com, as well as
@@ -29,7 +29,7 @@ to multiple {{ project.name }}-compatible instances with rich theming and plugin
 
 ## Support
 
-For any kind of support regarding {{ project.name }}, feel free to ask questions in our [Discord.com server](https://discord.gg/Ms5Ev7S6bF)
+For any kind of support regarding {{ project.name }}, feel free to ask questions in our [discord.com guild](https://discord.gg/Ms5Ev7S6bF)
 or our [official {{ project.name }} instance](https://staging.{{ project.domain }}).
 
 For bug reporting and feature requests please create an [issue]({{ repositories.base_url }}/{{ repositories.server }}/issues/new/choose) on Github.
