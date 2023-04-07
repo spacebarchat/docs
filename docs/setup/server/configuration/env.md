@@ -20,3 +20,16 @@ in the `{{ project.name.lower() }}-server` folder, with the format `NAME=VALUE` 
 | STORAGE_BUCKET             | string         | S3 bucket name                                                                                                       |
 | STORAGE_REGION             | string         | S3 storage region                                                                                                    |
 | DB_LOGGING                 | boolean        | if "true" logs all SQL queries to the terminal                                                                        |
+
+## Docker
+
+These environment variables should be set in the environment `~/.profile` or with an `export`
+
+| Name              | Value  | Description                                                     |
+| ----------------- | ------ | --------------------------------------------------------------- |
+| POSTGRES_USER     | string | Postgressql database username                                  |
+| POSTGRES_PASSWORD | string | Postgressql database password                                   |
+| POSTGRES_DATABASE | string | Database connection string. Defaults to SQlite3 at project root |
+| S3_BUCKET         | string | CDN storage location. S3 bucktet                                |
+| S3_BUCKET_NAME    | string | S3 bucket                                                       |
+| S3_BUCKET_REGION  | string | S3 storage region                                               |

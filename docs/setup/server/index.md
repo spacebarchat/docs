@@ -11,6 +11,12 @@ You **must** have access to a terminal for this guide.
 
 We do not recommend using Windows to run {{ project.name }}.
 
+## Docker
+
+To use docker please read the following page:
+
+-   [Docker](docker.md)
+
 ## Dependencies
 
 - [Git](https://git-scm.com/)
