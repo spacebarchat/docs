@@ -12,32 +12,32 @@ By contributing to any {{ project.name }} projects (for example, through pull re
 
 ### Desirable Behaviour
 
-- If possible, provide assistance with {{ project.name }} projects to other users.
-- Be respectful toward other's opinions and viewpoints.
-- Accepting responsibility and apologizing to those affected for our mistakes.
+-   If possible, provide assistance with {{ project.name }} projects to other users.
+-   Be respectful toward other's opinions and viewpoints.
+-   Accepting responsibility and apologizing to those affected for our mistakes.
 
 ### Prohibited Behaviour
 
-- Sharing leaked, proprietary source code from Discord Inc
-- Homophobia, transphobia, etc, misgendering, deadnaming, assuming gender. You should use singular they/them when in doubt.
-- Threats of violence
-- Harassment
-- Spreading hateful, violent, or discriminatory ideologies or conspiracy theories, via media or text (including avatars and nicknames)
-- Trolling. Intentionally derailing conversations or producing discussions on non-issues.
-- Doxing. Disclosing other's private information without their consent.
-- Spamming. This includes sending advertisements, repeatedly sending meaningless content, sending server invites unrequested.
-- Sharing media that may cause harm or be triggering to others, such as flashing imagery or gore.
-- Undesired automation of services that may lead to a reduction in service quality. For example, API spam of a {{ project.name }} instance.
-- Ban evasion. Creation of additional accounts used to join a community after being banned from that community.
-- Posting content that is illegal to publish or distribute in Germany.
-- Abusing loopholes in this code of conduct, or being in conflict with the goals of this code of conduct.
+-   Sharing leaked, proprietary source code from Discord Inc
+-   Homophobia, transphobia, etc, misgendering, deadnaming, assuming gender. You should use singular they/them when in doubt.
+-   Threats of violence
+-   Harassment
+-   Spreading hateful, violent, or discriminatory ideologies or conspiracy theories, via media or text (including avatars and nicknames)
+-   Trolling. Intentionally derailing conversations or producing discussions on non-issues.
+-   Doxing. Disclosing other's private information without their consent.
+-   Spamming. This includes sending advertisements, repeatedly sending meaningless content, sending server invites unrequested.
+-   Sharing media that may cause harm or be triggering to others, such as flashing imagery or gore.
+-   Undesired automation of services that may lead to a reduction in service quality. For example, API spam of a {{ project.name }} instance.
+-   Ban evasion. Creation of additional accounts used to join a community after being banned from that community.
+-   Posting content that is illegal to publish or distribute in Germany.
+-   Abusing loopholes in this code of conduct, or being in conflict with the goals of this code of conduct.
 
 ### Consequences of Violation
 
-- Written warnings, followed by kicks or bans if repeated.
-- If a violation is particularly egregious, an immediate kick or ban may be issued.
-- Offending content may be removed
-- Kicks and bans apply to all communities administered by the {{ project.name }} maintainers group.
+-   Written warnings, followed by kicks or bans if repeated.
+-   If a violation is particularly egregious, an immediate kick or ban may be issued.
+-   Offending content may be removed
+-   Kicks and bans apply to all communities administered by the {{ project.name }} maintainers group.
 
 ### Reporting problems
 

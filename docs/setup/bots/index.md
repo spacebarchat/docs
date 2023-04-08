@@ -18,12 +18,12 @@ the endpoints used.
 const { Client } = require("discord.js");
 
 const client = new Client({
- http: {
-  version: 9,
-  api: "https://api.{{ project.domain }}",
-  cdn: "https://cdn.{{ project.domain }}",
-  invite: "https://{{ project.domain }}/invite",
- },
+	http: {
+		version: 9,
+		api: "https://api.{{ project.domain }}",
+		cdn: "https://cdn.{{ project.domain }}",
+		invite: "https://{{ project.domain }}/invite",
+	},
 });
 
 client.login("your token here");
