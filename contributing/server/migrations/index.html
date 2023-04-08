@@ -456,8 +456,10 @@
 <div class="highlight"><pre><span></span><code>npm run generate:migration -- src/util/migrations/:dbms:/:migrationName:
 </code></pre></div>
 <p>where <code>:dbms:</code> is the db you use, and <code>:migrationName:</code> is whatever you wish to call it.
-The migration must be named a valid Javascript class name.
-3. The generated file is what TypeORM will do if you were to run <code>npm run sync:db</code>.
+The migration must be named a valid Javascript class name.</p>
+</li>
+<li>
+<p>The generated file is what TypeORM will do if you were to run <code>npm run sync:db</code>.
    Obviously, this is not always what you want. Edit it to preserve as much of the original data as possible.</p>
 </li>
 </ol>
