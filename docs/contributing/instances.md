@@ -11,7 +11,7 @@ Your instance:
 4. Must be moderated for *at least* publically accessible guilds. This includes guilds accessible from Discovery or a 'guild directory' channel in an auto join guild.
 5. Must have at least regular uptime, meaning it is available at a consistent time of day.
 6. Must have a valid and monitored [`general_correspondenceEmail` config](/setup/server/configuration) set.
-7. The default [rights](/setup/server/security/rights) does not include operator or other administrative rights.
+7. must not have default [rights](/setup/server/security/rights) that include operator or other administrative rights.
 8. Enable [Imagor](/setup/server/configuration/imagor), as no image proxy allows attackers to learn user IP addresses.
 
 We recommend (not required) that you:
@@ -19,5 +19,5 @@ We recommend (not required) that you:
 - Enable [Email verification](/setup/server/email), for anti-spam purposes
 - Enable [Captcha](/setup/server/security/captcha), for anti-spam purposes
 - Run your instance under [SystemD](/setup/server/systemd) or a similar system in your distro, for automatic restarting
-- Provide some mechanism for users to report content. This may be as simple as more openly advertising your correspondence email (i.e. outside `GET /api/policies/instance/domains`)
+- Provide some mechanism for users to report content. This may be as simple as more openly advertising your correspondence email (i.e. outside `GET /api/policies/instance` or `/api/ping`)
 - Provide some mechanism for instance status, such as [Grafana](https://grafana.com/).
