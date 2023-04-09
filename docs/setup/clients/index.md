@@ -42,7 +42,7 @@ In your terminal:
 git clone {{ repositories.base_url }}/{{ repositories.client }}.git
 
 # Enter the cloned directory, switch branches to the one, which is actually being developed
-cd {{ project.name.lower() }}-client; git switch dev/bare-rewrite
+cd client; git switch dev/bare-rewrite
 
 # Install dependencies
 yarn install

@@ -30,7 +30,7 @@ In your terminal:
 git clone {{ repositories.base_url }}/{{ repositories.server }}.git
 
 # Navigate to project root
-cd {{ project.name.lower() }}-server
+cd server
 
 # Install javascript packages
 npm i
