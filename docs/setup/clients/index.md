@@ -4,7 +4,7 @@
 
 !!! warning "Windows support is currently broken."
 
-The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}/tree/dev/bare-rewrite).
+The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}).
 
 ## Official host
 
