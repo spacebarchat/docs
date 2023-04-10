@@ -4,7 +4,7 @@
 
 !!! warning "Windows support is currently broken."
 
-The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}/tree/dev/bare-rewrite).
+The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}).
 
 ## Official host
 
@@ -42,7 +42,7 @@ In your terminal:
 git clone {{ repositories.base_url }}/{{ repositories.client }}.git
 
 # Enter the cloned directory, switch branches to the one, which is actually being developed
-cd client; git switch dev/bare-rewrite
+cd client
 
 # Install dependencies
 yarn install
