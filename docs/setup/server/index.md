@@ -14,7 +14,7 @@ We do not recommend using Windows to run {{ project.name }}.
 ## Dependencies
 
 -   [Git](https://git-scm.com/)
--   [NodeJS](https://nodejs.org). Version 16+
+-   [NodeJS](https://nodejs.org). Version 16+  (for `npm`, `node` commands)
 -   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
