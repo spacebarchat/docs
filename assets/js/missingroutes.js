@@ -16,7 +16,11 @@ document
 
 (async () => {
 	const res = await fetch(MISSING_ROUTES_LIST);
-	const missingRoutes = await res.json();
+	const json = await res.json();
+	const missingRoutes = json.routes;
+
+	document.getElementById("counter").innerHTML = `We implement ${json.missing}/${json.discord} endpoints from Discord.com ` +
+		`as well as ${(json.spacebar + json.missing) - json.discord} additional endpoints.`;
 
 	for (let route of missingRoutes) {
 		const elem = document.createElement("li");
