@@ -1,11 +1,13 @@
 # Configuration
 
+!!! info "Please see [this page](../database.md) for information regarding database configuration or where to access it."
+
+!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make {{ project.name }} use a JSON file instead of a database table."
+
 {{ project.name }}'s configuration is done through the `config` table of your [database](../database.md).
 The table schema consists of two columns `key` and `value`, where `value` is a JSON value.
 For now, you can update this through SQL manually or a GUI database editor such as
 [DBeaver](https://dbeaver.io/).
-
-!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make {{ project.name }} use a JSON file instead of a database table."
 
 ## Array Types
 
