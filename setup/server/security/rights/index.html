@@ -8,7 +8,7 @@
 <meta content="Documentation for Spacebar: a free open source selfhostable chat, voice and video discord-compatible platform" name="description"/>
 <link href="../regTokens/" rel="prev"/>
 <link href="../../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.7" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
 <title>Rights - Spacebar Documentation</title>
 <link href="../../../../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
@@ -461,7 +461,8 @@
 <h1>Rights</h1>
 <h2 id="about">About</h2>
 <p>Rights are instance-wide, per-user permissions for everything you may perform on the instance,
-such as sending messages, editing messages, or shutting down the server.</p>
+such as sending messages, editing messages, or shutting down the server. They are separate from
+guild member permissions, which only apply to a given guild.</p>
 <p>You may modify a users rights by editing the <code>rights</code> column in the <code>users</code> table.</p>
 <p>The rights value is a bitfield string. To grant multiple rights you must add their values together.
 For example, to grant <code>CREATE_GUILDS</code> and <code>SEND_MESSAGES</code>, set their <code>rights</code> to<br/>
