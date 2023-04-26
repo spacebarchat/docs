@@ -1,7 +1,8 @@
 ## About
 
 Rights are instance-wide, per-user permissions for everything you may perform on the instance,
-such as sending messages, editing messages, or shutting down the server.
+such as sending messages, editing messages, or shutting down the server. Those are separate from
+guild member permissions, which only apply to a given guild.
 
 You may modify a users rights by editing the `rights` column in the `users` table.
 
