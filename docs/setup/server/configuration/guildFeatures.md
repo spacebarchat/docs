@@ -15,7 +15,7 @@ Below is a list of guild features that {{ project.name }} currently implements s
 | `ALIASABLE_NAMES`             | Allows multiple vanity URLs                                 |
 | `VANITY_URL`                  | Allows vanity URLs                                          |
 | `INTERNAL_EMPLOYEE_ONLY`      | Requires all guild members be [staff](userFlags.md)         |
-| `INVITES_CLOSED`              | Prevents joining this guild                                 |
+| `INVITES_DISABLED`            | Prevents joining this guild                                 |
 | `CROSS_CHANNEL_REPLIES`       | Allows replies to be from outside the current channel       |
 | `ALLOW_INVALID_CHANNEL_NAMES` | Allow 'bad' channel names (spaces, invalid characters, etc) |
 | `IRC_LIKE_CATEGORY_NAMES`     | Use same validation for category names as channel names     |
