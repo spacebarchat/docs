@@ -1,6 +1,6 @@
 name: Build to GitHub Pages
 on:
-    repo_dispatch
+    repository_dispatch:
     push:
         branches:
             - master
