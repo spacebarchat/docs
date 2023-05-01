@@ -1,5 +1,6 @@
 name: Build to GitHub Pages
 on:
+    repo_dispatch
     push:
         branches:
             - master
@@ -12,6 +13,7 @@ jobs:
             - uses: actions/setup-python@v2
               with:
                   python-version: 3.x
+            - run: curl https://raw.githubusercontent.com/spacebarchat/spacebarchat/master/CODE_OF_CONDUCT.md -o docs/contributing/conduct.md
             - run: python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros-plugin
             - run: mkdocs build
             - run: echo docs.spacebar.chat >> site/CNAME
