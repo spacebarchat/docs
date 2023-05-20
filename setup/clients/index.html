@@ -9,7 +9,7 @@
 <link href="../bots/" rel="prev"/>
 <link href="../server/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.11" name="generator"/>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.14" name="generator"/>
 <title>Clients - Spacebar Documentation</title>
 <link href="../../assets/stylesheets/main.85bb2934.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a6bdf11c.min.css" rel="stylesheet"/>
@@ -499,9 +499,12 @@
 </div>
 <p>The official Spacebar client is currently being developed at <a href="https://github.com/spacebarchat/client">this repository</a>.</p>
 <h2 id="official-host">Official host</h2>
-<p>We currently host the client at <a href="https://app.spacebar.chat">https://app.spacebar.chat</a>.
-You can use it to connect to our official instance by default,
-or you can use it to connect to your own by editing your local storage to include the <code>routeSettings</code> key with the below example content:</p>
+<p>The new, React-only client is being hosted at <a href="https://dev.app.spacebar.chat">https://dev.app.spacebar.chat</a>.
+An older, React Native version of the client can be found at
+<a href="https://app.spacebar.chat">https://app.spacebar.chat</a>.
+You can use it to connect to our official instance by default, or you can use it to connect to your
+own instance by editing your local storage to include the <code>routeSettings</code> key with the below example
+content:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">"api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://staging.spacebar.chat/api/v9"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"cdn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.staging.spacebar.chat"</span><span class="p">,</span>
@@ -513,8 +516,10 @@ or you can use it to connect to your own by editing your local storage to includ
 <span class="p">}</span>
 </code></pre></div>
 <p>Replace the above endpoints with your own. If your domain name is <code>https://whatever.notasite</code>, then you'll most likely want to enter
-<code>https://whatever.noasite/api/v9</code> for the API endpoint, etc.</p>
+<code>https://whatever.notasite/api/v9</code> for the API endpoint, etc.</p>
+<p>If you're using the React Native client, you can also edit these settings by visiting <a href="https://app.spacebar.chat/settings">https://app.spacebar.chat/settings</a>.</p>
 <h2 id="setupbuilding">Setup/Building</h2>
+<p>These Instructions refer to the old, React Native client, and therefore do not apply to the new, React-only client.</p>
 <h3 id="dependencies">Dependencies</h3>
 <ul>
 <li><a href="https://git-scm.com/">Git</a></li>
@@ -591,7 +596,7 @@ yarn<span class="w"> </span>install
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+<script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
 <script>document$.subscribe(() => {
             window.update_swagger_ui_iframe_height = function (id) {
                 var iFrameID = document.getElementById(id);
