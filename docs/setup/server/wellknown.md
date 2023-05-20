@@ -6,6 +6,7 @@ Users can enter a domain, e.g. `spacebar.chat` as shorthand, and their client wi
 and from there the Gateway and CDN endpoints.
 
 Example `/.well-known/spacebar` file:
+
 ```json
 {
 	"api": "https://api.spacebar.chat/api/v9"

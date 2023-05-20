@@ -8,9 +8,12 @@ The official {{ project.name }} client is currently being developed at [this rep
 
 ## Official host
 
-We currently host the client at [https://app.{{ project.domain }}](https://app.{{ project.domain }}).
-You can use it to connect to our official instance by default,
-or you can use it to connect to your own by editing your local storage to include the `routeSettings` key with the below example content:
+The new, React-only client is being hosted at [https://dev.app.{{ project.domain }}](https://dev.app.{{ project.domain }}).
+An older, React Native version of the client can be found at
+[https://app.{{ project.domain }}](https://app.{{ project.domain }}).
+You can use it to connect to our official instance by default, or you can use it to connect to your
+own instance by editing your local storage to include the `routeSettings` key with the below example
+content:
 
 ```json
 {
@@ -25,9 +28,13 @@ or you can use it to connect to your own by editing your local storage to includ
 ```
 
 Replace the above endpoints with your own. If your domain name is `https://whatever.notasite`, then you'll most likely want to enter
-`https://whatever.noasite/api/v9` for the API endpoint, etc.
+`https://whatever.notasite/api/v9` for the API endpoint, etc.
+
+If you're using the React Native client, you can also edit these settings by visiting [https://app.{{ project.domain }}/settings](https://app.{{ project.domain }}/settings).
 
 ## Setup/Building
+
+These Instructions refer to the old, React Native client, and therefore do not apply to the new, React-only client.
 
 ### Dependencies
 
