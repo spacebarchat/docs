@@ -408,6 +408,27 @@
 <article class="md-content__inner md-typeset">
 <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 <details class="info">
+<summary>Is Spacebar still in development? Production Ready?</summary>
+<p>Yes, Spacebar is still in development. Our unpaid team of volunteers is very small though, and so progress is very dependant on our motivation
+and outside life.</p>
+<p>The <a href="https://github.com/spacebarchat/server">Spacebar server</a> program has been in development since at least 28/11/2020,
+and has most core features implemented. API compatibility is reasonable although not quite perfect and so some third party clients may not function,
+although the official Discord.com client which we test against functions correctly for the most part.</p>
+<p>The big Discord.com features currently left unimplemented or with partial implementations are:</p>
+<ul>
+<li>Voice/Video support</li>
+<li>Voice activities</li>
+<li>OAuth2 scopes and other applications (Bot applications work by are left unscoped)</li>
+<li>Message threads</li>
+<li>Pomelo (new username system without discriminators)</li>
+<li>Auto moderation</li>
+</ul>
+<p>For a more complete overview of what is left unimplemented, please refer to <a href="../contributing/server/missingroute/">the missing routes viewer</a></p>
+<p>The <a href="https://github.com/spacebarchat/client">Spacebar client</a> however is very premature, starting development around 1/03/2023.
+It is not ready production use or as your daily driver. It lacks many core features and is not recommended to be used.
+Please setup a third party client, or help contribute to our codebase! Any and all help is appreciated.</p>
+</details>
+<details class="info">
 <summary>How do you use the Client?</summary>
 <p>As described in <a href="/setup/clients">Clients</a>, the official client is not ready yet. You are free to use
 a Spacebar compatible client to connect, but no support will be provided.</p>
