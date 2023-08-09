@@ -9,9 +9,9 @@
 <link href="../systemd/" rel="prev"/>
 <link href="../configuration/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.18" name="generator"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
 <title>well-known - Spacebar Documentation</title>
-<link href="../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -410,11 +410,24 @@
 <p>Instance owners may host a <code>/.well-known/spacebar</code> file on a domain containing the instance's API endpoint for Spacebar instance discovery.</p>
 <p>Users can enter a domain, e.g. <code>spacebar.chat</code> as shorthand, and their client will query <code>https://spacebar.chat/.well-known/spacebar</code> for the instance API URL,
 and from there the Gateway and CDN endpoints.</p>
-<p>Example <code>/.well-known/spacebar</code> file:</p>
+<p>For example:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">NGINX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">"api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.spacebar.chat/api/v9"</span>
 <span class="p">}</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/.well-known/spacebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Access-Control-Allow-Origin</span><span class="w"> </span><span class="s">*</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="s">'</span><span class="p">{</span><span class="kn">"api":</span><span class="w"> </span><span class="s">"https://api.spacebar.chat/api/v9"</span><span class="err">}</span><span class="s">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
 </article>
 </div>
 </div>
