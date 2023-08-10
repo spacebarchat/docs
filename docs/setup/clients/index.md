@@ -19,9 +19,9 @@ content:
 {
 	"api": "https://api.old.server.{{ project.domain }}/api/v9",
 	"cdn": "https://cdn.old.server.{{ project.domain }}",
-	"gateway": "wss://gateway.staging.{{ project.domain }}",
+	"gateway": "wss://gateway.old.server.{{ project.domain }}",
 	"invite": "https://old.server.{{ project.domain }}/invite",
-	"template": "https://gateway.old.server.{{ project.domain }}/template",
+	"template": "https://old.server.{{ project.domain }}/template",
 	"gift": "https://old.server.{{ project.domain }}/gift",
 	"scheduledEvent": "https://old.server.{{ project.domain }}/events"
 }
