@@ -39,8 +39,8 @@ These Instructions refer to the old, React Native client, and therefore do not a
 ### Dependencies
 
 -   [Git](https://git-scm.com/)
--   [NodeJS](https://nodejs.org). Version 16+
--   [yarn](https://yarnpkg.com/) (preferred) or npm
+-   [NodeJS](https://nodejs.org). Version 18+
+-   [yarn](https://yarnpkg.com/)
 
 In your terminal:
 
