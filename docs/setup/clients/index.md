@@ -17,13 +17,13 @@ content:
 
 ```json
 {
-	"api": "https://staging.{{ project.domain }}/api/v9",
-	"cdn": "https://cdn.staging.{{ project.domain }}",
+	"api": "https://api.old.server.{{ project.domain }}/api/v9",
+	"cdn": "https://cdn.old.server.{{ project.domain }}",
 	"gateway": "wss://gateway.staging.{{ project.domain }}",
-	"invite": "https://staging.{{ project.domain }}/invite",
-	"template": "https://staging.{{ project.domain }}/template",
-	"gift": "https://staging.{{ project.domain }}/gift",
-	"scheduledEvent": "https://staging.{{ project.domain }}/events"
+	"invite": "https://old.server.{{ project.domain }}/invite",
+	"template": "https://gateway.old.server.{{ project.domain }}/template",
+	"gift": "https://old.server.{{ project.domain }}/gift",
+	"scheduledEvent": "https://old.server.{{ project.domain }}/events"
 }
 ```
 
@@ -46,7 +46,7 @@ In your terminal:
 
 ```bash
 # Download {{ project.name }} Client
-git clone {{ repositories.base_url }}/{{ repositories.client }}.git
+git clone {{ repositories.base_url }}/{{ repositories.client }}.git -b legacy-v2
 
 # Enter the cloned directory, switch branches to the one, which is actually being developed
 cd client
