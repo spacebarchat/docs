@@ -1,6 +1,6 @@
 # For Instance Owners
 
-The below are the rules for instance owners who look to be featured in our [community instances](https://github.com/spacebarchat/community-instances) list.
+The below are the rules for instance owners who look to be featured in our [community instances](https://github.com/spacebarchat/spacebarchat/tree/master/instances) list.
 If you do not meet these criteria, your instance will simply not be featured on our website.
 
 Your instance:
