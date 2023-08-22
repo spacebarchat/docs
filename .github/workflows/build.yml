@@ -14,7 +14,7 @@ jobs:
               with:
                   python-version: 3.x
             - run: curl https://raw.githubusercontent.com/spacebarchat/spacebarchat/master/CODE_OF_CONDUCT.md -o docs/contributing/conduct.md
-            - run: python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros-plugin
+            - run: python3 -m pip install -r requirements.txt
             - run: mkdocs build
             - run: echo docs.spacebar.chat >> site/CNAME
             - name: Deploy 🚀
