@@ -16,7 +16,7 @@
 3. Install dependencies.
 
     ```bash
-    python3 -m pip install mkdocs-material mkdocs-swagger-ui-tag mkdocs-section-index mkdocs-macros-plugin
+    python3 -m pip install -r requirements.txt
     ```
 
 4. Edit documents(s).
