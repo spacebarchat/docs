@@ -13,6 +13,7 @@ Your instance:
 6. Must have a valid and monitored [`general_correspondenceEmail` config](/setup/server/configuration) set.
 7. Must not have default [rights](/setup/server/security/rights) that include operator or other administrative rights.
 8. Enable [Imagor](/setup/server/configuration/imagor), as no image proxy allows attackers to learn user IP addresses.
+9. Have a valid SSL/TLS certificate for all endpoints.
 
 We recommend (not required) that you:
 
