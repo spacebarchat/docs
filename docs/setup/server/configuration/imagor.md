@@ -41,14 +41,14 @@ location /media/ {
 ```
 
 Along with any additional config you already have, of course.
-Alternative (and perhaps the better choice) would be to create a new domain, say `media.whatever.com` specifically for Imagor.
+Alternative (and perhaps the better choice) would be to create a new domain, say `media.example.com` specifically for Imagor.
 
-??? "Example config for `media.whatever.com` site"
+??? "Example config for `media.example.com` site"
 
     ```nginx
     server {
      # Change the server_name to reflect your true domain
-        server_name media.whatever.com;
+        server_name media.example.com;
 
         add_header Last-Modified $date_gmt;
         proxy_set_header Host $host;
