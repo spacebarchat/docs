@@ -1,6 +1,6 @@
 # React Client
 
-!!! note "The {{ project.name }} client is under heavy development and not ready to be used in production yet."
+!!! warning "The {{ project.name }} client is under heavy development and not ready to be used in production yet."
 
 The official {{ project.name }} client is currently being developed at [this repository]({{ repositories.base_url }}/{{ repositories.client }}).
 
@@ -8,10 +8,17 @@ The official {{ project.name }} client is currently being developed at [this rep
 
 The client is currently hosted at [https://app.{{ project.domain }}](https://app.{{ project.domain }}).
 You can use it to connect to our official instance by default, or you can use it to connect to your
-own instance by editing the `Instance` field on the login page (This requires having [wellknown](/setup/server/wellknown/) setup).
+own instance by editing the `Instance` field on the login page.
 
-Replace the above endpoints with your own. If your domain name is `https://whatever.notasite`, then you'll most likely want to enter
-`https://whatever.notasite/api/v9` for the API endpoint, etc.
+!!! note
+
+    If you've set up [wellknown](/setup/server/wellknown/), you can enter that address here.
+    I.e. `https://spacebar.chat`. If you haven't, you'll need to enter the API endpoint address
+
+!!! warning
+
+    If you're using the app at [https://app.{{ project.domain }}](https://app.{{ project.domain }}),
+    you'll need to make sure your instance allows CORS from that address.
 
 ## Setup/Building
 
