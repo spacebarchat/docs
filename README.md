@@ -3,6 +3,8 @@
 [![Build to GitHub Pages](https://github.com/spacebarchat/docs/actions/workflows/build.yml/badge.svg)](https://github.com/spacebarchat/docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/spacebarchat/docs)
+<a href="https://www.netlify.com">
+	<img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="PR Previews by Netlify" />
 
 ## How to get started
 
