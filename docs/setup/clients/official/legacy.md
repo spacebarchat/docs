@@ -41,7 +41,7 @@ In your terminal:
 # Download {{ project.name }} Client
 git clone {{ repositories.base_url }}/{{ repositories.client }}.git -b legacy-v2
 
-# Enter the cloned directory, switch branches to the one, which is actually being developed
+# Enter the cloned directory
 cd client
 
 # Install dependencies
