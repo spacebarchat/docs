@@ -1,6 +1,8 @@
 # Spacebar Docs
 
-[![Build to GitHub Pages](https://github.com/spacebarchat/docs/actions/workflows/build.yml/badge.svg)](https://github.com/spacebarchat/docs/actions/workflows/build.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Build to GitHub Pages](https://github.com/spacebarchat/docs/actions/workflows/build.yml/badge.svg)](https://github.com/spacebarchat/docs/actions/workflows/build.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/86622c9d-4952-4da5-9825-cc016e4a5e5f/deploy-status)](https://app.netlify.com/sites/spacebar-chat/deploys)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/spacebarchat/docs)
 
