@@ -1249,6 +1249,11 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <td>S3 bucket name</td>
 </tr>
 <tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>STORAGE_REGION</td>
 <td>string</td>
 <td>S3 storage region</td>
@@ -1257,6 +1262,11 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <td>DB_LOGGING</td>
 <td>boolean</td>
 <td>if "true" logs all SQL queries to the terminal</td>
+</tr>
+<tr>
+<td>LOG_REQUESTS</td>
+<td>filter</td>
+<td>What requests to log, per response code (eg. <code>-200</code> to log every non-200 response code, or <code>404</code> to log requests with a not found status code)</td>
 </tr>
 </tbody>
 </table>
