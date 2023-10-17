@@ -18,6 +18,7 @@ We do not recommend using Windows to run {{ project.name }}.
 -   [Python](https://www.python.org/). Version 3.10 or later. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
+     (NOTE: Ubuntu or Debian based systems can use NodeJS from [NodeSource](https://github.com/nodesource/distributions))
 -   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
     You do not need the full Visual Studio install, the build tools are fine.
 
