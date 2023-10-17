@@ -15,6 +15,7 @@ We do not recommend using Windows to run {{ project.name }}.
 
 -   [Git](https://git-scm.com/)
 -   [NodeJS](https://nodejs.org). Version 18+ (for `npm`, `node` commands)
+     (NOTE: Ubuntu and Debian based systems often ship with an outdated version of NodeJS, so you can use [NodeSource](https://github.com/nodesource/distributions) to install a newer version)
 -   [Python](https://www.python.org/). Version 3.10 or later. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
