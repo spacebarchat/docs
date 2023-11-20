@@ -1179,18 +1179,18 @@
 <p>Below is an example SystemD service for running Spacebar.<br />
 Save it in <code>/etc/systemd/system/spacebar.service</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
-<span class="n">Description</span><span class="o">=</span><span class="n">Spacebar</span><span class="p">,</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">better</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">secure</span><span class="w"> </span><span class="n">communication</span>
+<span class="n">Description</span><span class="o">=</span><span class="err">Spacebar, for better and secure communication</span>
 
 <span class="k">[Service]</span>
-<span class="n">User</span><span class="o">=</span><span class="err">&lt;</span><span class="n">your</span><span class="w"> </span><span class="n">user</span><span class="err">&gt;</span>
-<span class="n">WorkingDirectory</span><span class="o">=</span><span class="err">&lt;</span><span class="n">spacebar</span><span class="w"> </span><span class="n">directory</span><span class="err">&gt;</span>
-<span class="n">ExecStart</span><span class="o">=</span><span class="n">npm</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">start</span>
-<span class="n">Restart</span><span class="o">=</span><span class="n">always</span>
-<span class="n">StandardError</span><span class="o">=</span><span class="n">journal</span>
-<span class="n">StandardOutput</span><span class="o">=</span><span class="n">journal</span>
+<span class="n">User</span><span class="o">=</span><span class="err">&lt;your user&gt;</span>
+<span class="n">WorkingDirectory</span><span class="o">=</span><span class="err">&lt;spacebar directory&gt;</span>
+<span class="n">ExecStart</span><span class="o">=</span><span class="err">npm run start</span>
+<span class="n">Restart</span><span class="o">=</span><span class="err">always</span>
+<span class="n">StandardError</span><span class="o">=</span><span class="err">journal</span>
+<span class="n">StandardOutput</span><span class="o">=</span><span class="err">journal</span>
 
 <span class="k">[Install]</span>
-<span class="n">WantedBy</span><span class="o">=</span><span class="n">multi-user</span><span class="p">.</span><span class="n">target</span>
+<span class="n">WantedBy</span><span class="o">=</span><span class="err">multi-user.target</span>
 </code></pre></div>
 <div class="admonition error">
 <p class="admonition-title">Do not run Spacebar as the root user. This is a security risk to your system.</p>

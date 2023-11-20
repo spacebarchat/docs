@@ -1169,13 +1169,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#now-what" class="md-nav__link">
-    Now what?
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1231,8 +1224,55 @@ npm<span class="w"> </span>run<span class="w"> </span>setup
 npm<span class="w"> </span>run<span class="w"> </span>start
 </code></pre></div>
 <p>If all went according to plan, you can now access your new Spacebar instance at <a href="http://localhost:3001">http://localhost:3001</a>! Congrats!</p>
-<p>If you set up your server remotely, you can use <code>curl http://localhost:3001/api/ping</code> to verify the server is up and running,
+<p>If you set up your server remotely, you can use <code>curl http://localhost:3001/api/ping</code> to verify the server is up and running
 (you should set up a reverse proxy, next!).</p>
+<h1 id="connecting-from-remote-machines">Connecting from remote machines</h1>
+<p>For your server to be a bit more useful to those not on the same machine, you'll need to do a bit more configuration.</p>
+<p>The official Spacebar client does automatic discovery of the endpoints it uses to communicate with the server,
+but it needs to retrieve those from somewhere, that being the API server.</p>
+<p>If you don't tell the API server where to find the other services, the official Spacebar client wont be able to connect.
+Other clients which don't do automatic discovery will be, but that's because your users will need to provide the locations manually.</p>
+<p>We'll be doing some <a href="configuration">server configuration</a> in this step, which is stored in your servers database by default.
+By default, Spacebar uses an SQLite database in the project root called <code>database.db</code>, but you might not want to use that for production.
+<a href="database/">If you're going to switch databases, do it now.</a></p>
+<p>Once you've opened your database, navigate to the <code>config</code> table. You'll see 2 columns named <code>key</code> and <code>value</code>.
+You'll want to set the <code>value</code> of the rows with the following keys to the correct values.</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_publicEndpoint</code></td>
+<td>Your API endpoint. Likely <code>"https://DOMAIN_NAME/api/v9"</code></td>
+</tr>
+<tr>
+<td><code>cdn_publicEndpoint</code></td>
+<td>Your CDN endpoint. Likely <code>"https://DOMAIN_NAME</code></td>
+</tr>
+<tr>
+<td><code>gateway_publicEndpoint</code></td>
+<td>Your Gateway endpoint. Likely <code>"wss://DOMAIN_NAME</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">You must wrap these <code>value</code>s in doublequotes as they are parsed as JSON!</p>
+</div>
+<p>If you're in the CLI for this, heres some template SQL:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SQLite</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">update</span><span class="w"> </span><span class="n">config</span>
+<span class="k">set</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&quot;HTTPS_OR_WSS://SERVER_ADDRESS&quot;&#39;</span>
+<span class="k">where</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;THE_SERVICE_NAME_endpointPublic&quot;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="now-what">Now what?</h2>
 <p>Well, now you can configure Spacebar to your liking!</p>
 <ul>
