@@ -25,10 +25,6 @@ plugins:
     - section-index
     - search
     - macros
-    - swagger-ui-tag:
-          extra_css: [assets/swagger.css]
-          docExpansion: none
-          filter: true
 theme:
     name: material
     logo: assets/logo.svg
@@ -46,6 +42,7 @@ theme:
           toggle:
               icon: material/lightbulb
               name: Switch to light mode
+    custom_dir: docs/assets/overrides
     features:
         - navigation.expand
         - navigation.instant

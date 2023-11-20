@@ -67,17 +67,16 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
 
 Below are the available strings replaced in mail templates.
 
-| string                   | replaced with                                                                |
-| ------------------------ | ---------------------------------------------------------------------------- |
-| `{instanceName}`         | `general_instanceName` config value                                          |
-| `{userUsername}`         | The username of the user this email is being sent to                         |
-| `{userDiscriminator}`    | The discriminator of the user this email is being sent to                    |
-| `{userId}`               | The ID of the user this email is being sent to                               |
-| `{phoneNumber}`          | The last 4 digits of the user's phone number.                                |
-| `{userEmail}`            | The user's email address                                                     |
-| `{emailVerificationUrl}` | The generated email verification URL                                         |
-| `{passwordResetUrl}`     | The generated password reset URL                                             |
-| `{ipAddress}`            | The IP address of new login (New login emails are not currently implemented) |
-| `{locationCity}`         | The GeoIP city of new login                                                  |
-| `{locationRegion}`       | The GeoIP region of new login                                                |
-| `{locationCountryName}`  | The GeoIP country of new login                                               |
+| string                  | replaced with                                                                |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `{instanceName}`        | `general_instanceName` config value                                          |
+| `{userUsername}`        | The username of the user this email is being sent to                         |
+| `{userDiscriminator}`   | The discriminator of the user this email is being sent to                    |
+| `{userId}`              | The ID of the user this email is being sent to                               |
+| `{phoneNumber}`         | The last 4 digits of the user's phone number.                                |
+| `{userEmail}`           | The user's email address                                                     |
+| `{actionUrl}`           | The generated password reset or email verification link                      |
+| `{ipAddress}`           | The IP address of new login (New login emails are not currently implemented) |
+| `{locationCity}`        | The GeoIP city of new login                                                  |
+| `{locationRegion}`      | The GeoIP region of new login                                                |
+| `{locationCountryName}` | The GeoIP country of new login                                               |

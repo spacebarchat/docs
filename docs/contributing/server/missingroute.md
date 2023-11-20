@@ -9,15 +9,16 @@ It is generated daily by [{{ repositories.missing_routes }}]({{ repositories.bas
 by scraping the latest Discord.com client.
 
 <div>
- <div class="fc-search">
-  <input
-   id="missing-routes-search"
-   class="md-input md-input--stretch"
-   placeholder="Search missing routes"
-  />
- </div>
- <ul id="missing-routes-list">
- </ul>
+	<div class="fc-search">
+		<input
+			id="missing-routes-search"
+			class="md-input md-input--stretch"
+			placeholder="Search missing routes"
+		/>
+	</div>
+	<p id="counter"></p>
+	<ul id="missing-routes-list">
+	</ul>
 </div>
 
 <script src="/assets/js/missingroutes.js"></script>

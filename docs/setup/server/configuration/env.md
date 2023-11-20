@@ -20,3 +20,4 @@ in the `{{ project.name.lower() }}-server` folder, with the format `NAME=VALUE` 
 | STORAGE_BUCKET   | string         | S3 bucket name                                                                                                             |
 | STORAGE_REGION   | string         | S3 storage region                                                                                                          |
 | DB_LOGGING       | boolean        | if "true" logs all SQL queries to the terminal                                                                             |
+| LOG_REQUESTS     | filter         | What requests to log, per response code (eg. `-200` to log every non-200 response code, or `404` to log requests with a not found status code) |

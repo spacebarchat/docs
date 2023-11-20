@@ -14,8 +14,9 @@ We do not recommend using Windows to run {{ project.name }}.
 ## Dependencies
 
 -   [Git](https://git-scm.com/)
--   [NodeJS](https://nodejs.org). Version 16+
--   [Python](https://www.python.org/). Version 3+. Make sure this is executable via `python` in your terminal.  
+-   [NodeJS](https://nodejs.org). Version 18+ (for `npm`, `node` commands)
+     (NOTE: Ubuntu and Debian based systems often ship with an outdated version of NodeJS, so you can use [NodeSource](https://github.com/nodesource/distributions) to install a newer version)
+-   [Python](https://www.python.org/). Version 3.10 or later. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
 -   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
@@ -30,7 +31,7 @@ In your terminal:
 git clone {{ repositories.base_url }}/{{ repositories.server }}.git
 
 # Navigate to project root
-cd {{ project.name.lower() }}-server
+cd server
 
 # Install javascript packages
 npm i

@@ -1,6 +1,6 @@
 # For Instance Owners
 
-The below are the rules for instance owners who look to be featured in our [community instances](https://github.com/spacebarchat/community-instances) list.
+The below are the rules for instance owners who look to be featured in our [community instances](https://github.com/spacebarchat/spacebarchat/tree/master/instances) list.
 If you do not meet these criteria, your instance will simply not be featured on our website.
 
 Your instance:
@@ -13,6 +13,7 @@ Your instance:
 6. Must have a valid and monitored [`general_correspondenceEmail` config](/setup/server/configuration) set.
 7. Must not have default [rights](/setup/server/security/rights) that include operator or other administrative rights.
 8. Enable [Imagor](/setup/server/configuration/imagor), as no image proxy allows attackers to learn user IP addresses.
+9. Have a valid SSL/TLS certificate for all endpoints.
 
 We recommend (not required) that you:
 
@@ -21,3 +22,5 @@ We recommend (not required) that you:
 -   Run your instance under [SystemD](/setup/server/systemd) or a similar system in your distro, for automatic restarting
 -   Provide some mechanism for users to report content. This may be as simple as more openly advertising your correspondence email (i.e. outside `GET /api/policies/instance` or `/api/ping`)
 -   Provide some mechanism for instance status, such as [Grafana](https://grafana.com/).
+-   Host a [`/.well-known/spacebar`](/setup/server/wellknown) file on the domain you wish users associate with your instance, e.g. `spacebar.chat`.
+    If doing so, use this domain as the `url` field in your community instances PR.
