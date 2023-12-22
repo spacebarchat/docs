@@ -68,8 +68,8 @@ You'll want to set the `value` of the rows with the following keys to the correc
 | key                      | value                                                    |
 | ------------------------ | -------------------------------------------------------- |
 | `api_endpointPublic`     | Your API endpoint. Likely `"https://DOMAIN_NAME/api/v9"` |
-| `cdn_endpointPublic`     | Your CDN endpoint. Likely `"https://DOMAIN_NAME`         |
-| `gateway_endpointPublic` | Your Gateway endpoint. Likely `"wss://DOMAIN_NAME`       |
+| `cdn_endpointPublic`     | Your CDN endpoint. Likely `"https://DOMAIN_NAME"`         |
+| `gateway_endpointPublic` | Your Gateway endpoint. Likely `"wss://DOMAIN_NAME"`       |
 
 !!! warning "You must wrap these `value`s in doublequotes as they are parsed as JSON!"
 
