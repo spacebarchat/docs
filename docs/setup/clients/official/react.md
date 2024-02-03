@@ -44,7 +44,7 @@ pnpm install
 To start the client for development, run
 
 ```bash
-pnpm start
+pnpm dev
 ```
 
 To build static files for the web (i.e. when hosting it yourself), run
