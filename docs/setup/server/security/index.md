@@ -9,3 +9,5 @@ There are various security measures available to instance owners.
 ## [Registration Tokens](regTokens.md)
 
 ## [Rate Limits](limits.md)
+
+## [Blocking Proxies/VPN](ipanalysis.md)
