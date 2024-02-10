@@ -13,7 +13,7 @@ Below is a list of guild features that {{ project.name }} currently implements s
 | ----------------------------- | ----------------------------------------------------------- |
 | `VIP_REGIONS`                 | Grants access to VIP voice regions                          |
 | `ALIASABLE_NAMES`             | Allows multiple vanity URLs                                 |
-| `VANITY_URL`                  | Allows vanity URLs                                          |
+| `VANITY_URL`                  | Asserted if the guild has a vanity name                     |
 | `INTERNAL_EMPLOYEE_ONLY`      | Requires all guild members be [staff](userFlags.md)         |
 | `INVITES_DISABLED`            | Prevents joining this guild                                 |
 | `CROSS_CHANNEL_REPLIES`       | Allows replies to be from outside the current channel       |
