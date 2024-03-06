@@ -9,6 +9,7 @@ in the `{{ project.name.lower() }}-server` folder, with the format `NAME=VALUE` 
 | THREADS          | number         | Number of threads to run {{ project.name }} on when using bundle. Make sure you've enabled RabbitMQ if using more than one |
 | PORT             | number         | Port to listen on. Used by all components, including bundle. If using bundle, all components run under the same port       |
 | DATABASE         | string         | Database connection string. Defaults to SQlite3 at project root                                                            |
+| DB_SYNC | bool | Unsafely synchronise database model on startup. ***Not recommended for use in production environments!*** |
 | CONFIG_PATH      | string         | File path for JSON config, if not using `config` db table                                                                  |
 | WS_LOGEVENTS     | boolean        | If set, log websocket events except messages from gateway                                                                  |
 | WS_VERBOSE       | boolean        | If set, log websocket messages sent/received by gateway                                                                    |
