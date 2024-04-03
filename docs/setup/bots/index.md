@@ -41,21 +41,21 @@ client.run('your token here')
 ```
 
 ### JDA
-
+1. Create a RestConfig instance: `RestConfig restConfig = new RestConfig();`
+2. Use RestConfig#setBaseUrl to tell JDA what your Rest URI is (this NEEDS to include /api/<apiver>, because it's the api **base** url for all requests): `restConfig.setBaseUrl("https://{REPLACE HERE WITH YOUR API SERVER URL}/api/v9");`
+3. Create another class, and extend ConcurrentSessionController, e.g. `public class SpacebarSessionController extends ConcurrentSessionController`
+4. Override the ConcurrentSessionController#getGateway method:
 ```java
-import java.lang.reflect.*;
-import net.dv8tion.jda.internal.requests.*;
-
-public static void main(String[] args) {
-    JDA jda = JDABuilder.createDefault("your token here").build();
-
-    Field field = Requester.class.getDeclaredField("DISCORD_API_PREFIX")
-    field.setAccessible(true);
-
-    Field modifiers = Field.class.getDeclaredField("modifiers");
-    modifiers.setAccessible(true);
-    modifiers.setString(field, field.getModifiers() & ~Modifier.FINAL);
-
-    field.set(null, "https://api.{{ project.domain }}");
-}
+    @NotNull
+    @Override
+    public String getGateway() {
+        return "wss://{REPLACE HERE WITH YOUR GATEWAY SERVER URL}/?encoding=json&v=9&compress=zlib-stream";
+    }
+```
+5. Finally, configure JDA to use your RestConfig & SpacebarSessionController, like this:
+```java
+JDA jda = JDABuilder.createDefault("not_a_real_token_lol")
+                .setRestConfig(restConfig)
+                .setSessionController(new SpacebarSessionController())
+                .build();
 ```
