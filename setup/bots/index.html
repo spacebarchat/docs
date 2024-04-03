@@ -1307,22 +1307,24 @@ the endpoints used.</p>
 <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;your token here&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="jda">JDA</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.reflect.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">net.dv8tion.jda.internal.requests.*</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">JDA</span><span class="w"> </span><span class="n">jda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JDABuilder</span><span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;your token here&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
-
-<span class="w">    </span><span class="n">Field</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Requester</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;DISCORD_API_PREFIX&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">field</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">Field</span><span class="w"> </span><span class="n">modifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Field</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getDeclaredField</span><span class="p">(</span><span class="s">&quot;modifiers&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">modifiers</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">    </span><span class="n">modifiers</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="n">field</span><span class="p">,</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="na">getModifiers</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="n">Modifier</span><span class="p">.</span><span class="na">FINAL</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">field</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.spacebar.chat&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<ol>
+<li>Create a RestConfig instance: <code>RestConfig restConfig = new RestConfig();</code></li>
+<li>Use RestConfig#setBaseUrl to tell JDA what your Rest URI is (this NEEDS to include /api/<apiver>, because it's the api <strong>base</strong> url for all requests): <code>restConfig.setBaseUrl("https://{REPLACE HERE WITH YOUR API SERVER URL}/api/v9");</code></li>
+<li>Create another class, and extend ConcurrentSessionController, e.g. <code>public class SpacebarSessionController extends ConcurrentSessionController</code></li>
+<li>Override the ConcurrentSessionController#getGateway method:
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nd">@NotNull</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGateway</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;wss://{REPLACE HERE WITH YOUR GATEWAY SERVER URL}/?encoding=json&amp;v=9&amp;compress=zlib-stream&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></li>
+<li>Finally, configure JDA to use your RestConfig &amp; SpacebarSessionController, like this:
+<div class="highlight"><pre><span></span><code><span class="n">JDA</span><span class="w"> </span><span class="n">jda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JDABuilder</span><span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;not_a_real_token_lol&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">setRestConfig</span><span class="p">(</span><span class="n">restConfig</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">setSessionController</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SpacebarSessionController</span><span class="p">())</span>
+<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</code></pre></div></li>
+</ol>
 
 
 
