@@ -26,6 +26,7 @@ own instance by editing the `Instance` field on the login page.
 
 -   [Git](https://git-scm.com/)
 -   [NodeJS](https://nodejs.org): Version 18+
+-   [tauri v2 (beta) prerequisites](https://v2.tauri.app/start/prerequisites)
 -   [pnpm](https://pnpm.io/)
 
 In your terminal:
@@ -45,6 +46,12 @@ To start the client for development, run
 
 ```bash
 pnpm dev
+```
+
+To start the tauri client for development, run
+
+```bash
+pnpm tauri:dev
 ```
 
 To build static files for the web (i.e. when hosting it yourself), run
