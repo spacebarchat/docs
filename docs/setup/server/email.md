@@ -19,8 +19,7 @@ You must edit:
 
 -   The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
     Be sure to set it to the {{ project.name }} web app URL. For example, `https://staging.{{ project.domain }}`
--   The `general_correspondenceEmail` config value, used as the 'from' email address.
-    If unset, `noreply@localhost` is used, which will most likely throw an error with your email service.
+-   The `email_senderAddress` config value, used as the 'from' email address. If it's not set, `general_correspondenceEmail` is used.
 
 Optionally:
 
