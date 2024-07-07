@@ -1247,15 +1247,15 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>cdn_endpointPrivate</td>
-<td><a href="http://localhost:3001">http://localhost:3001</a></td>
+<td>null</td>
 <td>string</td>
-<td>See gateway_endpointPrivate</td>
+<td>CDN endpoint. See gateway_endpointPrivate</td>
 </tr>
 <tr>
 <td>cdn_endpointPublic</td>
-<td><a href="http://localhost:3001">http://localhost:3001</a></td>
+<td>null</td>
 <td>string</td>
-<td>See gateway_endpointPublic</td>
+<td>CDN endpoint. See gateway_endpointPublic</td>
 </tr>
 <tr>
 <td>cdn_resizeHeightMax</td>
@@ -1289,9 +1289,9 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>api_endpointPublic</td>
-<td>"/api"</td>
+<td>null</td>
 <td>string</td>
-<td>See gateway_endpointPublic</td>
+<td>Endpoint the API is available at, usually <code>&lt;Base URL&gt;/api</code></td>
 </tr>
 <tr>
 <td>general_instanceName</td>
@@ -1326,8 +1326,8 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <tr>
 <td>general_correspondenceUserID</td>
 <td>null</td>
-<td>string</td>
-<td>Announced instance correspondence ID (from this instance)</td>
+<td>Snowflake</td>
+<td>Announced instance correspondence user ID (from this instance)</td>
 </tr>
 <tr>
 <td>general_image</td>
@@ -1339,7 +1339,13 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>general_instanceId</td>
 <td>Snowflake of instance creation date</td>
 <td>Snowflake</td>
-<td>Announced instance ID</td>
+<td>Announced instance ID. Deprecated.</td>
+</tr>
+<tr>
+<td>general_autoCreateBotUsers</td>
+<td>false</td>
+<td>boolean</td>
+<td>Whether to automatically create a bot when creating an application</td>
 </tr>
 <tr>
 <td>limits_user_maxGuilds</td>
@@ -1349,7 +1355,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>limits_user_maxUsername</td>
-<td>127</td>
+<td>32</td>
 <td>number</td>
 <td>Maximum username length</td>
 </tr>
@@ -1445,7 +1451,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>limits_rate_enabled</td>
-<td>true</td>
+<td>false</td>
 <td>boolean</td>
 <td>Whether rate limits are enabled</td>
 </tr>
@@ -1555,7 +1561,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>limits_absoluteRate_register_window</td>
 <td>3600000</td>
 <td>number</td>
-<td>Global /register rate limit window, in seconds</td>
+<td>Global /register rate limit window, in milliseconds</td>
 </tr>
 <tr>
 <td>limits_absoluteRate_register_enabled</td>
@@ -1573,13 +1579,19 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>limits_absoluteRate_sendMessage_window</td>
 <td>60000</td>
 <td>number</td>
-<td>Global sendMessage window, in seconds</td>
+<td>Global sendMessage window, in milliseconds</td>
 </tr>
 <tr>
 <td>limits_absoluteRate_sendMessage_enabled</td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether absolute message sending rate limits are enabled</td>
+</tr>
+<tr>
+<td>metrics_timeout</td>
+<td>30000</td>
+<td>number</td>
+<td>Currently unused</td>
 </tr>
 <tr>
 <td><a href="../security/captcha/">security_captcha_enabled</a></td>
@@ -1590,7 +1602,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <tr>
 <td>security_captcha_service</td>
 <td>null</td>
-<td>"recaptcha"/"hcaptcha"</td>
+<td>"recaptcha", "hcaptcha"</td>
 <td>Which captcha service to use</td>
 </tr>
 <tr>
@@ -1612,6 +1624,12 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>Whether to generate backup codes for MFA users</td>
 </tr>
 <tr>
+<td>security_autoUpdate</td>
+<td>true</td>
+<td>boolean</td>
+<td>Automatically updates NPM packages daily. Currently unused</td>
+</tr>
+<tr>
 <td>security_requestSignature</td>
 <td>Secret secret</td>
 <td>string</td>
@@ -1627,7 +1645,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td><a href="../reverseProxy/">security_forwardedFor</a></td>
 <td>null</td>
 <td>string</td>
-<td>HTTP header for user's real IP.</td>
+<td>HTTP header for user's real IP</td>
 </tr>
 <tr>
 <td>security_ipdataApiKey</td>
@@ -1651,7 +1669,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>security_defaultRegistrationTokenExpiration</td>
 <td>604800000</td>
 <td>number</td>
-<td>Seconds for <a href="../security/regTokens/">registration tokens</a> to expire</td>
+<td><a href="../security/regTokens/">Registration token</a> expiry in milliseconds</td>
 </tr>
 <tr>
 <td>login_requireCaptcha</td>
@@ -1756,6 +1774,12 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>Whether guests accounts require a guild invite</td>
 </tr>
 <tr>
+<td>register_allowNewRegistration</td>
+<td>true</td>
+<td>boolean</td>
+<td>Whether registration is enabled. Deprecated, use <code>register_disabled</code>.</td>
+</tr>
+<tr>
 <td>register_allowMultipleAccounts</td>
 <td>true</td>
 <td>boolean</td>
@@ -1831,7 +1855,19 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>guild_discovery_showAllGuilds</td>
 <td>false</td>
 <td>boolean</td>
-<td>Whether guild discovery should show all guilds</td>
+<td>Whether guild discovery shows guilds without the DISCOVERABLE feature</td>
+</tr>
+<tr>
+<td>guild_discovery_useRecommendation</td>
+<td>false</td>
+<td>boolean</td>
+<td>Currently unused</td>
+</tr>
+<tr>
+<td>guild_discovery_offset</td>
+<td>0</td>
+<td>number</td>
+<td>Default offset when returning discoverable guilds. Currently unused</td>
 </tr>
 <tr>
 <td>guild_discovery_limit</td>
@@ -1871,7 +1907,7 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>gif_apiKey</td>
-<td>LIVDSRZULELA</td>
+<td>Spacebar tenor API key</td>
 <td>string</td>
 <td>GIF service API key</td>
 </tr>
@@ -1931,12 +1967,12 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </tr>
 <tr>
 <td>defaults_user_premium</td>
-<td>false</td>
+<td>true</td>
 <td>boolean</td>
 <td>Whether users are given premium upon registration</td>
 </tr>
 <tr>
-<td>defaults_user_premium_type</td>
+<td>defaults_user_premiumType</td>
 <td>2</td>
 <td>number</td>
 <td>The premium type given to users upon registration</td>
@@ -1946,6 +1982,36 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>true</td>
 <td>boolean</td>
 <td>Whether users get verified email upon registration</td>
+</tr>
+<tr>
+<td>defaults_guild_maxPresences</td>
+<td>250000</td>
+<td>number</td>
+<td>Maximum number of presences in a guild upon guild creation</td>
+</tr>
+<tr>
+<td>defaults_guild_maxVideoChannelUsers</td>
+<td>200</td>
+<td>number</td>
+<td>Maximum default number of users in a voice channel with video enabled</td>
+</tr>
+<tr>
+<td>defaults_guild_afkTimeout</td>
+<td>300</td>
+<td>number</td>
+<td>AFK timeout in seconds upon guild creation</td>
+</tr>
+<tr>
+<td>defaults_guild_defaultMessageNotifications</td>
+<td>1</td>
+<td>number</td>
+<td>Message notification level upon guild creation</td>
+</tr>
+<tr>
+<td>defaults_guild_explicitContentFilter</td>
+<td>0</td>
+<td>number</td>
+<td>Explicit content filter level upon guild creation</td>
 </tr>
 <tr>
 <td><a href="embeds/">external_twitter</a></td>
@@ -1960,10 +2026,16 @@ For now, you can update this through SQL manually or a GUI database editor such 
 <td>Which email transport to use</td>
 </tr>
 <tr>
+<td>email_senderAddress</td>
+<td>null</td>
+<td>string</td>
+<td>Sender email address. Defaults to <code>general_correspondenceEmail</code></td>
+</tr>
+<tr>
 <td>email_smtp_host</td>
 <td>null</td>
 <td>string</td>
-<td>SMTP Host for sending email</td>
+<td>SMTP host for sending email</td>
 </tr>
 <tr>
 <td>email_smtp_port</td>
