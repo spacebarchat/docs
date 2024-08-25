@@ -13,10 +13,10 @@ with the appropriate URLs of the instance you want to connect to.
 
 You can get them from a client or from the [well-known](server/wellknown) instance endpoint.
 
-### Discord.js
+### discord.js
 
-The `Client` class constructor accepts a `http` object, which you can use to change
-the endpoints used.
+The `Client` class constructor accepts configuration options that can be used to change
+the endpoints.
 
 ```js
 const { Client } = require("discord.js");
@@ -36,7 +36,7 @@ const client = new Client({
 client.login("your token here");
 ```
 
-### Discord.py
+### discord.py
 
 ```py
 import discord
@@ -57,13 +57,13 @@ client.run("your token here")
 	@NotNull
 	@Override
 	public String getGateway() {
-		return "wss://{REPLACE HERE WITH YOUR GATEWAY SERVER URL}/?encoding=json&v=9&compress=zlib-stream";
+		return "wss://gateway.{{ project.domain }}/?encoding=json&v=9&compress=zlib-stream";
 	}
 ```
 5. Finally, configure JDA to use your RestConfig & SpacebarSessionController, like this:
 ```java
 JDA jda = JDABuilder.createDefault("your token here")
-				.setRestConfig(restConfig)
-				.setSessionController(new SpacebarSessionController())
-				.build();
+	.setRestConfig(restConfig)
+	.setSessionController(new SpacebarSessionController())
+	.build();
 ```

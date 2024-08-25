@@ -2,7 +2,6 @@
 
 Registration tokens are a one-time use token for allowing a new user registration to bypass various restrictions:
 
--   Bypass `register_allowNewRegistrations = false`
 -   Bypass `register_disabled = true`
 -   Bypass [captchas](captcha.md)
 -   Bypass `register_allowMultipleAccounts = false`
