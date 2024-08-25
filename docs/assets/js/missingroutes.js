@@ -19,7 +19,7 @@ document
 	const json = await res.json();
 	const missingRoutes = json.routes;
 
-	document.getElementById("counter").innerHTML =
+	document.getElementById("counter").textContent =
 		`We implement ${json.discord - json.missing}/${
 			json.discord
 		} endpoints from Discord.com ` +

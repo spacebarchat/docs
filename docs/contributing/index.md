@@ -16,7 +16,7 @@
 
 ## Structure
 
-{{ project.name }} is written in Typescript and is comprised of 4 main parts:
+{{ project.name }} is written in TypeScript and is comprised of 4 main parts:
 
 -   REST HTTP API server
 -   Websocket Gateway server for realtime communication with clients
@@ -29,7 +29,7 @@ Generally, the approach is to just see what the Discord.com client sends and rec
 and guessing about any functionality server-side, if it's undocumented.
 
 For a lot of things it's pretty simple to guess, `GET /api/users/@me` returns private details about your user for example.
-This route is also detailed in [Discords own documentation](https://discord.com/developers/), [here specifically](https://discord.com/developers/docs/resources/user#get-current-user).
+This route is also detailed in [Discords own documentation](https://discord.com/developers/docs/intro), [here specifically](https://discord.com/developers/docs/resources/user#get-current-user).
 
 Discord generally does not document anything that is not related to application/bot development, though.
 As an example, `GET /api/updates?platform={}` which returns the `url`, `pub_date`, `name` and any `notes` about the latest client release for a platform.
@@ -40,5 +40,5 @@ Easy fix though, just edit the `DeveloperOptionsStore` localStorage key so that 
 
 !!! warning
 
-    Make sure you rerun `npm run build` every time you edit source code. Additionally, make sure you run `npm run generate:schema` whenever you change a
-    schema. If you want to do both, there's a shortcut: `npm run setup`.
+    Make sure you rerun `npm run build` every time you edit source code, or just use `npm run watch` to make TypeScript automatically recompile on code changes.
+    Wenn making changes to schemas or HTTP routes, run `npm run generate:schemas` and `npm run generate:openapi` to update the schemas used for validating incoming requests and generating the API documentation.
