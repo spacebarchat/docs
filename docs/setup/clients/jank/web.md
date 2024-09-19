@@ -33,22 +33,28 @@ git clone https://github.com/MathMan05/JankClient.git
 cd JankClient
 
 # Install dependencies
-npm install
+npm i
 
 # Or if you're on bun
-bun install
+bun i
+```
+then build the client
+
+```bash
+npm run build
+
+#or if you're on bun
+bun run build
+
 ```
 
 To start the client, run
 
 ```bash
-./index.js
-
-# Or if you want to more explicitly run it with nodejs
-node ./index.js
+npm run start
 
 # If you're using bun
-bun ./index.js
+bun run start
 ```
 !!! note
 
