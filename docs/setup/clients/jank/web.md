@@ -10,7 +10,7 @@ Jank Client is hosted at [this host](https://sb-jankclient.vanillaminigames.net/
 
 !!! note
 
-    Jank client does support pointing to by default your own instance, you can read about it [here](https://github.com/MathMan05/JankClient/blob/main/InstanceInfo.md)
+    Jank client supports pointing to your own instance by default, you can read about it [here](https://github.com/MathMan05/JankClient/blob/main/InstanceInfo.md)
 
 !!! warning
 
@@ -60,7 +60,7 @@ bun run start
 
     Jank Client defualts to opening on port 8080, if you want to change the port you'll need to change either the env variable PORT or put the port on the command you run, ex: `npm start ./index.js 43`
 
-If you're wanting to also develop Jank Client, you'll need to start the type script compiler in watch mode on the base dir of the project.
+If you're wanting to also develop Jank Client, you'll need to start the typescript compiler in watch mode on the base directory of the project.
 
 ## Contributing
 
