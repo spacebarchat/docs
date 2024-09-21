@@ -58,7 +58,7 @@ bun run start
 ```
 !!! note
 
-    Jank Client defualts to opening on port 8080, if you want to change the port you'll need to change either the env variable PORT or put the port on the command you run so it'd be like node ./index.js 43
+    Jank Client defualts to opening on port 8080, if you want to change the port you'll need to change either the env variable PORT or put the port on the command you run, ex: `npm start ./index.js 43`
 
 If you're wanting to also develop Jank Client, you'll need to start the type script compiler in watch mode on the base dir of the project.
 
