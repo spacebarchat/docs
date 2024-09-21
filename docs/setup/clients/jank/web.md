@@ -10,7 +10,7 @@ Jank Client is hosted at [this host](https://sb-jankclient.vanillaminigames.net/
 
 !!! note
 
-    Jank client does support pointing to by default your own instance, you can read about it [here](https://github.com/MathMan05/JankClient/blob/main/InstanceInfo.md)
+    Jank client supports pointing to your own instance by default, you can read about it [here](https://github.com/MathMan05/JankClient/blob/main/InstanceInfo.md)
 
 !!! warning
 
