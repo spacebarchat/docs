@@ -26,7 +26,7 @@ Jank Client is officially hosted [here](https://jankclient.greysilly7.xyz/)
 In your terminal:
 
 ```bash
-# Download {{ project.name }} Client
+# Download Jank Client
 git clone https://github.com/MathMan05/JankClient.git
 
 # Enter the cloned directory
