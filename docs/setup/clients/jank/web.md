@@ -6,7 +6,7 @@ Jank client is currently being developed at [this repository](https://github.com
 
 ## Official host
 
-Jank Client is hosted at [this host](https://sb-jankclient.vanillaminigames.net/) though this arrangment may change to make [this](https://jankclient.greysilly7.xyz/) the official host instead, there's currently a bit of a complicated situation with the hosting of jank client.
+Jank Client is officially hosted [here](https://jankclient.greysilly7.xyz/)
 
 !!! note
 
