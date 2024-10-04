@@ -2,7 +2,7 @@
 
 {{ project.name }}-server must restart in the following cases:
 
--   The .env file or config (database or [CONFIG_PATH](/setup/server/configuration) has changed.
+-   The .env file or config (database or [CONFIG_PATH](/setup/server/configuration) has changed).
 -   Files in the `client_test`, `preload-plugins` folders of inside `assets` have changed.
 -   Files inside `src` have changed (_remember to `npm run build`_).
 -   The `assets/schemas.json` file has changed.
