@@ -6,7 +6,7 @@ you should check out the other pages on this site to take your instance to the n
 
 For this guide, we assume you're familar with the terminal.
 
-We do **not** recommend or support running {{ project.name }} using services such as Ngrok or Heroku.  
+We do **not** recommend or support running {{ project.name }} using services such as Ngrok, Heroku or vercel.  
 You **must** have access to a terminal for this guide.
 
 We do not recommend using Windows to run {{ project.name }}.
