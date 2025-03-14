@@ -11,7 +11,7 @@ Below are some popular libraries for connecting bots to a {{ project.name }} ins
 Make sure to replace `api.{{ project.domain }}` and `cdn.{{ project.domain }}`
 with the appropriate URLs of the instance you want to connect to.
 
-You can get them from a client or from the [well-known](server/wellknown) instance endpoint.
+You can get them from a client or from the [well-known](../server/wellknown) instance endpoint.
 
 ### Discord.js
 
