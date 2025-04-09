@@ -1,4 +1,4 @@
-If you had followed the [setup guide](index.md), you'll have installed {{ project.name }} using [Git](https://git-scm.com/).
+If you followed the [setup guide](index.md), you'll have installed {{ project.name }} using [Git](https://git-scm.com/).
 Thus, you can update the server by running `git pull` in the `{{ project.name.lower() }}-server` directory.
 
 If you had made any changes locally, you may run into merge conflicts,

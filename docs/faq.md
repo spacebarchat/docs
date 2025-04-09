@@ -1,5 +1,29 @@
 # Frequently Asked Questions
 
+??? info "Is {{ project.name }} still in development? Production Ready?"
+
+    Yes, {{ project.name }} is still in development. Our unpaid team of volunteers is very small though, and so progress is very dependant on our motivation
+    and outside life.
+
+    The [{{ project.name }} server]({{ repositories.base_url }}/{{ repositories.server }}) program has been in development since at least 28/11/2020,
+	and has most core features implemented. API compatibility is reasonable although not quite perfect and so some third party clients may not function,
+    although the official Discord.com client which we test against functions correctly for the most part.
+
+    The big Discord.com features currently left unimplemented or with partial implementations are:
+
+    * Voice/Video support
+    * Voice activities
+    * OAuth2 scopes and other applications (Bot applications work by are left unscoped)
+    * Message threads
+    * Pomelo (new username system without discriminators)
+    * Auto moderation
+
+    For a more complete overview of what is left unimplemented, please refer to [the missing routes viewer](./contributing/server/missingroute.md)
+
+    The [{{ project.name }} client]({{ repositories.base_url }}/{{ repositories.client }}) however is very premature, starting development around 1/03/2023.
+    It is not ready production use or as your daily driver. It lacks many core features and is not recommended to be used.
+	Please setup a third party client, or help contribute to our codebase! Any and all help is appreciated.
+
 ??? info "How do you use the Client?"
 
     As described in [Clients](/setup/clients), the official client is not ready yet. You are free to use

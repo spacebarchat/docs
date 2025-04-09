@@ -4,8 +4,8 @@ There are various security measures available to instance owners.
 
 ## [Rights](rights.md)
 
-## [Captchas](captcha.md)
+## [CAPTCHAs](captcha.md)
 
 ## [Registration Tokens](regTokens.md)
 
-## [Rate Limits](limits.md)
+## [Rate Limiting](limits.md)

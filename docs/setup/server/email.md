@@ -2,31 +2,30 @@
 
 {{ project.name }} can be configured to send email, to enable the following functionality:
 
-- Email verification
-- Password resets
-- Password change notifications
+-   Email verification
+-   Password resets
+-   Password change notifications
 
 {{ project.name }} supports the following email transports:
 
-- SMTP
-- [Mailjet](https://www.mailjet.com/)
-- [Mailgun](https://www.mailgun.com/)
-- [Sendgrid](https://sendgrid.com/)
+-   SMTP
+-   [Mailjet](https://www.mailjet.com/)
+-   [Mailgun](https://www.mailgun.com/)
+-   [Sendgrid](https://sendgrid.com/)
 
 Once you have an account with one of the above services, or an SMTP service, you can begin configuring {{ project.name }} to send mail.
 
 You must edit:
 
-- The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
+-   The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
     Be sure to set it to the {{ project.name }} web app URL. For example, `https://staging.{{ project.domain }}`
-- The `general_correspondenceEmail` config value, used as the 'from' email address.
- If unset, `noreply@localhost` is used, which will most likely throw an error with your email service.
+-   The `email_senderAddress` config value, used as the 'from' email address. If it's not set, `general_correspondenceEmail` is used.
 
 Optionally:
 
-- By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
-- If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
-- You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
+-   By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+-   If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
+-   You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
 
 ## Email Config
 
@@ -67,17 +66,16 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
 
 Below are the available strings replaced in mail templates.
 
-| string                   | replaced with                                                                |
-| ------------------------ | ---------------------------------------------------------------------------- |
-| `{instanceName}`         | `general_instanceName` config value                                          |
-| `{userUsername}`         | The username of the user this email is being sent to                         |
-| `{userDiscriminator}`    | The discriminator of the user this email is being sent to                    |
-| `{userId}`               | The ID of the user this email is being sent to                               |
-| `{phoneNumber}`          | The last 4 digits of the user's phone number.                                |
-| `{userEmail}`            | The user's email address                                                     |
-| `{emailVerificationUrl}` | The generated email verification URL                                         |
-| `{passwordResetUrl}`     | The generated password reset URL                                             |
-| `{ipAddress}`            | The IP address of new login (New login emails are not currently implemented) |
-| `{locationCity}`         | The GeoIP city of new login                                                  |
-| `{locationRegion}`       | The GeoIP region of new login                                                |
-| `{locationCountryName}`  | The GeoIP country of new login                                               |
+| string                  | replaced with                                                                |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `{instanceName}`        | `general_instanceName` config value                                          |
+| `{userUsername}`        | The username of the user this email is being sent to                         |
+| `{userDiscriminator}`   | The discriminator of the user this email is being sent to                    |
+| `{userId}`              | The ID of the user this email is being sent to                               |
+| `{phoneNumber}`         | The last 4 digits of the user's phone number.                                |
+| `{userEmail}`           | The user's email address                                                     |
+| `{actionUrl}`           | The generated password reset or email verification link                      |
+| `{ipAddress}`           | The IP address of new login (New login emails are not currently implemented) |
+| `{locationCity}`        | The GeoIP city of new login                                                  |
+| `{locationRegion}`      | The GeoIP region of new login                                                |
+| `{locationCountryName}` | The GeoIP country of new login                                               |

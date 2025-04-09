@@ -25,10 +25,6 @@ plugins:
     - section-index
     - search
     - macros
-    - swagger-ui-tag:
-          extra_css: [assets/swagger.css]
-          docExpansion: none
-          filter: true
 theme:
     name: material
     logo: assets/logo.svg
@@ -36,17 +32,17 @@ theme:
     font: Open Sans
     palette:
         - media: "(prefers-color-scheme: light)"
-          primary: #0185ff
           scheme: default
           toggle:
               icon: material/lightbulb-outline
               name: Switch to dark mode
         - media: "(prefers-color-scheme: dark)"
-          primary: #0185ff
           scheme: slate
+          primary: indigo
           toggle:
               icon: material/lightbulb
               name: Switch to light mode
+    custom_dir: docs/assets/overrides
     features:
         - navigation.expand
         - navigation.instant

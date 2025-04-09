@@ -1,7 +1,8 @@
 ## About
 
 Rights are instance-wide, per-user permissions for everything you may perform on the instance,
-such as sending messages, editing messages, or shutting down the server.
+such as sending messages, editing messages, or shutting down the server. They are separate from
+guild member permissions, which only apply to a given guild.
 
 You may modify a users rights by editing the `rights` column in the `users` table.
 
@@ -21,7 +22,6 @@ is generated through the `npm run generate:rights` script. The script generates 
 Operator rights currently grants access to the following, in addition to all rights:
 
 -   Server shutdown through POST `/api/stop`
--   [Registration token creation](regTokens.md) through GET `/api/auth/generate-registration-tokens`
 
 ## Calculator
 
@@ -90,5 +90,6 @@ Operator rights currently grants access to the following, in addition to all rig
 | `MANAGE_GROUPS`             | 1 << 47 | Can manage other's groups                                                                                                                             |
 | `VIEW_SERVER_STATS`         | 1 << 48 | Can view server stats /api/policies/stats                                                                                                             |
 | `RESEND_VERIFICATION_EMAIL` | 1 << 49 | Can resend verification [emails](../email.md) (`/auth/verify/resend`)                                                                                 |
+| `CREATE_REGISTRATION_TOKENS` | 1 << 50 | Can create [registration tokens](./regTokens.md) (`/auth/generate-registration-tokens`)                                                               |
 
 <script src="/assets/js/rightsCalculator.js"></script>
