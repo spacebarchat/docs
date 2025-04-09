@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -826,20 +824,6 @@
     <li class="md-nav__item">
       <a href="../../email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -915,7 +899,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_7" checked>
       
       
         
@@ -938,14 +922,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1009,8 +993,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../imagor/" class="md-nav__link">
-        Imagor
+      <a href="../imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1065,7 +1049,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1080,14 +1064,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1141,7 +1125,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1160,14 +1144,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1311,12 +1295,12 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <tr>
 <td>DATABASE</td>
 <td>string</td>
-<td>Database connection string. Defaults to SQlite3 at project root</td>
+<td>Database connection string. Defaults to SQLite3 at project root</td>
 </tr>
 <tr>
 <td>DB_SYNC</td>
 <td>bool</td>
-<td>Unsafely synchronise database model on startup. <strong><em>Not recommended for use in production environments!</em></strong></td>
+<td>Unsafely synchronise database model on startup. <strong>Not recommended for use in production environments!</strong></td>
 </tr>
 <tr>
 <td>CONFIG_PATH</td>
@@ -1341,17 +1325,17 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <tr>
 <td>CDN</td>
 <td>string</td>
-<td>Lowest priority value for public CDN annoucements</td>
+<td>Lowest priority value for public CDN announcements</td>
 </tr>
 <tr>
 <td>GATEWAY</td>
 <td>string</td>
-<td>Lowest priority value for public gateway annoucements</td>
+<td>Lowest priority value for public gateway announcements</td>
 </tr>
 <tr>
 <td>STORAGE_LOCATION</td>
 <td>string</td>
-<td>CDN storage location. File path or S3 bucktet</td>
+<td>CDN storage location. File path or S3 bucket</td>
 </tr>
 <tr>
 <td>STORAGE_PROVIDER</td>
@@ -1371,12 +1355,12 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <tr>
 <td>DB_LOGGING</td>
 <td>boolean</td>
-<td>if "true" logs all SQL queries to the terminal</td>
+<td>If "true", logs all SQL queries to the terminal</td>
 </tr>
 <tr>
 <td>LOG_REQUESTS</td>
 <td>filter</td>
-<td>What requests to log, per response code (eg. <code>-200</code> to log every non-200 response code, or <code>404</code> to log requests with a not found status code)</td>
+<td>What requests to log, per response code (eg. <code>-200</code> to log every non-200 response code, or <code>404</code> to log requests with a Not Found status code)</td>
 </tr>
 </tbody>
 </table>

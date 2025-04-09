@@ -21,7 +21,7 @@
     
     
       
-        <title>Imagor - Spacebar Documentation</title>
+        <title>Image proxy - Spacebar Documentation</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#imagor" class="md-skip">
+        <a href="#image-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Imagor
+              Image proxy
             
           </span>
         </div>
@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -826,20 +824,6 @@
     <li class="md-nav__item">
       <a href="../../email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -915,7 +899,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_7" checked>
       
       
         
@@ -938,14 +922,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1009,12 +993,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Imagor
+          Image proxy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Imagor
+        Image proxy
       </a>
       
         
@@ -1033,15 +1017,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#imagor" class="md-nav__link">
+    Imagor
+  </a>
+  
+    <nav class="md-nav" aria-label="Imagor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#dependencies" class="md-nav__link">
     Dependencies
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#setup" class="md-nav__link">
     Setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-image-proxy" class="md-nav__link">
+    Built-in image proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-own-image-proxy" class="md-nav__link">
+    Your own image proxy
   </a>
   
 </li>
@@ -1103,7 +1114,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1118,14 +1129,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1179,7 +1190,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1198,14 +1209,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1314,15 +1325,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#imagor" class="md-nav__link">
+    Imagor
+  </a>
+  
+    <nav class="md-nav" aria-label="Imagor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#dependencies" class="md-nav__link">
     Dependencies
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#setup" class="md-nav__link">
     Setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-image-proxy" class="md-nav__link">
+    Built-in image proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-own-image-proxy" class="md-nav__link">
+    Your own image proxy
   </a>
   
 </li>
@@ -1345,17 +1383,18 @@
   
 
 
-<h1 id="imagor">Imagor</h1>
+<h1 id="image-proxy">Image proxy</h1>
+<p>If the configuration <code>cdn_imagorServerUrl</code> is empty (which is the default), <code>proxy_url</code> is set to the same value as the original <code>url</code>, causing clients to download images directly from the image host.
+This may lead to privacy concerns, as an attacker is able to learn users IP addresses.</p>
+<p>To combat this, Spacebar supports using an image proxy to serve and resize images.</p>
+<h2 id="imagor">Imagor</h2>
 <p><a href="https://github.com/cshum/imagor">Imagor</a> is a "fast, secure image processing server"
-used by Spacebar for external image resizing, primarily by embeds from other websites when linked in a message.
-If left unused, Spacebar will simply not provide a proxy_url for clients, which may leave external images unavailable
-or cause the client to download directly from the image host. Downloading images directly from the host may lead to
-privacy concerns, as an attacker may be able to learn users IP addresses.</p>
-<h2 id="dependencies">Dependencies</h2>
+used by Spacebar for external image resizing, primarily by embeds from other websites when linked in a message.</p>
+<h3 id="dependencies">Dependencies</h3>
 <ul>
 <li><a href="https://www.docker.com/">Docker</a></li>
 </ul>
-<h2 id="setup">Setup</h2>
+<h3 id="setup">Setup</h3>
 <p>To setup Imagor for Spacebar, first grab the <code>security_requestSignature</code> config value from Spacebar's database,
 and create a <code>imagor.env</code> file somewhere safe, with the following content.
 <strong>Make sure to edit the file with the correct information</strong>. Your requestSignture should <em>not</em> start or end with <code>"</code>.</p>
@@ -1370,16 +1409,14 @@ If you would like to change the port Imagor listens on, be sure to change both t
 and the <code>-p</code> value used in docker.</p>
 <p>If you're using a <a href="../../reverseProxy/">reverse proxy</a> such as Nginx for Spacebar already, you could add this to your config's <code>server</code> block</p>
 <div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/media/</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> </span><span class="c1"># If you changed the port, be sure to change it here too</span>
-<span class="w"> </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
+<span class="w">    </span><span class="c1"># If you changed the port, be sure to change it here too</span>
+<span class="w">    </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000/</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Along with any additional config you already have, of course.
 Alternative (and perhaps the better choice) would be to create a new domain, say <code>media.example.com</code> specifically for Imagor.</p>
-<details>
-<summary>Example config for <code>media.example.com</code> site</summary>
 <div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> </span><span class="c1"># Change the server_name to reflect your true domain</span>
+<span class="w">    </span><span class="c1"># Change the server_name to reflect your true domain</span>
 <span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">media.example.com</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Last-Modified</span><span class="w"> </span><span class="nv">$date_gmt</span><span class="p">;</span>
@@ -1388,17 +1425,30 @@ Alternative (and perhaps the better choice) would be to create a new domain, say
 <span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="c1"># If you had changed the port, change it here as well</span>
-<span class="w">            </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000</span><span class="p">;</span>
+<span class="w">        </span><span class="c1"># If you had changed the port, change it here as well</span>
+<span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</details>
 <p>Our last step is to simply tell Spacebar about Imagor. Just set the <code>cdn_imagorServerUrl</code> config value to your public endpoint for Imagor, wrapped in quotes.</p>
-<p>For example, if you used the <code>/media</code> location in your existing nginx config, it will look something like <code>"https://your.spacebar.chat/media"</code>.
-If you used a subdomain, it will look like <code>"https://media.your.spacebar.chat"</code>.
+<p>For example, if you used the <code>/media</code> location in your existing nginx config, it will look something like <code>"https://spacebar.chat/media"</code>.
+If you used a subdomain, it will look like <code>"https://media.spacebar.chat"</code>.
 Don't include a trailing backslash.</p>
 <p>Congrats! After a restart, you've now got Imagor resizing your images!</p>
+<h2 id="built-in-image-proxy">Built-in image proxy</h2>
+<p>While we recommend using Imagor, Spacebar has a built-in image proxy that can be used instead of Imagor if you just want to test the server or are unable to use Docker.</p>
+<p>To use it, simply set the <code>cdn_imagorServerUrl</code> to your API URL, but use <code>/imageproxy</code> instead of <code>/api</code>.
+For example, if the API is running at <code>https://api.spacebar.chat/api</code>, you would set <code>cdn_imagorServerUrl</code> to <code>"https://api.spacebar.chat/imageproxy"</code>.</p>
+<p>Note that to support resizing the image to the given format, it's required to install either <a href="https://www.npmjs.com/package/sharp">sharp</a> (preferred) or <a href="https://www.npmjs.com/package/jimp">jimp</a>:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>sharp
+</code></pre></div>
+<h2 id="your-own-image-proxy">Your own image proxy</h2>
+<p>You can also point the <code>cdn_imagorServerUrl</code> <a href="../">config</a> to your own image proxy, if you have one that supports the Imagor URL format:</p>
+<ol>
+<li>Construct URL path: <code>&lt;Image width&gt;x&lt;Height&gt;/&lt;Unencoded URL without https://&gt;</code></li>
+<li>Create a SHA-1 HMAC of the URL path using <code>security_requestSignature</code></li>
+<li>Construct final <code>proxy_url</code>: <code>&lt;cdn_imagorServerUrl configuration&gt;/&lt;SHA-1 hash&gt;/&lt;Path from above&gt;</code></li>
+</ol>
 
 
 

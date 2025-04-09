@@ -781,8 +781,6 @@
           
         
           
-        
-          
             
           
         
@@ -836,20 +834,6 @@
     <li class="md-nav__item">
       <a href="../../setup/server/email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/server/migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -925,7 +909,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_7" >
       
       
         
@@ -948,14 +932,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../setup/server/configuration/">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1009,8 +993,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/server/configuration/imagor/" class="md-nav__link">
-        Imagor
+      <a href="../../setup/server/configuration/imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1065,7 +1049,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1080,14 +1064,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../setup/server/maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1141,7 +1125,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1160,14 +1144,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../setup/server/security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1297,15 +1281,15 @@ If you do not meet these criteria, your instance will simply not be featured on 
 <li>Must have at least regular uptime, meaning it is available at a consistent time of day.</li>
 <li>Must have a valid and monitored <a href="/setup/server/configuration"><code>general_correspondenceEmail</code> config</a> set.</li>
 <li>Must not have default <a href="/setup/server/security/rights">rights</a> that include operator or other administrative rights.</li>
-<li>Enable <a href="/setup/server/configuration/imagor">Imagor</a>, as no image proxy allows attackers to learn user IP addresses.</li>
+<li>Use an <a href="/setup/server/configuration/imageProxy">image proxy</a>, e.g. Imagor, as no image proxy allows attackers to learn user IP addresses.</li>
 <li>Have a valid SSL/TLS certificate for all endpoints.</li>
 </ol>
 <p>We recommend (not required) that you:</p>
 <ul>
-<li>Enable <a href="/setup/server/email">Email verification</a>, for anti-spam purposes</li>
-<li>Enable <a href="/setup/server/security/captcha">Captcha</a>, for anti-spam purposes</li>
-<li>Run your instance under <a href="/setup/server/systemd">SystemD</a> or a similar system in your distro, for automatic restarting</li>
-<li>Provide some mechanism for users to report content. This may be as simple as more openly advertising your correspondence email (i.e. outside <code>GET /api/policies/instance</code> or <code>/api/ping</code>)</li>
+<li>Enable <a href="/setup/server/email">Email verification</a>, for anti-spam purposes.</li>
+<li>Enable <a href="/setup/server/security/captcha">Captcha</a>, for anti-spam purposes.</li>
+<li>Run your instance under <a href="/setup/server/systemd">SystemD</a> or a similar system in your distro, for automatic restarting.</li>
+<li>Provide some mechanism for users to report content. This may be as simple as more openly advertising your correspondence email (i.e. outside <code>GET /api/policies/instance</code> or <code>/api/ping</code>).</li>
 <li>Provide some mechanism for instance status, such as <a href="https://grafana.com/">Grafana</a>.</li>
 <li>Host a <a href="/setup/server/wellknown"><code>/.well-known/spacebar</code></a> file on the domain you wish users associate with your instance, e.g. <code>spacebar.chat</code>.
     If doing so, use this domain as the <code>url</code> field in your community instances PR.</li>

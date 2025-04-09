@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -826,20 +824,6 @@
     <li class="md-nav__item">
       <a href="../setup/server/email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup/server/migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -915,7 +899,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_7" >
       
       
         
@@ -938,14 +922,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../setup/server/configuration/">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -999,8 +983,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/server/configuration/imagor/" class="md-nav__link">
-        Imagor
+      <a href="../setup/server/configuration/imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1055,7 +1039,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1070,14 +1054,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../setup/server/maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1131,7 +1115,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1150,14 +1134,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../setup/server/security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1321,7 +1305,7 @@
     Additionally, please do not try to snipe features that others are working on.</li>
 </ul>
 <h2 id="structure">Structure</h2>
-<p>Spacebar is written in Typescript and is comprised of 4 main parts:</p>
+<p>Spacebar is written in TypeScript and is comprised of 4 main parts:</p>
 <ul>
 <li>REST HTTP API server</li>
 <li>Websocket Gateway server for realtime communication with clients</li>
@@ -1332,7 +1316,7 @@
 <p>Generally, the approach is to just see what the Discord.com client sends and receives from Discord.com (through your browsers devtools, for example)
 and guessing about any functionality server-side, if it's undocumented.</p>
 <p>For a lot of things it's pretty simple to guess, <code>GET /api/users/@me</code> returns private details about your user for example.
-This route is also detailed in <a href="https://discord.com/developers/">Discords own documentation</a>, <a href="https://discord.com/developers/docs/resources/user#get-current-user">here specifically</a>.</p>
+This route is also detailed in <a href="https://discord.com/developers/docs/intro">Discords own documentation</a>, <a href="https://discord.com/developers/docs/resources/user#get-current-user">here specifically</a>.</p>
 <p>Discord generally does not document anything that is not related to application/bot development, though.
 As an example, <code>GET /api/updates?platform={}</code> which returns the <code>url</code>, <code>pub_date</code>, <code>name</code> and any <code>notes</code> about the latest client release for a platform.</p>
 <p>For the Gateway it's the same procedure, except now you can't use the network logger of your devtools
@@ -1340,8 +1324,8 @@ because the gateway returns responses encoded with <a href="https://github.com/d
 Easy fix though, just edit the <code>DeveloperOptionsStore</code> localStorage key so that <code>logGatewayEvents</code> is true, and reload the client.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make sure you rerun <code>npm run build</code> every time you edit source code. Additionally, make sure you run <code>npm run generate:schema</code> whenever you change a
-schema. If you want to do both, there's a shortcut: <code>npm run setup</code>.</p>
+<p>Make sure you rerun <code>npm run build</code> every time you edit source code, or just use <code>npm run watch</code> to make TypeScript automatically recompile on code changes.
+Wenn making changes to schemas or HTTP routes, run <code>npm run generate:schemas</code> and <code>npm run generate:openapi</code> to update the schemas used for validating incoming requests and generating the API documentation.</p>
 </div>
 
 

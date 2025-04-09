@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -826,20 +824,6 @@
     <li class="md-nav__item">
       <a href="../server/email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../server/migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -915,7 +899,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_7" >
       
       
         
@@ -938,14 +922,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../server/configuration/">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -999,8 +983,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../server/configuration/imagor/" class="md-nav__link">
-        Imagor
+      <a href="../server/configuration/imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1055,7 +1039,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1070,14 +1054,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../server/maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1131,7 +1115,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1150,14 +1134,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../server/security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1275,14 +1259,14 @@
         
           <li class="md-nav__item">
   <a href="#discordjs" class="md-nav__link">
-    Discord.js
+    discord.js
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#discordpy" class="md-nav__link">
-    Discord.py
+    discord.py
   </a>
   
 </li>
@@ -1326,9 +1310,9 @@ when connected to a Spacebar instance instead.</p>
 <p>Make sure to replace <code>api.spacebar.chat</code> and <code>cdn.spacebar.chat</code>
 with the appropriate URLs of the instance you want to connect to.</p>
 <p>You can get them from a client or from the <a href="../server/wellknown">well-known</a> instance endpoint.</p>
-<h3 id="discordjs">Discord.js</h3>
-<p>The <code>Client</code> class constructor accepts a <code>http</code> object, which you can use to change
-the endpoints used.</p>
+<h3 id="discordjs">discord.js</h3>
+<p>The <code>Client</code> class constructor accepts configuration options that can be used to change
+the endpoints.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Client</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;discord.js&quot;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Client</span><span class="p">({</span>
@@ -1345,7 +1329,7 @@ the endpoints used.</p>
 
 <span class="nx">client</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="discordpy">Discord.py</h3>
+<h3 id="discordpy">discord.py</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">discord</span>
 
 <span class="n">discord</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Route</span><span class="o">.</span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.spacebar.chat/api&quot;</span>
@@ -1362,14 +1346,14 @@ the endpoints used.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nd">@NotNull</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGateway</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;wss://{REPLACE HERE WITH YOUR GATEWAY SERVER URL}/?encoding=json&amp;v=9&amp;compress=zlib-stream&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;wss://gateway.spacebar.chat/?encoding=json&amp;v=9&amp;compress=zlib-stream&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></li>
 <li>Finally, configure JDA to use your RestConfig &amp; SpacebarSessionController, like this:
 <div class="highlight"><pre><span></span><code><span class="n">JDA</span><span class="w"> </span><span class="n">jda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JDABuilder</span><span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;your token here&quot;</span><span class="p">)</span>
-<span class="w">                </span><span class="p">.</span><span class="na">setRestConfig</span><span class="p">(</span><span class="n">restConfig</span><span class="p">)</span>
-<span class="w">                </span><span class="p">.</span><span class="na">setSessionController</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SpacebarSessionController</span><span class="p">())</span>
-<span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setRestConfig</span><span class="p">(</span><span class="n">restConfig</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setSessionController</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SpacebarSessionController</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
 </code></pre></div></li>
 </ol>
 

@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../migatingFromStaging/">
+        <link rel="prev" href="../email/">
       
       
         <link rel="next" href="../reverseProxy/">
@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -836,20 +834,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -902,6 +886,13 @@
         <li class="md-nav__item">
   <a href="#build" class="md-nav__link">
     build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    watch
   </a>
   
 </li>
@@ -998,7 +989,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_7" >
       
       
         
@@ -1021,14 +1012,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../configuration/">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1082,8 +1073,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/imagor/" class="md-nav__link">
-        Imagor
+      <a href="../configuration/imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1138,7 +1129,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1153,14 +1144,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1214,7 +1205,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1233,14 +1224,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1370,6 +1361,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    watch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start" class="md-nav__link">
     start
   </a>
@@ -1424,6 +1422,8 @@
 <strong>May incur data loss</strong>. You do not normally need to run this script, as Spacebar-server will perform it when necessary.</p>
 <h2 id="build"><code>build</code></h2>
 <p>Builds the Spacebar source code</p>
+<h2 id="watch"><code>watch</code></h2>
+<p>Starts the compilation of the Spacebar source code in watch mode, automatically recompiling when changes are detected.</p>
 <h2 id="start"><code>start</code></h2>
 <p>Starts the bundled server. API, Gateway, and CDN run under the same process when using bundle, using the same port.</p>
 <h2 id="startapi-startgateway-startcdn"><code>start:api</code>, <code>start:gateway</code>, <code>start:cdn</code></h2>

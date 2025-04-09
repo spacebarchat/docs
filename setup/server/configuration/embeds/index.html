@@ -771,8 +771,6 @@
           
         
           
-        
-          
             
           
         
@@ -826,20 +824,6 @@
     <li class="md-nav__item">
       <a href="../../email/" class="md-nav__link">
         Email
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../migatingFromStaging/" class="md-nav__link">
-        Migrating from Staging
       </a>
     </li>
   
@@ -915,7 +899,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_7" checked>
       
       
         
@@ -938,14 +922,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Configuration</a>
           
-            <label for="__nav_5_3_8">
+            <label for="__nav_5_3_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5_3_8">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_3_7">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1040,8 +1024,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../imagor/" class="md-nav__link">
-        Imagor
+      <a href="../imageProxy/" class="md-nav__link">
+        Image proxy
       </a>
     </li>
   
@@ -1096,7 +1080,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_8" >
       
       
         
@@ -1111,14 +1095,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../maintenance/">Maintenance</a>
           
-            <label for="__nav_5_3_9">
+            <label for="__nav_5_3_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_9">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_8">
           <span class="md-nav__icon md-icon"></span>
           Maintenance
         </label>
@@ -1172,7 +1156,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1191,14 +1175,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../security/">Security</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1335,7 +1319,7 @@
 <p>Embeds in Spacebar are external content that is displayed within your messages when linked to.
 Spacebar tries its best to fetch content from these external sites,
 but sometimes we require an API key or other authentication with the site to display their content (or nicer looking embeds).</p>
-<p>For external images, it's best to set up <a href="../imagor/">Imagor</a> for image resizing.
+<p>For external images, it's best to set up <a href="../imageProxy/">Imagor or another image proxy</a> for image resizing.
 The client may or may not fetch images directly from their source if this is not set up,
 and as such some users may not see all images.
 In the case where a client does fetch an image from it's source, without Imagor an attacker
@@ -1344,8 +1328,8 @@ may be able to learn the IP addresses of users.</p>
 <p>Go to the <a href="https://developer.twitter.com/">Twitter developer portal</a> and sign up for developer access.
 You must have a phone number attached to your account to sign up.
 Create an application for use with the Twitter API (We don't need to post messages to Twitter itself).
-Make sure to create a bearer token for authentication.
-Once you have your API key, set the <code>external_twitter</code> <a href="../">config</a> value to your API key, wrapped in quotes.</p>
+Make sure to create a Bearer token for authentication.</p>
+<p>Once you have your API key, set the <code>external_twitter</code> <a href="../">config</a> value to your API key, wrapped in quotes.</p>
 
 
 
