@@ -15,6 +15,10 @@ Syncronise the database schema between {{ project.name }} source code and your d
 
 Builds the {{ project.name }} source code
 
+## `watch`
+
+Starts the compilation of the {{ project.name }} source code in watch mode, automatically recompiling when changes are detected.
+
 ## `start`
 
 Starts the bundled server. API, Gateway, and CDN run under the same process when using bundle, using the same port.
