@@ -12,6 +12,9 @@ and enable it with `ln -s /etc/nginx/sites-available/{{ project.name.lower() }}.
     Other distros, and Windows, may not have a `sites-available`, `sites-enabled` directory structure.
     You may need to edit the `/etc/nginx/nginx.conf` file instead, or place new files in a `conf.d` directory, for example.
     Check which directories exist on your system to be sure.
+!!! note
+
+    Nginx by default only allows uploads under 1mb in size, if you want to change that you'll need to set the client_max_body_size propery to be some other larger value so that way nginx does does reject the request
 
 ```nginx
 server {
