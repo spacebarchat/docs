@@ -62,6 +62,43 @@ bun run start
 
 If you're wanting to also develop Jank Client, you'll need to start the typescript compiler in watch mode on the base directory of the project.
 
+## SystemD
+
+If you want to run the Jank Client as a service, as you might with the server, you can do the same using SystemD.
+
+Below is an example of SystemD service for running the Spacebar Jank Client:
+Save it in `/etc/systemd/system/jankclient.service`.
+
+```toml
+[Unit]
+Description={{ project.name }} jank client, for better and secure communication
+
+[Service]
+User=<your user>
+WorkingDirectory=<jank client directory>
+ExecStart=npm run start
+Restart=always
+StandardError=journal
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+!!! error "Do not run Jank Client as the root user. This is a security risk to your system."
+
+Make sure to edit the file as needed, such as replacing the user.
+It is a good idea to create a new user on your system to run the Jank Client if possible.
+
+You can now start Jank Client using `sudo systemctl start jankclient`.
+
+To automatically run Jank Client on boot, use `sudo systemctl enable jankclient`.
+
+To view the server logs, you may use `journalctl -u jankclient`, or with `-f` to view them as they come.
+
+You may also use the `lnav` package to get nice, colourised and scrolling output:  
+`journalctl -xefu jankclient | lnav`
+
 ## Contributing
 
 To contribute:
