@@ -1,6 +1,6 @@
 # Web Fermi
 
-!!! warning "Fermi is under heavy development and not ready to be used in production yet."
+!!! warning "Fermi is under heavy development but may be used as it's still rather complete"
 
 Fermi is currently being developed at [this repository](https://github.com/MathMan05/Fermi).
 
