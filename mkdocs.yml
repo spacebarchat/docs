@@ -11,12 +11,18 @@ extra:
         base_url: https://github.com
         server: spacebarchat/server
         client: spacebarchat/client
+        voice_types: spacebarchat/spacebar-webrtc-types
+        voice_medooze: spacebarchat/medooze-spacebar-wrtc
+        voice_mediasoup: spacebarchat/mediasoup-spacebar-wrtc
         missing_routes: spacebarchat/missing-routes
         main: &repo_url https://github.com/spacebarchat/spacebarchat # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
     site:
         name: &site_name Spacebar Documentation
         description: &site_description "Documentation for Spacebar: a free open source selfhostable chat, voice and video discord-compatible platform"
         edit_uri: &edit_uri https://github.com/spacebarchat/docs/edit/master/docs/ # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+    npm_packages:
+        voice_medooze: medooze-spacebar-wrtc
+        voice_mediasoup: mediasoup-spacebar-wrtc
 site_name: *site_name
 repo_url: *repo_url
 edit_uri: *edit_uri
