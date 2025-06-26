@@ -29,21 +29,21 @@ You can install one of the provided sample implementations or you can choose to 
 
 1. First install the package in your {{ project.name }} server:
 
-```
-npm install {{ npm_packages.voice_medooze }} --no-save
-```
+    ```
+    npm install {{ npm_packages.voice_medooze }} --no-save
+    ```
 
 2. Configure the package name in your {{ project.name }} server `.env`:
 
-```
-WRTC_LIBRARY={{ npm_packages.voice_medooze }}
-```
+    ```
+    WRTC_LIBRARY={{ npm_packages.voice_medooze }}
+    ```
 
 3. Configure the public IP for your WebRTC server in your {{ project.name }} server `.env`. This should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation:
 
-```
-WRTC_PUBLIC_IP=127.0.0.1
-```
+    ```
+    WRTC_PUBLIC_IP=127.0.0.1
+    ```
 
 ### Mediasoup implementation installation
 
