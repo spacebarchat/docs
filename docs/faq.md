@@ -11,7 +11,7 @@
 
     The big Discord.com features currently left unimplemented or with partial implementations are:
 
-    * Voice/Video support
+    * Voice/Video support (WebRTC protocol support implemented, but lacking UDP protocol implementation)
     * Voice activities
     * OAuth2 scopes and other applications (Bot applications work by are left unscoped)
     * Message threads
@@ -31,10 +31,12 @@
 
 ??? info "Voice/Video when?"
 
-    Currently there is no voice or video support in any {{ project.name }} instance.
+    Currently there is experimental voice/video WebRTC support in {{ project.name }}. UDP connections are not currently supported.
+    
     This is a very difficult feature to get working, especially given that
-    we must implement it the exact same way as Discord.com for client compatibility.
-    [We would be incredibly thankful for any assistance.](/contributing)
+    we must implement it the exact same way as Discord.com for client compatibility, so if you find any bugs please open an issue in [{{ project.name }} server]({{ repositories.base_url }}/{{ repositories.server }}).
+    
+    [We would also be incredibly thankful for any assistance.](/contributing)
 
 ??? info "Free Nitro?"
 
