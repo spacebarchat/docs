@@ -21,6 +21,37 @@ You also have to configure the Voice Gateway endpoint in your database. In table
 "regions_available_0_endpoint":   "localhost:3004"
 ```
 
+### Nginx reverse proxy for Voice Gateway
+
+You will likely want to set your voice gateway behind a reverse proxy. Here's a sample Nginx configuration:
+
+```nginx
+server {
+ # Change server_name
+    server_name voice.example.com;
+    listen 80;
+
+    location / {
+   # Only change this if Nginx and {{ project.name }} are not on the same machine.
+            proxy_pass http://127.0.0.1:3004;
+            proxy_set_header Host $host;
+            proxy_pass_request_headers      on;
+            add_header Last-Modified $date_gmt;
+            add_header Cache-Control 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
+            proxy_set_header  X-Real-IP $remote_addr;
+            proxy_set_header  X-Forwarded-Proto https;
+            proxy_set_header  X-Forwarded-For $remote_addr;
+            proxy_set_header  X-Forwarded-Host $remote_addr;
+            proxy_no_cache 1;
+            proxy_cache_bypass 1;
+
+   # This is important. It allows Websocket connections through NGINX.
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+    }
+}
+```
+
 ## Configuring Voice Library
 
 You can install one of the provided sample implementations or you can choose to install another third-party one. Installation process will be the same regardless:
