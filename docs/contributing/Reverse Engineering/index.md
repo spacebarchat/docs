@@ -4,7 +4,7 @@ This section contains various articles relating to the reverse engineering of Di
 
 There are various other resources that have been incredibly helpful in our endevours, such as:
 
--   [Discord user docs](https://docs.discord.sex)
+-   [Discord user docs](https://docs.discord.food)
 -   [Luna's unofficial Discord docs](https://luna.gitlab.io/discord-unofficial-docs/)
 -   [Litecord](https://gitlab.com/litecord/litecord)
 -   [DiscordLists](https://github.com/Delitefully/DiscordLists)
