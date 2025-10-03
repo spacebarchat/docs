@@ -36,6 +36,29 @@ const client = new Client({
 client.login("your token here");
 ```
 
+### Eris
+
+```js
+const Eris = require("eris");
+const bot = new Eris("your token here", {
+    intents: [
+        "guildMessages"
+    ],
+    rest: {
+    domain: "api.old.server.spacebar.chat",
+    baseURL: "/api/v9"
+    },
+    ws: {
+    headers: {
+    'User-Agent': 'eris',
+    }
+  },
+});
+
+bot.connect();
+```
+
+
 ### discord.py
 
 ```py
