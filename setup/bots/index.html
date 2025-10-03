@@ -1281,6 +1281,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#eris" class="md-nav__link">
+    Eris
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#discordpy" class="md-nav__link">
     discord.py
   </a>
@@ -1344,6 +1351,25 @@ the endpoints.</p>
 <span class="p">});</span>
 
 <span class="nx">client</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="eris">Eris</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">Eris</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;eris&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">bot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Eris</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">intents</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;guildMessages&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">rest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">domain</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;api.old.server.spacebar.chat&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/api/v9&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">&#39;User-Agent&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eris&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">});</span>
+
+<span class="nx">bot</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
 </code></pre></div>
 <h3 id="discordpy">discord.py</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">discord</span>
