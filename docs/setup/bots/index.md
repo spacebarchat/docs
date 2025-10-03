@@ -39,6 +39,7 @@ client.login("your token here");
 ### Eris
 
 ```js
+const Eris = require("eris");
 const bot = new Eris("your token here", {
     intents: [
         "guildMessages"
