@@ -1308,13 +1308,14 @@ You <strong>must</strong> have access to a terminal for this guide.</p>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="https://git-scm.com/">Git</a></li>
-<li><a href="https://nodejs.org">NodeJS</a>. Version 18+ (for <code>npm</code>, <code>node</code> commands)
+<li><a href="https://nodejs.org">NodeJS</a>. Version 24+ (for <code>npm</code>, <code>node</code> commands)
      (NOTE: Ubuntu and Debian based systems often ship with an outdated version of NodeJS, so you can use <a href="https://github.com/nodesource/distributions">NodeSource</a> to install a newer version)</li>
-<li><a href="https://www.python.org/">Python</a>. Version 3.10 or later. Make sure this is executable via <code>python</code> in your terminal.<br />
+<li><a href="https://www.python.org/">Python</a>. Version 3.13 or later. Make sure this is executable via <code>python</code> in your terminal.<br />
      (See: <code>python-is-python3</code> package)</li>
 <li>On Linux: <code>gcc</code>/<code>g++</code>. Packaged with <code>build-essential</code> on Debian/Ubuntu and <code>base-devel</code> on Arch.</li>
 <li>On Windows: <a href="https://visualstudio.microsoft.com/">Visual Studio</a> (<strong>NOT</strong> VSCode) with the <code>Desktop development with C++</code> package.
     You do not need the full Visual Studio install, the build tools are fine.</li>
+<li>Hint: If you have the <a href="https://nixos.org/download/"><code>nix</code></a> package manager installed, you can skip all of the above by running <code>nix develop .#</code> in your terminal.</li>
 </ul>
 <h2 id="setup">Setup</h2>
 <p>In your terminal:</p>
