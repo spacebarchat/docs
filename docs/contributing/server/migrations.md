@@ -3,7 +3,7 @@
 ## What you need to know
 
 -   SQL
--   Preferably the various syntax of SQL used by MariaDB/MySQL and Postgres.
+-   Preferably the syntax of SQL used by Postgres.
     Although if you only write the migration for one, making a PR so others can is good enough.
 
 ## Generating Migrations
