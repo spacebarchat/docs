@@ -58,7 +58,9 @@ bun run start
 ```
 !!! note
 
-    Fermi defualts to opening on port 8080, if you want to change the port you'll need to change either the env variable PORT or put the port on the command you run, ex: `npm start ./dist/index.js 43`
+    Fermi defaults to opening on port 8080, if you want to change the port you'll need to change either the env variable PORT or put the port on the command you run, ex: `npm start ./dist/index.js 43`
+
+!!! warning ***DO NOT*** edit the default port in index.ts, use `Environment=PORT=1234` in your systemd service file instead!
 
 If you're wanting to also develop Fermi, you'll need to start the typescript compiler in watch mode on the base directory of the project.
 
