@@ -6,7 +6,8 @@ The official {{ project.name }} client is currently being developed at [this rep
 
 ## Official host
 
-The client is currently hosted at [https://app.{{ project.domain }}](https://app.{{ project.domain }}).
+The client is no longer hosted on our own domains, as it's incompleteness caused too much confusion.
+We would like to revisit this in the future, when it's in a more complete shape.
 You can use it to connect to our official instance by default, or you can use it to connect to your
 own instance by editing the `Instance` field on the login page.
 
