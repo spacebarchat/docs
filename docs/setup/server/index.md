@@ -18,6 +18,7 @@ We do not recommend using Windows to run {{ project.name }}.
      (NOTE: Ubuntu and Debian based systems often ship with an outdated version of NodeJS, so you can use [NodeSource](https://github.com/nodesource/distributions) to install a newer version)
 -   [Python](https://www.python.org/). Version 3.13 or later. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
+-   [.NET SDK](https://dot.net). Version 9.0+. Optional, but used for the experimental [Admin API](adminApi).
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
 -   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
     You do not need the full Visual Studio install, the build tools are fine.
@@ -88,6 +89,7 @@ If you're in the CLI for this, heres some template SQL:
 
 Well, now you can configure {{ project.name }} to your liking!
 
+-   [Set up experimental and optional Admin API](adminApi)
 -   [Skip to server configuration](configuration)
 -   [Skip to reverse proxy / SSL](reverseProxy.md)
 -   [Skip to security](security)
