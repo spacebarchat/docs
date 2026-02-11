@@ -1387,6 +1387,11 @@ in the <code>spacebar-server</code> folder, with the format <code>NAME=VALUE</co
 <td>S3 storage region</td>
 </tr>
 <tr>
+<td>STORAGE_ENDPOINT</td>
+<td>string</td>
+<td>Custom S3 endpoint. Only used when STORAGE_PROVIDER = "s3". Defaults to "https://s3.${region}.amazonaws.com"</td>
+</tr>
+<tr>
 <td>DB_LOGGING</td>
 <td>boolean</td>
 <td>If "true", logs all SQL queries to the terminal</td>
