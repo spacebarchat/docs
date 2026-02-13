@@ -2,6 +2,8 @@
 
 !!! warn "The NixOS module is still in development and subject to change."
 
+!!! warn "It is not currently possible to use the NixOS module outside flakes-based setups"
+
 {{ project.name }} comes with an integrated NixOS module, which takes care of a lot of the configuration for you. In particular, the module automatically configures [seperate SystemD services](../systemd.md) for the API, gateway, and CDN services and configures unix sockets for [message passing](../message-passing).
 
 ## Installation
@@ -29,7 +31,7 @@ imports = [
 
 The module expose the option `services.spacebarchat-server`. You will want to set `serverName` to your instance domain. Additionally, you should point `requestSignaturePath` and `cdnSignaturePath` as files containing secrets for signing requests.
 
-The options `{api,gateway,cdn}Endpoint` should be configured for the connection information of the services, for example:
+The options `{api,gateway,cdn}Endpoint` should be configured for the connection information of the services. This can be done manually or by importing `${spacebar}/nix/modules/default/lib.nix` and using the function `mkEndpoint`. For example:
 
 ```nix
 apiEndpoint = {
@@ -38,6 +40,8 @@ apiEndpoint = {
   localPort = 3001;
   publicPort = 443; # by default, if useSsl = true
 }
+
+gatewayEndpoint = (import "${spacebar}/nix/modules/default/lib.nix").mkEndpoint "gateway.spacebar.mydomain.net" 3002 true;
 ```
 
 Nginx can be configured to act as a reverse proxy for those endpoints via `nginx.enable`.
