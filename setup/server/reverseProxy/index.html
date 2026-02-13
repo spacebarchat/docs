@@ -906,6 +906,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#caddy" class="md-nav__link">
+    Caddy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     NGINX
   </a>
@@ -1348,6 +1355,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#caddy" class="md-nav__link">
+    Caddy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     NGINX
   </a>
@@ -1380,6 +1394,13 @@
 
 
 <h1 id="reverse-proxy">Reverse Proxy</h1>
+<h2 id="caddy">Caddy</h2>
+<p>Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.</p>
+<p>To set up Spacebar behind Caddy, simply add <code>reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001</code> to your Caddyfile. <strong>Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.</strong></p>
+<div class="highlight"><pre><span></span><code>spacebar.example.xyz {
+    reverse_proxy 10.0.0.99:3001
+}
+</code></pre></div>
 <h2 id="nginx">NGINX</h2>
 <p>Generally, our community sets up Spacebar instances behind NGINX, a powerful reverse proxy.</p>
 <p>Below is an example NGINX config. On Ubuntu, you can put this in the <code>/etc/nginx/sites-available/spacebar.conf</code> file,
