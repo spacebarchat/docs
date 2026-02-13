@@ -1300,15 +1300,154 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#array-types" class="md-nav__link">
-    Array Types
+  <a href="#schema" class="md-nav__link">
+    Schema
   </a>
+  
+    <nav class="md-nav" aria-label="Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gateway-options-gateway" class="md-nav__link">
+    Gateway Options (gateway)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdn-options-cdn" class="md-nav__link">
+    CDN Options (cdn)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-options-api" class="md-nav__link">
+    API Options (api)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-options-general" class="md-nav__link">
+    General Options (general)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits-options-limits" class="md-nav__link">
+    Limits Options (limits)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-options-metrics" class="md-nav__link">
+    Metrics Options (metrics)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-options-security" class="md-nav__link">
+    Security Options (security)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-options-login" class="md-nav__link">
+    Login Options (login)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-options-register" class="md-nav__link">
+    Registration Options (register)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-region-options-regions" class="md-nav__link">
+    Voice Region Options (regions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild-options-guild" class="md-nav__link">
+    Guild Options (guild)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gif-search-options-gif" class="md-nav__link">
+    GIF Search Options (gif)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbitmq-options-rabbitmq" class="md-nav__link">
+    RabbitMQ Options (rabbitmq)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild-template-options-templates" class="md-nav__link">
+    Guild Template Options (templates)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentry-enabled-sentry" class="md-nav__link">
+    Sentry Enabled (sentry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-and-guild-defaults-defaults" class="md-nav__link">
+    User and Guild Defaults (defaults)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embeds-options-external" class="md-nav__link">
+    Embeds Options (external)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-options-email" class="md-nav__link">
+    Email Options (email)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-reset-options-passwordreset" class="md-nav__link">
+    Password Reset Options (passwordReset)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-configuration-options" class="md-nav__link">
-    Available Configuration Options
+  <a href="#sample-configuration" class="md-nav__link">
+    Sample Configuration
   </a>
   
 </li>
@@ -1332,41 +1471,96 @@
 
 
 <h1 id="configuration">Configuration</h1>
-<div class="admonition info">
-<p class="admonition-title">Please see <a href="../database/">this page</a> for information regarding database configuration or where to access it.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">The <code>CONFIG_PATH</code> <a href="env/">environment variable</a> can be set to make Spacebar use a JSON file instead of a database table.</p>
-</div>
-<p>Spacebar's configuration is done through the <code>config</code> table of your <a href="../database/">database</a>.
-The table schema consists of two columns <code>key</code> and <code>value</code>, where <code>value</code> is a JSON value.
-For now, you can update this through SQL manually or a GUI database editor such as
-<a href="https://dbeaver.io/">DBeaver</a>.</p>
-<h2 id="array-types">Array Types</h2>
-<p>Arrays are represented by _[number] in a config key. For example, multiple <code>guild_defaultFeatures</code> may be assigned such as</p>
+<p>Spacebar is configured via a JSON file. Use the <code>CONFIG_PATH</code> <a href="env/">environment variable</a> to set the path to the JSON file.</p>
+<h2 id="schema">Schema</h2>
+<p>The JSON file has the following top-level sections:</p>
 <table>
 <thead>
 <tr>
 <th>key</th>
-<th>value</th>
+<th>description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>guild_defaultFeatures_0</code></td>
-<td><code>DISCOVERABLE</code></td>
+<td><code>gateway</code></td>
+<td>Options for the gateway service</td>
 </tr>
 <tr>
-<td><code>guild_defaultFeatures_1</code></td>
-<td><code>ANIMATED_ICON</code></td>
+<td><code>cdn</code></td>
+<td>Options for the CDN service</td>
 </tr>
 <tr>
-<td>etc</td>
-<td>etc</td>
+<td><code>api</code></td>
+<td>Options for the API service</td>
+</tr>
+<tr>
+<td><code>general</code></td>
+<td>General-purpose options</td>
+</tr>
+<tr>
+<td><code>limits</code></td>
+<td>Limits imposed on users</td>
+</tr>
+<tr>
+<td><code>metrics</code></td>
+<td>Options for metric collection</td>
+</tr>
+<tr>
+<td><code>security</code></td>
+<td>Security options</td>
+</tr>
+<tr>
+<td><code>login</code></td>
+<td>Login options</td>
+</tr>
+<tr>
+<td><code>register</code></td>
+<td>Registration options</td>
+</tr>
+<tr>
+<td><code>regions</code></td>
+<td>Voice chat server region options</td>
+</tr>
+<tr>
+<td><code>guild</code></td>
+<td>Guild options</td>
+</tr>
+<tr>
+<td><code>gif</code></td>
+<td>GIF search options</td>
+</tr>
+<tr>
+<td><code>rabbitmq</code></td>
+<td>RabbitMQ options</td>
+</tr>
+<tr>
+<td><code>templates</code></td>
+<td>Guild template options</td>
+</tr>
+<tr>
+<td><code>sentry</code></td>
+<td>Sentry analytics options</td>
+</tr>
+<tr>
+<td><code>defaults</code></td>
+<td>User and guild defaults</td>
+</tr>
+<tr>
+<td><code>external</code></td>
+<td>Embed provider options</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Options for sending emails</td>
+</tr>
+<tr>
+<td><code>passwordReset</code></td>
+<td>Password reset options</td>
 </tr>
 </tbody>
 </table>
-<h2 id="available-configuration-options">Available Configuration Options</h2>
+<h3 id="gateway-options-gateway">Gateway Options (<code>gateway</code>)</h3>
 <table>
 <thead>
 <tr>
@@ -1378,871 +1572,1193 @@ For now, you can update this through SQL manually or a GUI database editor such 
 </thead>
 <tbody>
 <tr>
-<td>gateway_endpointPrivate</td>
+<td><code>endpointPrivate</code></td>
 <td>null</td>
 <td>string</td>
 <td>Used for internal communication with gateway</td>
 </tr>
 <tr>
-<td>gateway_endpointPublic</td>
+<td><code>endpointPublic</code></td>
 <td>null</td>
 <td>string</td>
 <td>Publicly announced gateway endpoint</td>
 </tr>
+</tbody>
+</table>
+<h3 id="cdn-options-cdn">CDN Options (<code>cdn</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>cdn_endpointPrivate</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>endpointPrivate</code></td>
 <td>null</td>
 <td>string</td>
-<td>CDN endpoint. See gateway_endpointPrivate</td>
+<td>CDN endpoint. See <code>gateway.endpointPrivate</code></td>
 </tr>
 <tr>
-<td>cdn_endpointPublic</td>
+<td><code>endpointPublic</code></td>
 <td>null</td>
 <td>string</td>
-<td>CDN endpoint. See gateway_endpointPublic</td>
+<td>CDN endpoint. See <code>gateway.endpointPublic</code></td>
 </tr>
 <tr>
-<td>cdn_resizeHeightMax</td>
+<td><code>resizeHeightMax</code></td>
 <td>1000</td>
 <td>number</td>
 <td>Maximum image resize height for embeds.</td>
 </tr>
 <tr>
-<td>cdn_resizeWidthMax</td>
+<td><code>resizeWidthMax</code></td>
 <td>1000</td>
 <td>number</td>
 <td>Maximum image resize width for embeds.</td>
 </tr>
 <tr>
-<td><a href="imageProxy/">cdn_imagorServerUrl</a></td>
+<td><a href="imageProxy/"><code>imagorServerUrl</code></a></td>
 <td>null</td>
 <td>string</td>
 <td>Endpoint to proxy embed images, e.g. using Imagor.</td>
 </tr>
+</tbody>
+</table>
+<h3 id="api-options-api">API Options (<code>api</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>api_defaultVersion</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>defaultVersion</code></td>
 <td>9</td>
 <td>string</td>
 <td>API version to use when not specified</td>
 </tr>
 <tr>
-<td>api_activeVersions_0</td>
+<td><code>activeVersions</code></td>
 <td>6, 7, 8, 9</td>
 <td>string[]</td>
-<td>Allowed API version numbers. <a href="#array-types">Array</a>.</td>
+<td>Allowed API version numbers</td>
 </tr>
 <tr>
-<td>api_endpointPublic</td>
+<td><code>endpointPublic</code></td>
 <td>null</td>
 <td>string</td>
 <td>Endpoint the API is available at, usually <code>&lt;Base URL&gt;/api</code></td>
 </tr>
+</tbody>
+</table>
+<h3 id="general-options-general">General Options (<code>general</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>general_instanceName</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instanceName</code></td>
 <td>Spacebar Instance</td>
 <td>string</td>
 <td>Announced instance name</td>
 </tr>
 <tr>
-<td>general_instanceDescription</td>
+<td><code>instanceDescription</code></td>
 <td>This is a Spacebar instance made in the pre-release days</td>
 <td>string</td>
 <td>Announced instance description</td>
 </tr>
 <tr>
-<td>general_frontPage</td>
+<td><code>frontPage</code></td>
 <td>null</td>
 <td>string</td>
 <td>Announced instance front page</td>
 </tr>
 <tr>
-<td>general_tosPage</td>
+<td><code>tosPage</code></td>
 <td>null</td>
 <td>string</td>
 <td>Announced instance TOS page</td>
 </tr>
 <tr>
-<td>general_correspondenceEmail</td>
+<td><code>correspondenceEmail</code></td>
 <td>null</td>
 <td>string</td>
 <td>Announced instance correspondence email</td>
 </tr>
 <tr>
-<td>general_correspondenceUserID</td>
+<td><code>correspondenceUserID</code></td>
 <td>null</td>
 <td>Snowflake</td>
 <td>Announced instance correspondence user ID (from this instance)</td>
 </tr>
 <tr>
-<td>general_image</td>
+<td><code>image</code></td>
 <td>null</td>
 <td>string</td>
 <td>Announced instance image URL</td>
 </tr>
 <tr>
-<td>general_instanceId</td>
+<td><code>instanceId</code></td>
 <td>Snowflake of instance creation date</td>
 <td>Snowflake</td>
 <td>Announced instance ID. Deprecated.</td>
 </tr>
 <tr>
-<td>general_autoCreateBotUsers</td>
+<td><code>autoCreateBotUsers</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether to automatically create a bot when creating an application</td>
 </tr>
+</tbody>
+</table>
+<h3 id="limits-options-limits">Limits Options (<code>limits</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>limits_user_maxGuilds</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user.maxGuilds</code></td>
 <td>1048576</td>
 <td>number</td>
 <td>Maxmimum guilds a user can join</td>
 </tr>
 <tr>
-<td>limits_user_maxUsername</td>
+<td><code>user.maxUsername</code></td>
 <td>32</td>
 <td>number</td>
 <td>Maximum username length</td>
 </tr>
 <tr>
-<td>limits_user_maxFriends</td>
+<td><code>user.maxFriends</code></td>
 <td>5000</td>
 <td>number</td>
 <td>Maximum number of friends per user</td>
 </tr>
 <tr>
-<td>limits_guild_maxRoles</td>
+<td><code>guild.maxRoles</code></td>
 <td>1000</td>
 <td>number</td>
 <td>Maximum number of roles in a guild</td>
 </tr>
 <tr>
-<td>limits_guild_maxEmojis</td>
+<td><code>guild.maxEmojis</code></td>
 <td>2000</td>
 <td>number</td>
 <td>Maximum number of emojis in a guild</td>
 </tr>
 <tr>
-<td>limits_guild_maxMembers</td>
+<td><code>guild.maxMembers</code></td>
 <td>25000000</td>
 <td>number</td>
 <td>Maximum number of members in a guild</td>
 </tr>
 <tr>
-<td>limits_guild_maxChannels</td>
+<td><code>guild.maxChannels</code></td>
 <td>65535</td>
 <td>number</td>
 <td>Maximum number of channels in a guild</td>
 </tr>
 <tr>
-<td>limits_guild_maxChannelsInCategory</td>
+<td><code>guild.maxChannelsInCategory</code></td>
 <td>65535</td>
 <td>number</td>
 <td>Maximum number of channels per category in a guild</td>
 </tr>
 <tr>
-<td>limits_message_maxCharacters</td>
+<td><code>message.maxCharacters</code></td>
 <td>1048576</td>
 <td>number</td>
 <td>Maximum character count per message</td>
 </tr>
 <tr>
-<td>limits_message_maxTTSCharacters</td>
+<td><code>message.maxTTSCharacters</code></td>
 <td>160</td>
 <td>number</td>
 <td>Maximum character count per text to speech messages</td>
 </tr>
 <tr>
-<td>limits_message_maxReactions</td>
+<td><code>message.maxReactions</code></td>
 <td>2048</td>
 <td>number</td>
 <td>Maximum number of reactions per message</td>
 </tr>
 <tr>
-<td>limits_message_maxAttachmentSize</td>
+<td><code>message.maxAttachmentSize</code></td>
 <td>1073741824</td>
 <td>number</td>
 <td>Maximum total attachment size per message</td>
 </tr>
 <tr>
-<td>limits_message_maxBulkDelete</td>
+<td><code>message.maxBulkDelete</code></td>
 <td>1000</td>
 <td>number</td>
 <td>Maximum number of messages deletable through bulk delete</td>
 </tr>
 <tr>
-<td>limits_message_maxEmbedDownloadSize</td>
+<td><code>message.maxEmbedDownloadSize</code></td>
 <td>5242880</td>
 <td>number</td>
 <td>Maximum download size of external embeddable content</td>
 </tr>
 <tr>
-<td>limits_channel_maxPins</td>
+<td><code>channel.maxPins</code></td>
 <td>500</td>
 <td>number</td>
 <td>Maximum number of pins per channel</td>
 </tr>
 <tr>
-<td>limits_channel_maxTopic</td>
+<td><code>channel.maxTopic</code></td>
 <td>1024</td>
 <td>number</td>
 <td>Maximum channel topic character length</td>
 </tr>
 <tr>
-<td>limits_channel_maxWebhooks</td>
+<td><code>channel.maxWebhooks</code></td>
 <td>100</td>
 <td>number</td>
 <td>Maximum number of webhooks per channel</td>
 </tr>
 <tr>
-<td>limits_rate_enabled</td>
+<td><code>rate.enabled</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether rate limits are enabled</td>
 </tr>
 <tr>
-<td>limits_rate_ip_count</td>
+<td><code>rate.ip.count</code></td>
 <td>500</td>
 <td>number</td>
 <td>Allowed number of requests per IP within window</td>
 </tr>
 <tr>
-<td>limits_rate_ip_window</td>
+<td><code>rate.ip.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>IP rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_global_count</td>
+<td><code>rate.global.count</code></td>
 <td>250</td>
 <td>number</td>
 <td>Allowed number of requests globally within window</td>
 </tr>
 <tr>
-<td>limits_rate_global_window</td>
+<td><code>rate.global.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>Global rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_error_count</td>
+<td><code>rate.error.count</code></td>
 <td>10</td>
 <td>number</td>
 <td>Number of allowed errors per user within window</td>
 </tr>
 <tr>
-<td>limits_rate_error_window</td>
+<td><code>rate.error.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>User error rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_routes_guild_count</td>
+<td><code>rate.routes.guild.count</code></td>
 <td>5</td>
 <td>number</td>
 <td>Allowed number of /guild* requests per user within window</td>
 </tr>
 <tr>
-<td>limits_rate_routes_guild_window</td>
+<td><code>rate.routes.guild.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>User /guild* rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_routes_webhook_count</td>
+<td><code>rate.routes.webhook.count</code></td>
 <td>10</td>
 <td>number</td>
 <td>Allowed number of /webhooks* requests per user within window</td>
 </tr>
 <tr>
-<td>limits_rate_routes_webhook_window</td>
+<td><code>rate.routes.webhook.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>User /webhooks* rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_routes_channel_count</td>
+<td><code>rate.routes.channel.count</code></td>
 <td>10</td>
 <td>number</td>
 <td>Allowed number of /channel* requests per user within window</td>
 </tr>
 <tr>
-<td>limits_rate_routes_channel_window</td>
+<td><code>rate.routes.channel.window</code></td>
 <td>5</td>
 <td>number</td>
 <td>User /channel* rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_routes_auth_login_count</td>
+<td><code>rate.routes.auth.login.count</code></td>
 <td>5</td>
 <td>number</td>
 <td>Allowed number of IP /login requests within window</td>
 </tr>
 <tr>
-<td>limits_rate_routes_auth_login_window</td>
+<td><code>rate.routes.auth.login.window</code></td>
 <td>60</td>
 <td>number</td>
 <td>IP /login rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_rate_routes_auth_register_count</td>
+<td><code>rate.routes.auth.register.count</code></td>
 <td>2</td>
 <td>number</td>
 <td>Allowed number of IP /register requests within window</td>
 </tr>
 <tr>
-<td>limits_rate_routes_auth_register_window</td>
+<td><code>rate.routes.auth.register.window</code></td>
 <td>43200</td>
 <td>number</td>
 <td>IP /register rate limit window, in seconds</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_register_limit</td>
+<td><code>absoluteRate.register.limit</code></td>
 <td>25</td>
 <td>number</td>
 <td>Absolute number of registrations instance-wide per window</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_register_window</td>
+<td><code>absoluteRate.register.window</code></td>
 <td>3600000</td>
 <td>number</td>
 <td>Global /register rate limit window, in milliseconds</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_register_enabled</td>
+<td><code>absoluteRate.register.enabled</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether absolute register rate limits are enabled</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_sendMessage_limit</td>
+<td><code>absoluteRate.sendMessage.limit</code></td>
 <td>200</td>
 <td>number</td>
 <td>Absolute number of messages instance-wide per window</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_sendMessage_window</td>
+<td><code>absoluteRate.sendMessage.window</code></td>
 <td>60000</td>
 <td>number</td>
 <td>Global sendMessage window, in milliseconds</td>
 </tr>
 <tr>
-<td>limits_absoluteRate_sendMessage_enabled</td>
+<td><code>absoluteRate.sendMessage.enabled</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether absolute message sending rate limits are enabled</td>
 </tr>
+</tbody>
+</table>
+<h3 id="metrics-options-metrics">Metrics Options (<code>metrics</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>metrics_timeout</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timeout</code></td>
 <td>30000</td>
 <td>number</td>
 <td>Currently unused</td>
 </tr>
+</tbody>
+</table>
+<h3 id="security-options-security">Security Options (<code>security</code>)</h3>
+<table>
+<thead>
 <tr>
-<td><a href="../security/captcha/">security_captcha_enabled</a></td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../security/captcha/"><code>captcha.enabled</code></a></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether to enable captchas for login/register</td>
 </tr>
 <tr>
-<td>security_captcha_service</td>
+<td><code>captcha.service</code></td>
 <td>null</td>
 <td>"recaptcha", "hcaptcha"</td>
 <td>Which captcha service to use</td>
 </tr>
 <tr>
-<td>security_captcha_sitekey</td>
+<td><code>captcha.sitekey</code></td>
 <td>null</td>
 <td>string</td>
 <td>Captcha service sitekey</td>
 </tr>
 <tr>
-<td>security_captcha_secret</td>
+<td><code>captcha.secret</code></td>
 <td>null</td>
 <td>string</td>
 <td>Captcha service secret</td>
 </tr>
 <tr>
-<td>security_twoFactor_generateBackupCodes</td>
+<td><code>twoFactor.generateBackupCodes</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether to generate backup codes for MFA users</td>
 </tr>
 <tr>
-<td>security_autoUpdate</td>
+<td><code>autoUpdate</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Automatically updates NPM packages daily. Currently unused</td>
 </tr>
 <tr>
-<td>security_requestSignature</td>
+<td><code>requestSignature</code></td>
 <td>Random secret</td>
 <td>string</td>
 <td>The signature required for CDN or <a href="imageProxy/">Imagor</a> usage</td>
 </tr>
 <tr>
-<td>security_jwtSecret</td>
+<td><code>jwtSecret</code></td>
 <td>Random secret</td>
 <td>string</td>
 <td>The secret used for user token generation</td>
 </tr>
 <tr>
-<td><a href="../reverseProxy/">security_forwardedFor</a></td>
+<td><a href="../reverseProxy/"><code>forwardedFor</code></a></td>
 <td>null</td>
 <td>string</td>
 <td>HTTP header for user's real IP</td>
 </tr>
 <tr>
-<td>security_ipdataApiKey</td>
+<td><code>ipdataApiKey</code></td>
 <td>Spacebar IPdata key</td>
 <td>string</td>
 <td>API key used for IP geolocation and proxy detection</td>
 </tr>
 <tr>
-<td>security_mfaBackupCodeCount</td>
+<td><code>mfaBackupCodeCount</code></td>
 <td>10</td>
 <td>number</td>
 <td>Number of MFA backup codes to generate</td>
 </tr>
 <tr>
-<td>security_statsWorldReadable</td>
+<td><code>statsWorldReadable</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether instance stats are publically accessible or require right</td>
 </tr>
 <tr>
-<td>security_defaultRegistrationTokenExpiration</td>
+<td><code>defaultRegistrationTokenExpiration</code></td>
 <td>604800000</td>
 <td>number</td>
 <td><a href="../security/regTokens/">Registration token</a> expiry in milliseconds</td>
 </tr>
+</tbody>
+</table>
+<h3 id="login-options-login">Login Options (<code>login</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>login_requireCaptcha</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requireCaptcha</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether login requires captcha verification</td>
 </tr>
 <tr>
-<td>login_requireVerification</td>
+<td><code>requireVerification</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether login requires email verification</td>
 </tr>
+</tbody>
+</table>
+<h3 id="registration-options-register">Registration Options (<code>register</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>register_email_required</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email.required</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether an email is required for registration</td>
 </tr>
 <tr>
-<td>register_email_allowlist</td>
+<td><code>email.allowlist</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether <code>register_email_domains</code> is an allowlist</td>
 </tr>
 <tr>
-<td>register_email_blocklist</td>
+<td><code>email.blocklist</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether <code>register_email_domains</code> is a blocklist</td>
 </tr>
 <tr>
-<td>register_email_domains</td>
+<td><code>email.domains</code></td>
 <td>[]</td>
 <td>string[]</td>
 <td>The email domains list to use as a block/allow list</td>
 </tr>
 <tr>
-<td>register_dateOfBirth_required</td>
+<td><code>dateOfBirth.required</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether a date of birth is required for registration</td>
 </tr>
 <tr>
-<td>register_dateOfBirth_minimum</td>
+<td><code>dateOfBirth.minimum</code></td>
 <td>13</td>
 <td>number</td>
 <td>The minimum age of registration</td>
 </tr>
 <tr>
-<td>register_password_required</td>
+<td><code>password.required</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether a password is required for registration</td>
 </tr>
 <tr>
-<td>register_password_minLength</td>
+<td><code>password.minLength</code></td>
 <td>8</td>
 <td>number</td>
 <td>Minimum password length</td>
 </tr>
 <tr>
-<td>register_password_minNumbers</td>
+<td><code>password.minNumbers</code></td>
 <td>2</td>
 <td>number</td>
 <td>Minimum number of number characters in passwords</td>
 </tr>
 <tr>
-<td>register_password_minUpperCase</td>
+<td><code>password.minUpperCase</code></td>
 <td>2</td>
 <td>number</td>
 <td>Minimum number of uppercase characters in passwords</td>
 </tr>
 <tr>
-<td>register_password_minSymbols</td>
+<td><code>password.minSymbols</code></td>
 <td>0</td>
 <td>number</td>
 <td>Minimum number of symbols in passwords</td>
 </tr>
 <tr>
-<td>register_disabled</td>
+<td><code>disabled</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether registration is disabled</td>
 </tr>
 <tr>
-<td>register_requireCaptcha</td>
+<td><code>requireCaptcha</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether registration requires captcha verification</td>
 </tr>
 <tr>
-<td>register_requireInvite</td>
+<td><code>requireInvite</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether registration requires a guild invite</td>
 </tr>
 <tr>
-<td>register_guestsRequireInvite</td>
+<td><code>guestsRequireInvite</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether guests accounts require a guild invite</td>
 </tr>
 <tr>
-<td>register_allowNewRegistration</td>
+<td><code>allowNewRegistration</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether registration is enabled. Deprecated, use <code>register_disabled</code>.</td>
 </tr>
 <tr>
-<td>register_allowMultipleAccounts</td>
+<td><code>allowMultipleAccounts</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Allow multiple accounts with the same client fingerprint</td>
 </tr>
 <tr>
-<td>register_blockProxies</td>
+<td><code>blockProxies</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether proxies are blocked from registration</td>
 </tr>
 <tr>
-<td>register_incrementingDiscriminators</td>
+<td><code>incrementingDiscriminators</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether discriminators are random or incrementing</td>
 </tr>
 <tr>
-<td><a href="../security/rights/">register_defaultRights</a></td>
+<td><a href="../security/rights/"><code>defaultRights</code></a></td>
 <td>875069521787904</td>
 <td>string</td>
 <td>The rights assigned to users <em>upon registration</em></td>
 </tr>
+</tbody>
+</table>
+<h3 id="voice-region-options-regions">Voice Region Options (<code>regions</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>regions_default</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code></td>
 <td>spacebar</td>
 <td>string</td>
 <td>The default voice region to use</td>
 </tr>
 <tr>
-<td>regions_useDefaultAsOptimal</td>
+<td><code>useDefaultAsOptimal</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether to calculate closest or use default as optimal voice region</td>
 </tr>
 <tr>
-<td>regions_available_0_id</td>
+<td><code>available</code></td>
+<td>[]</td>
+<td>Region[] (see below)</td>
+<td>Advertised voice regions</td>
+</tr>
+</tbody>
+</table>
+<p>Regions are defined with the following structure</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
 <td>spacebar</td>
-<td>string[]</td>
+<td>string</td>
 <td>The available voice region IDs</td>
 </tr>
 <tr>
-<td>regions_available_0_name</td>
+<td><code>name</code></td>
 <td>Spacebar</td>
-<td>string[]</td>
+<td>string</td>
 <td>The available voice region names</td>
 </tr>
 <tr>
-<td>regions_available_0_endpoint</td>
+<td><code>endpoint</code></td>
 <td>127.0.0.1:3004</td>
-<td>string[]</td>
+<td>string</td>
 <td>The available voice region endpoint URLs</td>
 </tr>
 <tr>
-<td>regions_available_0_vip</td>
+<td><code>vip</code></td>
 <td>false</td>
-<td>boolean[]</td>
+<td>boolean</td>
 <td>Whether this voice region is VIP exclusive</td>
 </tr>
 <tr>
-<td>regions_available_0_custom</td>
+<td><code>custom</code></td>
 <td>false</td>
-<td>boolean[]</td>
+<td>boolean</td>
 <td>Whether this is a custom voice region (used for events/etc)</td>
 </tr>
 <tr>
-<td>regions_available_0_deprecated</td>
+<td><code>deprecated</code></td>
 <td>false</td>
-<td>boolean[]</td>
+<td>boolean</td>
 <td>Whether this is a deprecated voice region (clients avoid these)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="guild-options-guild">Guild Options (<code>guild</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>guild_discovery_showAllGuilds</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>discovery.showAllGuilds</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether guild discovery shows guilds without the DISCOVERABLE feature</td>
 </tr>
 <tr>
-<td>guild_discovery_useRecommendation</td>
+<td><code>discovery.useRecommendation</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Currently unused</td>
 </tr>
 <tr>
-<td>guild_discovery_offset</td>
+<td><code>discovery.offset</code></td>
 <td>0</td>
 <td>number</td>
 <td>Default offset when returning discoverable guilds. Currently unused</td>
 </tr>
 <tr>
-<td>guild_discovery_limit</td>
+<td><code>discovery.limit</code></td>
 <td>24</td>
 <td>number</td>
 <td>Maximum number of guild discovery elements per page</td>
 </tr>
 <tr>
-<td>guild_autoJoin_enabled</td>
+<td><code>autoJoin.enabled</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether users auto join guild(s) on registration</td>
 </tr>
 <tr>
-<td>guild_autoJoin_canLeave</td>
+<td><code>autoJoin.canLeave</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether users can leave the auto-joined guild(s)</td>
 </tr>
 <tr>
-<td><a href="guildFeatures/">guild_defaultFeatures_0</a></td>
-<td>null</td>
-<td>string</td>
+<td><a href="guildFeatures/"><code>defaultFeatures</code></a>        null</td>
+<td>string[]</td>
 <td>Features automatically granted to guilds upon creation</td>
+<td></td>
 </tr>
+</tbody>
+</table>
+<h3 id="gif-search-options-gif">GIF Search Options (<code>gif</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>gif_enabled</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether GIF features are enabled</td>
 </tr>
 <tr>
-<td>gif_provider</td>
+<td><code>provider</code></td>
 <td>tenor</td>
 <td>"tenor"</td>
 <td>Which GIF service to use</td>
 </tr>
 <tr>
-<td>gif_apiKey</td>
+<td><code>apiKey</code></td>
 <td>Spacebar tenor API key</td>
 <td>string</td>
 <td>GIF service API key</td>
 </tr>
+</tbody>
+</table>
+<h3 id="rabbitmq-options-rabbitmq">RabbitMQ Options (<code>rabbitmq</code>)</h3>
+<p>See <a href="rabbitmq/">RabbitMQ</a> for more information.</p>
+<table>
+<thead>
 <tr>
-<td><a href="rabbitmq/">rabbitmq_host</a></td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
 <td>null</td>
 <td>string</td>
 <td>RabbitMQ connection string</td>
 </tr>
+</tbody>
+</table>
+<h3 id="guild-template-options-templates">Guild Template Options (<code>templates</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>templates_enabled</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether guild templates are enabled</td>
 </tr>
 <tr>
-<td>templates_allowTemplateCreation</td>
+<td><code>allowTemplateCreation</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether new guild templates can be created</td>
 </tr>
 <tr>
-<td>templates_allowDiscordTemplates</td>
+<td><code>allowDiscordTemplates</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether guild templates from Discord.com can be fetched</td>
 </tr>
 <tr>
-<td><a href="/concepts/guildTemplates.md">templates_allowRaws</a></td>
+<td><a href="/concepts/guildTemplates.md"><code>allowRaws</code></a></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether raw guild templates are allowed</td>
 </tr>
+</tbody>
+</table>
+<h3 id="sentry-enabled-sentry">Sentry Enabled (<code>sentry</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>sentry_enabled</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Whether server-side Sentry analytics is enabled</td>
 </tr>
 <tr>
-<td>sentry_endpoint</td>
+<td><code>endpoint</code></td>
 <td>Spacebar sentry endpoint</td>
 <td>string</td>
 <td>Sentry endpoint</td>
 </tr>
 <tr>
-<td>sentry_traceSampleRate</td>
+<td><code>traceSampleRate</code></td>
 <td>1</td>
 <td>number</td>
 <td>Sentry sample rate (1 means all requests)</td>
 </tr>
 <tr>
-<td>sentry_environment</td>
+<td><code>environment</code></td>
 <td>System hostname</td>
 <td>string</td>
 <td>Sentry environment name</td>
 </tr>
+</tbody>
+</table>
+<h3 id="user-and-guild-defaults-defaults">User and Guild Defaults (<code>defaults</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>defaults_user_premium</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user.premium</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether users are given premium upon registration</td>
 </tr>
 <tr>
-<td>defaults_user_premiumType</td>
+<td><code>user.premiumType</code></td>
 <td>2</td>
 <td>number</td>
 <td>The premium type given to users upon registration</td>
 </tr>
 <tr>
-<td>defaults_user_verified</td>
+<td><code>user.verified</code></td>
 <td>true</td>
 <td>boolean</td>
 <td>Whether users get verified email upon registration</td>
 </tr>
 <tr>
-<td>defaults_guild_maxPresences</td>
+<td><code>guild.maxPresences</code></td>
 <td>250000</td>
 <td>number</td>
 <td>Maximum number of presences in a guild upon guild creation</td>
 </tr>
 <tr>
-<td>defaults_guild_maxVideoChannelUsers</td>
+<td><code>guild.maxVideoChannelUsers</code></td>
 <td>200</td>
 <td>number</td>
 <td>Maximum default number of users in a voice channel with video enabled</td>
 </tr>
 <tr>
-<td>defaults_guild_afkTimeout</td>
+<td><code>guild.afkTimeout</code></td>
 <td>300</td>
 <td>number</td>
 <td>AFK timeout in seconds upon guild creation</td>
 </tr>
 <tr>
-<td>defaults_guild_defaultMessageNotifications</td>
+<td><code>guild.defaultMessageNotifications</code></td>
 <td>1</td>
 <td>number</td>
 <td>Message notification level upon guild creation</td>
 </tr>
 <tr>
-<td>defaults_guild_explicitContentFilter</td>
+<td><code>guild.explicitContentFilter</code></td>
 <td>0</td>
 <td>number</td>
 <td>Explicit content filter level upon guild creation</td>
 </tr>
+</tbody>
+</table>
+<h3 id="embeds-options-external">Embeds Options (<code>external</code>)</h3>
+<table>
+<thead>
 <tr>
-<td><a href="embeds/">external_twitter</a></td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="embeds/"><code>twitter</code></a></td>
 <td>null</td>
 <td>string</td>
 <td>Twitter API key used for Twitter embeds</td>
 </tr>
+</tbody>
+</table>
+<h3 id="email-options-email">Email Options (<code>email</code>)</h3>
+<p>See <a href="../email/">EMail</a> for more information.</p>
+<table>
+<thead>
 <tr>
-<td><a href="../email/">email_provider</a></td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../email/"><code>provider</code></a></td>
 <td>null</td>
 <td>"smtp", "mailgun", "mailjet", "sendgrid"</td>
 <td>Which email transport to use</td>
 </tr>
 <tr>
-<td>email_senderAddress</td>
+<td><code>senderAddress</code></td>
 <td>null</td>
 <td>string</td>
 <td>Sender email address. Defaults to <code>general_correspondenceEmail</code></td>
 </tr>
 <tr>
-<td>email_smtp_host</td>
+<td><code>smtp.host</code></td>
 <td>null</td>
 <td>string</td>
 <td>SMTP host for sending email</td>
 </tr>
 <tr>
-<td>email_smtp_port</td>
+<td><code>smtp.port</code></td>
 <td>null</td>
 <td>number</td>
 <td>SMTP port</td>
 </tr>
 <tr>
-<td>email_smtp_secure</td>
+<td><code>smtp.secure</code></td>
 <td>null</td>
 <td>boolean</td>
 <td>Use TLS for SMTP</td>
 </tr>
 <tr>
-<td>email_smtp_username</td>
+<td><code>smtp.username</code></td>
 <td>null</td>
 <td>string</td>
 <td>SMTP username</td>
 </tr>
 <tr>
-<td>email_smtp_password</td>
+<td><code>smtp.password</code></td>
 <td>null</td>
 <td>string</td>
 <td>SMTP password</td>
 </tr>
 <tr>
-<td>email_mailgun_apiKey</td>
+<td><code>mailgun.apiKey</code></td>
 <td>null</td>
 <td>string</td>
 <td>Mailgun API key</td>
 </tr>
 <tr>
-<td>email_mailgun_domain</td>
+<td><code>mailgun.domain</code></td>
 <td>null</td>
 <td>string</td>
 <td>Mailgun domain</td>
 </tr>
 <tr>
-<td>email_mailjet_apiKey</td>
+<td><code>mailjet.apiKey</code></td>
 <td>null</td>
 <td>string</td>
 <td>Mailjet API key</td>
 </tr>
 <tr>
-<td>email_mailjet_apiSecret</td>
+<td><code>mailjet.apiSecret</code></td>
 <td>null</td>
 <td>string</td>
 <td>Mailjet API secret</td>
 </tr>
 <tr>
-<td>email_sendgrid_apiKey</td>
+<td><code>sendgrid.apiKey</code></td>
 <td>null</td>
 <td>string</td>
 <td>Sendgrid API key</td>
 </tr>
+</tbody>
+</table>
+<h3 id="password-reset-options-passwordreset">Password Reset Options (<code>passwordReset</code>)</h3>
+<table>
+<thead>
 <tr>
-<td>passwordReset_requireCaptcha</td>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requireCaptcha</code></td>
 <td>false</td>
 <td>boolean</td>
 <td>Require captcha to send password reset email</td>
 </tr>
 </tbody>
 </table>
+<h2 id="sample-configuration">Sample Configuration</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;api&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3001&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.spacebar.example.net/api/v9&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;cdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3002&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.spacebar.example.net&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3003&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wss://gateway.spacebar.example.net&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;instanceDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m in space!&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;instanceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A Spacebar Instance&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;serverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spacebar.example.net&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;autoJoin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;canLeave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;defaultFeatures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;ALIASABLE_NAMES&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;VANITY_URL&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;CROSS_CHANNEL_REPLIES&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;ANIMATED_ICON&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;BANNER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;GUILD_TAGS&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;GUILD_SERVER_GUIDE&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;GUILD_ONBOARDING&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;MEMBER_PROFILES&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;NEWS&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;ROLE_ICONS&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;limits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;channel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;maxTopic&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;maxBio&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;maxUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;rabbitmq&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amqp://guest:guest@127.0.0.1:5672&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;register&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;requireInvite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;forwardedFor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;trustedProxies&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
