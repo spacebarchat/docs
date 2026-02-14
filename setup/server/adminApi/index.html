@@ -1414,7 +1414,7 @@ you should check out the other pages on this site to take your instance to the n
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spacebarchat/server.git
 
 <span class="c1"># Navigate to project root</span>
-<span class="nb">cd</span><span class="w"> </span>server/extras/admin-api/Spacebar.AdminAPI
+<span class="nb">cd</span><span class="w"> </span>server/extra/admin-api/Spacebar.AdminApi
 
 <span class="c1"># Configure Admin API (ignore JSON comment warnings)</span>
 nvim<span class="w"> </span>appsettings.Development.json
@@ -1423,12 +1423,12 @@ nvim<span class="w"> </span>appsettings.Development.json
 dotnet<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>Release
 
 <span class="c1"># Start the Admin API</span>
-dotnet<span class="w"> </span>bin/Release/net9.0/Spacebar.AdminAPI.dll
+dotnet<span class="w"> </span>bin/Release/net9.0/Spacebar.AdminApi.dll
 </code></pre></div>
 <h2 id="setup-test-client-optional">Setup Test Client (optional)</h2>
 <p>We're assuming you're in the same directory as where you built the admin api:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Navigate to project root</span>
-<span class="nb">cd</span><span class="w"> </span>../Utilities/Spacebar.AdminAPI.TestClient
+<span class="nb">cd</span><span class="w"> </span>../Utilities/Spacebar.AdminApi.TestClient
 
 <span class="c1"># Start the Test Client</span>
 dotnet<span class="w"> </span>run<span class="w"> </span>-c<span class="w"> </span>Release
