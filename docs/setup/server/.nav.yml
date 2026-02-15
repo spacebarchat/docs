@@ -1,0 +1,8 @@
+nav:
+- index.md
+- installation/
+- configuration/
+- security/
+- maintenance/
+- adminApi/
+- "*"
