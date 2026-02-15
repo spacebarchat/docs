@@ -1391,9 +1391,9 @@
 <span class="w">  </span>--name<span class="w"> </span>spacebar-server<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--network<span class="w"> </span>spacebar-network<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span>postgres://postgres:postgres@spacebar-db/postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>config/config.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>/config/config.json<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-v<span class="w"> </span>./config:/config<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./files:/files<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>./data:/data<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>ghcr.io/spacebarchat/server
 </code></pre></div></p>
 </li>
@@ -1406,9 +1406,9 @@
 <span class="w">  </span>--name<span class="w"> </span>spacebar-server<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--network<span class="w"> </span>spacebar-network<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span>postgres://postgres:postgres@spacebar-db/postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>config/config.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>/config/config.json<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-v<span class="w"> </span>./config:/config<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./files:/files<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>./data/:/data<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-p<span class="w"> </span><span class="m">3001</span>:3001<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>ghcr.io/spacebarchat/server
 </code></pre></div></p>
