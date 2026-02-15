@@ -1567,11 +1567,20 @@
       - POSTGRES_PASSWORD=postgres
     restart: unless-stopped
 
+  rabbitmq:
+    image: rabbitmq:4-management-alpine
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: unless-stopped
+    networks:
+      - spacebar-network
+
 networks:
   spacebar-network:
 
 volumes:
   spacebar-db:
+  rabbitmq_data:
 </code></pre></div>
 <h2 id="volumes">Volumes</h2>
 <table>
@@ -1595,6 +1604,12 @@ volumes:
 <td>Named</td>
 <td>postgres</td>
 <td>Persistent database</td>
+</tr>
+<tr>
+<td>/var/lib/rabbitmq</td>
+<td>Named</td>
+<td>rabbitmq</td>
+<td>Persistent data for message queue</td>
 </tr>
 </tbody>
 </table>
@@ -1664,6 +1679,11 @@ For the full list of config file options, check out the <a href="../../configura
 <td>External API communication</td>
 <td>https://api.your.domain/api/v9</td>
 </tr>
+<tr>
+<td><code>rabbitmq.host</code></td>
+<td>Internal communication between Spacebar containers</td>
+<td>amqp://guest:guest@rabbitmq:5672</td>
+</tr>
 </tbody>
 </table>
 <ol>
@@ -1697,7 +1717,6 @@ We recommend copying this file somewhere safe, as updating the git repo will lik
 <p>Add the following service to the existing compose file:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span>fermi:
 <span class="w">    </span>image:<span class="w"> </span>fermi:latest
-<span class="w">    </span>env_file:<span class="w"> </span>.env
 <span class="w">    </span>networks:
 <span class="w">      </span>-<span class="w"> </span>spacebar-network
 <span class="w">    </span>volumes:
