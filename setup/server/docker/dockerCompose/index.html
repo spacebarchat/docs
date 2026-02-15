@@ -11,24 +11,24 @@
       
       
       
-        <link rel="prev" href="../database/">
+        <link rel="prev" href="../docker/">
       
       
-        <link rel="next" href="../email/">
+        <link rel="next" href="../../maintenance/">
       
-      <link rel="icon" href="../../../assets/favicon.svg">
+      <link rel="icon" href="../../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Running the server as a docker container - Spacebar Documentation</title>
+        <title>Docker Compose - Spacebar Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/extra.css">
+      <link rel="stylesheet" href="../../../../assets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-the-server-as-a-docker-container" class="md-skip">
+        <a href="#docker-compose" class="md-skip">
           Skip to content
         </a>
       
@@ -91,9 +91,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Spacebar Documentation" class="md-header__button md-logo" aria-label="Spacebar Documentation" data-md-component="logo">
+    <a href="../../../.." title="Spacebar Documentation" class="md-header__button md-logo" aria-label="Spacebar Documentation" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running the server as a docker container
+              Docker Compose
             
           </span>
         </div>
@@ -214,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Spacebar Documentation" class="md-nav__button md-logo" aria-label="Spacebar Documentation" data-md-component="logo">
+    <a href="../../../.." title="Spacebar Documentation" class="md-nav__button md-logo" aria-label="Spacebar Documentation" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     Spacebar Documentation
@@ -244,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faq/" class="md-nav__link">
+      <a href="../../../../faq/" class="md-nav__link">
         Frequently Asked Questions
       </a>
     </li>
@@ -274,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../routes/" class="md-nav__link">
+      <a href="../../../../routes/" class="md-nav__link">
         HTTP API Docs
       </a>
     </li>
@@ -315,7 +315,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../contributing/">Contributing</a>
+          <a href="../../../../contributing/">Contributing</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -336,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/conduct/" class="md-nav__link">
+      <a href="../../../../contributing/conduct/" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -350,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/instances/" class="md-nav__link">
+      <a href="../../../../contributing/instances/" class="md-nav__link">
         For Instance Owners
       </a>
     </li>
@@ -384,7 +384,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../contributing/server/">Server</a>
+          <a href="../../../../contributing/server/">Server</a>
           
             <label for="__nav_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -405,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/server/migrations/" class="md-nav__link">
+      <a href="../../../../contributing/server/migrations/" class="md-nav__link">
         Migrations
       </a>
     </li>
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/server/missingroute/" class="md-nav__link">
+      <a href="../../../../contributing/server/missingroute/" class="md-nav__link">
         Missing Routes
       </a>
     </li>
@@ -478,7 +478,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Setup</a>
+          <a href="../../../">Setup</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -517,7 +517,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../bots/">Bots</a>
+          <a href="../../../bots/">Bots</a>
           
             <label for="__nav_5_1">
               <span class="md-nav__icon md-icon"></span>
@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bots/usage/" class="md-nav__link">
+      <a href="../../../bots/usage/" class="md-nav__link">
         Bot and application usage
       </a>
     </li>
@@ -583,7 +583,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../clients/">Clients</a>
+          <a href="../../../clients/">Clients</a>
           
             <label for="__nav_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -622,7 +622,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../clients/fermi/">Fermi</a>
+          <a href="../../../clients/fermi/">Fermi</a>
           
             <label for="__nav_5_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -643,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clients/fermi/web/" class="md-nav__link">
+      <a href="../../../clients/fermi/web/" class="md-nav__link">
         Web Fermi
       </a>
     </li>
@@ -684,7 +684,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../clients/official/">Official</a>
+          <a href="../../../clients/official/">Official</a>
           
             <label for="__nav_5_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -705,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clients/official/legacy/" class="md-nav__link">
+      <a href="../../../clients/official/legacy/" class="md-nav__link">
         Legacy Client
       </a>
     </li>
@@ -719,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clients/official/react/" class="md-nav__link">
+      <a href="../../../clients/official/react/" class="md-nav__link">
         React Client
       </a>
     </li>
@@ -773,13 +773,13 @@
           
         
           
-        
-          
             
           
         
           
             
+          
+        
           
         
           
@@ -795,7 +795,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Server</a>
+          <a href="../../">Server</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -816,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/" class="md-nav__link">
+      <a href="../../database/" class="md-nav__link">
         Database
       </a>
     </li>
@@ -828,64 +828,9 @@
               
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Running the server as a docker container
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Running the server as a docker container
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bundle" class="md-nav__link">
-    Bundle
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
-      <a href="../email/" class="md-nav__link">
+      <a href="../../email/" class="md-nav__link">
         Email
       </a>
     </li>
@@ -899,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../npmScripts/" class="md-nav__link">
+      <a href="../../npmScripts/" class="md-nav__link">
         NPM scripts
       </a>
     </li>
@@ -913,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reverseProxy/" class="md-nav__link">
+      <a href="../../reverseProxy/" class="md-nav__link">
         Reverse Proxy
       </a>
     </li>
@@ -927,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systemd/" class="md-nav__link">
+      <a href="../../systemd/" class="md-nav__link">
         SystemD
       </a>
     </li>
@@ -941,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../voice/" class="md-nav__link">
+      <a href="../../voice/" class="md-nav__link">
         Voice
       </a>
     </li>
@@ -955,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wellknown/" class="md-nav__link">
+      <a href="../../wellknown/" class="md-nav__link">
         well-known
       </a>
     </li>
@@ -969,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adminApi/" class="md-nav__link">
+      <a href="../../adminApi/" class="md-nav__link">
         adminApi
       </a>
     </li>
@@ -990,7 +935,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_10" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_9" >
       
       
         
@@ -1011,16 +956,16 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../configuration/">Configuration</a>
+          <a href="../../configuration/">Configuration</a>
           
-            <label for="__nav_5_3_10">
+            <label for="__nav_5_3_9">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_9">
           <span class="md-nav__icon md-icon"></span>
           Configuration
         </label>
@@ -1032,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/embeds/" class="md-nav__link">
+      <a href="../../configuration/embeds/" class="md-nav__link">
         Embeds
       </a>
     </li>
@@ -1046,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/env/" class="md-nav__link">
+      <a href="../../configuration/env/" class="md-nav__link">
         Environment Variables
       </a>
     </li>
@@ -1060,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/guildFeatures/" class="md-nav__link">
+      <a href="../../configuration/guildFeatures/" class="md-nav__link">
         Guild Features
       </a>
     </li>
@@ -1074,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/imageProxy/" class="md-nav__link">
+      <a href="../../configuration/imageProxy/" class="md-nav__link">
         Image proxy
       </a>
     </li>
@@ -1088,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/rabbitmq/" class="md-nav__link">
+      <a href="../../configuration/rabbitmq/" class="md-nav__link">
         RabbitMQ
       </a>
     </li>
@@ -1102,9 +1047,165 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/userFlags/" class="md-nav__link">
+      <a href="../../configuration/userFlags/" class="md-nav__link">
         User Flags
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_10" checked>
+      
+      
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../docker/">Docker</a>
+          
+            <label for="__nav_5_3_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker Compose
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Docker Compose
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compose-file" class="md-nav__link">
+    Compose file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fermi" class="md-nav__link">
+    Fermi
+  </a>
+  
+    <nav class="md-nav" aria-label="Fermi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-fermi" class="md-nav__link">
+    Build Fermi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compose-file_1" class="md-nav__link">
+    Compose file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-proxy" class="md-nav__link">
+    Reverse Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finished" class="md-nav__link">
+    Finished
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1143,7 +1244,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../maintenance/">Maintenance</a>
+          <a href="../../maintenance/">Maintenance</a>
           
             <label for="__nav_5_3_11">
               <span class="md-nav__icon md-icon"></span>
@@ -1164,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/restart/" class="md-nav__link">
+      <a href="../../maintenance/restart/" class="md-nav__link">
         When must the server restart?
       </a>
     </li>
@@ -1178,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maintenance/updating/" class="md-nav__link">
+      <a href="../../maintenance/updating/" class="md-nav__link">
         Updating
       </a>
     </li>
@@ -1223,7 +1324,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../security/">Security</a>
+          <a href="../../security/">Security</a>
           
             <label for="__nav_5_3_12">
               <span class="md-nav__icon md-icon"></span>
@@ -1244,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/captcha/" class="md-nav__link">
+      <a href="../../security/captcha/" class="md-nav__link">
         CAPTCHAs
       </a>
     </li>
@@ -1258,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/limits/" class="md-nav__link">
+      <a href="../../security/limits/" class="md-nav__link">
         Rate Limiting
       </a>
     </li>
@@ -1272,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/regTokens/" class="md-nav__link">
+      <a href="../../security/regTokens/" class="md-nav__link">
         Registration Tokens
       </a>
     </li>
@@ -1286,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/rights/" class="md-nav__link">
+      <a href="../../security/rights/" class="md-nav__link">
         Rights
       </a>
     </li>
@@ -1341,9 +1442,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bundle" class="md-nav__link">
-    Bundle
+  <a href="#compose-file" class="md-nav__link">
+    Compose file
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fermi" class="md-nav__link">
+    Fermi
+  </a>
+  
+    <nav class="md-nav" aria-label="Fermi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-fermi" class="md-nav__link">
+    Build Fermi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compose-file_1" class="md-nav__link">
+    Compose file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-proxy" class="md-nav__link">
+    Reverse Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finished" class="md-nav__link">
+    Finished
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1365,55 +1521,198 @@
   
 
 
-<h1 id="running-the-server-as-a-docker-container">Running the server as a docker container</h1>
-<h2 id="bundle">Bundle</h2>
+<h1 id="docker-compose">Docker Compose</h1>
+<h2 id="compose-file">Compose file</h2>
+<div class="highlight"><pre><span></span><code>services:
+  spacebar-gateway:
+    image: ghcr.io/spacebarchat/server-gateway:latest
+    env_file: .env
+    networks:
+      - spacebar-network
+    volumes:
+      - ./data:/data
+    ports:
+      - &quot;3001:3001&quot;
+    restart:  unless-stopped
+
+  spacebar-api:
+    image: ghcr.io/spacebarchat/server-api:latest
+    env_file: .env
+    networks:
+      - spacebar-network
+    volumes:
+      - ./data:/data
+    ports:
+      - &quot;3002:3001&quot;
+    restart:  unless-stopped
+
+  spacebar-cdn:
+    image: ghcr.io/spacebarchat/server-cdn:latest
+    env_file: .env
+    networks:
+      - spacebar-network
+    volumes:
+      - ./data:/data
+    ports:
+      - &quot;3003:3001&quot;
+    restart:  unless-stopped
+
+  spacebar-db:
+    image: postgres:18-alpine
+    networks:
+      - spacebar-network
+    volumes:
+      - spacebar-db:/var/lib/postgresql
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    restart: unless-stopped
+
+networks:
+  spacebar-network:
+
+volumes:
+  spacebar-db:
+</code></pre></div>
+<h2 id="volumes">Volumes</h2>
+<table>
+<thead>
+<tr>
+<th>Mount</th>
+<th>Type</th>
+<th>Container(s)</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/data</td>
+<td>Bind</td>
+<td>spacebar-*</td>
+<td>All Spacebar persistent data</td>
+</tr>
+<tr>
+<td>/var/lib/postgresql</td>
+<td>Named</td>
+<td>postgres</td>
+<td>Persistent database</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setup">Setup</h2>
+<p>There's some prep to get things running the first time.</p>
 <ol>
-<li>
-<p>Add an isolated network to share between the server and the database:
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>spacebar-network
-</code></pre></div></p>
-</li>
-<li>
-<p>Set up a database for the server:
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--name<span class="w"> </span>spacebar-db<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--network<span class="w"> </span>spacebar-network<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>spacebar-db:/var/lib/postgresql<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>postgres:alpine
-</code></pre></div></p>
-</li>
-<li>
-<p>Run the server docker image to let it generate the config:
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--name<span class="w"> </span>spacebar-server<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--network<span class="w"> </span>spacebar-network<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span>postgres://postgres:postgres@spacebar-db/postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>/config/config.json<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./config:/config<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./data:/data<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>ghcr.io/spacebarchat/server
-</code></pre></div></p>
-</li>
-<li>
-<p>Set config values for <code>general_serverName</code>, <code>cdn_endpointPublic</code>, <code>cdn_endpointPrivate</code> to <code>http://localhost:3001</code>, <code>api_endpointPublic</code> to <code>http://localhost:3001/api/v9</code> and <code>gateway_endpointPublic</code> to <code>ws://localhost:3001</code></p>
-</li>
-<li>
-<p>Run the server docker image after the config changes:
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--name<span class="w"> </span>spacebar-server<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--network<span class="w"> </span>spacebar-network<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span>postgres://postgres:postgres@spacebar-db/postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>/config/config.json<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./config:/config<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>./data/:/data<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-p<span class="w"> </span><span class="m">3001</span>:3001<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>ghcr.io/spacebarchat/server
-</code></pre></div></p>
-</li>
+<li>First steps:</li>
 </ol>
+<p>Before anything, make sure you have a domain to use, and are familiar with creating subdomains and setting up
+a reverse proxy (like NGINX or Caddy) to point to the containers. Due to the very, <em>very</em> many ways this can be
+done, we won't cover specifics here, but you'll need to point <code>your.domain</code> (placeholder) to the following
+subdomains and ports:</p>
+<p><code>spacebar.your.domain</code> -&gt; <code>localhost:3001</code><br />
+<code>api.your.domain</code> -&gt; <code>localhost:3002</code><br />
+<code>cdn.your.domain</code> -&gt; <code>localhost:3003</code></p>
+<p>Create the .env file with the following variables:
+<div class="highlight"><pre><span></span><code><span class="nv">DATABASE</span><span class="o">=</span>postgres://postgres:postgres@spacebar-db/postgres
+<span class="nv">CONFIG_PATH</span><span class="o">=</span>config.json
+</code></pre></div></p>
+<p>Run the compose setup for a minute to generate the other required files:
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
+Wait until the logs stop moving and it looks like it's finished setting up, then <code>ctrl+c</code> to exit.</p>
+<p>This will place a few files into the <code>./data</code> bind, including <code>jwt.key</code> and <code>jwt.key.pub</code>, along with a fresh 
+<code>config.json</code> file.</p>
+<ol>
+<li>Edit the <code>config.json</code> file with your server information
+This covers only what's different for a Docker Compose setup compared to a baremetal install.
+For the full list of config file options, check out the <a href="../../configuration/">configuration settings</a></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gateway.endpointPrivate</code></td>
+<td>Internal (e.g. api-to-cdn) gateway communication</td>
+<td>ws://spacebar-gateway:3001</td>
+</tr>
+<tr>
+<td><code>gateway.endpointPublic</code></td>
+<td>External (e.g. from a user) gateway communication</td>
+<td>wss://spacebar.your.domain</td>
+</tr>
+<tr>
+<td><code>cdn.endpointPrivate</code></td>
+<td>Internal CDN communication</td>
+<td>http://spacebar-cdn:3001</td>
+</tr>
+<tr>
+<td><code>cdn.gatewayPublic</code></td>
+<td>External CDN communication</td>
+<td>https://cdn.your.domain</td>
+</tr>
+<tr>
+<td><code>api.endpointPrivate</code></td>
+<td>Internal API communication</td>
+<td>http://spacebar-api:3001/api/v9</td>
+</tr>
+<tr>
+<td><code>api.endpointPublic</code></td>
+<td>External API communication</td>
+<td>https://api.your.domain/api/v9</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Bring up the containers
+Everything should be good to go. Run the following command to start the containers running in the background.
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></li>
+</ol>
+<h2 id="fermi">Fermi</h2>
+<ol>
+<li>If you want to host Fermi, the web client for Spacebar, as well
+Spacebar needs a client to connect to it for it to be used. Spacebar doesn't come with one by default, so you'll need
+one like Fermi. It can be added to this compose setup pretty easily.</li>
+</ol>
+<h3 id="build-fermi">Build Fermi</h3>
+<p>Fermi doesn't have a native Docker image just yet, so we have to build it ourselves.</p>
+<p>Clone the git repository:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MathMan05/Fermi.git
+</code></pre></div></p>
+<p>Create a new <code>fermi</code> directory in the same place as the docker-compose.yml and create an empty <code>uptime.json</code> file:
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>fermi
+touch<span class="w"> </span>fermi/uptime.json
+</code></pre></div></p>
+<p>Edit the <code>instances.json</code> file in the repository to include your new server. Read the details on how to do
+that <a href="https://github.com/MathMan05/Fermi/blob/main/InstanceInfo.md">in the Fermi GitHub</a>.
+We recommend copying this file somewhere safe, as updating the git repo will likely overwrite these changes.</p>
+<p>Build the Docker image:
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>fermi:latest<span class="w"> </span>.
+</code></pre></div></p>
+<h3 id="compose-file_1">Compose file</h3>
+<p>Add the following service to the existing compose file:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>fermi:
+<span class="w">    </span>image:<span class="w"> </span>fermi:latest
+<span class="w">    </span>env_file:<span class="w"> </span>.env
+<span class="w">    </span>networks:
+<span class="w">      </span>-<span class="w"> </span>spacebar-network
+<span class="w">    </span>volumes:
+<span class="w">      </span>-<span class="w"> </span>./fermi/uptime.json:/exec/uptime.json
+<span class="w">    </span>ports:
+<span class="w">      </span>-<span class="w"> </span><span class="m">8080</span>:8080
+<span class="w">    </span>restart:<span class="w"> </span>unless-stopped
+</code></pre></div>
+<h3 id="reverse-proxy">Reverse Proxy</h3>
+<p>Add another route to your reverse proxy pointing your domain or subdomain to the new Fermi port, <code>8080</code>.
+Most people use the <code>app.your.domain</code> subdomain for Fermi, but you can also use the plain domain itself if you won't
+be using it for something else.</p>
+<h3 id="finished">Finished</h3>
+<p>After restarting the compose, or starting it for the first time if you read ahead, you should be able to open up 
+the Fermi app and connect to your Spacebar instance. </p>
 
 
 
@@ -1456,10 +1755,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
