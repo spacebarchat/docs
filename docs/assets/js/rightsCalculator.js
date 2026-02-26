@@ -6,14 +6,29 @@
 		// grab the table data elements
 		[...document.querySelectorAll("td")]
 			.map((x) => x.innerText) // get their content
-			.map((x, i) =>
-				x.indexOf("<<") == 2 // if this column is the `value` column
-					? x.split(" ").reverse()[0] // get the value we shift by
-					: x,
-			); // otherwise dont do anything
+			.map(
+				(x, i) =>
+					x.indexOf("<<") == 2 // if this column is the `value` column
+						? x.split(" ").reverse()[0] // get the value we shift by
+						: x, // otherwise dont do anything
+			);
+
 	const mount = document.getElementById("rights-container");
 	const outputMount = document.getElementById("rights-output");
 	var calculated = 0n;
+
+	const calcBitsFromInput = () => {
+		const value = BigInt(outputMount.value);
+		calculated = value;
+
+		for (const div of mount.children) {
+			const toggle = div.children[0];
+			const flag = BigInt(toggle.getAttribute("id"));
+			toggle.checked = ((value >> flag) & 1n) != 0n;
+		}
+	};
+
+	outputMount.addEventListener("input", calcBitsFromInput);
 
 	for (var i = 0; i < rights.length; i += NUM_COLUMNS) {
 		const name = rights[i];
@@ -25,7 +40,7 @@
 		input.setAttribute("type", "checkbox");
 		input.setAttribute("id", shift);
 		const label = document.createElement("label");
-		label.setAttribute("for", label.id);
+		label.setAttribute("for", input.id);
 		label.innerText = name.toUpperCase();
 
 		div.appendChild(input);
@@ -44,13 +59,14 @@
 					}
 					event.target.removeAttribute("disabled");
 
-					outputMount.innerText = "1";
+					calculated++;
+					outputMount.value = "1";
 					return;
 				} else {
 					for (var elem of mount.children) {
 						elem.children[0].removeAttribute("disabled");
 					}
-					outputMount.innerText = calculated;
+					outputMount.value = --calculated;
 					return;
 				}
 			}
@@ -59,7 +75,10 @@
 				? calculated + value
 				: calculated - value;
 
-			outputMount.innerText = calculated;
+			outputMount.value = calculated;
 		});
 	}
+
+	// if you reload the page, your input is still present.
+	calcBitsFromInput();
 })();

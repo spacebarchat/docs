@@ -1,144 +1,372 @@
 # Configuration
 
-Fosscord's configuration is done through the `config` table of your database.
-The table schema consists of two columns `key` and `value`, where `value` is a JSON value.
-For now, you can update this through SQL manually or a GUI database editor such as
-[DBeaver](https://dbeaver.io/).
+{{ project.name }} is configured via a JSON file. Use the `CONFIG_PATH` [environment variable](env.md) to set the path to the JSON file.
 
-!!! note "The `CONFIG_PATH` [environment variable](env.md) can be set to make Fosscord use a JSON file instead of a database table."
+## Schema
 
-## Array Types
+The JSON file has the following top-level sections:
 
-Arrays are represented by \_[number] in a config key. For example, multiple `guild_defaultFeatures` may be assigned such as
+| key             | description                      |
+| --------------- | -------------------------------- |
+| `gateway`       | Options for the gateway service  |
+| `cdn`           | Options for the CDN service      |
+| `api`           | Options for the API service      |
+| `general`       | General-purpose options          |
+| `limits`        | Limits imposed on users          |
+| `metrics`       | Options for metric collection    |
+| `security`      | Security options                 |
+| `login`         | Login options                    |
+| `register`      | Registration options             |
+| `regions`       | Voice chat server region options |
+| `guild`         | Guild options                    |
+| `gif`           | GIF search options               |
+| `rabbitmq`      | RabbitMQ options                 |
+| `templates`     | Guild template options           |
+| `sentry`        | Sentry analytics options         |
+| `defaults`      | User and guild defaults          |
+| `external`      | Embed provider options           |
+| `email`         | Options for sending emails       |
+| `passwordReset` | Password reset options           |
 
-| key                       | value           |
-| ------------------------- | --------------- |
-| `guild_defaultFeatures_0` | `DISCOVERABLE`  |
-| `guild_defaultFeatures_1` | `ANIMATED_ICON` |
-| etc                       | etc             |
+### Gateway Options (`gateway`)
 
-## Available Configuration Options
+| key                            | default          | type          | description                                              |
+| ------------------------------ | ---------------- | ------------- | -------------------------------------------------------- |
+| `endpointPrivate`              | null             | string        | Used for internal communication with gateway             |
+| `endpointPublic`               | null             | string        | Publicly announced gateway endpoint                      |
 
-| key                                                | default                                                  | type                   | description                                                           |
-| -------------------------------------------------- | -------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------- |
-| gateway_endpointClient                             | null                                                     | string                 | Injected into index.html if available                                 |
-| gateway_endpointPrivate                            | null                                                     | string                 | Used for internal communication with gateway                          |
-| gateway_endpointPublic                             | null                                                     | string                 | Publicly announced gateway endpoint                                   |
-| cdn_endpointClient                                 | null                                                     | string                 | See gateway_endpointClient                                            |
-| cdn_endpointPrivate                                | http://localhost:3001                                    | string                 | See gateway_endpointPrivate                                           |
-| cdn_endpointPublic                                 | http://localhost:3001                                    | string                 | See gateway_endpointPublic                                            |
-| cdn_resizeHeightMax                                | 1000                                                     | number                 | Maximum image resize height for embeds.                               |
-| cdn_resizeWidthMax                                 | 1000                                                     | number                 | Maximum image resize width for embeds.                                |
-| [cdn_imagorServerUrl](imagor.md)                   | null                                                     | string                 | Imagor instance endpoint for external image resizing.                 |
-| api_defaultVersion                                 | 9                                                        | string                 | API version to use when not specified                                 |
-| api_activeVersions_0                               | 6, 7, 8, 9                                               | string[]               | Allowed API version numbers. [Array](#array-types).                   |
-| general_instanceName                               | Fosscord Instance                                        | string                 | Announced instance name                                               |
-| general_instanceDescription                        | This is a Fosscord instance made in the pre-release days | string                 | Announced instance description                                        |
-| general_frontPage                                  | null                                                     | string                 | Announced instance front page                                         |
-| general_tosPage                                    | null                                                     | string                 | Announced instance TOS page                                           |
-| general_correspondenceEmail                        | null                                                     | string                 | Announced instance correspondence email                               |
-| general_correspondenceUserID                       | null                                                     | string                 | Announced instance correspondence ID (from this instance)             |
-| general_image                                      | null                                                     | string                 | Announced instance image URL                                          |
-| general_instanceId                                 | Snowflake of instance creation date                      | Snowflake              | Announced instance ID                                                 |
-| limits_user_maxGuilds                              | 1048576                                                  | number                 | Maxmimum guilds a user can join                                       |
-| limits_user_maxUsername                            | 127                                                      | number                 | Maximum username length                                               |
-| limits_user_maxFriends                             | 5000                                                     | number                 | Maximum number of friends per user                                    |
-| limits_guild_maxRoles                              | 1000                                                     | number                 | Maximum number of roles in a guild                                    |
-| limits_guild_maxEmojis                             | 2000                                                     | number                 | Maximum number of emojis in a guild                                   |
-| limits_guild_maxMembers                            | 25000000                                                 | number                 | Maximum number of members in a guild                                  |
-| limits_guild_maxChannels                           | 65535                                                    | number                 | Maximum number of channels in a guild                                 |
-| limits_guild_maxChannelsInCategory                 | 65535                                                    | number                 | Maximum number of channels per category in a guild                    |
-| limits_message_maxCharacters                       | 1048576                                                  | number                 | Maximum character count per message                                   |
-| limits_message_maxTTSCharacters                    | 160                                                      | number                 | Maximum character count per text to speech messages                   |
-| limits_message_maxReactions                        | 2048                                                     | number                 | Maximum number of reactions per message                               |
-| limits_message_maxAttachmentSize                   | 1073741824                                               | number                 | Maximum total attachment size per message                             |
-| limits_message_maxBulkDelete                       | 1000                                                     | number                 | Maximum number of messages deletable through bulk delete              |
-| limits_message_maxEmbedDownloadSize                | 5242880                                                  | number                 | Maximum download size of external embeddable content                  |
-| limits_channel_maxPins                             | 500                                                      | number                 | Maximum number of pins per channel                                    |
-| limits_channel_maxTopic                            | 1024                                                     | number                 | Maximum channel topic character length                                |
-| limits_channel_maxWebhooks                         | 100                                                      | number                 | Maximum number of webhooks per channel                                |
-| limits_rate_enabled                                | true                                                     | boolean                | Whether rate limits are enabled                                       |
-| limits_rate_ip_count                               | 500                                                      | number                 | Allowed number of requests per IP within window                       |
-| limits_rate_ip_window                              | 5                                                        | number                 | IP rate limit window, in seconds                                      |
-| limits_rate_global_count                           | 250                                                      | number                 | Allowed number of requests globally within window                     |
-| limits_rate_global_window                          | 5                                                        | number                 | Global rate limit window, in seconds                                  |
-| limits_rate_error_count                            | 10                                                       | number                 | Number of allowed errors per user within window                       |
-| limits_rate_error_window                           | 5                                                        | number                 | User error rate limit window, in seconds                              |
-| limits_rate_routes_guild_count                     | 5                                                        | number                 | Allowed number of /guild\* requests per user within window            |
-| limits_rate_routes_guild_window                    | 5                                                        | number                 | User /guild\* rate limit window, in seconds                           |
-| limits_rate_routes_webhook_count                   | 10                                                       | number                 | Allowed number of /webhooks\* requests per user within window         |
-| limits_rate_routes_webhook_window                  | 5                                                        | number                 | User /webhooks\* rate limit window, in seconds                        |
-| limits_rate_routes_channel_count                   | 10                                                       | number                 | Allowed number of /channel\* requests per user within window          |
-| limits_rate_routes_channel_window                  | 5                                                        | number                 | User /channel\* rate limit window, in seconds                         |
-| limits_rate_routes_auth_login_count                | 5                                                        | number                 | Allowed number of IP /login requests within window                    |
-| limits_rate_routes_auth_login_window               | 60                                                       | number                 | IP /login rate limit window, in seconds                               |
-| limits_rate_routes_auth_register_count             | 2                                                        | number                 | Allowed number of IP /register requests within window                 |
-| limits_rate_routes_auth_register_window            | 43200                                                    | number                 | IP /register rate limit window, in seconds                            |
-| limits_absoluteRate_register_limit                 | 25                                                       | number                 | Absolute number of registrations instance-wide per window             |
-| limits_absoluteRate_register_window                | 3600000                                                  | number                 | Global /register rate limit window, in seconds                        |
-| limits_absoluteRate_register_enabled               | true                                                     | boolean                | Whether absolute register rate limits are enabled                     |
-| limits_absoluteRate_sendMessage_limit              | 200                                                      | number                 | Absolute number of messages instance-wide per window                  |
-| limits_absoluteRate_sendMessage_window             | 60000                                                    | number                 | Global sendMessage window, in seconds                                 |
-| limits_absoluteRate_sendMessage_enabled            | true                                                     | boolean                | Whether absolute message sending rate limits are enabled              |
-| [security_captcha_enabled](../security/captcha.md) | false                                                    | boolean                | Whether to enable captchas for login/register                         |
-| security_captcha_service                           | null                                                     | "recaptcha"/"hcaptcha" | Which captcha service to use                                          |
-| security_captcha_sitekey                           | null                                                     | string                 | Captcha service sitekey                                               |
-| security_captcha_secret                            | null                                                     | string                 | Captcha service secret                                                |
-| security_twoFactor_generateBackupCodes             | true                                                     | boolean                | Whether to generate backup codes for MFA users                        |
-| security_requestSignature                          | Secret secret                                            | string                 | The signature required for CDN or [Imagor](imagor.md) usage           |
-| security_jwtSecret                                 | Secure secret                                            | string                 | The secret used for user token generation                             |
-| [security_forwadedFor](../reverseProxy.md)         | null                                                     | string                 | HTTP header for user's real IP.                                       |
-| security_ipdataApiKey                              | Fosscord IPdata key                                      | string                 | API key used for IP geolocation and proxy detection                   |
-| security_mfaBackupCodeCount                        | 10                                                       | number                 | Number of MFA backup codes to generate                                |
-| security_statsWorldReadable                        | true                                                     | boolean                | Whether instance stats are publically accessible or require right     |
-| security_defaultRegistrationTokenExpiration        | 604800000                                                | number                 | Seconds for [registration tokens](../security/regTokens.md) to expire |
-| login_requireCaptcha                               | false                                                    | boolean                | Whether login requires captcha verification                           |
-| register_email_required                            | false                                                    | boolean                | Whether an email is required for registration                         |
-| register_email_allowlist                           | false                                                    | boolean                | Whether `register_email_domains` is an allowlist                      |
-| register_email_blocklist                           | true                                                     | boolean                | Whether `register_email_domains` is a blocklist                       |
-| register_email_domains                             | []                                                       | string[]               | The email domains list to use as a block/allow list                   |
-| register_dateOfBirth_required                      | true                                                     | boolean                | Whether a date of birth is required for registration                  |
-| register_dateOfBirth_minimum                       | 13                                                       | number                 | The minimum age of registration                                       |
-| register_password_required                         | false                                                    | boolean                | Whether a password is required for registration                       |
-| register_password_minLength                        | 8                                                        | number                 | Minimum password length                                               |
-| register_password_minNumbers                       | 2                                                        | number                 | Minimum number of number characters in passwords                      |
-| register_password_minUpperCase                     | 2                                                        | number                 | Minimum number of uppercase characters in passwords                   |
-| register_password_minSymbols                       | 0                                                        | number                 | Minimum number of symbols in passwords                                |
-| register_disabled                                  | false                                                    | boolean                | Whether registration is disabled                                      |
-| register_requireCaptcha                            | true                                                     | boolean                | Whether registration requires captcha verification                    |
-| register_requireInvite                             | false                                                    | boolean                | Whether registration requires a guild invite                          |
-| register_guestsRequireInvite                       | true                                                     | boolean                | Whether guests accounts require a guild invite                        |
-| register_allowMultipleAccounts                     | true                                                     | boolean                | Allow multiple accounts with the same client fingerprint              |
-| register_blockProxies                              | true                                                     | boolean                | Whether proxies are blocked from registration                         |
-| register_incrementingDiscriminators                | false                                                    | boolean                | Whether discriminators are random or incrementing                     |
-| [register_defaultRights](../security/rights.md)    | 30644591655940                                           | string                 | The rights assigned to users _upon registration_                      |
-| regions_default                                    | fosscord                                                 | string                 | The default voice region to use                                       |
-| regions_useDefaultAsOptimal                        | true                                                     | boolean                | Whether to calculate closest or use default as optimal voice region   |
-| regions_available_0_id                             | fosscord                                                 | string[]               | The available voice region IDs                                        |
-| regions_available_0_name                           | Fosscord                                                 | string[]               | The available voice region names                                      |
-| regions_available_0_endpoint                       | 127.0.0.1:3004                                           | string[]               | The available voice region endpoint URLs                              |
-| regions_available_0_vip                            | false                                                    | boolean[]              | Whether this voice region is VIP exclusive                            |
-| regions_available_0_custom                         | false                                                    | boolean[]              | Whether this is a custom voice region (used for events/etc)           |
-| regions_available_0_deprecated                     | false                                                    | boolean[]              | Whether this is a deprecated voice region (clients avoid these)       |
-| guild_discovery_showAllGuilds                      | false                                                    | boolean                | Whether guild discovery should show all guilds                        |
-| guild_discovery_limit                              | 24                                                       | number                 | Maximum number of guild discovery elements per page                   |
-| guild_autoJoin_enabled                             | true                                                     | boolean                | Whether users auto join guild(s) on registration                      |
-| guild_autoJoin_canLeave                            | true                                                     | boolean                | Whether users can leave the auto-joined guild(s)                      |
-| [guild_defaultFeatures_0](guildFeatures.md)        | null                                                     | string                 | Features automatically granted to guilds upon creation                |
-| gif_enabled                                        | true                                                     | boolean                | Whether GIF features are enabled                                      |
-| gif_provider                                       | tenor                                                    | "tenor"                | Which GIF service to use                                              |
-| gif_apiKey                                         | LIVDSRZULELA                                             | string                 | GIF service API key                                                   |
-| [rabbitmq_host](rabbitmq.md)                       | null                                                     | string                 | RabbitMQ connection string                                            |
-| templates_enabled                                  | true                                                     | boolean                | Whether guild templates are enabled                                   |
-| templates_allowTemplateCreation                    | true                                                     | boolean                | Whether new guild templates can be created                            |
-| templates_allowDiscordTemplates                    | true                                                     | boolean                | Whether guild templates from Discord.com can be fetched               |
-| [templates_allowRaws](/concepts/guildTemplates.md) | true                                                     | boolean                | Whether raw guild templates are allowed                               |
-| client_useTestClient                               | false                                                    | boolean                | Whether the Discord.com test client is enabled                        |
-| sentry_enabled                                     | false                                                    | boolean                | Whether server-side Sentry analytics is enabled                       |
-| sentry_endpoint                                    | Fosscord sentry endpoint                                 | string                 | Sentry endpoint                                                       |
-| sentry_traceSampleRate                             | 1                                                        | number                 | Sentry sample rate (1 means all requests)                             |
-| sentry_environment                                 | System hostname                                          | string                 | Sentry environment name                                               |
-| defaults_user_premium                              | false                                                    | boolean                | Whether users are given premium upon registration                     |
-| defaults_user_premium_type                         | 2                                                        | number                 | The premium type given to users upon registration                     |
-| defaults_user_verified                             | true                                                     | boolean                | Whether users get verified email upon registration                    |
-| [external_twitter](embeds.md)                      | null                                                     | string                 | Twitter API key used for Twitter embeds                               |
+
+### CDN Options (`cdn`)
+
+| key                                | default          | type          | description                                              |
+| ---------------------------------- | ---------------- | ------------- | -------------------------------------------------------- |
+| `endpointPrivate`                  | null             | string        | CDN endpoint. See `gateway.endpointPrivate`              |
+| `endpointPublic`                   | null             | string        | CDN endpoint. See `gateway.endpointPublic`               |
+| `resizeHeightMax`                  | 1000             | number        | Maximum image resize height for embeds.                  |
+| `resizeWidthMax`                   | 1000             | number        | Maximum image resize width for embeds.                   |
+| [`imagorServerUrl`](imageProxy.md) | null             | string        | Endpoint to proxy embed images, e.g. using Imagor.       |
+
+
+### API Options (`api`)
+
+| key                                | default          | type          | description                                                |
+| ---------------------------------- | ---------------- | ------------- | ---------------------------------------------------------- |
+| `defaultVersion`                   | 9                | string        | API version to use when not specified                      |
+| `activeVersions`                   | 6, 7, 8, 9       | string[]      | Allowed API version numbers                                |
+| `endpointPublic`                   | null             | string        | Endpoint the API is available at, usually `<Base URL>/api` |
+
+
+### General Options (`general`)
+
+| key                        | default                                                            | type          | description                                                |
+| -------------------------- | ------------------------------------------------------------------ | ------------- | ---------------------------------------------------------- |
+| `instanceName`             | {{ project.name }} Instance                                        | string        | Announced instance name                                                       |
+| `instanceDescription`      | This is a {{ project.name }} instance made in the pre-release days | string        | Announced instance description                                                |
+| `frontPage`                | null                                                               | string        | Announced instance front page                                                 |
+| `tosPage`                  | null                                                               | string        | Announced instance TOS page                                                   |
+| `correspondenceEmail`      | null                                                               | string        | Announced instance correspondence email                                       |
+| `correspondenceUserID`     | null                                                               | Snowflake     | Announced instance correspondence user ID (from this instance)                |
+| `image`                    | null                                                               | string        | Announced instance image URL                                                  |
+| `instanceId`               | Snowflake of instance creation date                                | Snowflake     | Announced instance ID. Deprecated.                                            |
+| `autoCreateBotUsers`       | false                                                              | boolean       | Whether to automatically create a bot when creating an application    |
+
+
+### Limits Options (`limits`)
+
+| key                                    | default          | type          | description                                                   |
+| -------------------------------------- | ---------------- | ------------- | ------------------------------------------------------------- |
+| `user.maxGuilds`                       | 1048576          | number        | Maxmimum guilds a user can join                               |
+| `user.maxUsername`                     | 32               | number        | Maximum username length                                       |
+| `user.maxFriends`                      | 5000             | number        | Maximum number of friends per user                            |
+| `guild.maxRoles`                       | 1000             | number        | Maximum number of roles in a guild                            |
+| `guild.maxEmojis`                      | 2000             | number        | Maximum number of emojis in a guild                           |
+| `guild.maxMembers`                     | 25000000         | number        | Maximum number of members in a guild                          |
+| `guild.maxChannels`                    | 65535            | number        | Maximum number of channels in a guild                         |
+| `guild.maxChannelsInCategory`          | 65535            | number        | Maximum number of channels per category in a guild            |
+| `message.maxCharacters`                | 1048576          | number        | Maximum character count per message                           |
+| `message.maxTTSCharacters`             | 160              | number        | Maximum character count per text to speech messages           |
+| `message.maxReactions`                 | 2048             | number        | Maximum number of reactions per message                       |
+| `message.maxAttachmentSize`            | 1073741824       | number        | Maximum total attachment size per message                     |
+| `message.maxBulkDelete`                | 1000             | number        | Maximum number of messages deletable through bulk delete      |
+| `message.maxEmbedDownloadSize`         | 5242880          | number        | Maximum download size of external embeddable content          |
+| `channel.maxPins`                      | 500              | number        | Maximum number of pins per channel                            |
+| `channel.maxTopic`                     | 1024             | number        | Maximum channel topic character length                        |
+| `channel.maxWebhooks`                  | 100              | number        | Maximum number of webhooks per channel                        |
+| `rate.enabled`                         | false            | boolean       | Whether rate limits are enabled                               |
+| `rate.ip.count`                        | 500              | number        | Allowed number of requests per IP within window               |
+| `rate.ip.window`                       | 5                | number        | IP rate limit window, in seconds                              |
+| `rate.global.count`                    | 250              | number        | Allowed number of requests globally within window             |
+| `rate.global.window`                   | 5                | number        | Global rate limit window, in seconds                          |
+| `rate.error.count`                     | 10               | number        | Number of allowed errors per user within window               |
+| `rate.error.window`                    | 5                | number        | User error rate limit window, in seconds                      |
+| `rate.routes.guild.count`              | 5                | number        | Allowed number of /guild\* requests per user within window    |
+| `rate.routes.guild.window`             | 5                | number        | User /guild\* rate limit window, in seconds                   |
+| `rate.routes.webhook.count`            | 10               | number        | Allowed number of /webhooks\* requests per user within window |
+| `rate.routes.webhook.window`           | 5                | number        | User /webhooks\* rate limit window, in seconds                |
+| `rate.routes.channel.count`            | 10               | number        | Allowed number of /channel\* requests per user within window  |
+| `rate.routes.channel.window`           | 5                | number        | User /channel\* rate limit window, in seconds                 |
+| `rate.routes.auth.login.count`         | 5                | number        | Allowed number of IP /login requests within window            |
+| `rate.routes.auth.login.window`        | 60               | number        | IP /login rate limit window, in seconds                       |
+| `rate.routes.auth.register.count`      | 2                | number        | Allowed number of IP /register requests within window         |
+| `rate.routes.auth.register.window`     | 43200            | number        | IP /register rate limit window, in seconds                    |
+| `absoluteRate.register.limit`          | 25               | number        | Absolute number of registrations instance-wide per window     |
+| `absoluteRate.register.window`         | 3600000          | number        | Global /register rate limit window, in milliseconds           |
+| `absoluteRate.register.enabled`        | true             | boolean       | Whether absolute register rate limits are enabled             |
+| `absoluteRate.sendMessage.limit`       | 200              | number        | Absolute number of messages instance-wide per window          |
+| `absoluteRate.sendMessage.window`      | 60000            | number        | Global sendMessage window, in milliseconds                    |
+| `absoluteRate.sendMessage.enabled`     | true             | boolean       | Whether absolute message sending rate limits are enabled      |
+
+
+### Metrics Options (`metrics`)
+
+
+| key                                | default          | type          | description                                                |
+| ---------------------------------- | ---------------- | ------------- | ---------------------------------------------------------- |
+| `timeout`                          | 30000            | number        | Currently unused                                           |
+
+
+### Security Options (`security`)
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| [`captcha.enabled`](../security/captcha.md) | false                         | boolean                 | Whether to enable captchas for login/register                         |
+| `captcha.service`                           | null                          | "recaptcha", "hcaptcha" | Which captcha service to use                                          |
+| `captcha.sitekey`                           | null                          | string                  | Captcha service sitekey                                               |
+| `captcha.secret`                            | null                          | string                  | Captcha service secret                                                |
+| `twoFactor.generateBackupCodes`             | true                          | boolean                 | Whether to generate backup codes for MFA users                        |
+| `autoUpdate`                                | true                          | boolean                 | Automatically updates NPM packages daily. Currently unused            |
+| `requestSignature`                          | Random secret                 | string                  | The signature required for CDN or [Imagor](imageProxy.md) usage       |
+| `jwtSecret`                                 | Random secret                 | string                  | The secret used for user token generation                             |
+| [`forwardedFor`](../reverseProxy.md)        | null                          | string                  | HTTP header for user's real IP                                        |
+| `ipdataApiKey`                              | {{ project.name }} IPdata key | string                  | API key used for IP geolocation and proxy detection                   |
+| `mfaBackupCodeCount`                        | 10                            | number                  | Number of MFA backup codes to generate                                |
+| `statsWorldReadable`                        | true                          | boolean                 | Whether instance stats are publically accessible or require right     |
+| `defaultRegistrationTokenExpiration`        | 604800000                     | number                  | [Registration token](../security/regTokens.md) expiry in milliseconds |
+
+
+### Login Options (`login`)
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `requireCaptcha`                            | false                         | boolean                 | Whether login requires captcha verification                           |
+| `requireVerification`                       | false                         | boolean                 | Whether login requires email verification                             |
+
+
+### Registration Options (`register`)
+
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `email.required`                            | false                         | boolean                 | Whether an email is required for registration                         |
+| `email.allowlist`                           | false                         | boolean                 | Whether `register_email_domains` is an allowlist                      |
+| `email.blocklist`                           | true                          | boolean                 | Whether `register_email_domains` is a blocklist                       |
+| `email.domains`                             | []                            | string[]                | The email domains list to use as a block/allow list                   |
+| `dateOfBirth.required`                      | true                          | boolean                 | Whether a date of birth is required for registration                  |
+| `dateOfBirth.minimum`                       | 13                            | number                  | The minimum age of registration                                       |
+| `password.required`                         | false                         | boolean                 | Whether a password is required for registration                       |
+| `password.minLength`                        | 8                             | number                  | Minimum password length                                               |
+| `password.minNumbers`                       | 2                             | number                  | Minimum number of number characters in passwords                      |
+| `password.minUpperCase`                     | 2                             | number                  | Minimum number of uppercase characters in passwords                   |
+| `password.minSymbols`                       | 0                             | number                  | Minimum number of symbols in passwords                                |
+| `disabled`                                  | false                         | boolean                 | Whether registration is disabled                                      |
+| `requireCaptcha`                            | true                          | boolean                 | Whether registration requires captcha verification                    |
+| `requireInvite`                             | false                         | boolean                 | Whether registration requires a guild invite                          |
+| `guestsRequireInvite`                       | true                          | boolean                 | Whether guests accounts require a guild invite                        |
+| `allowNewRegistration`                      | true                          | boolean                 | Whether registration is enabled. Deprecated, use `register_disabled`. |
+| `allowMultipleAccounts`                     | true                          | boolean                 | Allow multiple accounts with the same client fingerprint              |
+| `blockProxies`                              | true                          | boolean                 | Whether proxies are blocked from registration                         |
+| `incrementingDiscriminators`                | false                         | boolean                 | Whether discriminators are random or incrementing                     |
+| [`defaultRights`](../security/rights.md)    | 875069521787904               | string                  | The rights assigned to users _upon registration_                      |
+
+
+### Voice Region Options (`regions`)
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `default`                                   | {{ project.name.lower() }}    | string                  | The default voice region to use                                       |
+| `useDefaultAsOptimal`                       | true                          | boolean                 | Whether to calculate closest or use default as optimal voice region   |
+| `available`                                 | []                            | Region[] (see below)    | Advertised voice regions                                              |
+
+
+Regions are defined with the following structure
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `id`                                        | {{ project.name.lower() }}    | string                  | The available voice region IDs                                        |
+| `name`                                      | {{ project.name }}            | string                  | The available voice region names                                      |
+| `endpoint`                                  | 127.0.0.1:3004                | string                  | The available voice region endpoint URLs                              |
+| `vip`                                       | false                         | boolean                 | Whether this voice region is VIP exclusive                            |
+| `custom`                                    | false                         | boolean                 | Whether this is a custom voice region (used for events/etc)           |
+| `deprecated`                                | false                         | boolean                 | Whether this is a deprecated voice region (clients avoid these)       |
+
+
+### Guild Options (`guild`)
+
+| key                                         | default                       | type                    | description                                                           |
+| ------------------------------------------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `discovery.showAllGuilds`                   | false                         | boolean                 | Whether guild discovery shows guilds without the DISCOVERABLE feature |
+| `discovery.useRecommendation`               | false                         | boolean                 | Currently unused                                                      |
+| `discovery.offset`                          | 0                             | number                  | Default offset when returning discoverable guilds. Currently unused   |
+| `discovery.limit`                           | 24                            | number                  | Maximum number of guild discovery elements per page                   |
+| `autoJoin.enabled`                          | true                          | boolean                 | Whether users auto join guild(s) on registration                      |
+| `autoJoin.canLeave`                         | true                          | boolean                 | Whether users can leave the auto-joined guild(s)                      |
+| [`defaultFeatures`](guildFeatures.md)        null                           | string[]                | Features automatically granted to guilds upon creation                |
+
+
+### GIF Search Options (`gif`)
+
+| key                                         | default                          | type                    | description                                                           |
+| ------------------------------------------- | -------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `enabled`                                   | true                             | boolean                 | Whether GIF features are enabled                                      |
+| `provider`                                  | tenor                            | "tenor"                 | Which GIF service to use                                              |
+| `apiKey`                                    | {{ project.name }} tenor API key | string                  | GIF service API key                                                   |
+
+
+### RabbitMQ Options (`rabbitmq`)
+
+See [RabbitMQ](rabbitmq.md) for more information.
+
+| key                                         | default                          | type                    | description                                                           |
+| ------------------------------------------- | -------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `host`                                      | null                             | string                  | RabbitMQ connection string                                            |
+
+
+### Guild Template Options (`templates`)
+
+| key                                         | default                          | type                    | description                                                           |
+| ------------------------------------------- | -------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `enabled`                                   | true                             | boolean                 | Whether guild templates are enabled                                   |
+| `allowTemplateCreation`                     | true                             | boolean                 | Whether new guild templates can be created                            |
+| `allowDiscordTemplates`                     | true                             | boolean                 | Whether guild templates from Discord.com can be fetched               |
+| [`allowRaws`](/concepts/guildTemplates.md)  | true                             | boolean                 | Whether raw guild templates are allowed                               |
+
+
+### Sentry Enabled (`sentry`)
+
+| key                                         | default                            | type                    | description                                                           |
+| ------------------------------------------- | ---------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `enabled`                                   | false                              | boolean                 | Whether server-side Sentry analytics is enabled                       |
+| `endpoint`                                  | {{ project.name }} sentry endpoint | string                  | Sentry endpoint                                                       |
+| `traceSampleRate`                           | 1                                  | number                  | Sentry sample rate (1 means all requests)                             |
+| `environment`                               | System hostname                    | string                  | Sentry environment name                                               |
+
+
+### User and Guild Defaults (`defaults`)
+
+| key                                         | default                            | type                    | description                                                           |
+| ------------------------------------------- | ---------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `user.premium`                              | true                               | boolean                 | Whether users are given premium upon registration                     |
+| `user.premiumType`                          | 2                                  | number                  | The premium type given to users upon registration                     |
+| `user.verified`                             | true                               | boolean                 | Whether users get verified email upon registration                    |
+| `guild.maxPresences`                        | 250000                             | number                  | Maximum number of presences in a guild upon guild creation            |
+| `guild.maxVideoChannelUsers`                | 200                                | number                  | Maximum default number of users in a voice channel with video enabled |
+| `guild.afkTimeout`                          | 300                                | number                  | AFK timeout in seconds upon guild creation                            |
+| `guild.defaultMessageNotifications`         | 1                                  | number                  | Message notification level upon guild creation                        |
+| `guild.explicitContentFilter`               | 0                                  | number                  | Explicit content filter level upon guild creation                     |
+
+
+### Embeds Options (`external`)
+
+| key                                         | default                            | type                    | description                                                           |
+| ------------------------------------------- | ---------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| [`twitter`](embeds.md)                      | null                               | string                  | Twitter API key used for Twitter embeds                               |
+
+
+### Email Options (`email`)
+
+See [EMail](../email.md) for more information.
+
+
+| key                                         | default               | type                                     | description                                                           |
+| ------------------------------------------- | --------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
+| [`provider`](../email.md)                   | null                  | "smtp", "mailgun", "mailjet", "sendgrid" | Which email transport to use                                          |
+| `senderAddress`                             | null                  | string                                   | Sender email address. Defaults to `general_correspondenceEmail`       |
+| `smtp.host`                                 | null                  | string                                   | SMTP host for sending email                                           |
+| `smtp.port`                                 | null                  | number                                   | SMTP port                                                             |
+| `smtp.secure`                               | null                  | boolean                                  | Use TLS for SMTP                                                      |
+| `smtp.username`                             | null                  | string                                   | SMTP username                                                         |
+| `smtp.password`                             | null                  | string                                   | SMTP password                                                         |
+| `mailgun.apiKey`                            | null                  | string                                   | Mailgun API key                                                       |
+| `mailgun.domain`                            | null                  | string                                   | Mailgun domain                                                        |
+| `mailjet.apiKey`                            | null                  | string                                   | Mailjet API key                                                       |
+| `mailjet.apiSecret`                         | null                  | string                                   | Mailjet API secret                                                    |
+| `sendgrid.apiKey`                           | null                  | string                                   | Sendgrid API key                                                      |
+
+
+### Password Reset Options (`passwordReset`)
+
+| key                                         | default                            | type                    | description                                                           |
+| ------------------------------------------- | ---------------------------------- | ----------------------- | --------------------------------------------------------------------- |
+| `requireCaptcha`                            | false                              | boolean                 | Require captcha to send password reset email                          |
+
+
+## Sample Configuration
+
+```json
+{
+  "api": {
+    "endpointPrivate": "http://127.0.0.1:3001",
+    "endpointPublic": "https://api.spacebar.example.net/api/v9"
+  },
+  "cdn": {
+    "endpointPrivate": "http://127.0.0.1:3002",
+    "endpointPublic": "https://cdn.spacebar.example.net"
+  },
+  "gateway": {
+    "endpointPrivate": "http://127.0.0.1:3003",
+    "endpointPublic": "wss://gateway.spacebar.example.net"
+  },
+  "general": {
+    "instanceDescription": "I'm in space!",
+    "instanceName": "A Spacebar Instance",
+    "serverName": "spacebar.example.net"
+  },
+  "guild": {
+    "autoJoin": {
+      "bots": false,
+      "canLeave": true,
+      "enabled": true
+    },
+    "defaultFeatures": [
+      "ALIASABLE_NAMES",
+      "VANITY_URL",
+      "CROSS_CHANNEL_REPLIES",
+      "ANIMATED_ICON",
+      "BANNER",
+      "GUILD_TAGS",
+      "GUILD_SERVER_GUIDE",
+      "GUILD_ONBOARDING",
+      "MEMBER_PROFILES",
+      "NEWS",
+      "ROLE_ICONS"
+    ]
+  },
+  "limits": {
+    "channel": {
+      "maxTopic": 10000
+    },
+    "user": {
+      "maxBio": 1000,
+      "maxUsername": 64
+    }
+  },
+  "rabbitmq": {
+    "host": "amqp://guest:guest@127.0.0.1:5672"
+  },
+  "register": {
+    "dateOfBirth": {
+      "required": false
+    },
+    "disabled": true,
+    "password": {
+      "required": true
+    },
+    "requireInvite": true
+  },
+  "security": {
+    "forwardedFor": "X-Forwarded-For",
+    "trustedProxies": "127.0.0.1"
+  }
+}
+```
+

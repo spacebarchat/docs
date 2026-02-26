@@ -1,26 +1,41 @@
 # Reverse Proxy
 
+## Caddy
+
+Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.
+
+To set up Spacebar behind Caddy, simply add `reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001` to your Caddyfile. **Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.**
+
+```
+spacebar.example.xyz {
+    reverse_proxy 10.0.0.99:3001
+}
+```
+
 ## NGINX
 
-Generally, our community sets up Fosscord instances behind NGINX, a powerful reverse proxy.
+Generally, our community sets up {{ project.name }} instances behind NGINX, a powerful reverse proxy.
 
-Below is an example NGINX config. On Ubuntu, you can put this in the `/etc/nginx/sites-available/fosscord.conf` file,
-and enable it with `ln -s /etc/nginx/sites-available/fosscord.conf /etc/nginx/sites-enabled/` and `systemctl restart nginx`
+Below is an example NGINX config. On Ubuntu, you can put this in the `/etc/nginx/sites-available/{{ project.name.lower() }}.conf` file,
+and enable it with `ln -s /etc/nginx/sites-available/{{ project.name.lower() }}.conf /etc/nginx/sites-enabled/` and `systemctl restart nginx`
 
 !!! info
 
     Other distros, and Windows, may not have a `sites-available`, `sites-enabled` directory structure.
     You may need to edit the `/etc/nginx/nginx.conf` file instead, or place new files in a `conf.d` directory, for example.
     Check which directories exist on your system to be sure.
+!!! note
+
+    Nginx by default only allows uploads under 1mb in size, if you want to change that you'll need to set the client_max_body_size propery to be some other larger value so that way nginx doesn't reject the request
 
 ```nginx
 server {
-	# Change server_name
-    server_name fosscord.example.com;
+ # Change server_name
+    server_name {{ project.name.lower() }}.example.com;
     listen 80;
 
     location / {
-			# Only change this if Nginx and Fosscord are not on the same machine.
+   # Only change this if Nginx and {{ project.name }} are not on the same machine.
             proxy_pass http://127.0.0.1:3001;
             proxy_set_header Host $host;
             proxy_pass_request_headers      on;
@@ -33,16 +48,16 @@ server {
             proxy_no_cache 1;
             proxy_cache_bypass 1;
 
-			# This is important. It allows Websocket connections through NGINX.
+   # This is important. It allows Websocket connections through NGINX.
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
     }
 
-	# Uncomment this if using Imagor:
-	#location /media/ {
-	#	# If you changed the port, be sure to change it here too
-	#	proxy_pass http://127.0.0.1:8000/;
-	#}
+ # Uncomment this if using Imagor:
+ #location /media/ {
+ # # If you changed the port, be sure to change it here too
+ # proxy_pass http://127.0.0.1:8000/;
+ #}
 }
 ```
 
@@ -71,7 +86,7 @@ After you've set up NGINX, it's very simple to also set up SSL using `certbot`.
     Please refer to [Certbots documentation](https://certbot.eff.org/)
 
 You should be asked various questions, such as which site you want to enable SSL for.
-After which, you should now have a SSL secured Fosscord instance!
+After which, you should now have a SSL secured {{ project.name }} instance!
 
 But wait, there's more! If you have changed your `gateway_endpointPublic`
 or `cdn_endpointPublic` addresses, you'll probably have to update those to use the new protocol (`https` or `wss`).

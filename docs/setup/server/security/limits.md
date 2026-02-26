@@ -1,6 +1,6 @@
 # Rate Limiting
 
-Fosscord has various forms of rate limiting built in. If you are logged in, you can bypass these with the `BYPASS_RATE_LIMITS` [right](rights.md)
+{{ project.name }} has various forms of rate limiting built in. If you are logged in, you can bypass these with the `BYPASS_RATE_LIMITS` [right](rights.md)
 
 -   Absolute rate limits, which effect all requests to a route regardless of source (`limits_absoluteRate_*`)
 -   User or IP specific rate limits (`limits_rate_*`)

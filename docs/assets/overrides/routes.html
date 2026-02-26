@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+</head>
+
+<body>
+	<rapi-doc
+		spec-url = "https://raw.githubusercontent.com/spacebarchat/server/master/assets/openapi.json"
+		theme="dark"
+		sort-endpoints-by="none"
+		header-color="#4051b5"
+		primary-color="#4051b5"
+		render-style="focused"
+		schema-expand-level=1
+		schema-style="table"
+		default-schema-tab="schema"
+		show-components="true"
+		heading-text="Spacebar HTTP API Documentation"
+		show-curl-before-try="true"
+		allow-spec-url-load="false"
+		allow-spec-file-load="false"
+	>
+		<a slot="logo" href="https://docs.spacebar.chat" style="margin-left: 20px; width: 30px; height: 30px;">
+			<img style="width: 30px; height: 30px;" src="https://docs.spacebar.chat/assets/logo.svg" />
+		</a>
+</body>
+
+</html>

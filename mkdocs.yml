@@ -1,14 +1,38 @@
-site_name: Fosscord Documentation
-repo_url: https://github.com/fosscord/fosscord
-edit_uri: https://github.com/fosscord/fosscord-docs/edit/master/docs/
-site_description: "Documentation for Fosscord: a free open source selfhostable chat, voice and video discord-compatible platform"
+extra:
+    #
+    # Change these macros if you wish to update the projects' name.
+    # Use {{ variable_name }} in .md files to reference a variable that you've declared here.
+    # For more information, read https://mkdocs-macros-plugin.readthedocs.io/en/latest/ .
+    #
+    project:
+        name: Spacebar # Tip: use {{ project_name.lower() }} to get the project name in lowercase.
+        domain: spacebar.chat
+    repositories:
+        base_url: https://github.com
+        server: spacebarchat/server
+        client: spacebarchat/client
+        voice_types: spacebarchat/spacebar-webrtc-types
+        voice_pion: spacebarchat/pion-webrtc
+        voice_medooze: spacebarchat/medooze-webrtc
+        voice_mediasoup: spacebarchat/mediasoup-webrtc
+        missing_routes: spacebarchat/missing-routes
+        main: &repo_url https://github.com/spacebarchat/spacebarchat # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+    site:
+        name: &site_name Spacebar Documentation
+        description: &site_description "Documentation for Spacebar: a free open source selfhostable chat, voice and video discord-compatible platform"
+        edit_uri: &edit_uri https://github.com/spacebarchat/docs/edit/master/docs/ # This gets read by mkdocs without being pre-proccessed by mkdocs-macros, which is why the URL is in full.
+    npm_packages:
+        voice_pion: "@spacebarchat/pion-webrtc"
+        voice_medooze: "@spacebarchat/medooze-webrtc"
+        voice_mediasoup:  "mediasoup-spacebar-wrtc"
+site_name: *site_name
+repo_url: *repo_url
+edit_uri: *edit_uri
+site_description: *site_description
 plugins:
     - section-index
     - search
-    - swagger-ui-tag:
-          extra_css: [assets/swagger.css]
-          docExpansion: none
-          filter: true
+    - macros
 theme:
     name: material
     logo: assets/logo.svg
@@ -16,17 +40,17 @@ theme:
     font: Open Sans
     palette:
         - media: "(prefers-color-scheme: light)"
-          primary: deep-orange
           scheme: default
           toggle:
               icon: material/lightbulb-outline
               name: Switch to dark mode
         - media: "(prefers-color-scheme: dark)"
-          primary: deep-orange
           scheme: slate
+          primary: indigo
           toggle:
               icon: material/lightbulb
               name: Switch to light mode
+    custom_dir: docs/assets/overrides
     features:
         - navigation.expand
         - navigation.instant
