@@ -948,6 +948,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pion-implementation-installation" class="md-nav__link">
+    Pion implementation installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#medooze-implementation-installation" class="md-nav__link">
     Medooze implementation installation
   </a>
@@ -1455,6 +1462,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pion-implementation-installation" class="md-nav__link">
+    Pion implementation installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#medooze-implementation-installation" class="md-nav__link">
     Medooze implementation installation
   </a>
@@ -1493,17 +1507,36 @@
 
 <h1 id="voice">Voice</h1>
 <p><strong>Currently only WebRTC connections are supported. UDP connections will be dropped</strong> </p>
-<p>Voice support is left as an optional dependency in Spacebar, which means that it is disabled by default unless you decide to install additional dependencies. Spacebar is designed so that anyone can develop a voice package compatible with the project as long as the implementation adheres to the <a href="https://github.com/spacebarchat/spacebar-webrtc-types">WebRTC types</a>. Currently there are two sample implementations which can be used:</p>
+<p>Voice support is left as an optional dependency in Spacebar, which means that it is disabled by default unless you decide to install additional dependencies. Spacebar is designed so that anyone can develop a voice package compatible with the project as long as the implementation adheres to the <a href="https://github.com/spacebarchat/spacebar-webrtc-types">WebRTC types</a>. Currently there are three sample implementations which can be used:</p>
 <ul>
-<li><a href="https://github.com/spacebarchat/medooze-spacebar-wrtc">Medooze Implementation</a> - Supports video&amp;audio for guild voice, DM voice, as well as GoLive streams. Only supports Linux &amp; MacOS environments.</li>
-<li><a href="https://github.com/spacebarchat/mediasoup-spacebar-wrtc">Mediasoup Implementation</a> - Supports audio only for guild voice, DM voice, and GoLive streams. Supports Windows, Linux, and MacOS environments</li>
+<li>(<strong>Recommended</strong>) <a href="https://github.com/spacebarchat/pion-webrtc">Pion Implementation</a> - Golang SFU which is bridged via IPC to communicate with your voice gateway<ul>
+<li>✅ Video</li>
+<li>✅ Audio</li>
+<li>✅ Guild + DM voice</li>
+<li>✅ Go Live streams</li>
+</ul>
+</li>
+<li><a href="https://github.com/spacebarchat/medooze-webrtc">Medooze Implementation</a> - SFU written in C++ with Node.js native bindings<ul>
+<li>✅ Video</li>
+<li>✅ Audio</li>
+<li>✅ Guild + DM voice</li>
+<li>✅ Go Live streams</li>
+</ul>
+</li>
+<li><a href="https://github.com/spacebarchat/mediasoup-webrtc">Mediasoup Implementation</a> - From the Mediasoup FAQ: "mediasoup launches a set of C++ child processes (media workers) and communicates with them by means of inter-process communication"<ul>
+<li>❌ Video</li>
+<li>✅ Audio</li>
+<li>✅ Guild + DM voice</li>
+<li>❌ Go Live streams (no video, only audio)</li>
+</ul>
+</li>
 </ul>
 <h2 id="configuring-voice-gateway">Configuring Voice Gateway</h2>
 <p>By default the Voice Gateway is set to run on port 3004. You can change this default configuration by setting your desired port it in your <code>.env</code>:</p>
 <div class="highlight"><pre><span></span><code>WRTC_WS_PORT=3004
 </code></pre></div>
 <p>You also have to configure the Voice Gateway endpoint in your database. In table <code>config</code> you can set the default region endpoint to your Voice Gateway domain. It is set to <code>localhost:3004</code> by default:</p>
-<div class="highlight"><pre><span></span><code>&quot;regions_available_0_endpoint&quot;:   &quot;localhost:3004&quot;
+<div class="highlight"><pre><span></span><code>&quot;regions_available_0_endpoint&quot;:   &quot;voice.example.com:3004&quot;
 </code></pre></div>
 <h3 id="nginx-reverse-proxy-for-voice-gateway">Nginx reverse proxy for Voice Gateway</h3>
 <p>You will likely want to set your voice gateway behind a reverse proxy. Here's a sample Nginx configuration:</p>
@@ -1534,6 +1567,27 @@
 </code></pre></div>
 <h2 id="configuring-voice-library">Configuring Voice Library</h2>
 <p>You can install one of the provided sample implementations or you can choose to install another third-party one. Installation process will be the same regardless:</p>
+<h3 id="pion-implementation-installation">Pion implementation installation</h3>
+<ol>
+<li>
+<p>First install the package in your Spacebar server:</p>
+<div class="highlight"><pre><span></span><code>npm install @spacebarchat/pion-webrtc --no-save
+</code></pre></div>
+</li>
+<li>
+<p>Configure the package name in your Spacebar server <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>WRTC_LIBRARY=@spacebarchat/pion-webrtc
+</code></pre></div>
+</li>
+<li>
+<p>Download the Golang SFU from <a href="https://github.com/spacebarchat/pion-webrtc">Pion Repository</a></p>
+</li>
+<li>Make sure you have Golang installed, then start your SFU:
+    <div class="highlight"><pre><span></span><code>cd pion-sfu
+go run . -port &lt;udp port&gt; -ip &lt;your server public ip&gt;
+</code></pre></div>
+The ip should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation</li>
+</ol>
 <h3 id="medooze-implementation-installation">Medooze implementation installation</h3>
 <ol>
 <li>
@@ -1553,7 +1607,23 @@
 </li>
 </ol>
 <h3 id="mediasoup-implementation-installation">Mediasoup implementation installation</h3>
-<p>The process is exactly the same as the Medooze installation, just replace the package name in the commands with <code>mediasoup-spacebar-wrtc</code></p>
+<ol>
+<li>
+<p>First install the package in your Spacebar server:</p>
+<div class="highlight"><pre><span></span><code>npm install mediasoup-spacebar-wrtc --no-save
+</code></pre></div>
+</li>
+<li>
+<p>Configure the package name in your Spacebar server <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>WRTC_LIBRARY=mediasoup-spacebar-wrtc
+</code></pre></div>
+</li>
+<li>
+<p>Configure the public IP for your WebRTC server in your Spacebar server <code>.env</code>. This should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation:</p>
+<div class="highlight"><pre><span></span><code>WRTC_PUBLIC_IP=127.0.0.1
+</code></pre></div>
+</li>
+</ol>
 
 
 
