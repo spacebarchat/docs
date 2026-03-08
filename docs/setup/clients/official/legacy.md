@@ -12,13 +12,13 @@ content:
 
 ```json
 {
-	"api": "https://api.old.server.{{ project.domain }}/api/v9",
-	"cdn": "https://cdn.old.server.{{ project.domain }}",
-	"gateway": "wss://gateway.old.server.{{ project.domain }}",
-	"invite": "https://old.server.{{ project.domain }}/invite",
-	"template": "https://old.server.{{ project.domain }}/template",
-	"gift": "https://old.server.{{ project.domain }}/gift",
-	"scheduledEvent": "https://old.server.{{ project.domain }}/events"
+	"api": "https://api.rory.server.{{ project.domain }}/api/v9",
+	"cdn": "https://cdn.rory.server.{{ project.domain }}",
+	"gateway": "wss://gateway.rory.server.{{ project.domain }}",
+	"invite": "https://rory.server.{{ project.domain }}/invite",
+	"template": "https://rory.server.{{ project.domain }}/template",
+	"gift": "https://rory.server.{{ project.domain }}/gift",
+	"scheduledEvent": "https://rory.server.{{ project.domain }}/events"
 }
 ```
 
