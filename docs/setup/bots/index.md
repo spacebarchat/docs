@@ -8,7 +8,7 @@ when connected to a {{ project.name }} instance instead.
 
 Below are some popular libraries for connecting bots to a {{ project.name }} instance.
 
-Make sure to replace `api.{{ project.domain }}` and `cdn.{{ project.domain }}`
+Make sure to replace `api.old.server.{{ project.domain }}` and `cdn.old.server.{{ project.domain }}`
 with the appropriate URLs of the instance you want to connect to.
 
 You can get them from a client or from the [well-known](../server/wellknown) instance endpoint.
@@ -23,8 +23,8 @@ const { Client } = require("discord.js");
 
 const client = new Client({
 	rest: {
-		api: "https://api.{{ project.domain }}/api",
-		cdn: "https://cdn.{{ project.domain }}",
+		api: "https://api.old.server.{{ project.domain }}/api",
+		cdn: "https://cdn.old.server.{{ project.domain }}",
 		version: "9"
 	},
 	ws: {
@@ -45,7 +45,7 @@ const bot = new Eris("your token here", {
         "guildMessages"
     ],
     rest: {
-    domain: "api.old.server.spacebar.chat",
+    domain: "old.server.{{ project.domain }}",
     baseURL: "/api/v9"
     },
     ws: {
@@ -64,7 +64,7 @@ bot.connect();
 ```py
 import discord
 
-discord.http.Route.BASE = "https://api.{{ project.domain }}/api"
+discord.http.Route.BASE = "https://old.server.{{ project.domain }}/api"
 client = discord.Client()
 
 client.run("your token here")
@@ -73,14 +73,14 @@ client.run("your token here")
 ### JDA
 
 1. Create a RestConfig instance: `RestConfig restConfig = new RestConfig();`
-2. Use RestConfig#setBaseUrl to tell JDA what your Rest URI is: `restConfig.setBaseUrl("https://api.{{ project.domain }}/api/v9");`
+2. Use RestConfig#setBaseUrl to tell JDA what your Rest URI is: `restConfig.setBaseUrl("https://old.server.{{ project.domain }}/api/v9");`
 3. Create another class, and extend ConcurrentSessionController, e.g. `public class SpacebarSessionController extends ConcurrentSessionController`
 4. Override the ConcurrentSessionController#getGateway method:
 ```java
 	@NotNull
 	@Override
 	public String getGateway() {
-		return "wss://gateway.{{ project.domain }}/?encoding=json&v=9&compress=zlib-stream";
+		return "wss://gateway.old.server.{{ project.domain }}/?encoding=json&v=9&compress=zlib-stream";
 	}
 ```
 5. Finally, configure JDA to use your RestConfig & SpacebarSessionController, like this:
