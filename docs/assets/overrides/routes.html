@@ -1,31 +1,204 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spacebar API Docs</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000115;
+      --surface: #000828;
+      --border: #001a55;
+      --accent: #0185ff;
+      --text: #d0e8ff;
+      --muted: #2c5a90;
+      --red: #ff5555;
+    }
+
+    html, body { height: 100%; background: var(--bg); color: var(--text); }
+
+    #loader {
+      position: fixed; inset: 0; background: var(--bg);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 22px; z-index: 9999;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .loader-icon { position: relative; width: 56px; height: 56px; }
+    .loader-icon img { width: 100%; height: 100%; animation: pulse 2s ease-in-out infinite; }
+    .loader-ring {
+      position: absolute; inset: -10px; border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: var(--accent); border-right-color: #003a80;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .loader-title { font-family: monospace; font-size: 18px; font-weight: 700; letter-spacing: .1em; color: var(--accent); }
+    .loader-status { font-family: monospace; font-size: 12px; color: var(--muted); letter-spacing: .05em; min-height: 18px; }
+    .loader-track { width: 260px; height: 3px; background: var(--border); border-radius: 99px; overflow: hidden; }
+    .loader-fill { height: 100%; width: 0%; background: var(--accent); border-radius: 99px; transition: width .3s ease; box-shadow: 0 0 8px var(--accent); }
+
+    #app { min-height: 100vh; display: flex; flex-direction: column; opacity: 0; transition: opacity .5s ease; }
+    #app.visible { opacity: 1; }
+
+    .top-header {
+      position: sticky; top: 0; z-index: 200;
+      display: flex; align-items: center; gap: 14px;
+      padding: 0 24px; height: 52px;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      transition: left .18s ease, width .18s ease;
+    }
+
+    @media (min-width: 900px) {
+      .top-header.scrolled {
+        left: var(--sb-sidebar-width, 280px);
+        width: calc(100% - var(--sb-sidebar-width, 280px));
+      }
+    }
+    .top-header img { width: 26px; height: 26px; }
+    .top-header .brand { font-family: monospace; font-size: 14px; font-weight: 700; letter-spacing: .1em; color: var(--accent); }
+    .top-header .pill { font-family: monospace; font-size: 10px; padding: 2px 8px; border-radius: 99px; background: #001840; color: var(--accent); border: 1px solid #002a60; }
+    .top-header .spacer { flex: 1; }
+    .top-header a { font-family: monospace; font-size: 11px; color: var(--muted); text-decoration: none; transition: color .2s; margin-left: 16px; }
+    .top-header a:hover { color: var(--text); }
+
+    #scalar-app { flex: 1; }
+
+    .spacebar-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 700; font-family: monospace; letter-spacing: .05em;
+      background: rgba(255,60,60,.12); color: var(--red);
+      border: 1px solid rgba(255,60,60,.35);
+      margin-left: 8px; vertical-align: middle;
+    }
+
+    .top-header .pill.selected {
+      background: var(--accent);
+      color: #001025;
+      border: 1px solid color-mix(in srgb, var(--accent), black 10%);
+      box-shadow: 0 0 8px rgba(1,133,255,0.12);
+    }
+
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  </style>
 </head>
-
 <body>
-	<rapi-doc
-		spec-url = "https://raw.githubusercontent.com/spacebarchat/server/master/assets/openapi.json"
-		theme="dark"
-		sort-endpoints-by="none"
-		header-color="#4051b5"
-		primary-color="#4051b5"
-		render-style="focused"
-		schema-expand-level=1
-		schema-style="table"
-		default-schema-tab="schema"
-		show-components="true"
-		heading-text="Spacebar HTTP API Documentation"
-		show-curl-before-try="true"
-		allow-spec-url-load="false"
-		allow-spec-file-load="false"
-	>
-		<a slot="logo" href="https://docs.spacebar.chat" style="margin-left: 20px; width: 30px; height: 30px;">
-			<img style="width: 30px; height: 30px;" src="https://docs.spacebar.chat/assets/logo.svg" />
-		</a>
-</body>
 
+<div id="loader">
+  <div class="loader-icon">
+    <img src="https://docs.spacebar.chat/assets/logo.svg" alt="">
+    <div class="loader-ring"></div>
+  </div>
+  <div class="loader-title">SPACEBAR API</div>
+  <div class="loader-status" id="loader-status">Loading…</div>
+  <div class="loader-track"><div class="loader-fill" id="loader-fill"></div></div>
+</div>
+
+<div id="app">
+  <header class="top-header">
+    <a href="https://docs.spacebar.chat"><img src="https://docs.spacebar.chat/assets/logo.svg" alt="Spacebar"></a>
+    <span class="brand">SPACEBAR</span>
+    <span class="pill">HTTP API</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/spacebarchat/server" target="_blank">GitHub ↗</a>
+    <a href="https://docs.spacebar.chat" target="_blank" style="margin-left:16px;">Docs ↗</a>
+  </header>
+  <div id="scalar-app"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+<script>
+const SPEC_URL = 'https://raw.githubusercontent.com/spacebarchat/server/master/assets/openapi.json';
+const fillEl = document.getElementById('loader-fill');
+const statusEl = document.getElementById('loader-status');
+const loader = document.getElementById('loader');
+const app = document.getElementById('app');
+
+function setProgress(pct, msg) {
+  fillEl.style.width = pct + '%';
+  if (msg) statusEl.textContent = msg;
+}
+
+setProgress(40, 'Initializing Scalar...');
+
+Scalar.createApiReference('#scalar-app', {
+  url: SPEC_URL,
+  proxyUrl: 'https://proxy.scalar.com',
+
+  darkMode: true,
+  theme: 'none',
+  layout: 'modern',
+  showSidebar: true,
+  hideDownloadButton: false,
+  searchHotKey: 'k',
+
+  defaultHttpClient: {
+    targetKey: 'shell',
+    clientKey: 'curl',
+  },
+
+  customCss: `
+    :root, .dark-mode {
+      --scalar-color-1: #e8f2ff;
+      --scalar-color-2: #90b8e8;
+      --scalar-color-3: #3a6aaa;
+      --scalar-color-accent: #0185ff;
+      --scalar-background-1: #000115;
+      --scalar-background-2: #000828;
+      --scalar-background-3: #001040;
+      --scalar-border-color: #001a55;
+      --scalar-sidebar-background-1: #000010;
+      --scalar-scrollbar-color: #001a50;
+      --scalar-scrollbar-color-active: #0185ff;
+    }
+  `,
+});
+
+setProgress(70, 'Fetching specification...');
+
+const observer = new MutationObserver(() => {
+  const mounted = document.querySelector('#scalar-app .scalar-app, #scalar-app [class*="references"]');
+  if (mounted) {
+    observer.disconnect();
+    setProgress(100, 'Ready.');
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      app.classList.add('visible');
+    }, 400);
+  }
+});
+observer.observe(document.getElementById('scalar-app'), { childList: true, subtree: true });
+
+setTimeout(() => {
+  observer.disconnect();
+  loader.classList.add('hidden');
+  app.classList.add('visible');
+}, 8000);
+</script>
+
+<script>
+(function(){
+  const header = document.querySelector('.top-header');
+  function updateHeader(){
+    if (!header) return;
+    const scrolled = window.scrollY > 0 || document.documentElement.scrollTop > 0;
+    header.classList.toggle('scrolled', scrolled);
+  }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('load', updateHeader);
+  window.addEventListener('hashchange', () => setTimeout(updateHeader, 50));
+})();
+</script>
+
+</body>
 </html>
