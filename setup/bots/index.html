@@ -1410,7 +1410,7 @@ existing bots and applications designed for Discord.com should work relatively e
 when connected to a Spacebar instance instead.</p>
 <h2 id="bot-libraries">Bot Libraries</h2>
 <p>Below are some popular libraries for connecting bots to a Spacebar instance.</p>
-<p>Make sure to replace <code>api.spacebar.chat</code> and <code>cdn.spacebar.chat</code>
+<p>Make sure to replace <code>api.rory.server.spacebar.chat</code> and <code>cdn.rory.server.spacebar.chat</code>
 with the appropriate URLs of the instance you want to connect to.</p>
 <p>You can get them from a client or from the <a href="../server/wellknown">well-known</a> instance endpoint.</p>
 <h3 id="discordjs">discord.js</h3>
@@ -1420,8 +1420,8 @@ the endpoints.</p>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Client</span><span class="p">({</span>
 <span class="w">    </span><span class="nx">rest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">api</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://api.spacebar.chat/api&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">cdn</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.spacebar.chat&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">api</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://api.rory.server.spacebar.chat/api&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">cdn</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.rory.server.spacebar.chat&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nx">version</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -1439,7 +1439,7 @@ the endpoints.</p>
 <span class="w">        </span><span class="s2">&quot;guildMessages&quot;</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nx">rest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">domain</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;api.old.server.spacebar.chat&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">domain</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rory.server.spacebar.chat&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/api/v9&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -1454,7 +1454,7 @@ the endpoints.</p>
 <h3 id="discordpy">discord.py</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">discord</span>
 
-<span class="n">discord</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Route</span><span class="o">.</span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.spacebar.chat/api&quot;</span>
+<span class="n">discord</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">Route</span><span class="o">.</span><span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;https://rory.server.spacebar.chat/api&quot;</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 
 <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;your token here&quot;</span><span class="p">)</span>
@@ -1462,13 +1462,13 @@ the endpoints.</p>
 <h3 id="jda">JDA</h3>
 <ol>
 <li>Create a RestConfig instance: <code>RestConfig restConfig = new RestConfig();</code></li>
-<li>Use RestConfig#setBaseUrl to tell JDA what your Rest URI is: <code>restConfig.setBaseUrl("https://api.spacebar.chat/api/v9");</code></li>
+<li>Use RestConfig#setBaseUrl to tell JDA what your Rest URI is: <code>restConfig.setBaseUrl("https://rory.server.spacebar.chat/api/v9");</code></li>
 <li>Create another class, and extend ConcurrentSessionController, e.g. <code>public class SpacebarSessionController extends ConcurrentSessionController</code></li>
 <li>Override the ConcurrentSessionController#getGateway method:
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nd">@NotNull</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGateway</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;wss://gateway.spacebar.chat/?encoding=json&amp;v=9&amp;compress=zlib-stream&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;wss://gateway.rory.server.spacebar.chat/?encoding=json&amp;v=9&amp;compress=zlib-stream&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div></li>
 <li>Finally, configure JDA to use your RestConfig &amp; SpacebarSessionController, like this:
