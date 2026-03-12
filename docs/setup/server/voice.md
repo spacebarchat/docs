@@ -31,7 +31,7 @@ WRTC_WS_PORT=3004
 You also have to configure the Voice Gateway endpoint in your database. In table `config` you can set the default region endpoint to your Voice Gateway domain. It is set to `localhost:3004` by default:
 
 ```
-"regions_available_0_endpoint":   "voice.example.com:3004"
+"regions_available_0_endpoint":   "voice.example.com"
 ```
 
 ### Nginx reverse proxy for Voice Gateway
@@ -73,19 +73,20 @@ You can install one of the provided sample implementations or you can choose to 
 
 1. First install the package in your {{ project.name }} server:
 
-    ```
+    ```bash
     npm install {{ npm_packages.voice_pion }} --no-save
     ```
 
 2. Configure the package name in your {{ project.name }} server `.env`:
 
-    ```
+    ```.env
     WRTC_LIBRARY={{ npm_packages.voice_pion }}
     ```
 
 3. Download the Golang SFU from [Pion Repository]({{ repositories.base_url }}/{{repositories.voice_pion }})
+
 4. Make sure you have Golang installed, then start your SFU:
-    ```
+    ```bash
     cd pion-sfu
     go run . -port <udp port> -ip <your server public ip>
     ```
@@ -95,19 +96,19 @@ The ip should be a public IP that can be accessed from the internet if this is a
 
 1. First install the package in your {{ project.name }} server:
 
-    ```
+    ```bash
     npm install {{ npm_packages.voice_medooze }} --no-save
     ```
 
 2. Configure the package name in your {{ project.name }} server `.env`:
 
-    ```
+    ```.env
     WRTC_LIBRARY={{ npm_packages.voice_medooze }}
     ```
 
 3. Configure the public IP for your WebRTC server in your {{ project.name }} server `.env`. This should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation:
 
-    ```
+    ```.env
     WRTC_PUBLIC_IP=127.0.0.1
     ```
 
@@ -115,18 +116,25 @@ The ip should be a public IP that can be accessed from the internet if this is a
 
 1. First install the package in your {{ project.name }} server:
 
-    ```
+    ```bash
     npm install {{ npm_packages.voice_mediasoup }} --no-save
     ```
 
 2. Configure the package name in your {{ project.name }} server `.env`:
 
-    ```
+    ```.env
     WRTC_LIBRARY={{ npm_packages.voice_mediasoup }}
     ```
 
 3. Configure the public IP for your WebRTC server in your {{ project.name }} server `.env`. This should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation:
 
-    ```
+    ```.env
     WRTC_PUBLIC_IP=127.0.0.1
     ```
+
+## How to get your public ip
+
+You can get your server's public ip by executing the following command in your server's command line: 
+```bash
+curl https://checkip.amazonaws.com
+```
