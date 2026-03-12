@@ -1085,6 +1085,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-get-your-public-ip" class="md-nav__link">
+    How to get your public ip
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1599,6 +1606,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-get-your-public-ip" class="md-nav__link">
+    How to get your public ip
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1648,7 +1662,7 @@
 <div class="highlight"><pre><span></span><code>WRTC_WS_PORT=3004
 </code></pre></div>
 <p>You also have to configure the Voice Gateway endpoint in your database. In table <code>config</code> you can set the default region endpoint to your Voice Gateway domain. It is set to <code>localhost:3004</code> by default:</p>
-<div class="highlight"><pre><span></span><code>&quot;regions_available_0_endpoint&quot;:   &quot;voice.example.com:3004&quot;
+<div class="highlight"><pre><span></span><code>&quot;regions_available_0_endpoint&quot;:   &quot;voice.example.com&quot;
 </code></pre></div>
 <h3 id="nginx-reverse-proxy-for-voice-gateway">Nginx reverse proxy for Voice Gateway</h3>
 <p>You will likely want to set your voice gateway behind a reverse proxy. Here's a sample Nginx configuration:</p>
@@ -1683,7 +1697,7 @@
 <ol>
 <li>
 <p>First install the package in your Spacebar server:</p>
-<div class="highlight"><pre><span></span><code>npm install @spacebarchat/pion-webrtc --no-save
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@spacebarchat/pion-webrtc<span class="w"> </span>--no-save
 </code></pre></div>
 </li>
 <li>
@@ -1694,17 +1708,19 @@
 <li>
 <p>Download the Golang SFU from <a href="https://github.com/spacebarchat/pion-webrtc">Pion Repository</a></p>
 </li>
-<li>Make sure you have Golang installed, then start your SFU:
-    <div class="highlight"><pre><span></span><code>cd pion-sfu
-go run . -port &lt;udp port&gt; -ip &lt;your server public ip&gt;
+<li>
+<p>Make sure you have Golang installed, then start your SFU:
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>pion-sfu
+go<span class="w"> </span>run<span class="w"> </span>.<span class="w"> </span>-port<span class="w"> </span>&lt;udp<span class="w"> </span>port&gt;<span class="w"> </span>-ip<span class="w"> </span>&lt;your<span class="w"> </span>server<span class="w"> </span>public<span class="w"> </span>ip&gt;
 </code></pre></div>
-The ip should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation</li>
+The ip should be a public IP that can be accessed from the internet if this is a production instance. It will be the address that will get sent to the client during the WebRTC connection negotiation</p>
+</li>
 </ol>
 <h3 id="medooze-implementation-installation">Medooze implementation installation</h3>
 <ol>
 <li>
 <p>First install the package in your Spacebar server:</p>
-<div class="highlight"><pre><span></span><code>npm install @spacebarchat/medooze-webrtc --no-save
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@spacebarchat/medooze-webrtc<span class="w"> </span>--no-save
 </code></pre></div>
 </li>
 <li>
@@ -1722,7 +1738,7 @@ The ip should be a public IP that can be accessed from the internet if this is a
 <ol>
 <li>
 <p>First install the package in your Spacebar server:</p>
-<div class="highlight"><pre><span></span><code>npm install mediasoup-spacebar-wrtc --no-save
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>mediasoup-spacebar-wrtc<span class="w"> </span>--no-save
 </code></pre></div>
 </li>
 <li>
@@ -1736,6 +1752,10 @@ The ip should be a public IP that can be accessed from the internet if this is a
 </code></pre></div>
 </li>
 </ol>
+<h2 id="how-to-get-your-public-ip">How to get your public ip</h2>
+<p>You can get your server's public ip by executing the following command in your server's command line: 
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://checkip.amazonaws.com
+</code></pre></div></p>
 
 
 
