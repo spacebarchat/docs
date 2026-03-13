@@ -1,6 +1,6 @@
 # WebRTC Signaling
 
-Since WebRTC is a well-defined open standard and the browser-built in API's are heavily documented in many online sources, we are not going to focus on the WebRTC browser API and how to use it to connect. Rather, this document will focus on the Discord-specific signaling portion of the connection establishment. For details on using the browser's WebRTC API, you can reference [Mozilla Developer Docs](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection)
+Since WebRTC is a well-defined open standard and the browser-built in APIs are heavily documented in many online sources, we are not going to focus on the WebRTC browser API and how to use it to connect. Rather, this document will focus on the Discord-specific signaling portion of the connection establishment. For details on using the browser's WebRTC API, you can reference [Mozilla Developer Docs](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection)
 
 ## Connecting to voice
 
@@ -141,7 +141,7 @@ When re-constructing the SDP answer, remember to add `setup=passive` to the answ
 
 ## Signaling track events
 
-After we have sucessfully connected to the SFU over WebRTC, we are ready to begin sending and receiving media. Since the SFU and WebRTC client will only exchange SDP once (at the start of the connection), both the SFU and client will do have to do some clever tricking to negotiate the changing of the incoming/outgoing streams. The client will have to use something called **SDP munging**, where it alters the SDP manually, even generating its own SDP answer once it receives **Op Code 12 Video**
+After we have successfully connected to the SFU over WebRTC, we are ready to begin sending and receiving media. Since the SFU and WebRTC client will only exchange SDP once (at the start of the connection), both the SFU and client will do have to do some clever tricking to negotiate the changing of the incoming/outgoing streams. The client will have to use something called **SDP munging**, where it alters the SDP manually, even generating its own SDP answer once it receives **Op Code 12 Video**
 
 ### Server->Client Op Code 12 Video
 
@@ -204,4 +204,4 @@ Similarily, a value > 0 for the SSRC indicates that the user is publishing that 
 
 ## Other Voice Gateway events
 
-The remaining Voice Gateway events will be exactly the same for WebRTC clients and UDP clients, so you can just reference the [Discord developer docs](https://docs.discord.com/developers/topics/voice-connections). These include Speakinging events, Heartbeating, Buffered Resume, and the E2EE DAVE protocol-related message events.
+The remaining Voice Gateway events will be exactly the same for WebRTC clients and UDP clients, so you can just reference the [Discord developer docs](https://docs.discord.com/developers/topics/voice-connections). These include Speaking events, Heartbeating, Buffered Resume, and the E2EE DAVE protocol-related message events.

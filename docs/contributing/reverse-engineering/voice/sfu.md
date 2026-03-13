@@ -21,7 +21,7 @@ The UDP protocol is a stripped-down version of the WebRTC protocol, with no ICE,
  ---------------------------------------------------------------------------
 ```
 
-The server then replies with a pseudo-STUN Binding Response, which contains the public ip address of the UDP client, and its port which was used in the UDP connection that sent the original request:
+The server then replies with a pseudo-STUN Binding Response, which contains the public IP address of the UDP client, and its port which was used in the UDP connection that sent the original request:
 ```
  ------------------------------------------------------------------------------------------------------------------------------------------
 | 2 byte (0x2) | 2 byte msg length (70) | 4 byte audio SSRC | 64 byte Null-terminated string containing IP address | 2 byte containing port |
@@ -30,6 +30,6 @@ The server then replies with a pseudo-STUN Binding Response, which contains the 
 
 The client then sends this IP and port value to the Voice Gateway in the **Opcode 1 Select Protocol** message, which also specifies the transport encryption used, and the connecting protocol to be `udp`. 
 
-The UDP protocol still uses regular RTP packets for sending and receiving media, but with its own custom transport encryption. When the UDP client sends media to the SFU, the RTP packets would then just be decrypted then forwarded to the other UDP/WebRTC clients, and similarily, the RTP packets coming from other WebRTC/UDP clients would be encrypted and forwarded to our UDP client.
+The UDP protocol still uses regular RTP packets for sending and receiving media, but with its own custom transport encryption. When the UDP client sends media to the SFU, the RTP packets would then just be decrypted then forwarded to the other UDP/WebRTC clients, and similarly, the RTP packets coming from other WebRTC/UDP clients would be encrypted and forwarded to our UDP client.
 
 Luckily the UDP protocol is heavily documented in the [Discord Developer Docs](https://docs.discord.com/developers/topics/voice-connections#transport-encryption-and-sending-voice)
