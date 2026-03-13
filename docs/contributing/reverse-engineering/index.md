@@ -10,3 +10,4 @@ There are various other resources that have been incredibly helpful in our endev
 -   [DiscordLists](https://github.com/Delitefully/DiscordLists)
 -   [Discord Datamining](https://github.com/Discord-Datamining/Discord-Datamining)
 -   [Discord.js](https://discord.js.org) and other bot implementations
+-   [Discord blog about voice](https://discord.com/blog/how-discord-handles-two-and-half-million-concurrent-voice-users-using-webrtc)
