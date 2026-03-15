@@ -175,7 +175,7 @@ An incoming **Op Code 12 Video** event signals that a user in the voice channel 
 }
 ```
 
-A value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you receive a positive value SSRC for either audio, expect the PeerConnection onTrack event to be fired and to receive a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 object wtih `active=true`. 
+A value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you receive a positive value SSRC for either audio, expect the PeerConnection onTrack event to be fired and to receive a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 stream with `active=true`. 
 
 ### Client->Server Op Code 12 Video
 
@@ -204,7 +204,7 @@ An outgoing **Op Code 12 Video** event signals that your client wants to change 
 }
 ```
 
-Similarily, a value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you send a positive value for SSRC for audio, the server will be expecting for you to start sending a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 object wtih `active=true`. 
+Similarily, a value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you send a positive value for SSRC for audio, the server will be expecting for you to start sending a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 stream with `active=true`. 
 
 ## Other Voice Gateway events
 
