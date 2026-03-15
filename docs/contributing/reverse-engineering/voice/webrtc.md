@@ -54,11 +54,13 @@ Once connected, send an **Opcode 0 Identify** payload with our server_id, user_i
     "session_id": "my_session_id",
     "token": "my_token",
     "video": true,
-    "streams": [{
-      "type": "video",
-      "rid": "100",
-      "quality": 100
-    }],
+    "streams": [
+      {
+        "type": "video",
+        "rid": "100",
+        "quality": 100
+      }
+    ],
     "max_dave_protocol_version": 1
   }
 }
@@ -75,13 +77,15 @@ The Voice Gateway will respond with an **Opcode 2 Ready**
     "port": 1234,
     "modes": ["xsalsa20_poly1305", "xsalsa20_poly1305_suffix", "xsalsa20_poly1305_lite"],
     "heartbeat_interval": 1,
-    "streams": [{
-      "type": "video",
-      "rid": "100",
-      "quality": 100,
-      "ssrc": 2,
-      "rtx_ssrc": 3,
-    }],
+    "streams": [
+      {
+        "type": "video",
+        "rid": "100",
+        "quality": 100,
+        "ssrc": 2,
+        "rtx_ssrc": 3,
+      }
+    ],
   }
 }
 ```
@@ -153,8 +157,8 @@ An incoming **Op Code 12 Video** event signals that a user in the voice channel 
     "video_ssrc": 2,
     "rtx_ssrc": 3,
     "user_id": "29229393982",
-    "streams": {
-      [
+    "streams": [
+      {
         "type": "video",
         "rid": "100",
         "ssrc": 2,
@@ -166,12 +170,12 @@ An incoming **Op Code 12 Video** event signals that a user in the voice channel 
         "max_resolution": { 
           "type": "fixed", "width": 1080, "height": 720 
         }
-      ]
-    }
+      }
+    ]
 }
 ```
 
-A value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you receive a positive value SSRC for either audio or video, expect the PeerConnection onTrack event to be fired and to receive a track matching that SSRC.
+A value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you receive a positive value SSRC for either audio, expect the PeerConnection onTrack event to be fired and to receive a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 object wtih `active=true`. 
 
 ### Client->Server Op Code 12 Video
 
@@ -182,8 +186,8 @@ An outgoing **Op Code 12 Video** event signals that your client wants to change 
     "audio_ssrc": 1,
     "video_ssrc": 2,
     "rtx_ssrc": 3,
-    "streams": {
-      [
+    "streams": [
+      {
         "type": "video",
         "rid": "100",
         "ssrc": 2,
@@ -195,12 +199,12 @@ An outgoing **Op Code 12 Video** event signals that your client wants to change 
         "max_resolution": { 
           "type": "fixed", "width": 1080, "height": 720 
         }
-      ]
-    }
+      }
+    ]
 }
 ```
 
-Similarily, a value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you send a positive value for SSRC for either video or audio, the server will be expecting for you to start sending a track matching that SSRC
+Similarily, a value > 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you send a positive value for SSRC for audio, the server will be expecting for you to start sending a track matching that SSRC. For video, the video_ssrc has to be > 0 AND you have to have at least 1 object wtih `active=true`. 
 
 ## Other Voice Gateway events
 
