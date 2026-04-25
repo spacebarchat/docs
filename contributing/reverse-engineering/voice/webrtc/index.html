@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../sfu/">
       
       
-        <link rel="next" href="../../voice/">
+        <link rel="next" href="../../../server/">
       
       <link rel="icon" href="../../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Enums and bitfields and such - Spacebar Documentation</title>
+        <title>WebRTC Signaling - Spacebar Documentation</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enums-and-bitfields-and-such" class="md-skip">
+        <a href="#webrtc-signaling" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enums and bitfields and such
+              WebRTC Signaling
             
           </span>
         </div>
@@ -411,16 +411,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3_1" >
       
       
         
@@ -431,7 +431,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Client</a>
+          <a href="../../client/">Client</a>
           
             <label for="__nav_4_3_1">
               <span class="md-nav__icon md-icon"></span>
@@ -439,12 +439,88 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3_1">
           <span class="md-nav__icon md-icon"></span>
           Client
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/enums/" class="md-nav__link">
+        Enums and bitfields and such
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Voice</a>
+          
+            <label for="__nav_4_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Voice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sfu/" class="md-nav__link">
+        Selective Forwarding Unit (SFU) Server
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -462,12 +538,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Enums and bitfields and such
+          WebRTC Signaling
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Enums and bitfields and such
+        WebRTC Signaling
       </a>
       
         
@@ -486,15 +562,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage_flags" class="md-nav__link">
-    usage_flags
+  <a href="#connecting-to-voice" class="md-nav__link">
+    Connecting to voice
   </a>
+  
+    <nav class="md-nav" aria-label="Connecting to voice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-getting-our-voice-gateway-endpoint-and-our-token" class="md-nav__link">
+    1. Getting our Voice Gateway endpoint and our token:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-connecting-to-voice-gateway" class="md-nav__link">
+    2. Connecting to Voice Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-sdp-negotiation" class="md-nav__link">
+    3. Start SDP negotiation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#purchased_flags" class="md-nav__link">
-    purchased_flags
+  <a href="#signaling-track-events" class="md-nav__link">
+    Signaling track events
+  </a>
+  
+    <nav class="md-nav" aria-label="Signaling track events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-client-op-code-12-video" class="md-nav__link">
+    Server-&gt;Client Op Code 12 Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-server-op-code-12-video" class="md-nav__link">
+    Client-&gt;Server Op Code 12 Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-voice-gateway-events" class="md-nav__link">
+    Other Voice Gateway events
   </a>
   
 </li>
@@ -503,82 +633,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3_2" >
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../voice/">Voice</a>
-          
-            <label for="__nav_4_3_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Voice
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voice/sfu/" class="md-nav__link">
-        Selective Forwarding Unit (SFU) Server
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voice/webrtc/" class="md-nav__link">
-        WebRTC Signaling
-      </a>
     </li>
   
 
@@ -1586,15 +1640,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage_flags" class="md-nav__link">
-    usage_flags
+  <a href="#connecting-to-voice" class="md-nav__link">
+    Connecting to voice
   </a>
+  
+    <nav class="md-nav" aria-label="Connecting to voice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-getting-our-voice-gateway-endpoint-and-our-token" class="md-nav__link">
+    1. Getting our Voice Gateway endpoint and our token:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-connecting-to-voice-gateway" class="md-nav__link">
+    2. Connecting to Voice Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-sdp-negotiation" class="md-nav__link">
+    3. Start SDP negotiation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#purchased_flags" class="md-nav__link">
-    purchased_flags
+  <a href="#signaling-track-events" class="md-nav__link">
+    Signaling track events
+  </a>
+  
+    <nav class="md-nav" aria-label="Signaling track events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-client-op-code-12-video" class="md-nav__link">
+    Server-&gt;Client Op Code 12 Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-server-op-code-12-video" class="md-nav__link">
+    Client-&gt;Server Op Code 12 Video
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-voice-gateway-events" class="md-nav__link">
+    Other Voice Gateway events
   </a>
   
 </li>
@@ -1617,36 +1725,174 @@
   
 
 
-<h1 id="enums-and-bitfields-and-such">Enums and bitfields and such</h1>
-<p>Various interesting enums/bitfields/etc found by inspecting the client source</p>
-<h2 id="usage_flags"><code>usage_flags</code></h2>
-<p>Bitfield which tracks which premium features you have used in order
-to convince you out of unsubscribing from premium features.</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PREMIUM_DISCRIMINATOR</td>
-<td>1</td>
-</tr>
-<tr>
-<td>ANIMATED_AVATAR</td>
-<td>2</td>
-</tr>
-<tr>
-<td>PROFILE_BANNER</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<h2 id="purchased_flags"><code>purchased_flags</code></h2>
-<p>Bitfield which may track which premium features have ever been bought on this account.
-Uses the values of each <a href="https://discord.com/developers/docs/resources/user#user-object-premium-types">premium type</a></p>
+<h1 id="webrtc-signaling">WebRTC Signaling</h1>
+<p>Since WebRTC is a well-defined open standard and the browser-built in APIs are heavily documented in many online sources, we are not going to focus on the WebRTC browser API and how to use it to connect. Rather, this document will focus on the Discord-specific signaling portion of the connection establishment. For details on using the browser's WebRTC API, you can reference <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection">Mozilla Developer Docs</a></p>
+<h2 id="connecting-to-voice">Connecting to voice</h2>
+<p>The signaling for connecting to voice over WebRTC is very similar to the one used by UDP clients. There's only a few differences, notably the fact that our connection information is exchanged in SDP format.</p>
+<h3 id="1-getting-our-voice-gateway-endpoint-and-our-token">1. Getting our Voice Gateway endpoint and our token:</h3>
+<p>First send an <strong>Opcode 4 Gateway Voice State Update</strong> to Gateway:</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;guild_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;41771983423143937&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;channel_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127121515262115840&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;self_mute&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;self_deaf&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Gateway will respond with 2 events: <strong>Voice State Update</strong> event and a <strong>Voice Server Update</strong> event</p>
+<p><strong>Voice Server Update</strong> will contain information about the Voice Gateway endpoint that we will connect to, as well as our token for authenticating to it.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VOICE_SERVER_UPDATE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;s&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_token&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;guild_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;41771983423143937&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sweetwater-12345.discord.media:2048&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="2-connecting-to-voice-gateway">2. Connecting to Voice Gateway</h3>
+<p>Now that we have the Voice Gateway endpoint and token, we can connect to it. Start a new WebSocket connection to <code>wss://endpoint_obtained_from_gateway</code></p>
+<p>Once connected, send an <strong>Opcode 0 Identify</strong> payload with our server_id, user_id, session_id, and token</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;server_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;41771983423143937&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;104694319306248192&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_session_id&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_token&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;video&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;streams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;video&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;quality&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;max_dave_protocol_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The Voice Gateway will respond with an <strong>Opcode 2 Ready</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;modes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;xsalsa20_poly1305&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;xsalsa20_poly1305_suffix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;xsalsa20_poly1305_lite&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;heartbeat_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;streams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;video&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;quality&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rtx_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The IP, Port, and SSRC values would be used by UDP clients for connecting and sending media packets, but since we will be using WebRTC to connect, we can disregard everything in this message. Our browser will generate its own SSRC values and the connection information will be exchanged over SDP</p>
+<h3 id="3-start-sdp-negotiation">3. Start SDP negotiation</h3>
+<p>To start the SDP negotiation, we send <strong>Opcode 1 Select Protocol</strong> that includes our offer SDP</p>
+<p><strong><em>&gt;&gt;Important: our offer sdp is truncated before being sent to the server. You can send a complete sdp offer, it does not really matter because the client and server will use SDP munging to negotiate any streams. It is important that the codecs array has the correct payload types, as this will be used for the SDP munging by the server</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webrtc&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;our sdp offer here&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sdp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;our sdp offer here&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;codecs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;opus&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;audio&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payload_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H264&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;video&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payload_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rtx_payload_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;rtc_connection_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="c1">// uuid</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Voice Gateway will respond with <strong>Opcode 4 Session Description</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;op&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;video_codec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H264&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;sdp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sdp answer here&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;media_session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;audio_codec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;opus&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The SDP answer will not be a full SDP, instead it is a truncated sdp that contains the necessary information for connection, such as the SFU server host and port, fingerprint, and ICE username + password. Using this basic information we should be able to start our WebRTC connection, but first we have to construct a complete SDP answer using this information so that our client peer accepts it as a valid sdp.</p>
+<p>When re-constructing the SDP answer, remember to add <code>setup=passive</code> to the answer SDP, since that will tell the client to act in <em>controlling mode</em>, initiating the ICE connection to the SFU.</p>
+<h2 id="signaling-track-events">Signaling track events</h2>
+<p>After we have successfully connected to the SFU over WebRTC, we are ready to begin sending and receiving media. Since the SFU and WebRTC client will only exchange SDP once (at the start of the connection), both the SFU and client will do have to do some clever tricking to negotiate the changing of the incoming/outgoing streams. The client will have to use something called <strong>SDP munging</strong>, where it alters the SDP manually, even generating its own SDP answer once it receives <strong>Op Code 12 Video</strong></p>
+<h3 id="server-client-op-code-12-video">Server-&gt;Client Op Code 12 Video</h3>
+<p>An incoming <strong>Op Code 12 Video</strong> event signals that a user in the voice channel has changed their outgoing tracks. It includes the <code>user_id</code> so that you can map each track to a user, based on the SSRC.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;audio_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;video_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rtx_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29229393982&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;streams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;video&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;quality&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rtx_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_bitrate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2500</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_framerate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_resolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fixed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1080</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="w"> </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A value &gt; 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you receive a positive value SSRC for either audio, expect the PeerConnection onTrack event to be fired and to receive a track matching that SSRC. For video, the video_ssrc has to be &gt; 0 AND you have to have at least 1 stream with <code>active=true</code>. </p>
+<h3 id="client-server-op-code-12-video">Client-&gt;Server Op Code 12 Video</h3>
+<p>An outgoing <strong>Op Code 12 Video</strong> event signals that your client wants to change outgoing tracks. It is similar to the incoming event payload, but it omits the <code>user_id</code>, since the server already knows this event is coming from you.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;audio_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;video_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rtx_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;streams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;video&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;quality&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;rtx_ssrc&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_bitrate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2500</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_framerate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;max_resolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fixed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1080</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="w"> </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Similarily, a value &gt; 0 for the SSRC indicates that the user is publishing that track, while a value of 0 for the track indicates the user is not currently publishing that track. If you send a positive value for SSRC for audio, the server will be expecting for you to start sending a track matching that SSRC. For video, the video_ssrc has to be &gt; 0 AND you have to have at least 1 stream with <code>active=true</code>. </p>
+<h2 id="other-voice-gateway-events">Other Voice Gateway events</h2>
+<p>The remaining Voice Gateway events will be exactly the same for WebRTC clients and UDP clients, so you can just reference the <a href="https://docs.discord.com/developers/topics/voice-connections">Discord developer docs</a>. These include Speaking events, Heartbeating, Buffered Resume, and the E2EE DAVE protocol-related message events.</p>
 
 
 
