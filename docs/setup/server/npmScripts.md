@@ -1,37 +1,27 @@
 # NPM scripts
 
+These are the most relevant NPM scripts, for a complete listing, see package.json.
 Can be executed using `npm run {script name}`
-
-## `setup`
-
-Shorthand for `build` and `generate:schema`
 
 ## `sync:db`
 
 Syncronise the database schema between {{ project.name }} source code and your database.
 **May incur data loss**. You do not normally need to run this script, as {{ project.name }}-server will perform it when necessary.
 
-## `build`
+## `build:tsgo`
 
 Builds the {{ project.name }} source code
-
-## `watch`
-
-Starts the compilation of the {{ project.name }} source code in watch mode, automatically recompiling when changes are detected.
 
 ## `start`
 
 Starts the bundled server. API, Gateway, and CDN run under the same process when using bundle, using the same port.
+This should not be used in production!
 
-## `start:api`, `start:gateway`, `start:cdn`
+## `start:api`, `start:gateway`, `start:cdn`, `start:webrtc`
 
 Starts the respective component.
 
-## `generate:rights`
+## `generate:schema`, `generate:openapi`
 
-Generates a Discord.com-like rights value for use as a default right.
-Also displays the 'all rights' value, which `1` is a placeholder for.
-
-## `generate:schema`
-
-Recreates the `{{ project.name.lower() }}-server/assets/schema.json` file, which is used for API and Gateway request validation.
+Recreates the `{{ project.name.lower() }}-server/assets/schema.json`, `{{ project.name.lower() }}-server/assets/openapi.json` files respectively,
+the former of which is used for API and Gateway request validation.
