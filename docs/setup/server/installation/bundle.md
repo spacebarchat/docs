@@ -1,6 +1,7 @@
 # NPM Bundle
 
 The easiest way to set up a {{ project.name }} server is by running the npm bundle, which runs the API, gateway, and CDN processes together.
+This guide will assume that you own a paid domain name, and are on Linux.
 
 ## Dependencies
 
@@ -17,70 +18,61 @@ The easiest way to set up a {{ project.name }} server is by running the npm bund
 
 ## Setup
 
+First, set up a [PostgreSQL database](../database.md). Once that's done, you can continue setting up your Spacebar instance.
+
 In your terminal:
 
 ```bash
 # Download {{ project.name }}
-git clone {{ repositories.base_url }}/{{ repositories.server }}.git
-
-# Navigate to project root
-cd server
+git clone {{ repositories.base_url }}/{{ repositories.server }}.git && cd server
 
 # Install javascript packages
 npm i
 
-# Build and generate schema + openapi. Separately, they are `build:src`, `generate:schema` and `generate:openapi`.
-npm run build
+# Build and generate schema + openapi. Separately, they are `build:src:tsgo`, `generate:schema` and `generate:openapi`.
+npm run build:tsgo
 
-# Start the bundle server ( API, CDN, Gateway in one )
+# Set some environment variables regarding configuration
+export CONFIG_PATH=config.json
+export DATABASE='postgres://user:password@127.0.0.1/spacebar'
+
+# Start the bundle server (API, CDN, Gateway in one) - not recommended for production instances
 npm run start
 ```
 
-If all went according to plan, you can now access your new {{ project.name }} instance at [http://localhost:3001](http://localhost:3001)! Congrats!
+The server should error out with some instructions, particularly missing configuration values:
+```jsonc
+{
+  "api": { "endpointPublic": "https://api.spacebar.your-domain.net" }, // public URL to your API
+  "gateway": { "endpointPublic": "wss://gateway.spacebar.your-domain.net" }, // public URL to your gateway
+  "cdn": {
+    "endpointPublic": "https://cdn.spacebar.your-domain.net", // public URL to your CDN
+    "endpointPrivate": "http://localhost:3001" // special: this should be routable from the API! If not, file uploads will fail.
+  },
+  "general": { "serverName": "spacebar.your-domain.net" } // your "server name" should be the public domain of your instance, where .well-knowns are available
+}
+```
 
-If you set up your server remotely, you can use `curl http://localhost:3001/api/ping` to verify the server is up and running
-(you should set up a reverse proxy, next!).
+Then start the server again.
+
+If all went according to plan, you can now access your new {{ project.name }} instance via `curl http://localhost:3001` on the server! Congrats!
 
 # Connecting from remote machines
 
 For your server to be a bit more useful to those not on the same machine, you'll need to do a bit more configuration.
 
-The official Spacebar client does automatic discovery of the endpoints it uses to communicate with the server,
+Spacebar clients generally do automatic discovery of the endpoints it uses to communicate with the server,
 but it needs to retrieve those from somewhere, that being the API server.
 
-If you don't tell the API server where to find the other services, the official Spacebar client wont be able to connect.
+If you don't tell the API server where to find the other services, the Spacebar clients wont be able to connect.
 Other clients which don't do automatic discovery will be, but that's because your users will need to provide the locations manually.
 
-We'll be doing some [server configuration](../configuration) in this step, which is stored in your servers database by default.
-By default, Spacebar uses an SQLite database in the project root called `database.db`, but you might not want to use that for production.
-[If you're going to switch databases, do it now.](../database.md)
-
-Once you've opened your database, navigate to the `config` table. You'll see 2 columns named `key` and `value`.
-You'll want to set the `value` of the rows with the following keys to the correct values.
-
-| key                      | value                                                    |
-| ------------------------ | -------------------------------------------------------- |
-| `api_endpointPublic`     | Your API endpoint. Likely `"https://DOMAIN_NAME/api/v9"` |
-| `cdn_endpointPublic`     | Your CDN endpoint. Likely `"https://DOMAIN_NAME"`         |
-| `gateway_endpointPublic` | Your Gateway endpoint. Likely `"wss://DOMAIN_NAME"`       |
-
-!!! warning "You must wrap these `value`s in doublequotes as they are parsed as JSON!"
-
-If you're in the CLI for this, heres some template SQL:
-
-=== "SQLite"
-
-    ```sql
-    update config
-    set value = '"HTTPS_OR_WSS://SERVER_ADDRESS"'
-    where key = "THE_SERVICE_NAME_endpointPublic";
-    ```
+To achieve this, you'll need to configure a [reverse proxy w/ SSL](../reverseProxy.md).
 
 ## Now what?
 
 Well, now you can configure {{ project.name }} to your liking!
 
 -   [Set up experimental and optional Admin API](../adminApi)
--   [Skip to server configuration](../configuration)
--   [Skip to reverse proxy / SSL](../reverseProxy.md)
--   [Skip to security](../security)
+-   [Do more in-depth configuration](../configuration)
+-   [Explore security-related options](../security)
