@@ -21,6 +21,16 @@
     python3 -m pip install -r requirements.txt
     ```
 
+3.1. NixOS
+
+    ```bash
+    nix shell nixpkgs#python3 nixpkgs#python3Packages.pip
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+
+
 4. Edit documents(s).
 
     - Format document(s).
