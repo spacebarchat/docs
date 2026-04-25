@@ -33,6 +33,7 @@ plugins:
     - section-index
     - search
     - macros
+    - awesome-nav
 theme:
     name: material
     logo: assets/logo.svg
