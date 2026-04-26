@@ -10,7 +10,7 @@ Your instance:
 3. Must not host the Discord Inc. client in any capacity.
 4. Must be moderated for _at least_ publically accessible guilds. This includes guilds accessible from Discovery or a 'guild directory' channel in an auto join guild.
 5. Must have at least regular uptime, meaning it is available at a consistent time of day.
-6. Must have a valid and monitored [`general_correspondenceEmail` config](/setup/server/configuration) set.
+6. Must have a valid and monitored [`general.correspondenceEmail` config](/setup/server/configuration) set.
 7. Must not have default [rights](/setup/server/security/rights) that include operator or other administrative rights.
 8. Use an [image proxy](/setup/server/configuration/imageProxy), e.g. Imagor, as no image proxy allows attackers to learn user IP addresses.
 9. Have a valid SSL/TLS certificate for all endpoints.

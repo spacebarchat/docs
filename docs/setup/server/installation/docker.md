@@ -31,7 +31,7 @@ docker run \
   ghcr.io/{{ repositories.server }}
 ```
 
-4. Set config values for `general_serverName`, `cdn_endpointPublic`, `cdn_endpointPrivate` to `http://localhost:3001`, `api_endpointPublic` to `http://localhost:3001/api/v9` and `gateway_endpointPublic` to `ws://localhost:3001`
+4. Set config values for `general.serverName`, `cdn.endpointPublic`, `cdn.endpointPrivate` to `http://localhost:3001`, `api.endpointPublic` to `http://localhost:3001/api/v9` and `gateway.endpointPublic` to `ws://localhost:3001`
 
 5. Run the server docker image after the config changes:
 ```sh

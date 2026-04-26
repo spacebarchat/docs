@@ -59,7 +59,7 @@
 
     In the case of guilds, you may run into issues with uploading animated icons or banners, etc.
     If so, simply give the guild the [features](setup/server/configuration/guildFeatures.md) you require.
-    You can set them to be given to all guilds by default using the [config](setup/server/configuration/index.md) `guild_defaultFeatures` array.
+    You can set them to be given to all guilds by default using the [config](setup/server/configuration/index.md) `guild.defaultFeatures` array.
 
 ??? info "Can I log in with my Discord account?"
 

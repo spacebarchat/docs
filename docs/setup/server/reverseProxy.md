@@ -88,5 +88,5 @@ After you've set up NGINX, it's very simple to also set up SSL using `certbot`.
 You should be asked various questions, such as which site you want to enable SSL for.
 After which, you should now have a SSL secured {{ project.name }} instance!
 
-But wait, there's more! If you have changed your `gateway_endpointPublic`
-or `cdn_endpointPublic` addresses, you'll probably have to update those to use the new protocol (`https` or `wss`).
+But wait, there's more! If you have changed your `gateway.endpointPublic`
+or `cdn.endpointPublic` addresses, you'll probably have to update those to use the new protocol (`https` or `wss`).
