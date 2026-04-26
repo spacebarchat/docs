@@ -1,4 +1,4 @@
-# Running the server as a docker container
+# Docker
 
 ## Bundle
 

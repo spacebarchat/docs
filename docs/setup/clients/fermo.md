@@ -1,8 +1,8 @@
-# Web Fermo
+# Fermo
 
 !!! warning "Fermo is under heavy development but may be used as it's still rather complete"
 
-*Fermo is a fork of Fermi, which formerly used to target Spacebar.*
+*Fermo is a fork of [Fermi](https://github.com/MathMan05/Fermi), which formerly used to target Spacebar.*
 
 Fermo is currently being developed at [this repository](https://github.com/oh64/Fermo).
 

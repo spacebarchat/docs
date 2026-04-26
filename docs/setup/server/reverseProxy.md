@@ -1,4 +1,4 @@
-# Reverse Proxy
+# Reverse proxy
 
 ## NGINX
 

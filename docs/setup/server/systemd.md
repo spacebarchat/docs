@@ -1,4 +1,4 @@
-# SystemD
+# systemd
 
 Below is an example systemd service for running {{ project.name }}.
 Save it in `/etc/systemd/system/{{ project.name.lower() }}.service`.

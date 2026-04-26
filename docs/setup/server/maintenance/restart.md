@@ -1,3 +1,7 @@
+---
+title: When to restart
+---
+
 # When must the server restart?
 
 {{ project.name }}-server must restart in the following cases:

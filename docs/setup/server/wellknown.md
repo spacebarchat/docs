@@ -1,4 +1,4 @@
-# well-known
+# Domain delegation (.well-known)
 
 Instance owners may host a `/.well-known/spacebar/client` file on a domain containing the instance's API endpoint for Spacebar instance discovery.
 

@@ -1,3 +1,7 @@
+---
+title: Admin API
+---
+
 # Admin API Setup
 
 {{ project.name }}-server Admin API setup ranges in difficulty depending on how you want to configure your system.
