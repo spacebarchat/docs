@@ -4,7 +4,7 @@
 rather than maintaining 10 of them.
 
 We won't go into the setup of these servers here, given the scope of our documentation,
-but to configure {{ project.name }} to use your shiny new database, simply set the `DATABASE` [environment variable](configuration/env.md)
+but to configure {{ project.name }} to use your shiny new database, simply set the `DATABASE` [environment variable](../../configuration/env.md)
 to your new database connection string. You can generally find decent documentation with a quick web search:
 
   - NixOS: <https://wiki.nixos.org/wiki/PostgreSQL>

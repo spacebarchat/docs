@@ -44,7 +44,7 @@ The JSON file has the following top-level sections:
 | `endpointPublic`                   | null             | string        | CDN endpoint. See `gateway.endpointPublic`               |
 | `resizeHeightMax`                  | 1000             | number        | Maximum image resize height for embeds.                  |
 | `resizeWidthMax`                   | 1000             | number        | Maximum image resize width for embeds.                   |
-| [`imagorServerUrl`](imageProxy.md) | null             | string        | Endpoint to proxy embed images, e.g. using Imagor.       |
+| [`imagorServerUrl`](../installation/generic/imageProxy.md) | null             | string        | Endpoint to proxy embed images, e.g. using Imagor.       |
 
 
 ### API Options (`api`)
@@ -135,9 +135,9 @@ The JSON file has the following top-level sections:
 | `captcha.secret`                            | null                          | string                  | Captcha service secret                                                |
 | `twoFactor.generateBackupCodes`             | true                          | boolean                 | Whether to generate backup codes for MFA users                        |
 | `autoUpdate`                                | true                          | boolean                 | Automatically updates NPM packages daily. Currently unused            |
-| `requestSignature`                          | Random secret                 | string                  | The signature required for CDN or [Imagor](imageProxy.md) usage       |
+| `requestSignature`                          | Random secret                 | string                  | The signature required for CDN or [Imagor](../installation/generic/imageProxy.md) usage       |
 | `jwtSecret`                                 | Random secret                 | string                  | The secret used for user token generation                             |
-| [`forwardedFor`](../reverseProxy.md)        | null                          | string                  | HTTP header for user's real IP                                        |
+| [`forwardedFor`](../installation/generic/reverseProxy.md)        | null                          | string                  | HTTP header for user's real IP                                        |
 | `ipdataApiKey`                              | {{ project.name }} IPdata key | string                  | API key used for IP geolocation and proxy detection                   |
 | `mfaBackupCodeCount`                        | 10                            | number                  | Number of MFA backup codes to generate                                |
 | `statsWorldReadable`                        | true                          | boolean                 | Whether instance stats are publically accessible or require right     |
@@ -224,7 +224,7 @@ Regions are defined with the following structure
 
 ### RabbitMQ Options (`rabbitmq`)
 
-See [RabbitMQ](rabbitmq.md) for more information.
+See [RabbitMQ](../installation/generic/rabbitmq.md) for more information.
 
 | key                                         | default                          | type                    | description                                                           |
 | ------------------------------------------- | -------------------------------- | ----------------------- | --------------------------------------------------------------------- |
@@ -274,12 +274,12 @@ See [RabbitMQ](rabbitmq.md) for more information.
 
 ### Email Options (`email`)
 
-See [EMail](../email.md) for more information.
+See [EMail](email.md) for more information.
 
 
 | key                                         | default               | type                                     | description                                                           |
 | ------------------------------------------- | --------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| [`provider`](../email.md)                   | null                  | "smtp", "mailgun", "mailjet", "sendgrid" | Which email transport to use                                          |
+| [`provider`](email.md)                   | null                  | "smtp", "mailgun", "mailjet", "sendgrid" | Which email transport to use                                          |
 | `senderAddress`                             | null                  | string                                   | Sender email address. Defaults to `general_correspondenceEmail`       |
 | `smtp.host`                                 | null                  | string                                   | SMTP host for sending email                                           |
 | `smtp.port`                                 | null                  | number                                   | SMTP port                                                             |

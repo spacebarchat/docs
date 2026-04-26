@@ -13,7 +13,7 @@ This guide will assume that you own a paid domain name, and are on Linux.
      (NOTE: Ubuntu and Debian based systems often ship with an outdated version of NodeJS, so you can use [NodeSource](https://github.com/nodesource/distributions) to install a newer version)
 -   [Python](https://www.python.org/). Version 3.13 or later. Make sure this is executable via `python` in your terminal.  
      (See: `python-is-python3` package)
--   [.NET SDK](https://dot.net). Version 9.0+. Optional, but used for the experimental [Admin API](../adminApi).
+-   [.NET SDK](https://dot.net). Version 9.0+. Optional, but used for the experimental [Admin API](generic/adminApi.md).
 -   On Linux: `gcc`/`g++`. Packaged with `build-essential` on Debian/Ubuntu and `base-devel` on Arch.
 -   On Windows: [Visual Studio](https://visualstudio.microsoft.com/) (**NOT** VSCode) with the `Desktop development with C++` package.
     You do not need the full Visual Studio install, the build tools are fine.
@@ -21,7 +21,7 @@ This guide will assume that you own a paid domain name, and are on Linux.
 
 ## Setup
 
-First, set up a [PostgreSQL database](../database.md). Once that's done, you can continue setting up your Spacebar instance.
+First, set up a [PostgreSQL database](generic/database.md). Once that's done, you can continue setting up your Spacebar instance.
 
 In your terminal:
 
@@ -71,12 +71,12 @@ but it needs to retrieve those from somewhere, that being the API server.
 If you don't tell the API server where to find the other services, the Spacebar clients wont be able to connect.
 Other clients which don't do automatic discovery will be, but that's because your users will need to provide the locations manually.
 
-To achieve this, you'll need to configure a [reverse proxy w/ SSL](../reverseProxy.md).
+To achieve this, you'll need to configure a [reverse proxy w/ SSL](generic/reverseProxy.md).
 
 ## Now what?
 
 Well, now you can configure {{ project.name }} to your liking!
 
--   [Set up experimental and optional Admin API](../adminApi)
+-   [Set up experimental and optional Admin API](generic/adminApi.md)
 -   [Do more in-depth configuration](../configuration)
 -   [Explore security-related options](../security)

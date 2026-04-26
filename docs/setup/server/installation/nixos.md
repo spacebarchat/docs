@@ -4,7 +4,7 @@
 
 !!! warn "It is not currently possible to use the NixOS module outside flakes-based setups"
 
-{{ project.name }} comes with an integrated NixOS module, which takes care of a lot of the configuration for you. In particular, the module automatically configures [seperate SystemD services](../systemd.md) for the API, gateway, and CDN services and configures unix sockets for [message passing](../message-passing).
+{{ project.name }} comes with an integrated NixOS module, which takes care of a lot of the configuration for you. In particular, the module automatically configures [seperate SystemD services](generic/systemd.md) for the API, gateway, and CDN services and configures unix sockets for [message passing](../message-passing).
 
 ## Installation
 
@@ -48,7 +48,7 @@ Nginx can be configured to act as a reverse proxy for those endpoints via `nginx
 
 The configuration file is generated from `settings`. See [Configuration](../configuration/) for detailed documentation.
 
-Additional [environment variables](../configuration/env.md) can be set via `extraEnvironment` if desired. In particular, you will probably want to set up a [PostgreSQL database](../database.md) and set `extraEnvironemtn.DATABASE`. You can use
+Additional [environment variables](../configuration/env.md) can be set via `extraEnvironment` if desired. In particular, you will probably want to set up a [PostgreSQL database](generic/database.md) and set `extraEnvironemtn.DATABASE`. You can use
 
 ```nix
 extraEnvironment.DATABASE = "postgres://?host=/run/postgresql";

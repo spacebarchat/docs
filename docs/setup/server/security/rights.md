@@ -89,7 +89,7 @@ Operator rights currently grants access to the following, in addition to all rig
 | `EDIT_FLAGS`                | 1 << 46 | Can modify other's flags                                                                                                                              |
 | `MANAGE_GROUPS`             | 1 << 47 | Can manage other's groups                                                                                                                             |
 | `VIEW_SERVER_STATS`         | 1 << 48 | Can view server stats /api/policies/stats                                                                                                             |
-| `RESEND_VERIFICATION_EMAIL` | 1 << 49 | Can resend verification [emails](../email.md) (`/auth/verify/resend`)                                                                                 |
+| `RESEND_VERIFICATION_EMAIL` | 1 << 49 | Can resend verification [emails](../configuration/email.md) (`/auth/verify/resend`)                                                                                 |
 | `CREATE_REGISTRATION_TOKENS` | 1 << 50 | Can create [registration tokens](./regTokens.md) (`/auth/generate-registration-tokens`)                                                               |
 
 <script src="/assets/js/rightsCalculator.js"></script>

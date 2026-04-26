@@ -4,7 +4,7 @@ Embeds in {{ project.name }} are external content that is displayed within your 
 {{ project.name }} tries its best to fetch content from these external sites,
 but sometimes we require an API key or other authentication with the site to display their content (or nicer looking embeds).
 
-For external images, it's best to set up [Imagor or another image proxy](imageProxy.md) for image resizing.
+For external images, it's best to set up [Imagor or another image proxy](../installation/generic/imageProxy.md) for image resizing.
 The client may or may not fetch images directly from their source if this is not set up,
 and as such some users may not see all images.
 In the case where a client does fetch an image from it's source, without Imagor an attacker

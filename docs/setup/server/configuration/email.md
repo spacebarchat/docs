@@ -17,13 +17,13 @@ Once you have an account with one of the above services, or an SMTP service, you
 
 You must edit:
 
--   The `general.frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
+-   The `general.frontPage` [config](index.md) value, used to generate verification/password reset links.
     Be sure to set it to the {{ project.name }} web app URL. For example, `https://staging.{{ project.domain }}`
 -   The `email.senderAddress` config value, used as the 'from' email address. If it's not set, `general.correspondenceEmail` is used.
 
 Optionally:
 
--   By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+-   By default users are automatically verified. To change this, update the `defaults_user_verified` [config](index.md) value to `false`.
 -   If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
 -   You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
 
