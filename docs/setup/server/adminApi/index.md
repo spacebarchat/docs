@@ -13,9 +13,8 @@ Additionally, the Admin API has not been tested on Windows,
 ## Dependencies
 
 -   [Git](https://git-scm.com/)
--   [.NET SDK](https://dot.net). Version 9.0+.
--   [PostgreSQL](https://postgresql.org/). The Admin API does **not** work with SQLite.
--   [RabbitMQ](https://rabbitmq.com/). The Admin API heavily relies on a server setup with RabbitMQ.
+-   [.NET SDK](https://dot.net). Version 10.0+.
+-   [PostgreSQL](https://postgresql.org/)
 -   Hint: If you have the [`nix`](https://nixos.org/download/) package manager installed, you can skip all of the above by running `nix develop .#` in your terminal.
 
 ## Setup
@@ -36,7 +35,7 @@ nvim appsettings.Development.json
 dotnet build -c Release
 
 # Start the Admin API
-dotnet bin/Release/net9.0/Spacebar.AdminApi.dll
+dotnet bin/Release/net10.0/Spacebar.AdminApi.dll
 ```
 
 ## Setup Test Client (optional)
