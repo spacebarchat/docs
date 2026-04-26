@@ -1,9 +1,9 @@
 ---
-title: Baremetal (bundle)
+title: Baremetal (full)
 ---
-# NPM Bundle
+# NPM Bare Metal
 
-The easiest way to set up a {{ project.name }} server is by running the npm bundle, which runs the API, gateway, and CDN processes together.
+The easiest way to set up a {{ project.name }} server is by running the separate npm modules, which runs the API, gateway, and CDN processes separately.
 This guide will assume that you own a paid domain name, and are on Linux.
 
 ## Dependencies
@@ -39,18 +39,19 @@ npm run build:tsgo
 export CONFIG_PATH=config.json
 export DATABASE='postgres://user:password@127.0.0.1/spacebar'
 
-# Start the bundle server (API, CDN, Gateway in one) - not recommended for production instances
-npm run start
+# Start the server
+npm run start:api
+# start:cdn, start:gateway in separate terminals 
 ```
 
 The server should error out with some instructions, particularly missing configuration values:
 ```jsonc
 {
-  "api": { "endpointPublic": "https://spacebar.your-domain.net" }, // public URL to your API
-  "gateway": { "endpointPublic": "wss://spacebar.your-domain.net" }, // public URL to your gateway
+  "api": { "endpointPublic": "https://api.spacebar.your-domain.net" }, // public URL to your API
+  "gateway": { "endpointPublic": "wss://gateway.spacebar.your-domain.net" }, // public URL to your gateway
   "cdn": {
-    "endpointPublic": "https://spacebar.your-domain.net", // public URL to your CDN
-    "endpointPrivate": "http://localhost:3001" // special: this should be routable from the API! If not, file uploads will fail.
+    "endpointPublic": "https://cdn.spacebar.your-domain.net", // public URL to your CDN
+    "endpointPrivate": "http://localhost:3003" // special: this should be routable from the API! If not, file uploads will fail.
   },
   "general": { "serverName": "your-domain.net" } // your "server name" should be the public domain of your instance, where .well-knowns are available
 }
