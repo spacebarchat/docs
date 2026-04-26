@@ -1,17 +1,5 @@
 # Reverse Proxy
 
-## Caddy
-
-Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.
-
-To set up Spacebar behind Caddy, simply add `reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001` to your Caddyfile. **Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.**
-
-```
-spacebar.example.xyz {
-    reverse_proxy 10.0.0.99:3001
-}
-```
-
 ## NGINX
 
 Generally, our community sets up {{ project.name }} instances behind NGINX, a powerful reverse proxy.
@@ -58,6 +46,18 @@ server {
  # # If you changed the port, be sure to change it here too
  # proxy_pass http://127.0.0.1:8000/;
  #}
+}
+```
+
+## Caddy
+
+Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.
+
+To set up Spacebar behind Caddy, simply add `reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001` to your Caddyfile. **Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.**
+
+```
+spacebar.example.xyz {
+    reverse_proxy 10.0.0.99:3001
 }
 ```
 

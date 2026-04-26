@@ -40,5 +40,6 @@ Easy fix though, just edit the `DeveloperOptionsStore` localStorage key so that 
 
 !!! warning
 
-    Make sure you rerun `npm run build` every time you edit source code, or just use `npm run watch` to make TypeScript automatically recompile on code changes.
-    Wenn making changes to schemas or HTTP routes, run `npm run generate:schemas` and `npm run generate:openapi` to update the schemas used for validating incoming requests and generating the API documentation.
+    Make sure you rerun `npm run build:src:tsgo` every time you edit source code, or just use `npm run watch` to make TypeScript automatically recompile on code changes.
+    When making changes to schemas or HTTP routes, run `npm run generate:schemas` and `npm run generate:openapi` to update the schemas used for validating incoming requests and generating the API documentation.
+    (These are also updated when running `npm run build:tsgo`, if you'd rather rebuild everything in one shot.)
