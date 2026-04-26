@@ -1,6 +1,6 @@
 # SystemD
 
-Below is an example SystemD service for running {{ project.name }}.  
+Below is an example systemd service for running {{ project.name }}.
 Save it in `/etc/systemd/system/{{ project.name.lower() }}.service`.
 
 ```toml

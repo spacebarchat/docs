@@ -1,3 +1,6 @@
+---
+title: Baremetal (bundle)
+---
 # NPM Bundle
 
 The easiest way to set up a {{ project.name }} server is by running the npm bundle, which runs the API, gateway, and CDN processes together.

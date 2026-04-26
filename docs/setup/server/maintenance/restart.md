@@ -3,10 +3,10 @@
 {{ project.name }}-server must restart in the following cases:
 
 -   The .env file or config (database or [CONFIG_PATH](/setup/server/configuration)) has changed.
--   Files in the `client_test`, `preload-plugins` folders of inside `assets` have changed.
+-   Files in the `assets` directory have changed.
 -   Files inside `src` have changed (_remember to `npm run build`_).
--   The `assets/schemas.json` file has changed.
 -   The [RabbitMQ](/setup/server/configuration/rabbitmq) connection has been lost.
+-   The server has been updated.
 
 For all other cases, you do not need to restart the server. For example:
 

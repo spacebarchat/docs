@@ -8,7 +8,7 @@
 
 ## Installation
 
-Include the following dependency in your flake:
+Include the following input in your flake:
 
 ```nix
 spacebar = {
