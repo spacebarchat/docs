@@ -1,15 +1,19 @@
 # Database
 
-By default, {{ project.name }} will use SQLite. SQLite is nice for testing or development.
-The SQLite database is stored in the `database.db` file at the server root by default.
-You may delete this file to regenerate a new SQLite database on the next server start
-(or through `npm run sync:db`).
-
-However, if you plan to run an instance with any sort of demand, you'd best set up a more Proper™ database
-such as PostgreSQL, which is a popular choice within the community, and recommended by the maintainers.
+{{ project.name }} requires a PostgreSQL database server. This allows us to tailor support for one implementation,
+rather than maintaining 10 of them.
 
 We won't go into the setup of these servers here, given the scope of our documentation,
 but to configure {{ project.name }} to use your shiny new database, simply set the `DATABASE` [environment variable](configuration/env.md)
-to your new database connection string.
+to your new database connection string. You can generally find decent documentation with a quick web search:
 
-Usually, such a string will look something like `type://username:password@host-IP:port/databaseName`
+  - NixOS: <https://wiki.nixos.org/wiki/PostgreSQL>
+  - Debian/ubuntu: <https://wiki.debian.org/PostgreSql> (also see [upstream documentation](https://wiki.postgresql.org/wiki/Apt))
+  - Arch Linux: <https://wiki.archlinux.org/title/PostgreSQL>
+  - Gentoo: <https://wiki.gentoo.org/wiki/PostgreSQL> ([QuickStart guide](https://wiki.gentoo.org/wiki/PostgreSQL/QuickStart))
+  - Fedora: <https://docs.fedoraproject.org/en-US/quick-docs/postgresql/>
+
+Usually, such a string will look something like `postgres://username:password@127.0.0.1:5432/databaseName`
+
+For .NET based services (eg. the Admin API), the connection string will be in an appsettings file, with the following
+format: `Host=127.0.0.1; Username=username; Password=password Database=spacebar; Port=5432; Include Error Detail=true; Maximum Pool Size=1000; Command Timeout=6000; Timeout=600;`
