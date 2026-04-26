@@ -224,7 +224,7 @@ Regions are defined with the following structure
 
 ### RabbitMQ Options (`rabbitmq`)
 
-See [RabbitMQ](../installation/generic/rabbitmq.md) for more information.
+See [RabbitMQ](../installation/generic/ipc/rabbitmq.md) for more information.
 
 | key                                         | default                          | type                    | description                                                           |
 | ------------------------------------------- | -------------------------------- | ----------------------- | --------------------------------------------------------------------- |

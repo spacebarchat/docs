@@ -25,7 +25,7 @@ Make sure to edit the file as needed, such as replacing the user.
 It is a good idea to create a new user on your system to run {{ project.name }}.
 If you would like to run the API, CDN or Gateway separately,
 you can edit the `ExecStart` command used in line with the [npm script](../../maintenance/npmScripts.md).
-Also be sure to run [RabbitMQ](rabbitmq.md) in that case.
+Also be sure to run [RabbitMQ](ipc/rabbitmq.md) in that case.
 
 You can now start {{ project.name }} using `sudo systemctl start {{ project.name.lower() }}`.
 

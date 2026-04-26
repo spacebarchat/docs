@@ -7,7 +7,7 @@ Without it, the Gateway server won't know when you send new events for things su
 In the message create case, you will be able to send messages, but will have to reload the client to view new messages from others.
 
 After you've downloaded and installed RabbitMQ,
-edit {{ project.name }}'s [config](../../configuration/index.md), set `rabbitmq_host` to `"amqp://guest:guest@host:5672"`
+edit {{ project.name }}'s [config](../../../configuration/index.md), set `rabbitmq_host` to `"amqp://guest:guest@host:5672"`
 
 The `guest` RabbitMQ account can only be accessed via localhost, by default.
 If you want to run {{ project.name }} over multiple systems,

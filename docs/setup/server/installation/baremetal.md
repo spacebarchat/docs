@@ -36,6 +36,8 @@ npm i
 npm run build:tsgo
 
 # Set some environment variables regarding configuration
+export EVENT_TRANSMISSION=unix
+export EVENT_SOCKET_PATH=./sock
 export CONFIG_PATH=config.json
 export DATABASE='postgres://user:password@127.0.0.1/spacebar'
 
@@ -60,6 +62,8 @@ The server should error out with some instructions, particularly missing configu
 Then start the server again.
 
 If all went according to plan, you can now access your new {{ project.name }} instance via `curl http://localhost:3001` on the server! Congrats!
+
+If this setup doesn't cover your needs, you can set up alternate event transmission modes [here](./generic/ipc).
 
 # Connecting from remote machines
 

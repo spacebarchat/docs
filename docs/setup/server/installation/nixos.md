@@ -4,7 +4,7 @@
 
 !!! warn "It is not currently possible to use the NixOS module outside flakes-based setups"
 
-{{ project.name }} comes with an integrated NixOS module, which takes care of a lot of the configuration for you. In particular, the module automatically configures [seperate SystemD services](generic/systemd.md) for the API, gateway, and CDN services and configures unix sockets for [message passing](../message-passing).
+{{ project.name }} comes with an integrated NixOS module, which takes care of a lot of the configuration for you. In particular, the module automatically configures [seperate systemd services](generic/systemd.md) for the API, gateway, and CDN services and configures unix sockets for [message passing](./generic/ipc).
 
 ## Installation
 
