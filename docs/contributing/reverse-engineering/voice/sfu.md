@@ -1,3 +1,7 @@
+---
+title: SFU server
+---
+
 # Selective Forwarding Unit (SFU) Server 
 
 ## WebRTC implementation details

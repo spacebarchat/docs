@@ -35,7 +35,7 @@ docker run --env-file ./imagor.env -p 8000:8000 shumc/imagor
 If you would like to change the port Imagor listens on, be sure to change both the PORT value in `imagor.env`,
 and the `-p` value used in docker.
 
-If you're using a [reverse proxy](../reverseProxy.md) such as Nginx for {{ project.name }} already, you could add this to your config's `server` block
+If you're using a [reverse proxy](reverseProxy.md) such as Nginx for {{ project.name }} already, you could add this to your config's `server` block
 
 ```nginx
 location /media/ {
@@ -87,7 +87,7 @@ npm install sharp
 
 ## Your own image proxy
 
-You can also point the `cdn_imagorServerUrl` [config](index.md) to your own image proxy, if you have one that supports the Imagor URL format:
+You can also point the `cdn_imagorServerUrl` [config](../../configuration/index.md) to your own image proxy, if you have one that supports the Imagor URL format:
 
 1. Construct URL path: `<Image width>x<Height>/<Unencoded URL without https://>`
 2. Create a SHA-1 HMAC of the URL path using `security_requestSignature`

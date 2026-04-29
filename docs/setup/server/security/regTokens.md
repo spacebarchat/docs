@@ -2,12 +2,12 @@
 
 Registration tokens are a one-time use token for allowing a new user registration to bypass various restrictions:
 
--   Bypass `register_disabled = true`
+-   Bypass `register.disabled = true`
 -   Bypass [captchas](captcha.md)
--   Bypass `register_allowMultipleAccounts = false`
--   Bypass `register_blockProxies = true`
--   Bypass `register_requireInvite = true`
--   Bypass `register_guestsRequireInvite = true`
+-   Bypass `register.allowMultipleAccounts = false`
+-   Bypass `register.blockProxies = true`
+-   Bypass `register.requireInvite = true`
+-   Bypass `register.guestsRequireInvite = true`
 -   Bypass [absolute register rate limits](limits.md)
 
 To create a registration token, send a GET request to `/auth/generate-registration-tokens` as an account with `OPERATOR` [rights](rights.md).

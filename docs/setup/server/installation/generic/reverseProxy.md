@@ -1,16 +1,4 @@
-# Reverse Proxy
-
-## Caddy
-
-Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.
-
-To set up Spacebar behind Caddy, simply add `reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001` to your Caddyfile. **Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.**
-
-```
-spacebar.example.xyz {
-    reverse_proxy 10.0.0.99:3001
-}
-```
+# Reverse proxy
 
 ## NGINX
 
@@ -61,6 +49,18 @@ server {
 }
 ```
 
+## Caddy
+
+Caddy is a powerful and simple reverse proxy/webserver solution. Caddy will automatically manage HTTPS certs for any URL it is configured to serve.
+
+To set up Spacebar behind Caddy, simply add `reverse_proxy IP_TO_SPACEBAR_INSTANCE:3001` to your Caddyfile. **Remember to adjust your Spacebar configuration to use the external address on all public endpoints otherwise you will have CORS issues.**
+
+```
+spacebar.example.xyz {
+    reverse_proxy 10.0.0.99:3001
+}
+```
+
 ## SSL
 
 [SSL](https://en.wikipedia.org/wiki/Secure_Sockets_Layer) is a technology used to keep your website secure.
@@ -88,5 +88,5 @@ After you've set up NGINX, it's very simple to also set up SSL using `certbot`.
 You should be asked various questions, such as which site you want to enable SSL for.
 After which, you should now have a SSL secured {{ project.name }} instance!
 
-But wait, there's more! If you have changed your `gateway_endpointPublic`
-or `cdn_endpointPublic` addresses, you'll probably have to update those to use the new protocol (`https` or `wss`).
+But wait, there's more! If you have changed your `gateway.endpointPublic`
+or `cdn.endpointPublic` addresses, you'll probably have to update those to use the new protocol (`https` or `wss`).

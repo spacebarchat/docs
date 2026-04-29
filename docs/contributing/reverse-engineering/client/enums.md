@@ -1,3 +1,7 @@
+---
+title: Enums, bitfields, ...
+---
+
 # Enums and bitfields and such
 
 Various interesting enums/bitfields/etc found by inspecting the client source

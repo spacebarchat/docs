@@ -17,13 +17,13 @@ Once you have an account with one of the above services, or an SMTP service, you
 
 You must edit:
 
--   The `general_frontPage` [config](configuration/index.md) value, used to generate verification/password reset links.
+-   The `general.frontPage` [config](index.md) value, used to generate verification/password reset links.
     Be sure to set it to the {{ project.name }} web app URL. For example, `https://staging.{{ project.domain }}`
--   The `email_senderAddress` config value, used as the 'from' email address. If it's not set, `general_correspondenceEmail` is used.
+-   The `email.senderAddress` config value, used as the 'from' email address. If it's not set, `general.correspondenceEmail` is used.
 
 Optionally:
 
--   By default users are automatically verified. To change this, update the `defaults_user_verified` [config](configuration/index.md) value to `false`.
+-   By default users are automatically verified. To change this, update the `defaults_user_verified` [config](index.md) value to `false`.
 -   If you would like users to be forced to verify their email before using the service, set the `login_requireVerification` config to `true`.
 -   You may force users to pass a CAPTCHA before requesting a password reset by setting `passwordReset_requireCaptcha` to `true`
 
@@ -33,31 +33,31 @@ Optionally:
 
     | key                 | type    | description                 |
     | ------------------- | ------- | --------------------------- |
-    | email_smtp_host     | string  | SMTP Host for sending email |
-    | email_smtp_port     | number  | SMTP port                   |
-    | email_smtp_secure   | boolean | Use TLS for SMTP            |
-    | email_smtp_username | string  | SMTP username               |
-    | email_smtp_password | string  | SMTP password               |
+    | email.smtp.host     | string  | SMTP Host for sending email |
+    | email.smtp.port     | number  | SMTP port                   |
+    | email.smtp.secure   | boolean | Use TLS for SMTP            |
+    | email.smtp.username | string  | SMTP username               |
+    | email.smtp.password | string  | SMTP password               |
 
 === "Mailgun"
 
     | key                  | type   | description     |
     | -------------------- | ------ | --------------- |
-    | email_mailgun_apiKey | string | Mailgun API key |
-    | email_mailgun_domain | string | Mailgun domain  |
+    | email.mailgun.apiKey | string | Mailgun API key |
+    | email.mailgun.domain | string | Mailgun domain  |
 
 === "Mailjet"
 
     | key                     | type   | description        |
     | ----------------------- | ------ | ------------------ |
-    | email_mailjet_apiKey    | string | Mailjet API key    |
-    | email_mailjet_apiSecret | string | Mailjet API secret |
+    | email.mailjet.apiKey    | string | Mailjet API key    |
+    | email.mailjet.apiSecret | string | Mailjet API secret |
 
 === "Sendgrid"
 
     | key                   | type   | description      |
     | --------------------- | ------ | ---------------- |
-    | email_sendgrid_apiKey | string | Sendgrid API key |
+    | email.sendgrid.apiKey | string | Sendgrid API key |
 
 ## Email templates
 
@@ -67,8 +67,8 @@ They are simple HTML files, which you may edit freely. Although HTML mail is ver
 Below are the available strings replaced in mail templates.
 
 | string                  | replaced with                                                                |
-| ----------------------- | ---------------------------------------------------------------------------- |
-| `{instanceName}`        | `general_instanceName` config value                                          |
+| ----------------------- |------------------------------------------------------------------------------|
+| `{instanceName}`        | `general.instanceName` config value                                          |
 | `{userUsername}`        | The username of the user this email is being sent to                         |
 | `{userDiscriminator}`   | The discriminator of the user this email is being sent to                    |
 | `{userId}`              | The ID of the user this email is being sent to                               |

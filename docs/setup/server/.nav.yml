@@ -4,5 +4,4 @@ nav:
 - configuration/
 - security/
 - maintenance/
-- adminApi/
 - "*"

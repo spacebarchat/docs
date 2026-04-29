@@ -12,7 +12,7 @@ After downloading the new version, go through the setup guide as normal again:
 npm i
 
 # Build and generate schema
-npm run setup
+npm run build:tsgo
 
 # Start the server
 npm run start
