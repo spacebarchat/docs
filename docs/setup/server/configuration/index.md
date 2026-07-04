@@ -306,7 +306,7 @@ See [EMail](email.md) for more information.
 {
   "api": {
     "endpointPrivate": "http://127.0.0.1:3001",
-    "endpointPublic": "https://api.spacebar.example.net/api/v9"
+    "endpointPublic": "https://api.spacebar.example.net"
   },
   "cdn": {
     "endpointPrivate": "http://127.0.0.1:3002",

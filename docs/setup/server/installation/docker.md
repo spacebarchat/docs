@@ -26,12 +26,11 @@ docker run \
   --network spacebar-network \
   -e DATABASE=postgres://postgres:postgres@spacebar-db/postgres \
   -e CONFIG_PATH=config/config.json \
-  -v ./config:/config \
-  -v ./files:/files \
+  -v ./data:/data \
   ghcr.io/{{ repositories.server }}
 ```
 
-4. Set config values for `general.serverName`, `cdn.endpointPublic`, `cdn.endpointPrivate` to `http://localhost:3001`, `api.endpointPublic` to `http://localhost:3001/api/v9` and `gateway.endpointPublic` to `ws://localhost:3001`
+4. Set config values for `general.serverName`, `cdn.endpointPublic`, `cdn.endpointPrivate` and `api.endpointPublic` to `http://localhost:3001`, and `gateway.endpointPublic` to `ws://localhost:3001`
 
 5. Run the server docker image after the config changes:
 ```sh
@@ -40,8 +39,7 @@ docker run \
   --network spacebar-network \
   -e DATABASE=postgres://postgres:postgres@spacebar-db/postgres \
   -e CONFIG_PATH=config/config.json \
-  -v ./config:/config \
-  -v ./files:/files \
+  -v ./data:/data
   -p 3001:3001 \
   ghcr.io/{{ repositories.server }}
 ```

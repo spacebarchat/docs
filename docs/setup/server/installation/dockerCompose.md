@@ -111,8 +111,8 @@ For the full list of config file options, check out the [configuration settings]
 | `gateway.endpointPublic`  | External (e.g. from a user) gateway communication  | wss://spacebar.your.domain       |
 | `cdn.endpointPrivate`     | Internal CDN communication                         | http://spacebar-cdn:3001         |
 | `cdn.gatewayPublic`       | External CDN communication                         | https://cdn.your.domain          |
-| `api.endpointPrivate`     | Internal API communication                         | http://spacebar-api:3001/api/v9  |
-| `api.endpointPublic`      | External API communication                         | https://api.your.domain/api/v9   |
+| `api.endpointPrivate`     | Internal API communication                         | http://spacebar-api:3001         |
+| `api.endpointPublic`      | External API communication                         | https://api.your.domain          |
 | `rabbitmq.host`           | Internal communication between Spacebar containers | amqp://guest:guest@rabbitmq:5672 |
 
 3. Bring up the containers
