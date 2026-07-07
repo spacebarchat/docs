@@ -225,15 +225,6 @@ See [RabbitMQ](../installation/generic/ipc/rabbitmq.md) for more information.
 | `allowDiscordTemplates`                    | true    | boolean | Whether guild templates from Discord.com can be fetched |
 | [`allowRaws`](/concepts/guildTemplates.md) | true    | boolean | Whether raw guild templates are allowed                 |
 
-### Sentry Enabled (`sentry`)
-
-| key               | default                            | type    | description                                     |
-|-------------------|------------------------------------|---------|-------------------------------------------------|
-| `enabled`         | false                              | boolean | Whether server-side Sentry analytics is enabled |
-| `endpoint`        | {{ project.name }} sentry endpoint | string  | Sentry endpoint                                 |
-| `traceSampleRate` | 1                                  | number  | Sentry sample rate (1 means all requests)       |
-| `environment`     | System hostname                    | string  | Sentry environment name                         |
-
 ### User and Guild Defaults (`defaults`)
 
 | key                                 | default | type    | description                                                           |
