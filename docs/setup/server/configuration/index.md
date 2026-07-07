@@ -200,14 +200,6 @@ Regions are defined with the following structure
 | `autoJoin.canLeave`                               | true     | boolean                                                | Whether users can leave the auto-joined guild(s)                      |
 | [`defaultFeatures`](guildFeatures.md)        null | string[] | Features automatically granted to guilds upon creation |
 
-### GIF Search Options (`gif`)
-
-| key        | default                          | type    | description                      |
-|------------|----------------------------------|---------|----------------------------------|
-| `enabled`  | true                             | boolean | Whether GIF features are enabled |
-| `provider` | tenor                            | "tenor" | Which GIF service to use         |
-| `apiKey`   | {{ project.name }} tenor API key | string  | GIF service API key              |
-
 ### RabbitMQ Options (`rabbitmq`)
 
 See [RabbitMQ](../installation/generic/ipc/rabbitmq.md) for more information.
