@@ -7,27 +7,27 @@ to the JSON file.
 
 The JSON file has the following top-level sections:
 
-| key             | description                      |
-|-----------------|----------------------------------|
-| `gateway`       | Options for the gateway service  |
-| `cdn`           | Options for the CDN service      |
-| `api`           | Options for the API service      |
-| `general`       | General-purpose options          |
-| `limits`        | Limits imposed on users          |
-| `metrics`       | Options for metric collection    |
-| `security`      | Security options                 |
-| `login`         | Login options                    |
-| `register`      | Registration options             |
-| `regions`       | Voice chat server region options |
-| `guild`         | Guild options                    |
-| `gif`           | GIF search options               |
-| `rabbitmq`      | RabbitMQ options                 |
-| `templates`     | Guild template options           |
-| `sentry`        | Sentry analytics options         |
-| `defaults`      | User and guild defaults          |
-| `external`      | Embed provider options           |
-| `email`         | Options for sending emails       |
-| `passwordReset` | Password reset options           |
+| key             | description                       |
+|-----------------|-----------------------------------|
+| `gateway`       | Options for the gateway service   |
+| `cdn`           | Options for the CDN service       |
+| `api`           | Options for the API service       |
+| `general`       | General-purpose options           |
+| `limits`        | Limits imposed on users           |
+| `metrics`       | Options for metric collection     |
+| `security`      | Security options                  |
+| `login`         | Login options                     |
+| `register`      | Registration options              |
+| `regions`       | Voice chat server region options  |
+| `guild`         | Guild options                     |
+| `rabbitmq`      | RabbitMQ options                  |
+| `templates`     | Guild template options            |
+| `sentry`        | Sentry analytics options          |
+| `defaults`      | User and guild defaults           |
+| `external`      | Embed provider options            |
+| `email`         | Options for sending emails        |
+| `passwordReset` | Password reset options            |
+| `integrations`  | Integration configuration options | 
 
 ### Gateway Options (`gateway`)
 
