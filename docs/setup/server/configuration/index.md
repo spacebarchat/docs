@@ -22,7 +22,6 @@ The JSON file has the following top-level sections:
 | `guild`         | Guild options                     |
 | `rabbitmq`      | RabbitMQ options                  |
 | `templates`     | Guild template options            |
-| `sentry`        | Sentry analytics options          |
 | `defaults`      | User and guild defaults           |
 | `external`      | Embed provider options            |
 | `email`         | Options for sending emails        |
