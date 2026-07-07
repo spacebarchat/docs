@@ -27,3 +27,20 @@ configuration file as such:
   }
 }
 ```
+
+## For client authors
+
+You can get the list of known/enabled GIF providers via the `GET ${instance.baseUrl}/_spacebar/api/v1/integrations/gif`
+endpoint. This will yield a response as such:
+
+```json5
+{
+  "providers": {
+    // Provider ID
+    "klipy": {
+      // Whether it is available, not accounting for rate limits
+      "available": true
+    }
+  }
+}
+```
