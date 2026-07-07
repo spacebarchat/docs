@@ -1311,6 +1311,8 @@
         
           
         
+          
+        
       
       
         
@@ -1395,6 +1397,20 @@
     <li class="md-nav__item">
       <a href="userFlags/" class="md-nav__link">
         User Flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="integrations/gifs/" class="md-nav__link">
+        Integrations
       </a>
     </li>
   
@@ -1733,13 +1749,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gif-search-options-gif" class="md-nav__link">
-    GIF Search Options (gif)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#rabbitmq-options-rabbitmq" class="md-nav__link">
     RabbitMQ Options (rabbitmq)
   </a>
@@ -1749,13 +1758,6 @@
           <li class="md-nav__item">
   <a href="#guild-template-options-templates" class="md-nav__link">
     Guild Template Options (templates)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sentry-enabled-sentry" class="md-nav__link">
-    Sentry Enabled (sentry)
   </a>
   
 </li>
@@ -1784,6 +1786,13 @@
           <li class="md-nav__item">
   <a href="#password-reset-options-passwordreset" class="md-nav__link">
     Password Reset Options (passwordReset)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
   </a>
   
 </li>
@@ -1819,7 +1828,8 @@
 
 
 <h1 id="configuration">Configuration</h1>
-<p>Spacebar is configured via a JSON file. Use the <code>CONFIG_PATH</code> <a href="env/">environment variable</a> to set the path to the JSON file.</p>
+<p>Spacebar is configured via a JSON file. Use the <code>CONFIG_PATH</code> <a href="env/">environment variable</a> to set the path
+to the JSON file.</p>
 <h2 id="schema">Schema</h2>
 <p>The JSON file has the following top-level sections:</p>
 <table>
@@ -1875,20 +1885,12 @@
 <td>Guild options</td>
 </tr>
 <tr>
-<td><code>gif</code></td>
-<td>GIF search options</td>
-</tr>
-<tr>
 <td><code>rabbitmq</code></td>
 <td>RabbitMQ options</td>
 </tr>
 <tr>
 <td><code>templates</code></td>
 <td>Guild template options</td>
-</tr>
-<tr>
-<td><code>sentry</code></td>
-<td>Sentry analytics options</td>
 </tr>
 <tr>
 <td><code>defaults</code></td>
@@ -1905,6 +1907,10 @@
 <tr>
 <td><code>passwordReset</code></td>
 <td>Password reset options</td>
+</tr>
+<tr>
+<td><code>integrations</code></td>
+<td>Integration configuration options</td>
 </tr>
 </tbody>
 </table>
@@ -2730,37 +2736,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gif-search-options-gif">GIF Search Options (<code>gif</code>)</h3>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>default</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>enabled</code></td>
-<td>true</td>
-<td>boolean</td>
-<td>Whether GIF features are enabled</td>
-</tr>
-<tr>
-<td><code>provider</code></td>
-<td>tenor</td>
-<td>"tenor"</td>
-<td>Which GIF service to use</td>
-</tr>
-<tr>
-<td><code>apiKey</code></td>
-<td>Spacebar tenor API key</td>
-<td>string</td>
-<td>GIF service API key</td>
-</tr>
-</tbody>
-</table>
 <h3 id="rabbitmq-options-rabbitmq">RabbitMQ Options (<code>rabbitmq</code>)</h3>
 <p>See <a href="../installation/generic/ipc/rabbitmq/">RabbitMQ</a> for more information.</p>
 <table>
@@ -2815,43 +2790,6 @@
 <td>true</td>
 <td>boolean</td>
 <td>Whether raw guild templates are allowed</td>
-</tr>
-</tbody>
-</table>
-<h3 id="sentry-enabled-sentry">Sentry Enabled (<code>sentry</code>)</h3>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>default</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>enabled</code></td>
-<td>false</td>
-<td>boolean</td>
-<td>Whether server-side Sentry analytics is enabled</td>
-</tr>
-<tr>
-<td><code>endpoint</code></td>
-<td>Spacebar sentry endpoint</td>
-<td>string</td>
-<td>Sentry endpoint</td>
-</tr>
-<tr>
-<td><code>traceSampleRate</code></td>
-<td>1</td>
-<td>number</td>
-<td>Sentry sample rate (1 means all requests)</td>
-</tr>
-<tr>
-<td><code>environment</code></td>
-<td>System hostname</td>
-<td>string</td>
-<td>Sentry environment name</td>
 </tr>
 </tbody>
 </table>
@@ -3040,71 +2978,104 @@
 </tr>
 </tbody>
 </table>
+<h3 id="integrations">Integrations</h3>
+<p>See <a href="integrations/gifs/">GIF integration documentation</a> for more up to date configuration guidance for GIF
+providers.</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>integrations.gifs.klipy.enabled</code></td>
+<td>false</td>
+<td>boolean</td>
+<td>Whether the Klipy GIF provider is enabled</td>
+</tr>
+<tr>
+<td><code>integrations.gifs.klipy.apiKey</code></td>
+<td>undefined</td>
+<td>string?</td>
+<td>Klipy API key</td>
+</tr>
+<tr>
+<td><code>integrations.gifs.klipy.enabled</code></td>
+<td>undefined</td>
+<td>string?</td>
+<td>Path to file containing Klipy API key</td>
+</tr>
+</tbody>
+</table>
 <h2 id="sample-configuration">Sample Configuration</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;api&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3001&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.spacebar.example.net&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;cdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3002&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.spacebar.example.net&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3003&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wss://gateway.spacebar.example.net&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;instanceDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m in space!&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;instanceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A Spacebar Instance&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;serverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spacebar.example.net&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;autoJoin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;canLeave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">&quot;api&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.spacebar.example.net&quot;</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;defaultFeatures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;ALIASABLE_NAMES&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;VANITY_URL&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;CROSS_CHANNEL_REPLIES&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;ANIMATED_ICON&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;BANNER&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;GUILD_TAGS&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;GUILD_SERVER_GUIDE&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;GUILD_ONBOARDING&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;MEMBER_PROFILES&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;NEWS&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;ROLE_ICONS&quot;</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;limits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;channel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;maxTopic&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
+<span class="w">    </span><span class="nt">&quot;cdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3002&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.spacebar.example.net&quot;</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;maxBio&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;maxUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span>
+<span class="w">    </span><span class="nt">&quot;gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3003&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wss://gateway.spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;instanceDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m in space!&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instanceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A Spacebar Instance&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;serverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;autoJoin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;canLeave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;defaultFeatures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;ALIASABLE_NAMES&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;VANITY_URL&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;CROSS_CHANNEL_REPLIES&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;ANIMATED_ICON&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;BANNER&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;GUILD_TAGS&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;GUILD_SERVER_GUIDE&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;GUILD_ONBOARDING&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;MEMBER_PROFILES&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;NEWS&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;ROLE_ICONS&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;limits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;channel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;maxTopic&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;maxBio&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;maxUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;rabbitmq&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amqp://guest:guest@127.0.0.1:5672&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;register&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;requireInvite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;forwardedFor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;trustedProxies&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;rabbitmq&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amqp://guest:guest@127.0.0.1:5672&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;register&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;requireInvite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;forwardedFor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;trustedProxies&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
-<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
