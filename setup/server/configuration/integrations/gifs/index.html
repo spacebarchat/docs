@@ -1755,13 +1755,13 @@ and categories requests to aid keep the request rate down.</p>
 <p>Once you have obtained this API key, you can configure and enable Klipy support in your Spacebar instance's
 configuration file as such:
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nv">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nv">&quot;gifs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nv">&quot;klipy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nv">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">"integrations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">"gifs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nv">"klipy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nv">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">,</span>
 <span class="w">        </span><span class="c1">// You can pick either one of these 2:</span>
-<span class="w">        </span><span class="nv">&quot;apiKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;abcdef&quot;</span><span class="p">,</span><span class="w">                               </span><span class="c1">// Inline</span>
-<span class="w">        </span><span class="nv">&quot;apiKeyPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/run/secrets/spacebar/klipyApiKey&quot;</span><span class="w"> </span><span class="c1">// Read from file (single-line plaintext)</span>
+<span class="w">        </span><span class="nv">"apiKey"</span><span class="p">:</span><span class="w"> </span><span class="s">"abcdef"</span><span class="p">,</span><span class="w">                               </span><span class="c1">// Inline</span>
+<span class="w">        </span><span class="nv">"apiKeyPath"</span><span class="p">:</span><span class="w"> </span><span class="s">"/run/secrets/spacebar/klipyApiKey"</span><span class="w"> </span><span class="c1">// Read from file (single-line plaintext)</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
@@ -1771,11 +1771,11 @@ configuration file as such:
 <p>You can get the list of known/enabled GIF providers via the <code>GET ${instance.baseUrl}/_spacebar/api/v1/integrations/gif</code>
 endpoint. This will yield a response as such:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nv">&quot;providers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">"providers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Provider ID</span>
-<span class="w">    </span><span class="nv">&quot;klipy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">"klipy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1">// Whether it is available, not accounting for rate limits</span>
-<span class="w">      </span><span class="nv">&quot;available&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
+<span class="w">      </span><span class="nv">"available"</span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>

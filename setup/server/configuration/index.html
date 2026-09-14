@@ -3013,68 +3013,68 @@ providers.</p>
 </table>
 <h2 id="sample-configuration">Sample Configuration</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;api&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3001&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="nt">"api"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"endpointPrivate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:3001"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"endpointPublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.spacebar.example.net"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;cdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3002&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="nt">"cdn"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"endpointPrivate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:3002"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"endpointPublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.spacebar.example.net"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;endpointPrivate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:3003&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;endpointPublic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wss://gateway.spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="nt">"gateway"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"endpointPrivate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:3003"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"endpointPublic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wss://gateway.spacebar.example.net"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;instanceDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m in space!&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;instanceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A Spacebar Instance&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;serverName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spacebar.example.net&quot;</span>
+<span class="w">    </span><span class="nt">"general"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"instanceDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I'm in space!"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"instanceName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Spacebar Instance"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"serverName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spacebar.example.net"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;autoJoin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;canLeave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"guild"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"autoJoin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"bots"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"canLeave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;defaultFeatures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;ALIASABLE_NAMES&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;VANITY_URL&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;CROSS_CHANNEL_REPLIES&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;ANIMATED_ICON&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;BANNER&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;GUILD_TAGS&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;GUILD_SERVER_GUIDE&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;GUILD_ONBOARDING&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;MEMBER_PROFILES&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;NEWS&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;ROLE_ICONS&quot;</span>
+<span class="w">        </span><span class="nt">"defaultFeatures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">"ALIASABLE_NAMES"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"VANITY_URL"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"CROSS_CHANNEL_REPLIES"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"ANIMATED_ICON"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"BANNER"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"GUILD_TAGS"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"GUILD_SERVER_GUIDE"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"GUILD_ONBOARDING"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"MEMBER_PROFILES"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"NEWS"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"ROLE_ICONS"</span>
 <span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;limits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;channel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;maxTopic&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
+<span class="w">    </span><span class="nt">"limits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"maxTopic"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;maxBio&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;maxUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span>
+<span class="w">        </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"maxBio"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"maxUsername"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;rabbitmq&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amqp://guest:guest@127.0.0.1:5672&quot;</span>
+<span class="w">    </span><span class="nt">"rabbitmq"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amqp://guest:guest@127.0.0.1:5672"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;register&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;dateOfBirth&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"register"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"dateOfBirth"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="nt">"disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;requireInvite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="nt">"requireInvite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;forwardedFor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;trustedProxies&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="w">    </span><span class="nt">"security"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"forwardedFor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X-Forwarded-For"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"trustedProxies"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>

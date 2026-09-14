@@ -1868,7 +1868,7 @@
 <div class="highlight"><pre><span></span><code>WRTC_WS_PORT=3004
 </code></pre></div>
 <p>You also have to configure the Voice Gateway endpoint in your database. In table <code>config</code> you can set the default region endpoint to your Voice Gateway domain. It is set to <code>localhost:3004</code> by default:</p>
-<div class="highlight"><pre><span></span><code>&quot;regions_available_0_endpoint&quot;:   &quot;voice.example.com&quot;
+<div class="highlight"><pre><span></span><code>"regions_available_0_endpoint":   "voice.example.com"
 </code></pre></div>
 <h3 id="nginx-reverse-proxy-for-voice-gateway">Nginx reverse proxy for Voice Gateway</h3>
 <p>You will likely want to set your voice gateway behind a reverse proxy. Here's a sample Nginx configuration:</p>
@@ -1883,7 +1883,7 @@
 <span class="w">            </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
 <span class="w">            </span><span class="kn">proxy_pass_request_headers</span><span class="w">      </span><span class="no">on</span><span class="p">;</span>
 <span class="w">            </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Last-Modified</span><span class="w"> </span><span class="nv">$date_gmt</span><span class="p">;</span>
-<span class="w">            </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Cache-Control</span><span class="w"> </span><span class="s">&#39;no-store,</span><span class="w"> </span><span class="s">no-cache,</span><span class="w"> </span><span class="s">must-revalidate,</span><span class="w"> </span><span class="s">proxy-revalidate,</span><span class="w"> </span><span class="s">max-age=0&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Cache-Control</span><span class="w"> </span><span class="s">'no-store,</span><span class="w"> </span><span class="s">no-cache,</span><span class="w"> </span><span class="s">must-revalidate,</span><span class="w"> </span><span class="s">proxy-revalidate,</span><span class="w"> </span><span class="s">max-age=0'</span><span class="p">;</span>
 <span class="w">            </span><span class="kn">proxy_set_header</span><span class="w">  </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
 <span class="w">            </span><span class="kn">proxy_set_header</span><span class="w">  </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="s">https</span><span class="p">;</span>
 <span class="w">            </span><span class="kn">proxy_set_header</span><span class="w">  </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
@@ -1893,7 +1893,7 @@
 
 <span class="w">   </span><span class="c1"># This is important. It allows Websocket connections through NGINX.</span>
 <span class="w">            </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Upgrade</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
-<span class="w">            </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">"upgrade"</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>

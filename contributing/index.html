@@ -1738,9 +1738,9 @@ because the gateway returns responses encoded with <a href="https://github.com/d
 Easy fix though, just edit the <code>DeveloperOptionsStore</code> localStorage key so that <code>logGatewayEvents</code> is true, and reload the client.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make sure you rerun <code>npm run build:src:tsgo</code> every time you edit source code, or just use <code>npm run watch</code> to make TypeScript automatically recompile on code changes.
+<p>Make sure you rerun <code>npm run build:src</code> every time you edit source code, or just use <code>npm run watch</code> to make TypeScript automatically recompile on code changes.
 When making changes to schemas or HTTP routes, run <code>npm run generate:schemas</code> and <code>npm run generate:openapi</code> to update the schemas used for validating incoming requests and generating the API documentation.
-(These are also updated when running <code>npm run build:tsgo</code>, if you'd rather rebuild everything in one shot.)</p>
+(These are also updated when running <code>npm run build</code>, if you'd rather rebuild everything in one shot.)</p>
 </div>
 
 

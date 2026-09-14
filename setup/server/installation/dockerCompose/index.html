@@ -1841,64 +1841,64 @@
 
 <h1 id="docker-compose">Docker Compose</h1>
 <h2 id="compose-file">Compose file</h2>
-<div class="highlight"><pre><span></span><code>services:
-  spacebar-gateway:
-    image: ghcr.io/spacebarchat/server-gateway:latest
-    env_file: .env
-    networks:
-      - spacebar-network
-    volumes:
-      - ./data:/data
-    ports:
-      - &quot;3001:3001&quot;
-    restart:  unless-stopped
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">spacebar-gateway</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/spacebarchat/server-gateway:latest</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-network</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"3001:3001"</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 
-  spacebar-api:
-    image: ghcr.io/spacebarchat/server-api:latest
-    env_file: .env
-    networks:
-      - spacebar-network
-    volumes:
-      - ./data:/data
-    ports:
-      - &quot;3002:3001&quot;
-    restart:  unless-stopped
+<span class="w">  </span><span class="nt">spacebar-api</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/spacebarchat/server-api:latest</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-network</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"3002:3001"</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 
-  spacebar-cdn:
-    image: ghcr.io/spacebarchat/server-cdn:latest
-    env_file: .env
-    networks:
-      - spacebar-network
-    volumes:
-      - ./data:/data
-    ports:
-      - &quot;3003:3001&quot;
-    restart:  unless-stopped
+<span class="w">  </span><span class="nt">spacebar-cdn</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/spacebarchat/server-cdn:latest</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-network</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"3003:3001"</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 
-  spacebar-db:
-    image: postgres:18-alpine
-    networks:
-      - spacebar-network
-    volumes:
-      - spacebar-db:/var/lib/postgresql
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    restart: unless-stopped
+<span class="w">  </span><span class="nt">spacebar-db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:18-alpine</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-network</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-db:/var/lib/postgresql</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=postgres</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 
-  rabbitmq:
-    image: rabbitmq:4-management-alpine
-    volumes:
-      - rabbitmq_data:/var/lib/rabbitmq
-    restart: unless-stopped
-    networks:
-      - spacebar-network
+<span class="w">  </span><span class="nt">rabbitmq</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq:4-management-alpine</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rabbitmq_data:/var/lib/rabbitmq</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spacebar-network</span>
 
-networks:
-  spacebar-network:
+<span class="nt">networks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">spacebar-network</span><span class="p">:</span>
 
-volumes:
-  spacebar-db:
-  rabbitmq_data:
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">spacebar-db</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rabbitmq_data</span><span class="p">:</span>
 </code></pre></div>
 <h2 id="volumes">Volumes</h2>
 <table>

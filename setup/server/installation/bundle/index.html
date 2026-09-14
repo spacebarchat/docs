@@ -1768,25 +1768,25 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/space
 <span class="c1"># Install javascript packages</span>
 npm<span class="w"> </span>i
 
-<span class="c1"># Build and generate schema + openapi. Separately, they are `build:src:tsgo`, `generate:schema` and `generate:openapi`.</span>
-npm<span class="w"> </span>run<span class="w"> </span>build:tsgo
+<span class="c1"># Build and generate schema + openapi. Separately, they are `build:src`, `generate:schema` and `generate:openapi`.</span>
+npm<span class="w"> </span>run<span class="w"> </span>build
 
 <span class="c1"># Set some environment variables regarding configuration</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">CONFIG_PATH</span><span class="o">=</span>config.json
-<span class="nb">export</span><span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span><span class="s1">&#39;postgres://user:password@127.0.0.1/spacebar&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DATABASE</span><span class="o">=</span><span class="s1">'postgres://user:password@127.0.0.1/spacebar'</span>
 
 <span class="c1"># Start the bundle server (API, CDN, Gateway in one) - not recommended for production instances</span>
 npm<span class="w"> </span>run<span class="w"> </span>start
 </code></pre></div>
 <p>The server should error out with some instructions, particularly missing configuration values:
 <div class="highlight"><pre><span></span><code>{
-  &quot;api&quot;: { &quot;endpointPublic&quot;: &quot;https://spacebar.your-domain.net&quot; }, // public URL to your API
-  &quot;gateway&quot;: { &quot;endpointPublic&quot;: &quot;wss://spacebar.your-domain.net&quot; }, // public URL to your gateway
-  &quot;cdn&quot;: {
-    &quot;endpointPublic&quot;: &quot;https://spacebar.your-domain.net&quot;, // public URL to your CDN
-    &quot;endpointPrivate&quot;: &quot;http://localhost:3001&quot; // special: this should be routable from the API! If not, file uploads will fail.
+  "api": { "endpointPublic": "https://spacebar.your-domain.net" }, // public URL to your API
+  "gateway": { "endpointPublic": "wss://spacebar.your-domain.net" }, // public URL to your gateway
+  "cdn": {
+    "endpointPublic": "https://spacebar.your-domain.net", // public URL to your CDN
+    "endpointPrivate": "http://localhost:3001" // special: this should be routable from the API! If not, file uploads will fail.
   },
-  &quot;general&quot;: { &quot;serverName&quot;: &quot;your-domain.net&quot; } // your &quot;server name&quot; should be the public domain of your instance, where .well-knowns are available
+  "general": { "serverName": "your-domain.net" } // your "server name" should be the public domain of your instance, where .well-knowns are available
 }
 </code></pre></div></p>
 <p>Then start the server again.</p>
