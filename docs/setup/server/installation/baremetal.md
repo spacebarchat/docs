@@ -32,8 +32,8 @@ git clone {{ repositories.base_url }}/{{ repositories.server }}.git && cd server
 # Install javascript packages
 npm i
 
-# Build and generate schema + openapi. Separately, they are `build:src:tsgo`, `generate:schema` and `generate:openapi`.
-npm run build:tsgo
+# Build and generate schema + openapi. Separately, they are `build:src`, `generate:schema` and `generate:openapi`.
+npm run build
 
 # Set some environment variables regarding configuration
 export EVENT_TRANSMISSION=unix

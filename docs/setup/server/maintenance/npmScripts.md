@@ -8,7 +8,7 @@ Can be executed using `npm run {script name}`
 Syncronise the database schema between {{ project.name }} source code and your database.
 **May incur data loss**. You do not normally need to run this script, as {{ project.name }}-server will perform it when necessary.
 
-## `build:tsgo`
+## `build`
 
 Builds the {{ project.name }} source code
 
