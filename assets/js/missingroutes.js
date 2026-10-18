@@ -24,7 +24,7 @@ document
 			json.discord
 		} endpoints from Discord.com ` +
 		`as well as ${
-			json.spacebar + json.missing - json.discord
+			json.additional.length
 		} additional endpoints.`;
 
 	for (let route of missingRoutes) {
