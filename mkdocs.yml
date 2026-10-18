@@ -68,3 +68,5 @@ markdown_extensions:
     - pymdownx.tabbed:
           alternate_style: true
 extra_css: [assets/extra.css]
+extra_javascript:
+    - assets/js/force-full-nav.js
